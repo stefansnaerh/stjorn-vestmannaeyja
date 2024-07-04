@@ -1,0 +1,158 @@
+{
+  "format": "page",
+  "id": "front_page",
+  "label": "Front page",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "main_title": {
+        "type": "Text",
+        "config": {
+          "label": "Main title",
+          "placeholder": ""
+        }
+      },
+      "main_sub_title": {
+        "type": "Text",
+        "config": {
+          "label": "Main sub title",
+          "placeholder": ""
+        }
+      },
+      "hero_image": {
+        "type": "Image",
+        "config": {
+          "label": "Hero image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "hero_title_1": {
+        "type": "Text",
+        "config": {
+          "label": "Hero title 1",
+          "placeholder": ""
+        }
+      },
+      "hero_paragraph_1": {
+        "type": "Text",
+        "config": {
+          "label": "Hero paragraph 1",
+          "placeholder": ""
+        }
+      },
+      "hero_link_text_1": {
+        "type": "Text",
+        "config": {
+          "label": "Hero link text 1",
+          "placeholder": ""
+        }
+      },
+      "hero_link_1": {
+        "type": "Link",
+        "config": {
+          "label": "Hero link 1",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "hero_title_2": {
+        "type": "Text",
+        "config": {
+          "label": "Hero title 2",
+          "placeholder": ""
+        }
+      },
+      "hero_paragraph_2": {
+        "type": "Text",
+        "config": {
+          "label": "Hero paragraph 2",
+          "placeholder": ""
+        }
+      },
+      "hero_link_text_2": {
+        "type": "Text",
+        "config": {
+          "label": "Hero link text 2",
+          "placeholder": ""
+        }
+      },
+      "hero_link_2": {
+        "type": "Link",
+        "config": {
+          "label": "Hero link 2",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "hero_title_3": {
+        "type": "Text",
+        "config": {
+          "label": "Hero title 3",
+          "placeholder": ""
+        }
+      },
+      "hero_paragraph_3": {
+        "type": "Text",
+        "config": {
+          "label": "Hero paragraph 3",
+          "placeholder": ""
+        }
+      },
+      "hero_link_text_3": {
+        "type": "Text",
+        "config": {
+          "label": "Hero link text 3",
+          "placeholder": ""
+        }
+      },
+      "hero_link_3": {
+        "type": "Link",
+        "config": {
+          "label": "Hero link 3",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "service_overview": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

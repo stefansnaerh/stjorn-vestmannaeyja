@@ -1,0 +1,221 @@
+{
+  "format": "custom",
+  "id": "header",
+  "label": "Header",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "link_group_1_name": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 1 name",
+          "placeholder": ""
+        }
+      },
+      "link_group_1_title": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 1 title",
+          "placeholder": ""
+        }
+      },
+      "link_group_1_paragraph": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 1 paragraph",
+          "placeholder": ""
+        }
+      },
+      "link_group_1": {
+        "type": "Group",
+        "config": {
+          "label": "Link group 1",
+          "repeat": true,
+          "fields": {
+            "link_text": {
+              "type": "Text",
+              "config": {
+                "label": "Link text",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": "media"
+              }
+            }
+          }
+        }
+      },
+      "link_group_2_name": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 2 name",
+          "placeholder": ""
+        }
+      },
+      "link_group_2_title": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 2 title",
+          "placeholder": ""
+        }
+      },
+      "link_group_2_paragraph": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 2 paragraph",
+          "placeholder": ""
+        }
+      },
+      "link_group_2": {
+        "type": "Group",
+        "config": {
+          "label": "Link group 2",
+          "repeat": true,
+          "fields": {
+            "link_text": {
+              "type": "Text",
+              "config": {
+                "label": "Link text",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": "media"
+              }
+            }
+          }
+        }
+      },
+      "link_group_3_name": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 3 name",
+          "placeholder": ""
+        }
+      },
+      "link_group_3_title": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 3 title",
+          "placeholder": ""
+        }
+      },
+      "link_group_3_paragraph": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 3 paragraph",
+          "placeholder": ""
+        }
+      },
+      "link_group_3": {
+        "type": "Group",
+        "config": {
+          "label": "Link group 3",
+          "repeat": true,
+          "fields": {
+            "link_text": {
+              "type": "Text",
+              "config": {
+                "label": "Link text",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "link_group_4_name": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 4 name",
+          "placeholder": ""
+        }
+      },
+      "link_group_4_title": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 4 title",
+          "placeholder": ""
+        }
+      },
+      "link_group_4_paragraph": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 4 paragraph",
+          "placeholder": ""
+        }
+      },
+      "link_group_4": {
+        "type": "Group",
+        "config": {
+          "label": "Link group 4",
+          "repeat": true,
+          "fields": {
+            "link_text": {
+              "type": "Text",
+              "config": {
+                "label": "Link text",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "link_5_name": {
+        "type": "Text",
+        "config": {
+          "label": "Link 5 name",
+          "placeholder": ""
+        }
+      },
+      "link_5": {
+        "type": "Link",
+        "config": {
+          "label": "Link 5",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "link_6_name": {
+        "type": "Text",
+        "config": {
+          "label": "Link 6 name",
+          "placeholder": ""
+        }
+      },
+      "link_6": {
+        "type": "Link",
+        "config": {
+          "label": "Link 6",
+          "placeholder": "",
+          "select": null
+        }
+      }
+    }
+  }
+}
