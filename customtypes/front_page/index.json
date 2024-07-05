@@ -1,7 +1,7 @@
 {
   "format": "page",
   "id": "front_page",
-  "label": "Front page",
+  "label": "Forsíða",
   "repeatable": false,
   "status": true,
   "json": {
@@ -113,6 +113,37 @@
           "label": "Hero link 3",
           "placeholder": "",
           "select": null
+        }
+      },
+      "serviceoverview": {
+        "type": "Group",
+        "config": {
+          "label": "ServiceOverview",
+          "repeat": true,
+          "fields": {
+            "title": {
+              "type": "Text",
+              "config": {
+                "label": "title",
+                "placeholder": ""
+              }
+            },
+            "paragraph": {
+              "type": "Text",
+              "config": {
+                "label": "paragraph",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
         }
       },
       "slices": {

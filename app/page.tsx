@@ -6,6 +6,7 @@ import { components } from "../slices";
 import dynamic from "next/dynamic";
 import Hero from "./components/Hero/hero";
 import News from "./components/News/News";
+import ServiceOverview from "./components/ServiceOverview/serviceOverview";
 const NewsDynamic = dynamic(() => import("./components/News/News"));
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
@@ -27,6 +28,7 @@ export default async function Home() {
   return (
     <>
       <Hero content={section} />
+      <ServiceOverview content={section} />
       <NewsDynamic type="scroll" />
       <SliceZone slices={page.data.slices} components={components} />
     </>

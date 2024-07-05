@@ -4,14 +4,136 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+type AllNewsDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Allar fréttir documents
+ */
+interface AllNewsDocumentData {
+  /**
+   * Title field in *Allar fréttir*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_news.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Sub title field in *Allar fréttir*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_news.sub_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_title: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *Allar fréttir*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_news.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<AllNewsDocumentDataSlicesSlice> /**
+   * Meta Title field in *Allar fréttir*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: all_news.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Allar fréttir*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: all_news.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Allar fréttir*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_news.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Allar fréttir document from Prismic
+ *
+ * - **API ID**: `all_news`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AllNewsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<AllNewsDocumentData>,
+    "all_news",
+    Lang
+  >;
+
+/**
+ * Item in *Forsíða → ServiceOverview*
+ */
+export interface FrontPageDocumentDataServiceoverviewItem {
+  /**
+   * title field in *Forsíða → ServiceOverview*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.serviceoverview[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * paragraph field in *Forsíða → ServiceOverview*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.serviceoverview[].paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField;
+
+  /**
+   * link field in *Forsíða → ServiceOverview*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.serviceoverview[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
 type FrontPageDocumentDataSlicesSlice = ServiceOverviewSlice;
 
 /**
- * Content for Front page documents
+ * Content for Forsíða documents
  */
 interface FrontPageDocumentData {
   /**
-   * Main title field in *Front page*
+   * Main title field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -22,7 +144,7 @@ interface FrontPageDocumentData {
   main_title: prismic.KeyTextField;
 
   /**
-   * Main sub title field in *Front page*
+   * Main sub title field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -33,7 +155,7 @@ interface FrontPageDocumentData {
   main_sub_title: prismic.KeyTextField;
 
   /**
-   * Hero image field in *Front page*
+   * Hero image field in *Forsíða*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -44,7 +166,7 @@ interface FrontPageDocumentData {
   hero_image: prismic.ImageField<never>;
 
   /**
-   * Hero title 1 field in *Front page*
+   * Hero title 1 field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -55,7 +177,7 @@ interface FrontPageDocumentData {
   hero_title_1: prismic.KeyTextField;
 
   /**
-   * Hero paragraph 1 field in *Front page*
+   * Hero paragraph 1 field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -66,7 +188,7 @@ interface FrontPageDocumentData {
   hero_paragraph_1: prismic.KeyTextField;
 
   /**
-   * Hero link text 1 field in *Front page*
+   * Hero link text 1 field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -77,7 +199,7 @@ interface FrontPageDocumentData {
   hero_link_text_1: prismic.KeyTextField;
 
   /**
-   * Hero link 1 field in *Front page*
+   * Hero link 1 field in *Forsíða*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -88,7 +210,7 @@ interface FrontPageDocumentData {
   hero_link_1: prismic.LinkField;
 
   /**
-   * Hero title 2 field in *Front page*
+   * Hero title 2 field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -99,7 +221,7 @@ interface FrontPageDocumentData {
   hero_title_2: prismic.KeyTextField;
 
   /**
-   * Hero paragraph 2 field in *Front page*
+   * Hero paragraph 2 field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -110,7 +232,7 @@ interface FrontPageDocumentData {
   hero_paragraph_2: prismic.KeyTextField;
 
   /**
-   * Hero link text 2 field in *Front page*
+   * Hero link text 2 field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -121,7 +243,7 @@ interface FrontPageDocumentData {
   hero_link_text_2: prismic.KeyTextField;
 
   /**
-   * Hero link 2 field in *Front page*
+   * Hero link 2 field in *Forsíða*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -132,7 +254,7 @@ interface FrontPageDocumentData {
   hero_link_2: prismic.LinkField;
 
   /**
-   * Hero title 3 field in *Front page*
+   * Hero title 3 field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -143,7 +265,7 @@ interface FrontPageDocumentData {
   hero_title_3: prismic.KeyTextField;
 
   /**
-   * Hero paragraph 3 field in *Front page*
+   * Hero paragraph 3 field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -154,7 +276,7 @@ interface FrontPageDocumentData {
   hero_paragraph_3: prismic.KeyTextField;
 
   /**
-   * Hero link text 3 field in *Front page*
+   * Hero link text 3 field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -165,7 +287,7 @@ interface FrontPageDocumentData {
   hero_link_text_3: prismic.KeyTextField;
 
   /**
-   * Hero link 3 field in *Front page*
+   * Hero link 3 field in *Forsíða*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -176,7 +298,20 @@ interface FrontPageDocumentData {
   hero_link_3: prismic.LinkField;
 
   /**
-   * Slice Zone field in *Front page*
+   * ServiceOverview field in *Forsíða*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.serviceoverview[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  serviceoverview: prismic.GroupField<
+    Simplify<FrontPageDocumentDataServiceoverviewItem>
+  >;
+
+  /**
+   * Slice Zone field in *Forsíða*
    *
    * - **Field Type**: Slice Zone
    * - **Placeholder**: *None*
@@ -185,7 +320,7 @@ interface FrontPageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#slices
    */
   slices: prismic.SliceZone<FrontPageDocumentDataSlicesSlice> /**
-   * Meta Title field in *Front page*
+   * Meta Title field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A title of the page used for social media and search engines
@@ -196,7 +331,7 @@ interface FrontPageDocumentData {
   meta_title: prismic.KeyTextField;
 
   /**
-   * Meta Description field in *Front page*
+   * Meta Description field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: A brief summary of the page
@@ -207,7 +342,7 @@ interface FrontPageDocumentData {
   meta_description: prismic.KeyTextField;
 
   /**
-   * Meta Image field in *Front page*
+   * Meta Image field in *Forsíða*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -219,7 +354,7 @@ interface FrontPageDocumentData {
 }
 
 /**
- * Front page document from Prismic
+ * Forsíða document from Prismic
  *
  * - **API ID**: `front_page`
  * - **Repeatable**: `false`
@@ -575,7 +710,116 @@ export type HeaderDocument<Lang extends string = string> =
     Lang
   >;
 
-export type AllDocumentTypes = FrontPageDocument | HeaderDocument;
+type NewsDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Frétt documents
+ */
+interface NewsDocumentData {
+  /**
+   * Image field in *Frétt*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *Frétt*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Paragraph field in *Frétt*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.paragraph
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField;
+
+  /**
+   * Date field in *Frétt*
+   *
+   * - **Field Type**: Date
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.date
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#date
+   */
+  date: prismic.DateField;
+
+  /**
+   * Slice Zone field in *Frétt*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<NewsDocumentDataSlicesSlice> /**
+   * Meta Title field in *Frétt*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: news.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Frétt*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: news.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Frétt*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: news.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Frétt document from Prismic
+ *
+ * - **API ID**: `news`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NewsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<Simplify<NewsDocumentData>, "news", Lang>;
+
+export type AllDocumentTypes =
+  | AllNewsDocument
+  | FrontPageDocument
+  | HeaderDocument
+  | NewsDocument;
 
 /**
  * Item in *ServiceOverview → Default → Primary → items*
@@ -669,8 +913,12 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      AllNewsDocument,
+      AllNewsDocumentData,
+      AllNewsDocumentDataSlicesSlice,
       FrontPageDocument,
       FrontPageDocumentData,
+      FrontPageDocumentDataServiceoverviewItem,
       FrontPageDocumentDataSlicesSlice,
       HeaderDocument,
       HeaderDocumentData,
@@ -678,6 +926,9 @@ declare module "@prismicio/client" {
       HeaderDocumentDataLinkGroup2Item,
       HeaderDocumentDataLinkGroup3Item,
       HeaderDocumentDataLinkGroup4Item,
+      NewsDocument,
+      NewsDocumentData,
+      NewsDocumentDataSlicesSlice,
       AllDocumentTypes,
       ServiceOverviewSlice,
       ServiceOverviewSliceDefaultPrimaryItemsItem,
