@@ -139,11 +139,11 @@ export default function NewsClient({ news }: { news: any }) {
                 key={`${i}${section.title}`}
               >
                 <Link className="group flex flex-col " href={`${item.url}`}>
-                  <div className="relative snap-center snap-mandatory overflow-hidden rounded-t-6 ">
+                  <div className="relative snap-center snap-mandatory overflow-hidden rounded-6 ">
                     <div className="relative pb-[60%] ">
                       <PrismicNextImage
                         field={section.image}
-                        className="object-cover z-0 rounded-t-6 group-hover:scale-105 transition-all duration-300 ease-in-out"
+                        className="object-cover z-0 rounded-6 group-hover:scale-105 transition-all duration-300 ease-in-out"
                         fill
                         alt={""}
                         sizes="(max-width: 768px) 80vw, 25vw"
