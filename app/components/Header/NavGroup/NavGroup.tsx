@@ -5,12 +5,10 @@ import { HeaderDocumentData } from "@/prismicio-types";
 import { FadeIn } from "../../FadeIn/fadeIn";
 import { KeyTextField, LinkField, ImageField } from "@prismicio/client";
 import { Dispatch, SetStateAction } from "react";
-import { PrismicNextImage } from "@prismicio/next";
 import styles from "../header.module.css";
-import ArrowRight from "../../../../public/icons/ArrowRight.svg";
-import Image from "next/image";
+
 import cx from "classnames";
-import useOnClickOutside from "@/app/utils/useOnClickOutside";
+import useOnClickOutside from "../../../utils/useOnClickOutside";
 import { BackGroundGreyContext } from "../../ContextProvider/Provider";
 interface navGroups {
   title: KeyTextField;
