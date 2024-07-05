@@ -10,7 +10,7 @@ const ServiceOverview = ({
   content: FrontPageDocumentData;
 }): JSX.Element => {
   return (
-    <Container className="bg-backgroundBlue text-white" lessPadding>
+    <Container className="bg-backgroundBlue text-white min-w-fill" lessPadding>
       <section className="flex flex-col gap-fluid-40 md:gap-fluid-72 overflow-hidden ">
         <FadeIn className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 grid-flow-row gap-fluid-24">
           {content.serviceoverview?.map((item, index) => {

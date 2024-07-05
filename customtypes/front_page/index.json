@@ -151,7 +151,7 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "service_overview": {
+            "about_us_overview": {
               "type": "SharedSlice"
             }
           }

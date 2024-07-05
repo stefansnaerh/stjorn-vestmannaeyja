@@ -126,7 +126,7 @@ export interface FrontPageDocumentDataServiceoverviewItem {
   link: prismic.LinkField;
 }
 
-type FrontPageDocumentDataSlicesSlice = ServiceOverviewSlice;
+type FrontPageDocumentDataSlicesSlice = AboutUsOverviewSlice;
 
 /**
  * Content for Forsíða documents
@@ -822,6 +822,81 @@ export type AllDocumentTypes =
   | NewsDocument;
 
 /**
+ * Primary content in *AboutUsOverview → Default → Primary*
+ */
+export interface AboutUsOverviewSliceDefaultPrimary {
+  /**
+   * image field in *AboutUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us_overview.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Title field in *AboutUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us_overview.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Paragraph field in *AboutUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us_overview.default.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField;
+
+  /**
+   * Link field in *AboutUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us_overview.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Default variation for AboutUsOverview Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutUsOverviewSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AboutUsOverviewSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *AboutUsOverview*
+ */
+type AboutUsOverviewSliceVariation = AboutUsOverviewSliceDefault;
+
+/**
+ * AboutUsOverview Shared Slice
+ *
+ * - **API ID**: `about_us_overview`
+ * - **Description**: AboutUsOverview
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AboutUsOverviewSlice = prismic.SharedSlice<
+  "about_us_overview",
+  AboutUsOverviewSliceVariation
+>;
+
+/**
  * Item in *ServiceOverview → Default → Primary → items*
  */
 export interface ServiceOverviewSliceDefaultPrimaryItemsItem {
@@ -930,6 +1005,10 @@ declare module "@prismicio/client" {
       NewsDocumentData,
       NewsDocumentDataSlicesSlice,
       AllDocumentTypes,
+      AboutUsOverviewSlice,
+      AboutUsOverviewSliceDefaultPrimary,
+      AboutUsOverviewSliceVariation,
+      AboutUsOverviewSliceDefault,
       ServiceOverviewSlice,
       ServiceOverviewSliceDefaultPrimaryItemsItem,
       ServiceOverviewSliceDefaultPrimary,
