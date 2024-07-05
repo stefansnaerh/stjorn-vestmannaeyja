@@ -1,7 +1,7 @@
 "use client";
 import { useRef, useContext, useState } from "react";
 import cx from "classnames";
-import useOnClickOutside from "@/app/utils/useOnClickOutside";
+import useOnClickOutside from "../../../utils/useOnClickOutside";
 import styles from "../header.module.css";
 import SearchButton from "../Search/searchButton";
 import { LanguageSwitcher } from "../../googleTranslate/langSwitcher";
