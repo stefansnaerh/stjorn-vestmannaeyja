@@ -76,7 +76,7 @@ export default function NewsClient({ news }: { news: any }) {
         <FadeIn className="xs:flex  gap-fluid-24 self-center hidden">
           <button
             onClick={() => scrollCarousel("left")}
-            className=" hover:bg-purple bg-pureWhite group shadow-none flex justify-center border-[1px] h-fluid-56 w-fluid-56 border-purple border-opacity-10 rounded-[50%] transition-all duration-150 ease-in-out"
+            className=" hover:bg-purple bg-pureWhite groupyarn shadow-none flex justify-center border-[1px] h-fluid-56 w-fluid-56 border-purple border-opacity-10 rounded-[50%] transition-all duration-150 ease-in-out"
           >
             <svg
               width="100%"
@@ -174,7 +174,7 @@ export default function NewsClient({ news }: { news: any }) {
           arrow
           noShadow
           aHref={"/frettir"}
-          className=" hover:bg-softBLue text-buttonBlue font-semiBold flex justify-center border-[2px]  border-buttonBlue [&_img]:filterButtonBlue rounded-32"
+          className=" hover:bg-softBLue text-buttonBlue font-semiBold flex justify-center border-[2px]  border-purple [&_img]:filterButtonBlue rounded-32"
           type="nextLink"
           text={"Sjá allar fréttir"}
         />
