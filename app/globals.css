@@ -118,9 +118,9 @@
     filter: invert(7%) sepia(15%) saturate(7266%) hue-rotate(223deg)
       brightness(97%) contrast(88%);
   }
-  .filterButtonBlue {
-    filter: invert(43%) sepia(67%) saturate(595%) hue-rotate(162deg)
-      brightness(88%) contrast(85%);
+  .filterBlue {
+    filter: invert(83%) sepia(10%) saturate(3270%) hue-rotate(147deg)
+      brightness(71%) contrast(89%);
   }
   .filterRed {
     filter: invert(27%) sepia(51%) saturate(3734%) hue-rotate(331deg)

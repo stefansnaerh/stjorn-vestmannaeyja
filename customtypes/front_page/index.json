@@ -151,6 +151,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "why_us_overview": {
+              "type": "SharedSlice"
+            },
+            "orlofshus_um_allt_land": {
+              "type": "SharedSlice"
+            },
             "about_us_overview": {
               "type": "SharedSlice"
             }

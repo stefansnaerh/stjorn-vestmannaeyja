@@ -126,7 +126,10 @@ export interface FrontPageDocumentDataServiceoverviewItem {
   link: prismic.LinkField;
 }
 
-type FrontPageDocumentDataSlicesSlice = AboutUsOverviewSlice;
+type FrontPageDocumentDataSlicesSlice =
+  | WhyUsOverviewSlice
+  | OrlofshusUmAlltLandSlice
+  | AboutUsOverviewSlice;
 
 /**
  * Content for Forsíða documents
@@ -897,6 +900,111 @@ export type AboutUsOverviewSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *OrlofshusUmAlltLand → Default → Primary*
+ */
+export interface OrlofshusUmAlltLandSliceDefaultPrimary {
+  /**
+   * Title field in *OrlofshusUmAlltLand → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: orlofshus_um_allt_land.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Paragraph field in *OrlofshusUmAlltLand → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: orlofshus_um_allt_land.default.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField;
+
+  /**
+   * Link field in *OrlofshusUmAlltLand → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: orlofshus_um_allt_land.default.primary.link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+
+  /**
+   * Link text field in *OrlofshusUmAlltLand → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: orlofshus_um_allt_land.default.primary.link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
+
+  /**
+   * image 1 small field in *OrlofshusUmAlltLand → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: orlofshus_um_allt_land.default.primary.image_1_small
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_1_small: prismic.ImageField<never>;
+
+  /**
+   * image 2 small field in *OrlofshusUmAlltLand → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: orlofshus_um_allt_land.default.primary.image_2_small
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_2_small: prismic.ImageField<never>;
+
+  /**
+   * Image big field in *OrlofshusUmAlltLand → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: orlofshus_um_allt_land.default.primary.image_big
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_big: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for OrlofshusUmAlltLand Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OrlofshusUmAlltLandSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<OrlofshusUmAlltLandSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *OrlofshusUmAlltLand*
+ */
+type OrlofshusUmAlltLandSliceVariation = OrlofshusUmAlltLandSliceDefault;
+
+/**
+ * OrlofshusUmAlltLand Shared Slice
+ *
+ * - **API ID**: `orlofshus_um_allt_land`
+ * - **Description**: OrlofshusUmAlltLand
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type OrlofshusUmAlltLandSlice = prismic.SharedSlice<
+  "orlofshus_um_allt_land",
+  OrlofshusUmAlltLandSliceVariation
+>;
+
+/**
  * Item in *ServiceOverview → Default → Primary → items*
  */
 export interface ServiceOverviewSliceDefaultPrimaryItemsItem {
@@ -978,6 +1086,98 @@ export type ServiceOverviewSlice = prismic.SharedSlice<
   ServiceOverviewSliceVariation
 >;
 
+/**
+ * Item in *WhyUsOverview → Default → Primary → title and text items*
+ */
+export interface WhyUsOverviewSliceDefaultPrimaryTitleAndTextItemsItem {
+  /**
+   * title field in *WhyUsOverview → Default → Primary → title and text items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_us_overview.default.primary.title_and_text_items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Paragraph field in *WhyUsOverview → Default → Primary → title and text items*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_us_overview.default.primary.title_and_text_items[].paragraph
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *WhyUsOverview → Default → Primary*
+ */
+export interface WhyUsOverviewSliceDefaultPrimary {
+  /**
+   * Members field in *WhyUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_us_overview.default.primary.members
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  members: prismic.KeyTextField;
+
+  /**
+   * Houses field in *WhyUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_us_overview.default.primary.houses
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  houses: prismic.KeyTextField;
+
+  /**
+   * title and text items field in *WhyUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_us_overview.default.primary.title_and_text_items[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  title_and_text_items: prismic.GroupField<
+    Simplify<WhyUsOverviewSliceDefaultPrimaryTitleAndTextItemsItem>
+  >;
+}
+
+/**
+ * Default variation for WhyUsOverview Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type WhyUsOverviewSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<WhyUsOverviewSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *WhyUsOverview*
+ */
+type WhyUsOverviewSliceVariation = WhyUsOverviewSliceDefault;
+
+/**
+ * WhyUsOverview Shared Slice
+ *
+ * - **API ID**: `why_us_overview`
+ * - **Description**: WhyUsOverview
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type WhyUsOverviewSlice = prismic.SharedSlice<
+  "why_us_overview",
+  WhyUsOverviewSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -1009,11 +1209,20 @@ declare module "@prismicio/client" {
       AboutUsOverviewSliceDefaultPrimary,
       AboutUsOverviewSliceVariation,
       AboutUsOverviewSliceDefault,
+      OrlofshusUmAlltLandSlice,
+      OrlofshusUmAlltLandSliceDefaultPrimary,
+      OrlofshusUmAlltLandSliceVariation,
+      OrlofshusUmAlltLandSliceDefault,
       ServiceOverviewSlice,
       ServiceOverviewSliceDefaultPrimaryItemsItem,
       ServiceOverviewSliceDefaultPrimary,
       ServiceOverviewSliceVariation,
       ServiceOverviewSliceDefault,
+      WhyUsOverviewSlice,
+      WhyUsOverviewSliceDefaultPrimaryTitleAndTextItemsItem,
+      WhyUsOverviewSliceDefaultPrimary,
+      WhyUsOverviewSliceVariation,
+      WhyUsOverviewSliceDefault,
     };
   }
 }

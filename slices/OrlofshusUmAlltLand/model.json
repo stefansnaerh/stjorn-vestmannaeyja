@@ -1,0 +1,72 @@
+{
+  "id": "orlofshus_um_allt_land",
+  "type": "SharedSlice",
+  "name": "OrlofshusUmAlltLand",
+  "description": "OrlofshusUmAlltLand",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "paragraph": {
+          "type": "Text",
+          "config": {
+            "label": "Paragraph",
+            "placeholder": ""
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Link text",
+            "placeholder": ""
+          }
+        },
+        "image_1_small": {
+          "type": "Image",
+          "config": {
+            "label": "image 1 small",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image_2_small": {
+          "type": "Image",
+          "config": {
+            "label": "image 2 small",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "image_big": {
+          "type": "Image",
+          "config": {
+            "label": "Image big",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"members": {
+				"__TYPE__": "FieldContent",
+				"value": "spin",
+				"type": "Text"
+			},
+			"houses": {
+				"__TYPE__": "FieldContent",
+				"value": "feed",
+				"type": "Text"
+			},
+			"title_and_text_items": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "nobody",
+									"type": "Text"
+								}
+							],
+							[
+								"paragraph",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Velit laboris sint ullamco officia reprehenderit non. Labore enim laborum anim occaecat dolor cupidatat."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

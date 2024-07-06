@@ -1,0 +1,58 @@
+{
+  "id": "why_us_overview",
+  "type": "SharedSlice",
+  "name": "WhyUsOverview",
+  "description": "WhyUsOverview",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "members": {
+          "type": "Text",
+          "config": {
+            "label": "Members",
+            "placeholder": ""
+          }
+        },
+        "houses": {
+          "type": "Text",
+          "config": {
+            "label": "Houses",
+            "placeholder": ""
+          }
+        },
+        "title_and_text_items": {
+          "type": "Group",
+          "config": {
+            "label": "title and text items",
+            "repeat": true,
+            "fields": {
+              "title": {
+                "type": "Text",
+                "config": {
+                  "label": "title",
+                  "placeholder": ""
+                }
+              },
+              "paragraph": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Paragraph",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,hyperlink"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
