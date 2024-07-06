@@ -127,6 +127,7 @@ export interface FrontPageDocumentDataServiceoverviewItem {
 }
 
 type FrontPageDocumentDataSlicesSlice =
+  | MemberQuoteSlice
   | WhyUsOverviewSlice
   | OrlofshusUmAlltLandSlice
   | AboutUsOverviewSlice;
@@ -900,6 +901,81 @@ export type AboutUsOverviewSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *MemberQuote → Default → Primary*
+ */
+export interface MemberQuoteSliceDefaultPrimary {
+  /**
+   * Paragraph field in *MemberQuote → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member_quote.default.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField;
+
+  /**
+   * Image field in *MemberQuote → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member_quote.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Name field in *MemberQuote → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member_quote.default.primary.name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  name: prismic.KeyTextField;
+
+  /**
+   * Job title field in *MemberQuote → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: member_quote.default.primary.job_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  job_title: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for MemberQuote Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MemberQuoteSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<MemberQuoteSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *MemberQuote*
+ */
+type MemberQuoteSliceVariation = MemberQuoteSliceDefault;
+
+/**
+ * MemberQuote Shared Slice
+ *
+ * - **API ID**: `member_quote`
+ * - **Description**: MemberQuote
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type MemberQuoteSlice = prismic.SharedSlice<
+  "member_quote",
+  MemberQuoteSliceVariation
+>;
+
+/**
  * Primary content in *OrlofshusUmAlltLand → Default → Primary*
  */
 export interface OrlofshusUmAlltLandSliceDefaultPrimary {
@@ -1209,6 +1285,10 @@ declare module "@prismicio/client" {
       AboutUsOverviewSliceDefaultPrimary,
       AboutUsOverviewSliceVariation,
       AboutUsOverviewSliceDefault,
+      MemberQuoteSlice,
+      MemberQuoteSliceDefaultPrimary,
+      MemberQuoteSliceVariation,
+      MemberQuoteSliceDefault,
       OrlofshusUmAlltLandSlice,
       OrlofshusUmAlltLandSliceDefaultPrimary,
       OrlofshusUmAlltLandSliceVariation,

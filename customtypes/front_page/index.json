@@ -151,6 +151,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "member_quote": {
+              "type": "SharedSlice"
+            },
             "why_us_overview": {
               "type": "SharedSlice"
             },

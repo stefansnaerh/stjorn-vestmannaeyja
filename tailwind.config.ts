@@ -215,6 +215,7 @@ const config: Config = {
         button: " 0px 4px 4px 0px rgba(0, 0, 0, 0.20)",
         nav: "0px 4px 4px 0px rgba(0, 0, 0, 0.10)",
         header: " 0px 4px 4px 0px rgba(0, 0, 0, 0.25)",
+        quote: " 4px 14px 4px 4px rgba(0, 0, 0, 0.006)",
       },
     },
   },
