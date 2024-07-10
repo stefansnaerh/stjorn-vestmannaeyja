@@ -1,0 +1,56 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "happen",
+				"type": "Text"
+			},
+			"board_members": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"member_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "change",
+									"type": "Text"
+								}
+							],
+							[
+								"member_job",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "busy",
+									"type": "Text"
+								}
+							],
+							[
+								"email",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "realize",
+									"type": "Text"
+								}
+							],
+							[
+								"phone_number",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "guide",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

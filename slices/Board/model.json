@@ -1,0 +1,63 @@
+{
+  "id": "board",
+  "type": "SharedSlice",
+  "name": "Board",
+  "description": "Board",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "board_members": {
+          "type": "Group",
+          "config": {
+            "label": "Board members",
+            "repeat": true,
+            "fields": {
+              "member_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Member name",
+                  "placeholder": ""
+                }
+              },
+              "member_job": {
+                "type": "Text",
+                "config": {
+                  "label": "Member job",
+                  "placeholder": ""
+                }
+              },
+              "email": {
+                "type": "Text",
+                "config": {
+                  "label": "Email",
+                  "placeholder": ""
+                }
+              },
+              "phone_number": {
+                "type": "Text",
+                "config": {
+                  "label": "Phone number",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
