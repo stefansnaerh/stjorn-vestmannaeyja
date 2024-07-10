@@ -7,7 +7,7 @@ export default function NewsClientNoScroll({ news }: { news: any }) {
   return (
     <div className=" pt-fluid-48 flex-col gap-fluid-48 sm:gap-fluid-72  overflow-hidden ">
       <div className="max-w-fill">
-        <div className="flex flex-wrap gap-fluid-56 w-fill ">
+        <div className="grid grid-flow-row sm:grid-cols-2 md:grid-cols-3 gap-fluid-32 md:gap-fluid-40">
           {news.map((item: any, i: number) => {
             function formatDate(dateString: string): string {
               const options: Intl.DateTimeFormatOptions = {
@@ -23,16 +23,13 @@ export default function NewsClientNoScroll({ news }: { news: any }) {
             const formattedDate = formatDate(`${section.date}`);
 
             return (
-              <FadeIn
-                className="w-fill  xs:max-w-[45%] xs:min-w-[45%] md:min-w-[21%] md:max-w-[21%] xl:max-w-[22%] xl:min-w-[22%] snap-x snap-mandatory snap-always snap-center "
+              <div
+                className=" bg-pureWhite border-b-[1px] border-l-[1px] border-r-[1px] rounded-b-8 border-greyInput border-opacity-20"
                 key={`${i}${section.title}`}
               >
-                <Link
-                  className="group flex flex-col gap-fluid-16"
-                  href={`${item.url}`}
-                >
+                <Link className="group flex flex-col " href={`${item.url}`}>
                   <div className="relative snap-center snap-mandatory overflow-hidden rounded-6 ">
-                    <div className="relative pb-[120%] ">
+                    <div className="relative pb-[60%] ">
                       <PrismicNextImage
                         field={section.image}
                         className="object-cover z-0 rounded-6 group-hover:scale-105 transition-all duration-300 ease-in-out"
@@ -41,21 +38,22 @@ export default function NewsClientNoScroll({ news }: { news: any }) {
                         sizes="(max-width: 768px) 80vw, 25vw"
                       />
                     </div>
+                    <div className="absolute bottom-0 px-fluid-8 bg-backgroundBlue rounded-6 py-fluid-8">
+                      <p
+                        suppressHydrationWarning
+                        className="font-body text-sm text-pureWhite"
+                      >
+                        {formattedDate}
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex flex-col gap-6 ">
-                    <p
-                      suppressHydrationWarning
-                      className="font-body text-sm text-bodyGrey"
-                    >
-                      {formattedDate}
-                    </p>
-
-                    <h2 className="font-body font-semiBold text-headlineBlue text-navLinksMobile group-hover:text-buttonBlue transition-all duration-300 ease-in-out">
+                  <div className="flex flex-col gap-6  py-fluid-32 px-fluid-18">
+                    <h2 className="font-body font-semiBold text-headlineBlue text-navLinksMobile group-hover:text-purple transition-all duration-300 ease-in-out">
                       {section.title}
                     </h2>
                   </div>
                 </Link>
-              </FadeIn>
+              </div>
             );
           })}
         </div>

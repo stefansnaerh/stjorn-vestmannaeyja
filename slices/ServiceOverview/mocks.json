@@ -38,6 +38,16 @@
 						]
 					}
 				]
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "mean",
+				"type": "Text"
+			},
+			"sub_title": {
+				"__TYPE__": "FieldContent",
+				"value": "graph",
+				"type": "Text"
 			}
 		},
 		"items": []

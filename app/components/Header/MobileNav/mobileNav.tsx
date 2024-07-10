@@ -47,7 +47,7 @@ export default function MobileNav({
       >
         <div
           className={cx(
-            "bg-headlineBlue h-[3px] w-fill rounded-12  transform transition duration-500 ease-in-out ",
+            "bg-headlineColor h-[3px] w-fill rounded-12  transform transition duration-500 ease-in-out ",
             {
               ["rotate-45 translate-y-[13.6px]"]: showMobileNav,
               [""]: !showMobileNav,
@@ -56,7 +56,7 @@ export default function MobileNav({
         ></div>
         <div
           className={cx(
-            "bg-headlineBlue h-[3px] w-fill rounded-12  transform transition duration-500 ease-in-out ",
+            "bg-headlineColor h-[3px] w-fill rounded-12  transform transition duration-500 ease-in-out ",
             {
               ["opacity-0"]: showMobileNav,
             }
@@ -64,7 +64,7 @@ export default function MobileNav({
         ></div>
         <div
           className={cx(
-            "bg-headlineBlue h-[3px] w-fill rounded-12  transform transition duration-500 ease-in-out ",
+            "bg-headlineColor h-[3px] w-fill rounded-12  transform transition duration-500 ease-in-out ",
             {
               ["-rotate-45 -translate-y-[13.6px]"]: showMobileNav,
               [""]: !showMobileNav,
@@ -85,34 +85,31 @@ export default function MobileNav({
           navGroupCurrentIndex={navGroupCurrentIndex}
           setNavGroupCurrentIndex={setNavGroupCurrentIndex}
         />
-        <FadeInSide delay={0.5}>
-          <PrismicNextLink
-            className="flex group gap-6 pb-2 text-navLinksMobile transition-all duration-300 ease-in-out"
-            field={content.link_5}
-            onClick={handleNavClick}
-          >
-            {content.link_5_name}
-          </PrismicNextLink>
-        </FadeInSide>
-        <FadeInSide delay={0.6}>
-          <PrismicNextLink
-            className="flex group gap-6 pb-2 text-navLinksMobile transition-all duration-300 ease-in-out"
-            field={content.link_6}
-            onClick={handleNavClick}
-          >
-            {content.link_6_name}
-          </PrismicNextLink>
-        </FadeInSide>
-        <FadeInSide delay={0.7}>
-          <Button
-            onClick={handleNavClick}
-            text={"Sækja um aðild"}
-            aHref={"/saekja-um-adild"}
-            ariaLabel={`Hlekkur til þess að sækja um aðild að STF`}
-            type="nextLink"
-            className="text-white rounded-8  bg-buttonBlue text-navLinksMobile  transition-all duration-300 ease-in-out"
-          />
-        </FadeInSide>
+
+        <PrismicNextLink
+          className="flex group gap-6 pb-2 text-navLinksMobile transition-all duration-300 ease-in-out"
+          field={content.link_5}
+          onClick={handleNavClick}
+        >
+          {content.link_5_name}
+        </PrismicNextLink>
+
+        <PrismicNextLink
+          className="flex group gap-6 pb-2 text-navLinksMobile transition-all duration-300 ease-in-out"
+          field={content.link_6}
+          onClick={handleNavClick}
+        >
+          {content.link_6_name}
+        </PrismicNextLink>
+
+        <Button
+          onClick={handleNavClick}
+          text={"Sækja um aðild"}
+          aHref={"/saekja-um-adild"}
+          ariaLabel={`Hlekkur til þess að sækja um aðild að STF`}
+          type="nextLink"
+          className="text-white rounded-8  bg-backgroundBlue hover:bg-buttonBlue  text-navLinksMobile  transition-all duration-300 ease-in-out"
+        />
       </nav>
     </>
   );

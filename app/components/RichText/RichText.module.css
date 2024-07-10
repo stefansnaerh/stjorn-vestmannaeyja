@@ -1,0 +1,67 @@
+.xsm p,
+.xsm a,
+.xsm li {
+  @apply text-xsm;
+}
+
+.sm p,
+.sm a,
+.sm li {
+  @apply text-sm;
+}
+
+.base p,
+.base a,
+.base li {
+  @apply text-m;
+}
+
+.ml p,
+.ml a,
+.ml li {
+  @apply text-ml;
+}
+
+.lg p,
+.lg a,
+.lg li {
+  @apply text-lg;
+}
+
+.xl p,
+.xl a,
+.xl li {
+  @apply text-xl;
+}
+
+.richtext {
+  @apply pt-8;
+}
+
+.richtext ul {
+  @apply pb-24 pl-24 pt-16;
+}
+
+.richtext li {
+  @apply relative pt-8 leading-138;
+}
+
+.richtext ul li::before {
+  @apply absolute -left-24 top-18 inline-block h-6 w-6 rounded-full content-[''];
+}
+
+.richtext ol {
+  @apply list-decimal pb-24 pl-[37px] pt-16;
+}
+
+.richtext ol li::marker {
+  @apply font-semibold;
+}
+
+.richtext img {
+  @apply max-h-[470px] w-fill rounded-16;
+}
+
+.richtext h2 {
+  @apply leading-108;
+}

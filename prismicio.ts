@@ -19,6 +19,18 @@ const routes: prismic.ClientConfig["routes"] = [
     type: "front_page",
     path: "/",
   },
+  {
+    type: "about_us",
+    path: "/um-okkur",
+  },
+  {
+    type: "all_news",
+    path: "/frettir",
+  },
+  {
+    type: "news",
+    path: "/frettir/:uid",
+  },
 ];
 
 /**

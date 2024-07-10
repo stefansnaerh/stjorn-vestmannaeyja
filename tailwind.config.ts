@@ -19,7 +19,7 @@ const config: Config = {
       backgroundGrey: "#FAFAFA",
       backgroundBlue: "#233D4D",
       backgroundLightBlue: "#F5F8FA",
-      headlineColor: "#331E30",
+      headlineColor: "#1B2E3A",
       bodyGrey: "#3F3F3F",
       greyInput: "#bababa",
       greyLight: "#fafafa",

@@ -4,6 +4,104 @@ import type * as prismic from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+type AboutUsDocumentDataSlicesSlice = MemberQuoteSlice | ServiceOverviewSlice;
+
+/**
+ * Content for Um okkur documents
+ */
+interface AboutUsDocumentData {
+  /**
+   * Title field in *Um okkur*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Paragraph field in *Um okkur*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.paragraph
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField;
+
+  /**
+   * Image field in *Um okkur*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Slice Zone field in *Um okkur*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<AboutUsDocumentDataSlicesSlice> /**
+   * Meta Title field in *Um okkur*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: about_us.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Um okkur*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: about_us.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Um okkur*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Um okkur document from Prismic
+ *
+ * - **API ID**: `about_us`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AboutUsDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<AboutUsDocumentData>,
+    "about_us",
+    Lang
+  >;
+
 type AllNewsDocumentDataSlicesSlice = never;
 
 /**
@@ -390,12 +488,12 @@ export interface HeaderDocumentDataLinkGroup1Item {
   /**
    * Link field in *Header → Link group 1*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: header.link_group_1[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  link: prismic.LinkToMediaField;
+  link: prismic.LinkField;
 }
 
 /**
@@ -415,12 +513,12 @@ export interface HeaderDocumentDataLinkGroup2Item {
   /**
    * Link field in *Header → Link group 2*
    *
-   * - **Field Type**: Link to Media
+   * - **Field Type**: Link
    * - **Placeholder**: *None*
    * - **API ID Path**: header.link_group_2[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  link: prismic.LinkToMediaField;
+  link: prismic.LinkField;
 }
 
 /**
@@ -511,6 +609,28 @@ interface HeaderDocumentData {
   link_group_1_paragraph: prismic.KeyTextField;
 
   /**
+   * Link group 1 image 1 field in *Header*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.link_group_1_image_1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  link_group_1_image_1: prismic.ImageField<never>;
+
+  /**
+   * Link group 1 image 2 field in *Header*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.link_group_1_image_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  link_group_1_image_2: prismic.ImageField<never>;
+
+  /**
    * Link group 1 field in *Header*
    *
    * - **Field Type**: Group
@@ -553,6 +673,28 @@ interface HeaderDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   link_group_2_paragraph: prismic.KeyTextField;
+
+  /**
+   * Link group 2 image 1 field in *Header*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.link_group_2_image_1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  link_group_2_image_1: prismic.ImageField<never>;
+
+  /**
+   * Link group 2 image 2 field in *Header*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.link_group_2_image_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  link_group_2_image_2: prismic.ImageField<never>;
 
   /**
    * Link group 2 field in *Header*
@@ -599,6 +741,28 @@ interface HeaderDocumentData {
   link_group_3_paragraph: prismic.KeyTextField;
 
   /**
+   * Link group 3 image 1 field in *Header*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.link_group_3_image_1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  link_group_3_image_1: prismic.ImageField<never>;
+
+  /**
+   * Link group 3 image 2 field in *Header*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.link_group_3_image_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  link_group_3_image_2: prismic.ImageField<never>;
+
+  /**
    * Link group 3 field in *Header*
    *
    * - **Field Type**: Group
@@ -641,6 +805,28 @@ interface HeaderDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   link_group_4_paragraph: prismic.KeyTextField;
+
+  /**
+   * Link group 4 image 1 field in *Header*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.link_group_4_image_1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  link_group_4_image_1: prismic.ImageField<never>;
+
+  /**
+   * Link group 4 image 2 field in *Header*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.link_group_4_image_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  link_group_4_image_2: prismic.ImageField<never>;
 
   /**
    * Link group 4 field in *Header*
@@ -820,6 +1006,7 @@ export type NewsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<NewsDocumentData>, "news", Lang>;
 
 export type AllDocumentTypes =
+  | AboutUsDocument
   | AllNewsDocument
   | FrontPageDocument
   | HeaderDocument
@@ -1120,6 +1307,26 @@ export interface ServiceOverviewSliceDefaultPrimaryItemsItem {
  */
 export interface ServiceOverviewSliceDefaultPrimary {
   /**
+   * Title field in *ServiceOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Sub title field in *ServiceOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.default.primary.sub_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_title: prismic.KeyTextField;
+
+  /**
    * items field in *ServiceOverview → Default → Primary*
    *
    * - **Field Type**: Group
@@ -1264,6 +1471,9 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
+      AboutUsDocument,
+      AboutUsDocumentData,
+      AboutUsDocumentDataSlicesSlice,
       AllNewsDocument,
       AllNewsDocumentData,
       AllNewsDocumentDataSlicesSlice,

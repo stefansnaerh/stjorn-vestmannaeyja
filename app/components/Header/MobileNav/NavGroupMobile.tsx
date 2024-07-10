@@ -68,20 +68,19 @@ export default function NavGroupMobile({
         const navGroupTitleDelay = i / 10;
         return (
           <div key={i} className="flex w-fill  text-headlineBlue self-start ">
-            <FadeInSide delay={navGroupTitleDelay} className="group w-fill">
-              <button
-                aria-label={`Takki til að sjá hlekki fyrir ${group.title}`}
-                className="flex min-w-fill justify-between  group  pb-2 text-navLinksMobile transition-all duration-300 ease-in-out "
-                onClick={() => showNavGroup(i)}
-              >
-                <span> {group.title}</span>
-                <Image
-                  alt="ör til hægri"
-                  className="self-center filterHeadlineBlue transition-all  filter  duration-150 ease-in-out"
-                  src={ArrowRight}
-                />
-              </button>
-            </FadeInSide>
+            <button
+              aria-label={`Takki til að sjá hlekki fyrir ${group.title}`}
+              className="flex min-w-fill justify-between  group  pb-2 text-navLinksMobile transition-all duration-300 ease-in-out "
+              onClick={() => showNavGroup(i)}
+            >
+              <span> {group.title}</span>
+              <Image
+                alt="ör til hægri"
+                className="self-center filterHeadlineBlue transition-all  filter  duration-150 ease-in-out"
+                src={ArrowRight}
+              />
+            </button>
+
             <div
               className={cx(
                 " md:hidden absolute top-20 px-fluid-40 py-fluid-56 xs:py-fluid-72 xs:px-fluid-56  overflow-hidden z-20 flex flex-col  bg-backgroundGrey overflow-y-auto h-fill min-h-[100vh] w-fill transform duration-500 ease-in-out",
@@ -118,19 +117,14 @@ export default function NavGroupMobile({
                         className="min-w-fit group whitespace-nowrap flex gap-12"
                         key={i}
                       >
-                        <FadeInSide
-                          delay={navGroupItemDelay}
-                          key={`${i}${el.link_text}`}
+                        <PrismicNextLink
+                          aria-label={`Hlekkur á ${el.link_text}`}
+                          field={el.link}
+                          onClick={toggleShowNav}
+                          className=" transition-all  text-navLinksMobile group-hover:text-orange duration-300 w-fit ease-in-out "
                         >
-                          <PrismicNextLink
-                            aria-label={`Hlekkur á ${el.link_text}`}
-                            field={el.link}
-                            onClick={toggleShowNav}
-                            className=" transition-all  text-navLinksMobile group-hover:text-orange duration-300 w-fit ease-in-out "
-                          >
-                            {el.link_text}
-                          </PrismicNextLink>
-                        </FadeInSide>
+                          {el.link_text}
+                        </PrismicNextLink>
                       </li>
                     );
                   }

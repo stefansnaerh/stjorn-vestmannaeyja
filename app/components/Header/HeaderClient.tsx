@@ -163,7 +163,7 @@ export default function HeaderClient({
             ariaLabel={`Hlekkur til að hafa samband`}
             onClick={handleNavClick}
             type="nextLink"
-            className="text-fontBlue rounded-8   bg-backgroundBlue hover:bg-buttonBlueHover text-navLinks  transition-all duration-300 ease-in-out"
+            className="text-fontBlue rounded-8   bg-backgroundBlue hover:bg-buttonBlue text-navLinks  transition-all duration-300 ease-in-out"
           />
         </div>
       </nav>

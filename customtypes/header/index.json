@@ -27,6 +27,22 @@
           "placeholder": ""
         }
       },
+      "link_group_1_image_1": {
+        "type": "Image",
+        "config": {
+          "label": "Link group 1 image 1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "link_group_1_image_2": {
+        "type": "Image",
+        "config": {
+          "label": "Link group 1 image 2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "link_group_1": {
         "type": "Group",
         "config": {
@@ -45,7 +61,7 @@
               "config": {
                 "label": "Link",
                 "placeholder": "",
-                "select": "media"
+                "select": null
               }
             }
           }
@@ -72,6 +88,22 @@
           "placeholder": ""
         }
       },
+      "link_group_2_image_1": {
+        "type": "Image",
+        "config": {
+          "label": "Link group 2 image 1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "link_group_2_image_2": {
+        "type": "Image",
+        "config": {
+          "label": "Link group 2 image 2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "link_group_2": {
         "type": "Group",
         "config": {
@@ -90,7 +122,7 @@
               "config": {
                 "label": "Link",
                 "placeholder": "",
-                "select": "media"
+                "select": null
               }
             }
           }
@@ -115,6 +147,22 @@
         "config": {
           "label": "Link group 3 paragraph",
           "placeholder": ""
+        }
+      },
+      "link_group_3_image_1": {
+        "type": "Image",
+        "config": {
+          "label": "Link group 3 image 1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "link_group_3_image_2": {
+        "type": "Image",
+        "config": {
+          "label": "Link group 3 image 2",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "link_group_3": {
@@ -160,6 +208,22 @@
         "config": {
           "label": "Link group 4 paragraph",
           "placeholder": ""
+        }
+      },
+      "link_group_4_image_1": {
+        "type": "Image",
+        "config": {
+          "label": "Link group 4 image 1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "link_group_4_image_2": {
+        "type": "Image",
+        "config": {
+          "label": "Link group 4 image 2",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "link_group_4": {

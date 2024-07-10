@@ -1,25 +1,11 @@
 {
   "format": "page",
-  "id": "news",
-  "label": "Frétt",
-  "repeatable": true,
+  "id": "about_us",
+  "label": "Um okkur",
+  "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "uid": {
-        "config": {
-          "label": "UID"
-        },
-        "type": "UID"
-      },
-      "image": {
-        "type": "Image",
-        "config": {
-          "label": "Image",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
       "title": {
         "type": "Text",
         "config": {
@@ -33,21 +19,29 @@
           "label": "Paragraph",
           "placeholder": "",
           "allowTargetBlank": true,
-          "multi": "paragraph,heading2,heading3,strong,hyperlink,list-item,o-list-item,image"
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
         }
       },
-      "date": {
-        "type": "Date",
+      "image": {
+        "type": "Image",
         "config": {
-          "label": "Date",
-          "placeholder": ""
+          "label": "Image",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
-          "choices": {}
+          "choices": {
+            "member_quote": {
+              "type": "SharedSlice"
+            },
+            "service_overview": {
+              "type": "SharedSlice"
+            }
+          }
         }
       }
     },
