@@ -1008,12 +1008,100 @@ interface NewsDocumentData {
 export type NewsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<NewsDocumentData>, "news", Lang>;
 
+type UmOkkurTextasidaDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Um okkur textasíða documents
+ */
+interface UmOkkurTextasidaDocumentData {
+  /**
+   * Title field in *Um okkur textasíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: um_okkur_textasida.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Paragraph field in *Um okkur textasíða*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: um_okkur_textasida.paragraph
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField;
+
+  /**
+   * Slice Zone field in *Um okkur textasíða*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: um_okkur_textasida.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<UmOkkurTextasidaDocumentDataSlicesSlice> /**
+   * Meta Title field in *Um okkur textasíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: um_okkur_textasida.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Um okkur textasíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: um_okkur_textasida.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Um okkur textasíða*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: um_okkur_textasida.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Um okkur textasíða document from Prismic
+ *
+ * - **API ID**: `um_okkur_textasida`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type UmOkkurTextasidaDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<UmOkkurTextasidaDocumentData>,
+    "um_okkur_textasida",
+    Lang
+  >;
+
 export type AllDocumentTypes =
   | AboutUsDocument
   | AllNewsDocument
   | FrontPageDocument
   | HeaderDocument
-  | NewsDocument;
+  | NewsDocument
+  | UmOkkurTextasidaDocument;
 
 /**
  * Primary content in *AboutUsOverview → Default → Primary*
@@ -1592,6 +1680,9 @@ declare module "@prismicio/client" {
       NewsDocument,
       NewsDocumentData,
       NewsDocumentDataSlicesSlice,
+      UmOkkurTextasidaDocument,
+      UmOkkurTextasidaDocumentData,
+      UmOkkurTextasidaDocumentDataSlicesSlice,
       AllDocumentTypes,
       AboutUsOverviewSlice,
       AboutUsOverviewSliceDefaultPrimary,
