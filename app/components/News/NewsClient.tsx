@@ -69,7 +69,7 @@ export default function NewsClient({ news }: { news: any }) {
         <div className="w-fill flex flex-col gap-fluid-18">
           <FadeIn className="self-start">
             <h2 className="font-headline text-h2 font-semiBold text-headlineColor">
-              Fréttir
+              Fréttir og tilkynningar
             </h2>
           </FadeIn>
         </div>
