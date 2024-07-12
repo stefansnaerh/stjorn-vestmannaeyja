@@ -119,7 +119,7 @@ export default function NavGroup({
                   "flex group gap-6 pb-2 text-navLinks transition-all duration-300 ease-in-out ",
                   {
                     ["text-purple"]: currentIndex === i,
-                    ["text-headlineBlue"]: currentIndex !== i,
+                    ["text-headlineColor"]: currentIndex !== i,
                   }
                 )}
                 onClick={() => showNavGroup(i)}

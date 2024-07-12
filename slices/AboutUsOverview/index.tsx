@@ -20,6 +20,7 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="flex justify-center"
     >
       <Container className="bg-backgroundGrey">
         <section className="relative text-black  flex flex-col gap-fluid-40  w-fill  ">

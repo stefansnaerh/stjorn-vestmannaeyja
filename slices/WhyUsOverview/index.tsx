@@ -24,12 +24,12 @@ const WhyUsOverview = ({ slice }: WhyUsOverviewProps): JSX.Element => {
   const yearsActive = currentYear - startYear;
 
   return (
-    <Container lessPadding>
-      <section
-        className=" flex flex-col gap-fluid-56 w-fill"
-        data-slice-type={slice.slice_type}
-        data-slice-variation={slice.variation}
-      >
+    <section
+      className="flex justify-center"
+      data-slice-type={slice.slice_type}
+      data-slice-variation={slice.variation}
+    >
+      <Container className=" flex flex-col gap-fluid-56 w-fill" lessPadding>
         <FadeIn className="self-center gap-fluid-32 hidden sm:flex md:gap-fluid-96  w-fit rounded-12 justify-center  ">
           <FadeIn className="flex gap-fluid-16  border-[1px] border-greyInput border-opacity-20 bg-pureWhite rounded-8 py-fluid-32 px-[10%]">
             <div className="flex self-center bg-greyLight py-fluid-12 px-fluid-12  w-fluid-56 h-fluid-56 xs:h-fluid-72 xs:w-fluid-72 rounded-[50%]">
@@ -180,8 +180,8 @@ const WhyUsOverview = ({ slice }: WhyUsOverviewProps): JSX.Element => {
             );
           })}
         </div>
-      </section>
-    </Container>
+      </Container>
+    </section>
   );
 };
 

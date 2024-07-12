@@ -19,6 +19,7 @@ const MemberQuote = ({ slice }: MemberQuoteProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="flex justify-center"
     >
       <Container lessPadding className="flex justify-center">
         <FadeIn className="flex bg-pureWhite sm:bg-transparent flex-col gap-fluid-32 pb-fluid-40 sm:pb-0 lg:gap-fluid-48 max-w-[1200px]">
@@ -30,7 +31,7 @@ const MemberQuote = ({ slice }: MemberQuoteProps): JSX.Element => {
             />
 
             <FadeIn className="flex w-fit justify-center">
-              <p className="font-body  self-center text-center w-[80%] text-md font-regular text-headlineBlue">
+              <p className="font-body  self-center text-center w-[80%] text-md font-regular text-headlineColor">
                 <span className="font-bold">„</span>
                 {section.paragraph} “
               </p>
@@ -54,7 +55,7 @@ const MemberQuote = ({ slice }: MemberQuoteProps): JSX.Element => {
             </div>
             <div className="flex flex-col gap-4 row-start-3 w-fill ">
               <FadeIn className="w-fit self-center">
-                <p className="font-headline text-headlineBlue font-semiBold text-navLinksMobile">
+                <p className="font-headline text-headlineColor font-semiBold text-navLinksMobile">
                   {section.name}
                 </p>
               </FadeIn>

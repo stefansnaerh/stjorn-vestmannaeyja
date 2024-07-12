@@ -21,7 +21,7 @@ export default async function AboutUs() {
   const section = page.data;
   return (
     <section className="flex flex-col justify-center">
-      <div className=" pt-fluid-40 smmd:pt-fluid-64  pb-64 px-container-88 self-center flex flex-col gap-fluid-56 smmd:w-[95%] lg2:w-[90%] ">
+      <div className=" pt-fluid-40 smmd:pt-fluid-64  pb-64 px-container-88 self-center flex flex-col gap-fluid-56 smmd:w-[95%] lg2:w-[90%] max-w-[2000px]">
         <FadeIn className="flex  font-body text-sm ">
           <Link className="text-bodyGrey" href={"/"}>
             Heim

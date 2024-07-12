@@ -159,7 +159,7 @@ export default function NewsClient({ news }: { news: any }) {
                     </div>
                   </div>
                   <div className="flex flex-col gap-6  py-fluid-32 px-fluid-18">
-                    <h2 className="font-body font-semiBold text-headlineBlue text-navLinksMobile group-hover:text-purple transition-all duration-300 ease-in-out">
+                    <h2 className="font-body font-semiBold text-headlineColor text-navLinksMobile group-hover:text-purple transition-all duration-300 ease-in-out">
                       {section.title}
                     </h2>
                   </div>

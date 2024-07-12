@@ -10,9 +10,7 @@ export default function Main({
     BackGroundGreyContext
   );
   return (
-    <main
-      className={`${greyBackground} self-center max-w-[2000px] pt-80 xs:pt-[90px] w-fill`}
-    >
+    <main className={`${greyBackground} self-center pt-80 xs:pt-[90px] w-fill`}>
       {children}
     </main>
   );

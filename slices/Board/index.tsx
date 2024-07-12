@@ -18,6 +18,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="flex justify-center"
     >
       <Container className="">
         <section className="flex flex-col w-fill  gap-fluid-56 md:gap-fluid-96">

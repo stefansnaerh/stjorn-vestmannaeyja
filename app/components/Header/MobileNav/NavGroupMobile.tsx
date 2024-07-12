@@ -67,7 +67,7 @@ export default function NavGroupMobile({
       {headerNavGroups?.map((group, i) => {
         const navGroupTitleDelay = i / 10;
         return (
-          <div key={i} className="flex w-fill  text-headlineBlue self-start ">
+          <div key={i} className="flex w-fill  text-headlineColor self-start ">
             <button
               aria-label={`Takki til að sjá hlekki fyrir ${group.title}`}
               className="flex min-w-fill justify-between  group  pb-2 text-navLinksMobile transition-all duration-300 ease-in-out "
@@ -76,7 +76,7 @@ export default function NavGroupMobile({
               <span> {group.title}</span>
               <Image
                 alt="ör til hægri"
-                className="self-center filterHeadlineBlue transition-all  filter  duration-150 ease-in-out"
+                className="self-center filterHeadlineColor transition-all  filter  duration-150 ease-in-out"
                 src={ArrowRight}
               />
             </button>

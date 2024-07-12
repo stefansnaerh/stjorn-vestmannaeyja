@@ -1008,6 +1008,93 @@ interface NewsDocumentData {
 export type NewsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<NewsDocumentData>, "news", Lang>;
 
+type OrlofshusDocumentDataSlicesSlice = AllHousesSlice | TextOnlySlice;
+
+/**
+ * Content for Orlofshús yfirlit documents
+ */
+interface OrlofshusDocumentData {
+  /**
+   * Hero image field in *Orlofshús yfirlit*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: orlofshus.hero_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  hero_image: prismic.ImageField<never>;
+
+  /**
+   * Hero title field in *Orlofshús yfirlit*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: orlofshus.hero_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_title: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *Orlofshús yfirlit*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: orlofshus.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<OrlofshusDocumentDataSlicesSlice> /**
+   * Meta Title field in *Orlofshús yfirlit*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: orlofshus.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Orlofshús yfirlit*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: orlofshus.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Orlofshús yfirlit*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: orlofshus.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Orlofshús yfirlit document from Prismic
+ *
+ * - **API ID**: `orlofshus`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type OrlofshusDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<OrlofshusDocumentData>,
+    "orlofshus",
+    Lang
+  >;
+
 type UmOkkurTextasidaDocumentDataSlicesSlice = never;
 
 /**
@@ -1101,6 +1188,7 @@ export type AllDocumentTypes =
   | FrontPageDocument
   | HeaderDocument
   | NewsDocument
+  | OrlofshusDocument
   | UmOkkurTextasidaDocument;
 
 /**
@@ -1176,6 +1264,96 @@ type AboutUsOverviewSliceVariation = AboutUsOverviewSliceDefault;
 export type AboutUsOverviewSlice = prismic.SharedSlice<
   "about_us_overview",
   AboutUsOverviewSliceVariation
+>;
+
+/**
+ * Item in *AllHouses → Default → Primary → Houses*
+ */
+export interface AllHousesSliceDefaultPrimaryHousesItem {
+  /**
+   * House image field in *AllHouses → Default → Primary → Houses*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses.default.primary.houses[].house_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  house_image: prismic.ImageField<never>;
+
+  /**
+   * House address field in *AllHouses → Default → Primary → Houses*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses.default.primary.houses[].house_address
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  house_address: prismic.KeyTextField;
+
+  /**
+   * House link field in *AllHouses → Default → Primary → Houses*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses.default.primary.houses[].house_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  house_link: prismic.LinkField;
+}
+
+/**
+ * Primary content in *AllHouses → Default → Primary*
+ */
+export interface AllHousesSliceDefaultPrimary {
+  /**
+   * Title field in *AllHouses → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Houses field in *AllHouses → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses.default.primary.houses[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  houses: prismic.GroupField<Simplify<AllHousesSliceDefaultPrimaryHousesItem>>;
+}
+
+/**
+ * Default variation for AllHouses Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AllHousesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AllHousesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *AllHouses*
+ */
+type AllHousesSliceVariation = AllHousesSliceDefault;
+
+/**
+ * AllHouses Shared Slice
+ *
+ * - **API ID**: `all_houses`
+ * - **Description**: AllHouses
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AllHousesSlice = prismic.SharedSlice<
+  "all_houses",
+  AllHousesSliceVariation
 >;
 
 /**
@@ -1560,6 +1738,51 @@ export type ServiceOverviewSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *TextOnly → Default → Primary*
+ */
+export interface TextOnlySliceDefaultPrimary {
+  /**
+   * Paragraph field in *TextOnly → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_only.default.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField;
+}
+
+/**
+ * Default variation for TextOnly Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextOnlySliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TextOnlySliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *TextOnly*
+ */
+type TextOnlySliceVariation = TextOnlySliceDefault;
+
+/**
+ * TextOnly Shared Slice
+ *
+ * - **API ID**: `text_only`
+ * - **Description**: TextOnly
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextOnlySlice = prismic.SharedSlice<
+  "text_only",
+  TextOnlySliceVariation
+>;
+
+/**
  * Item in *WhyUsOverview → Default → Primary → title and text items*
  */
 export interface WhyUsOverviewSliceDefaultPrimaryTitleAndTextItemsItem {
@@ -1680,6 +1903,9 @@ declare module "@prismicio/client" {
       NewsDocument,
       NewsDocumentData,
       NewsDocumentDataSlicesSlice,
+      OrlofshusDocument,
+      OrlofshusDocumentData,
+      OrlofshusDocumentDataSlicesSlice,
       UmOkkurTextasidaDocument,
       UmOkkurTextasidaDocumentData,
       UmOkkurTextasidaDocumentDataSlicesSlice,
@@ -1688,6 +1914,11 @@ declare module "@prismicio/client" {
       AboutUsOverviewSliceDefaultPrimary,
       AboutUsOverviewSliceVariation,
       AboutUsOverviewSliceDefault,
+      AllHousesSlice,
+      AllHousesSliceDefaultPrimaryHousesItem,
+      AllHousesSliceDefaultPrimary,
+      AllHousesSliceVariation,
+      AllHousesSliceDefault,
       BoardSlice,
       BoardSliceDefaultPrimaryBoardMembersItem,
       BoardSliceDefaultPrimary,
@@ -1706,6 +1937,10 @@ declare module "@prismicio/client" {
       ServiceOverviewSliceDefaultPrimary,
       ServiceOverviewSliceVariation,
       ServiceOverviewSliceDefault,
+      TextOnlySlice,
+      TextOnlySliceDefaultPrimary,
+      TextOnlySliceVariation,
+      TextOnlySliceDefault,
       WhyUsOverviewSlice,
       WhyUsOverviewSliceDefaultPrimaryTitleAndTextItemsItem,
       WhyUsOverviewSliceDefaultPrimary,

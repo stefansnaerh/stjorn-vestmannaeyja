@@ -36,7 +36,7 @@ export default function SearchHits({
             onAuxClick={() => sendEvent("click", hit, "Hit Clicked")}
           >
             <div className="flex flex-col gap-fluid-12">
-              <h3 className="font-headline group-hover:text-buttonBlue w-fit text-headlineBlue text-h3 transition-all duration-300 ease-in-out">
+              <h3 className="font-headline group-hover:text-buttonBlue w-fit text-headlineColor text-h3 transition-all duration-300 ease-in-out">
                 {hit.title}
               </h3>
               <p className="font-body text-bodyGrey text-navLinks line-clamp-3">

@@ -19,7 +19,7 @@ export default function Footer() {
             />
           </Link>
           <div className="flex flex-col gap-fluid-12">
-            <h3 className="text-h3 font-semiBold font-headline text-headlineBlue">
+            <h3 className="text-h3 font-semiBold font-headline text-headlineColor">
               Félag stjórnenda
             </h3>
             <ul className="flex flex-col gap-fluid-8 font-body text-bodyGrey text-navLinks">

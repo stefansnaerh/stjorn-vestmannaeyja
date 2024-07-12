@@ -70,7 +70,7 @@ export default async function Service({ params }: { params: Params }) {
               {formatDate(section.date)}
             </p>
             <FadeIn>
-              <h1 className="font-headline  text-headlineBlue text-h2 font-semiBold">
+              <h1 className="font-headline  text-headlineColor text-h2 font-semiBold">
                 {section.title}
               </h1>
             </FadeIn>

@@ -27,7 +27,7 @@ export default function HeroImages({
             />
           </div>
         </div>
-        <div className="absolute sm:left-[5%] md:left-auto top-[5%] md:top-[20%] w-fill flex flex-col md:flex-row gap-fluid-72 md:gap-fluid-56 justify-around px-fluid-48">
+        <div className="absolute sm:left-[5%] md:left-auto top-[5%] md:top-[20%] w-fill flex flex-col md:flex-row gap-fluid-72 md:gap-fluid-56 justify-around px-fluid-48 xxxl:max-w-[2000px] xxxl:ml-auto xxxl:mr-auto xxxl:left-0 xxxl:right-0">
           <div className="mt-[5%]  flex flex-col gap-fluid-16">
             <FadeIn>
               <p className="font-body font-bold text-pureWhite text-md xs:text-h3">

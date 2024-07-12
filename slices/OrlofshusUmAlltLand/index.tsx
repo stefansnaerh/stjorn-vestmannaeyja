@@ -21,6 +21,7 @@ const OrlofshusUmAlltLand = ({
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
+      className="flex justify-center"
     >
       <Container className="bg-backgroundGrey">
         <section className="bg-purpleLight py-fluid-56 px-fluid-48 rounded-8 text-black flex flex-col md:flex-row justify-between">

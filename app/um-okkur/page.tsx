@@ -28,7 +28,7 @@ export default async function AboutUs() {
 
   return (
     <section className="flex flex-col justify-center">
-      <div className="lg:pb-fluid-122 pt-fluid-40 smmd:pt-fluid-64  pb-64 px-container-88 self-center flex flex-col gap-fluid-56 smmd:w-[95%] lg2:w-[90%]  ">
+      <div className="lg:pb-fluid-122 pt-fluid-40 smmd:pt-fluid-64 max-w-[2000px]  pb-64 px-container-88 self-center flex flex-col gap-fluid-56 smmd:w-[95%] lg2:w-[90%]  ">
         <FadeIn className="flex  font-body text-sm ">
           <Link className="text-bodyGrey" href={"/"}>
             Heim
@@ -38,7 +38,7 @@ export default async function AboutUs() {
             src={Chevron}
             className="h-fluid-16 rotate-90 self-center"
           />
-          <p className="text-sm text-headlineBlue font-semiBold">Um okkur</p>
+          <p className="text-sm text-headlineColor font-semiBold">Um okkur</p>
         </FadeIn>
         <FadeIn className=" flex flex-col gap-fluid-72 xxs:gap-fluid-96 smmd:flex-row-reverse smmd:justify-between">
           <FadeIn className="self-center relative min-w-[90%]  md:min-w-[35%] lg2:min-w-[40%]">

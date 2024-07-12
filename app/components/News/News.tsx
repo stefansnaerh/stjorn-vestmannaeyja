@@ -25,13 +25,13 @@ export default async function News({ type }: { type: "scroll" | "noScroll" }) {
   }
   if (type === "scroll") {
     return (
-      <section>
+      <section className="flex justify-center">
         <NewsClient news={news} />
       </section>
     );
   } else if (type === "noScroll") {
     return (
-      <section>
+      <section className="flex justify-center">
         <NewsClientNoScroll news={news} />
       </section>
     );
