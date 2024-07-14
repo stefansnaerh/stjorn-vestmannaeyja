@@ -21,7 +21,7 @@ const TextOnly = ({ slice }: TextOnlyProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <Container className="overflow-hidden">
-        <div className="md:w-[80%] lg2:w-[60%] w-fit">
+        <div className="md:w-[80%] lg2:w-[60%] w-fit ">
           <FadeIn
             className="w-fill [&_p]:text-navLinks [&_p]:font-regular [&_p]:font-body [&_p]:pt-fluid-12 [&_p]:text-bodyGrey
     [&_h2]:text-h2 [&_h2]:font-headline [&_h2]:font-semiBold   [&_h2]:pb-fluid-24 [&_h2]:text-headlineColor

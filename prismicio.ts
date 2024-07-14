@@ -28,6 +28,10 @@ const routes: prismic.ClientConfig["routes"] = [
     path: "/um-okkur/orlofshus",
   },
   {
+    type: "one_orlofshus",
+    path: "/um-okkur/orlofshus/:uid",
+  },
+  {
     type: "um_okkur_textasida",
     path: "/um-okkur/:uid",
   },

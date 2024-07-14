@@ -9,7 +9,7 @@ import MobileNav from "./MobileNav/mobileNav";
 import Button from "../Button/Button";
 import { HeaderDocumentData } from "@/prismicio-types";
 import NavGroup from "./NavGroup/NavGroup";
-import Logo from "../../../public/icons/stfLogoLiggjandi.svg";
+import Logo from "../../../public/icons/felag-stjornenda-placeholderLogo.svg";
 import UserLinks from "./UserLinks/UserLinks";
 import { BackGroundGreyContext } from "../ContextProvider/Provider";
 export default function HeaderClient({
@@ -106,7 +106,7 @@ export default function HeaderClient({
             alt="STF logo"
             src={Logo}
             height={60}
-            className=" md:hidden  w-[130px]   "
+            className=" md:hidden h-[60px]  w-[100px] xs:w-[120px]  "
           />
         </Link>
         <UserLinks />
@@ -124,8 +124,8 @@ export default function HeaderClient({
             <Image
               alt="STF logo"
               src={Logo}
-              height={60}
-              className=" h-[80px] xs:h-[80px] w-[100px] lg:w-[120px] lg2:w-[140px] "
+              height={80}
+              className=" h-[100px] xs:h-[80px] w-[100px] lg:w-[100px] lg2:w-[120px] "
             />
           </Link>
           <NavGroup

@@ -8,6 +8,7 @@ import Image from "next/image";
 import Chevron from "../../../public/icons/chevronUp.svg";
 import { FadeIn } from "../../components/FadeIn/fadeIn";
 import { PrismicNextImage } from "@prismicio/next";
+import Button from "@/app/components/Button/Button";
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
   const page = await client.getSingle("orlofshus");
@@ -71,10 +72,20 @@ export default async function AboutUs() {
                 {section.hero_title}
               </h1>
             </FadeIn>
+            {/* <FadeIn delay={0.4} className="  ">
+              <Button
+                text="Sjá orlofsvef"
+                aHref={"https://orlof.is/vssi/"}
+                type="nextLink"
+                noShadow
+                arrow
+                ariaLabel={`hlekkur til að lesa meira um okkur`}
+                className=" text-[16px] bg-purple hover:bg-purpleHover text-pureWhite  font-semiBold flex justify-center   border-buttonBlue  rounded-12"
+              ></Button>
+            </FadeIn> */}
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-fluid-32 smmd:w-[50%]"></div>
 
       <SliceZone slices={page.data.slices} components={components} />
     </section>
