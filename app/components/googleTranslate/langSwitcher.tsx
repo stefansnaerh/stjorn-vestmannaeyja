@@ -83,10 +83,10 @@ const LanguageSwitcher = () => {
           {currentLanguage === ld.name ||
           (currentLanguage === "auto" &&
             languageConfig.defaultLanguage === ld) ? (
-            <span className=" text-orange">{ld.title}</span>
+            <span className=" text-buttonBlue">{ld.title}</span>
           ) : (
             <button
-              className="flex gap-fluid-16 text-backgroundBlue group hover:text-orange transition-all duration-300 ease-in-out"
+              className="flex gap-fluid-16 text-backgroundBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
               onClick={switchLanguage(ld.name)}
             >
               {ld.title}

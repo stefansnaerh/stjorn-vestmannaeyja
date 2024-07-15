@@ -23,8 +23,8 @@ const OrlofshusUmAlltLand = ({
       data-slice-variation={slice.variation}
       className="flex justify-center"
     >
-      <Container className="bg-backgroundGrey">
-        <section className="bg-purpleLight py-fluid-56 px-fluid-48 rounded-8 text-black flex flex-col md:flex-row justify-between">
+      <Container className="bg-purpleLight xs:bg-backgroundGrey">
+        <section className="bg-purpleLight xs:py-fluid-56 xs:px-fluid-48 rounded-8 text-black flex flex-col md:flex-row justify-between">
           <div className="relative flex flex-col gap-fluid-40  md:w-[50%] justify-center">
             <FadeIn className="w-fill">
               <h2 className="text-h2 font-headline text-headlineColor font-semiBold w-fill">

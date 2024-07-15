@@ -140,13 +140,13 @@ export default function UserLinks() {
           }
         >
           <a
-            className="flex gap-fluid-16 text-backgroundBlue group hover:text-orange transition-all duration-300 ease-in-out"
+            className="flex gap-fluid-16 text-backgroundBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
             aria-label="hlekkur á mínar síður"
             href="https://innskraning.island.is/?id=thjonusta.stf.is"
             target="_blank"
           >
             <svg
-              className="text-backgroundBlue self-center group-hover:text-orange transition-all duration-300 ease-in-out"
+              className="text-backgroundBlue self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
               width="20"
               height="20"
               viewBox="0 0 17 17"
@@ -171,13 +171,13 @@ export default function UserLinks() {
             Mínar síður
           </a>
           <a
-            className="flex gap-fluid-16 text-backgroundBlue group hover:text-orange transition-all duration-300 ease-in-out"
+            className="flex gap-fluid-16 text-backgroundBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
             aria-label="hlekkur á orlofsvef"
             href="https://orlof.is/vssi/"
             target="_blank"
           >
             <svg
-              className="text-backgroundBlue self-center group-hover:text-orange transition-all duration-300 ease-in-out"
+              className="text-backgroundBlue self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
               width="20"
               height="20"
               viewBox="0 0 17 17"
