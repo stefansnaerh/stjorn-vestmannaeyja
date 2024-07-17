@@ -159,10 +159,10 @@ export default function HeaderClient({
           <UserLinks />
           <Button
             text={"Sækja um aðild"}
-            aHref={"/saekja-um-adild"}
+            aHref={"https://stf.is/saekja-um-adild"}
             ariaLabel={`Hlekkur til að hafa samband`}
             onClick={handleNavClick}
-            type="nextLink"
+            type="htmla"
             className="text-fontBlue rounded-8   bg-backgroundBlue hover:bg-buttonBlue text-navLinks  transition-all duration-300 ease-in-out"
           />
         </div>

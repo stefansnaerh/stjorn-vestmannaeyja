@@ -59,7 +59,7 @@ export async function POST(request) {
     );
 
     // Initialize an Algolia index named 'stf_website'
-    const index = algoliaClient.initIndex("stf_website");
+    const index = algoliaClient.initIndex("felag_stjornenda");
 
     // Get all news from Prismic
     const news = await prismicClient.getAllByTag("Frétt");
@@ -73,51 +73,8 @@ export async function POST(request) {
       paragraph: asText(post.data.paragraph), // Post content transformed to search text
     }));
 
-    const education = await prismicClient.getAllByType(
-      "menntun_og_fraedsla_textasida"
-    );
-    const educationRecords = education.map((page) => ({
-      objectID: page.id,
-      url: page.url,
-      title: page.data.title,
-      slug: page.uid,
-      paragraph: asText(page.data.paragraph),
-    }));
-
-    const stjornendaFraedsla =
-      await prismicClient.getSingle("stjornendafraedsla");
-    const stjornendaFraedslaRecords = {
-      objectID: stjornendaFraedsla.id,
-      url: stjornendaFraedsla.url,
-      title: stjornendaFraedsla.data.title,
-      subTitle: stjornendaFraedsla.data.title,
-      paragraph: stjornendaFraedsla.data.paragraph,
-      text: transformAboutUsSlices(stjornendaFraedsla.data.slices),
-    };
-
-    const medicalFund = await prismicClient.getAllByTag("Sjúkrasjóður");
-    const medicalFundRecords = medicalFund.map((page) => ({
-      objectID: page.id,
-      url: page.url,
-      title: page.data.title,
-      subTitle: page.data.sub_title,
-      slug: page.uid,
-      paragraph: asText(page.data.paragraph),
-    }));
-
-    const kaupOgKjorTextasida = await prismicClient.getAllByType(
-      "kaup_og_kjor_textasida"
-    );
-    const kaupOgKjorTextasidaRecords = kaupOgKjorTextasida.map((page) => ({
-      objectID: page.id,
-      url: page.url,
-      title: page.data.title,
-      subTitle: page.data.sub_title,
-      slug: page.uid,
-      paragraph: asText(page.data.paragraph),
-    }));
-
-    const umOkkurTextasida = await prismicClient.getAllByType("textasida");
+    const umOkkurTextasida =
+      await prismicClient.getAllByType("um_okkur_textasida");
     const umOkkurTextasidaRecords = umOkkurTextasida.map((page) => ({
       objectID: page.id,
       url: page.url,
@@ -132,46 +89,15 @@ export async function POST(request) {
       url: page.url,
       title: page.data.title,
       slug: page.uid,
-      paragraph: page.data.paragraph,
+      paragraph: asText(page.data.paragraph),
       text: transformAboutUsSlices(page.data.slices),
-    }));
-    const idgjold = await prismicClient.getAllByType("idgjold");
-    const idgjoldRecords = idgjold.map((page) => ({
-      objectID: page.id,
-      url: page.url,
-      title: page.data.title,
-      slug: page.uid,
-      paragraph: page.data.paragraph,
-    }));
-    const umsoknirOgForm = await prismicClient.getAllByType("umsoknir_og_form");
-    const umsoknirOgFormRecords = umsoknirOgForm.map((page) => ({
-      objectID: page.id,
-      url: page.url,
-      title: page.data.title,
-      slug: page.uid,
-      paragraph: page.data.paragraph,
-      text: transFormUmsoknirSlices(page.data.slices),
-    }));
-
-    const skilagrein = await prismicClient.getAllByType("skilagrein");
-    const skilagreinRecords = skilagrein.map((page) => ({
-      objectID: page.id,
-      url: page.url,
-      title: page.data.title,
-      slug: page.uid,
     }));
 
     // Index records to Algolia
     await index.saveObjects(newsRecords);
-    await index.saveObjects(educationRecords);
-    await index.saveObject(stjornendaFraedslaRecords);
-    await index.saveObjects(medicalFundRecords);
-    await index.saveObjects(kaupOgKjorTextasidaRecords);
+
     await index.saveObjects(umOkkurTextasidaRecords);
     await index.saveObjects(umOkkurRecords);
-    await index.saveObjects(idgjoldRecords);
-    await index.saveObjects(umsoknirOgFormRecords);
-    await index.saveObjects(skilagreinRecords);
 
     // Return success response if the process completes without any issue
     return new Response(

@@ -12,7 +12,7 @@ export default function Footer() {
             className="self-start h-fit  lg:pr-fluid-18"
           >
             <Image
-              alt="STF logo"
+              alt="Félag stjórnenda logo"
               src={Logo}
               height={60}
               className="lg2:w-[400px] "
@@ -44,20 +44,22 @@ export default function Footer() {
               className="flex gap-8 text-navLinks   md:min-h-[160px] w-fit  md:w-[160px] lg2:w-fit flex-col font-medium before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
             >
               <li className="hover:text-buttonBlue transition-all duration-300 ease-in-out">
-                <Link
-                  href={"/algengar-spurningar"}
+                <a
+                  href={"https://stf.is/algengar-spurningar"}
+                  target="_blank"
                   aria-label={`Hlekkur til þess að sjá algengar spurningar og svör`}
                 >
                   Algengar spurningar
-                </Link>
+                </a>
               </li>
               <li className="hover:text-buttonBlue transition-all duration-300 ease-in-out">
-                <Link
-                  href={`/saekja-um-adild`}
+                <a
+                  href={`https://stf.is/saekja-um-adild`}
+                  target="_blank"
                   aria-label={`Hlekkur til þess að sækja um aðild`}
                 >
                   Sækja um aðild
-                </Link>
+                </a>
               </li>
               <li className="hover:text-buttonBlue transition-all duration-300 ease-in-out">
                 <a

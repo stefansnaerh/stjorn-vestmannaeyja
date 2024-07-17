@@ -50,7 +50,7 @@ export default function Search({
     <InstantSearch
       future={{ preserveSharedStateOnUnmount: true }}
       searchClient={searchClient}
-      indexName="stf_website"
+      indexName="felag_stjornenda"
     >
       <div className="self-start flex flex-col gap-fluid-56 overflow-scroll w-fill">
         <CustomSearchBox />

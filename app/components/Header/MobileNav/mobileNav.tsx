@@ -105,9 +105,9 @@ export default function MobileNav({
         <Button
           onClick={handleNavClick}
           text={"Sækja um aðild"}
-          aHref={"/saekja-um-adild"}
+          aHref={"https://stf.is/saekja-um-adild"}
           ariaLabel={`Hlekkur til þess að sækja um aðild að STF`}
-          type="nextLink"
+          type="htmla"
           className="text-white rounded-8  bg-backgroundBlue hover:bg-buttonBlue  text-navLinksMobile  transition-all duration-300 ease-in-out"
         />
       </nav>

@@ -57,9 +57,9 @@ export default function HeroImages({
                 <FadeIn delay={0.4} className="mt-fluid-24">
                   <Button
                     text={"Sækja um aðild"}
-                    aHref={"/saekja-um-adild"}
+                    href={content.hero_link_1}
                     ariaLabel={`Hlekkur til að hafa samband`}
-                    type="nextLink"
+                    type="anchor"
                     className="text-fontBlue rounded-8  text-white bg-purple hover:bg-purpleHover text-navLinks  transition-all duration-300 ease-in-out"
                   />
                 </FadeIn>
