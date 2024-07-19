@@ -21,7 +21,7 @@ const Container = (props: SliceContainerProps) => {
     <div
       id={id}
       className={cx(
-        `lg:py-fluid-96 py-64  flex w-full items-center content-center max-w-screen-xxl ${className}`,
+        `lg:py-fluid-96 py-64  flex w-full items-center content-center max-w-[2000px] ${className}`,
         {
           ["px-container-56"]: lessPadding,
           ["px-container-88"]: !lessPadding,

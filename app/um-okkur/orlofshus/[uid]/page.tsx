@@ -33,8 +33,8 @@ export default async function OneOrlofshus({ params }: { params: Params }) {
   const section = page.data;
 
   return (
-    <section className="flex flex-col justify-center bg-backgroundGreyDarker">
-      <div className="pt-fluid-40 smmd:pt-fluid-64  px-container-88   flex flex-col gap-fluid-56  max-w-[2000px] ">
+    <section className="flex flex-col justify-center bg-backgroundGrey">
+      <div className="pt-fluid-40 smmd:pt-fluid-64  px-container-88   flex flex-col gap-fluid-56  w-fill self-center  max-w-[2000px] ">
         <FadeIn className="flex  font-body text-sm  w-fit">
           <Link
             className="text-bodyGrey  hover:text-buttonBlue transition-all duration-300"

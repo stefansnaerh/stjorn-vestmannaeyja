@@ -1,0 +1,62 @@
+{
+  "id": "house_amenities",
+  "type": "SharedSlice",
+  "name": "HouseAmenities",
+  "description": "HouseAmenities",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "internet": {
+          "type": "Boolean",
+          "config": {
+            "label": "Internet",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "grill": {
+          "type": "Boolean",
+          "config": {
+            "label": "Grill",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "thvottavel": {
+          "type": "Boolean",
+          "config": {
+            "label": "Þvottavel",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "heitur_pottur": {
+          "type": "Boolean",
+          "config": {
+            "label": "Heitur pottur",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "svefnplass": {
+          "type": "Text",
+          "config": {
+            "label": "Svefnpláss",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

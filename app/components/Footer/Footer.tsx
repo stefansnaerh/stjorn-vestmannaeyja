@@ -3,7 +3,7 @@ import Image from "next/image";
 import Logo from "../../../public/icons/felag-stjornenda-logoPaceholderWhite.svg";
 export default function Footer() {
   return (
-    <footer className=" bg-backgroundGrey px-fluid-24 sm:px-fluid-40 mt-fluid-96 ">
+    <footer className=" bg-backgroundGreyDarker px-fluid-24 sm:px-fluid-40 mt-fluid-96 ">
       <div className=" flex bg-backgroundBlue rounded-6  pt-fluid-48 pb-fluid-56  lg:py-fluid-72   w-fill smmd:flex-nowrap smmd:flex-row flex-wrap px-24 xs:px-fluid-40 sm:px-fluid-56 flex-col  gap-y-fluid-48   gap-64 lg2:gap-fluid-96 lg2:px-[7%] xl:px-[9%] xxl:px-[12%] ">
         <div className="flex flex-col gap-fluid-40">
           <Link

@@ -1,0 +1,30 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"internet": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"grill": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"svefnplass": {
+				"__TYPE__": "FieldContent",
+				"value": "memory",
+				"type": "Text"
+			},
+			"heitur_pottur": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"thvottavel": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			}
+		},
+		"items": []
+	}
+]

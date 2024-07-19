@@ -24,6 +24,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "house_amenities": {
+              "type": "SharedSlice"
+            },
             "house": {
               "type": "SharedSlice"
             }

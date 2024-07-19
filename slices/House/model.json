@@ -25,7 +25,7 @@
             "label": "Paragraph",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,heading2,heading3,heading4,strong,em,list-item,o-list-item"
+            "multi": "paragraph,heading2,strong,em,list-item,o-list-item"
           }
         },
         "link_to_house": {

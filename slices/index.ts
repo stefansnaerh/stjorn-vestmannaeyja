@@ -7,6 +7,7 @@ export const components = {
   all_houses: dynamic(() => import("./AllHouses")),
   board: dynamic(() => import("./Board")),
   house: dynamic(() => import("./House")),
+  house_amenities: dynamic(() => import("./HouseAmenities")),
   member_quote: dynamic(() => import("./MemberQuote")),
   orlofshus_um_allt_land: dynamic(() => import("./OrlofshusUmAlltLand")),
   service_overview: dynamic(() => import("./ServiceOverview")),
