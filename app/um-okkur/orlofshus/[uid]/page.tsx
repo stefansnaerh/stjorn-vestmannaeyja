@@ -35,7 +35,7 @@ export default async function OneOrlofshus({ params }: { params: Params }) {
   return (
     <section className="flex flex-col justify-center bg-backgroundGrey">
       <div className="pt-fluid-40 smmd:pt-fluid-64  px-container-88   flex flex-col gap-fluid-56  w-fill self-center  max-w-[2000px] ">
-        <FadeIn className="flex  font-body text-sm  w-fit">
+        <FadeIn className="flex gap-y-6  font-body text-sm  w-fit flex-wrap">
           <Link
             className="text-bodyGrey  hover:text-buttonBlue transition-all duration-300"
             href={"/"}
@@ -48,7 +48,7 @@ export default async function OneOrlofshus({ params }: { params: Params }) {
             className="h-fluid-16 rotate-90 self-center"
           />
           <Link
-            className="text-sm text-bodyGrey hover:text-buttonBlue transition-all duration-300"
+            className="text-sm text-bodyGrey hover:text-buttonBlue transition-all duration-300 whitespace-nowrap"
             href={"/um-okkur"}
           >
             Um okkur

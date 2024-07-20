@@ -17,7 +17,7 @@ const ServiceOverview = ({ slice }: ServiceOverviewProps): JSX.Element => {
   return (
     <div className="flex justify-center">
       <Container lessPadding className=" text-white ">
-        <section className="flex bg-purpleLight py-fluid-56 px-fluid-48 rounded-8 flex-col gap-fluid-40 md:gap-fluid-72 overflow-hidden ">
+        <section className="flex bg-purpleLight py-fluid-48 sm:py-fluid-56 px-fluid-32 sm:px-fluid-48 rounded-8 flex-col gap-fluid-40 md:gap-fluid-72 overflow-hidden ">
           <FadeIn className="flex flex-col  gap-fluid-32  sm:max-w-[50%]">
             {section.title ? (
               <h2 className="font-headline text-headlineColor font-regular text-h2 h-fit w-fit">

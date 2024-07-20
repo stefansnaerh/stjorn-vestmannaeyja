@@ -29,7 +29,7 @@ const AllHouses = ({ slice }: AllHousesProps): JSX.Element => {
             </h2>
           </FadeIn>
 
-          <FadeIn className="grid grid-flow-row xs:grid-cols-2 md:grid-cols-4  w-fill gap-fluid-48 md:gap-fluid-56  ">
+          <div className="grid grid-flow-row xs:grid-cols-2 md:grid-cols-4  w-fill gap-fluid-48 md:gap-fluid-56  ">
             {section.houses.map((item, index) => {
               return (
                 <PrismicNextLink
@@ -75,7 +75,7 @@ const AllHouses = ({ slice }: AllHousesProps): JSX.Element => {
                 </PrismicNextLink>
               );
             })}
-          </FadeIn>
+          </div>
         </section>
       </Container>
     </section>

@@ -25,7 +25,7 @@ const OrlofshusUmAlltLand = ({
     >
       <Container className="bg-purpleLight xs:bg-backgroundGrey">
         <section className="bg-purpleLight xs:py-fluid-56 xs:px-fluid-48 rounded-8 text-black flex flex-col md:flex-row justify-between">
-          <div className="relative flex flex-col gap-fluid-40  md:w-[50%] justify-center">
+          <div className="relative flex flex-col gap-fluid-32 md:gap-fluid-40  md:w-[50%] justify-center">
             <FadeIn className="w-fill">
               <h2 className="text-h2 font-headline text-headlineColor font-semiBold w-fill">
                 {section.title}

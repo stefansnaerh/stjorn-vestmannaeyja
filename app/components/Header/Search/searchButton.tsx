@@ -53,7 +53,7 @@ export default function SearchButton() {
         </svg>
       </button>
       {isSearchOpen ? (
-        <Container className="fixed top-[80px] xs:top-[90px] xxxl:min-w-[2020px]  xxxl:m-auto xxxl:left-0 xxxl:right-0 bg-backgroundGrey left-0 max-h-[100vh] overflow-scroll min-h-[100vh] min-w-[100vw]">
+        <Container className="fixed top-[80px] xs:top-[90px] xxxl:min-w-[2000px]  xxxl:m-auto xxxl:left-0 xxxl:right-0 bg-backgroundGrey left-0 max-h-[100vh] overflow-scroll min-h-[100vh] min-w-[100vw]">
           <button
             onClick={handleOpenSearch}
             className="bg-pureWhite hidden rounded-6 py-fluid-16 px-fluid-24 group hover:text-orange absolute top-32 right-container-88 text-bodyGrey font-body md:flex gap-6 transition-all duration-150 ease-in-out"

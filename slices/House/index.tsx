@@ -27,7 +27,7 @@ const House = ({ slice }: HouseProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <Container className="flex flex-col-reverse md:flex-row gap-fluid-72 lg2:gap-fluid-96 xxl:gap-fluid-122">
-        <FadeIn className="self-start xs:grid grid-row-flow flex flex-col  grid-cols-4 w-fill md:w-[45%] gap-fluid-18">
+        <div className="self-start xs:grid grid-row-flow flex flex-col  grid-cols-4 w-fill md:w-[45%] gap-fluid-18">
           {section.images.map((item, index) => {
             return (
               <div
@@ -86,8 +86,8 @@ const House = ({ slice }: HouseProps): JSX.Element => {
               </div>
             );
           })}
-        </FadeIn>
-        <div className="w-fill md:w-[50%] self-start flex flex-col gap-fluid-40">
+        </div>
+        <div className="w-fill md:w-[50%] self-start flex flex-col gap-fluid-32 md:gap-fluid-40">
           <FadeIn>
             <h1 className="text-headlineColor font-headline font-semiBold text-h2">
               {section.title}

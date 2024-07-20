@@ -26,41 +26,41 @@ const HouseAmenities = ({ slice }: HouseAmenitiesProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <Container morePadding className="flex flex-col gap-fluid-48">
-        <div>
+        <FadeIn>
           <h2 className="font-headline text-headlineColor text-h2">
             Húsið inniheldur
           </h2>
-        </div>
+        </FadeIn>
         <div className="grid grid-rows-3 xs:grid-rows-2 lg:grid-rows-1 grid-flow-col w-fill gap-fluid-32">
-          <div className="col-span-1 py-fluid-32 px-fluid-48 bg-pureWhite border-[1px] border-greyDarker border-opacity-25 rounded-6 flex flex-col gap-fluid-12">
+          <FadeIn className="col-span-1 py-fluid-32 px-fluid-48 bg-pureWhite border-[1px] border-greyDarker border-opacity-25 rounded-6 flex flex-col gap-fluid-12">
             <Image alt="rúm" src={Bed} className="h-fluid-32 " />
             <p className="font-body text-bodyGrey text-md">
               {section.svefnplass} svefnpláss
             </p>
-          </div>
+          </FadeIn>
           {section.grill && (
-            <div className="col-span-1 py-fluid-32 px-fluid-48 bg-pureWhite border-[1px] border-greyDarker border-opacity-25 rounded-6 flex flex-col gap-fluid-12">
+            <FadeIn className="col-span-1 py-fluid-32 px-fluid-48 bg-pureWhite border-[1px] border-greyDarker border-opacity-25 rounded-6 flex flex-col gap-fluid-12">
               <Image alt="rúm" src={Grill} className="h-fluid-32 " />
               <p className="font-body text-bodyGrey text-md">Grill aðstaða</p>
-            </div>
+            </FadeIn>
           )}
           {section.heitur_pottur && (
-            <div className="col-span-1 py-fluid-32 px-fluid-48 bg-pureWhite border-[1px] border-greyDarker border-opacity-25 rounded-6 flex flex-col gap-fluid-12">
+            <FadeIn className="col-span-1 py-fluid-32 px-fluid-48 bg-pureWhite border-[1px] border-greyDarker border-opacity-25 rounded-6 flex flex-col gap-fluid-12">
               <Image alt="rúm" src={HotTub} className="h-fluid-32 " />
               <p className="font-body text-bodyGrey text-md">Heitur pottur</p>
-            </div>
+            </FadeIn>
           )}
           {section.internet && (
-            <div className="col-span-1 py-fluid-32 px-fluid-48 bg-pureWhite border-[1px] border-greyDarker border-opacity-25 rounded-6 flex flex-col gap-fluid-12">
+            <FadeIn className="col-span-1 py-fluid-32 px-fluid-48 bg-pureWhite border-[1px] border-greyDarker border-opacity-25 rounded-6 flex flex-col gap-fluid-12">
               <Image alt="rúm" src={WiFi} className="h-fluid-32 " />
               <p className="font-body text-bodyGrey text-md">Internet</p>
-            </div>
+            </FadeIn>
           )}
           {section.thvottavel && (
-            <div className="col-span-1 py-fluid-32 px-fluid-48 bg-pureWhite border-[1px] border-greyDarker border-opacity-25 rounded-6 flex flex-col gap-fluid-12">
+            <FadeIn className="col-span-1 py-fluid-32 px-fluid-48 bg-pureWhite border-[1px] border-greyDarker border-opacity-25 rounded-6 flex flex-col gap-fluid-12">
               <Image alt="rúm" src={Laundry} className="h-fluid-32 " />
               <p className="font-body text-bodyGrey text-md">Þvottavél</p>
-            </div>
+            </FadeIn>
           )}
         </div>
       </Container>

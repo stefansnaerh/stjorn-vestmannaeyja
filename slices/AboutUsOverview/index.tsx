@@ -23,7 +23,7 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
       className="flex justify-center"
     >
       <Container className="bg-backgroundGrey">
-        <section className="relative text-black  flex flex-col gap-fluid-40  w-fill  ">
+        <section className="relative text-black  flex flex-col gap-fluid-32 md:gap-fluid-40  w-fill  ">
           <FadeIn className="w-fill">
             <h2 className="text-h2 font-headline text-headlineColor font-semiBold w-fill">
               {section.title}
