@@ -77,7 +77,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
                         {item.email}
                       </a>
                       <a
-                        className="text-sm bg-greyPurple group text-purple py-fluid-8 px-fluid-16 rounded-32 w-fit max-w-[50%] whitespace-nowrap  flex gap-6 hover:text-buttonBlue transition-all duration-300 ease-in-out"
+                        className="text-sm bg-greyPurple group text-purple py-fluid-8 px-fluid-16 rounded-32 w-fit max-w-[111px] xxs:max-w-fit whitespace-nowrap  flex gap-6 hover:text-buttonBlue transition-all duration-300 ease-in-out"
                         href={`tel:${item.phone_number}`}
                         aria-label={`Hlekkur til að hringja í ${item.member_name}`}
                       >
