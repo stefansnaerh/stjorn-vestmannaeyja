@@ -107,7 +107,7 @@ export default function Footer() {
                 aria-label={`Opnar tölvupóst til fylla inn í nýjum glugga`}
                 target="_blank"
               >
-                Netfang: stjornadi@stjornandi.is
+                Netfang: stjornandi@stjornandi.is
               </a>
             </li>
             <li className="hover:text-buttonBlue transition-all duration-300 ease-in-out">

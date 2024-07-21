@@ -21,16 +21,16 @@ const HouseAmenities = ({ slice }: HouseAmenitiesProps): JSX.Element => {
   const section = slice.primary;
   return (
     <section
-      className="flex justify-center bg-backgroundGreyDarker"
+      className="flex justify-center bg-backgroundGrey"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
       <Container morePadding className="flex flex-col gap-fluid-48">
-        <FadeIn>
+        {/* <FadeIn className="">
           <h2 className="font-headline text-headlineColor text-h2">
             Húsið inniheldur
           </h2>
-        </FadeIn>
+        </FadeIn> */}
         <div className="grid grid-rows-3 xs:grid-rows-2 lg:grid-rows-1 grid-flow-col w-fill gap-fluid-32">
           <FadeIn className="col-span-1 py-fluid-32 px-fluid-48 bg-pureWhite border-[1px] border-greyDarker border-opacity-25 rounded-6 flex flex-col gap-fluid-12">
             <Image alt="rúm" src={Bed} className="h-fluid-32 " />
