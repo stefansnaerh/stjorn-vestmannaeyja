@@ -105,6 +105,73 @@ export type AboutUsDocument<Lang extends string = string> =
     Lang
   >;
 
+/**
+ * Item in *All houses overview → Houses*
+ */
+export interface AllHousesOverviewDocumentDataHousesItem {
+  /**
+   * Image field in *All houses overview → Houses*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses_overview.houses[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+
+  /**
+   * Address field in *All houses overview → Houses*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses_overview.houses[].address
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address: prismic.KeyTextField;
+
+  /**
+   * Link field in *All houses overview → Houses*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses_overview.houses[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Content for All houses overview documents
+ */
+interface AllHousesOverviewDocumentData {
+  /**
+   * Houses field in *All houses overview*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses_overview.houses[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  houses: prismic.GroupField<Simplify<AllHousesOverviewDocumentDataHousesItem>>;
+}
+
+/**
+ * All houses overview document from Prismic
+ *
+ * - **API ID**: `all_houses_overview`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AllHousesOverviewDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<AllHousesOverviewDocumentData>,
+    "all_houses_overview",
+    Lang
+  >;
+
 type AllNewsDocumentDataSlicesSlice = never;
 
 /**
@@ -1260,6 +1327,7 @@ export type UmOkkurTextasidaDocument<Lang extends string = string> =
 
 export type AllDocumentTypes =
   | AboutUsDocument
+  | AllHousesOverviewDocument
   | AllNewsDocument
   | FrontPageDocument
   | HeaderDocument
@@ -2140,6 +2208,9 @@ declare module "@prismicio/client" {
       AboutUsDocument,
       AboutUsDocumentData,
       AboutUsDocumentDataSlicesSlice,
+      AllHousesOverviewDocument,
+      AllHousesOverviewDocumentData,
+      AllHousesOverviewDocumentDataHousesItem,
       AllNewsDocument,
       AllNewsDocumentData,
       AllNewsDocumentDataSlicesSlice,

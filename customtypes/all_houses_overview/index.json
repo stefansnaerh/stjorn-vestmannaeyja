@@ -1,0 +1,43 @@
+{
+  "format": "custom",
+  "id": "all_houses_overview",
+  "label": "All houses overview",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "houses": {
+        "type": "Group",
+        "config": {
+          "label": "Houses",
+          "repeat": true,
+          "fields": {
+            "image": {
+              "type": "Image",
+              "config": {
+                "label": "Image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            },
+            "address": {
+              "type": "Text",
+              "config": {
+                "label": "Address",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

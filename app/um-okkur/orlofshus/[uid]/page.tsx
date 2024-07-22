@@ -7,7 +7,7 @@ import { FadeIn } from "@/app/components/FadeIn/fadeIn";
 import Image from "next/image";
 import Link from "next/link";
 import Chevron from "../../../../public/icons/chevronUp.svg";
-import RichText from "@/app/components/RichText/RichText";
+import AllHousesOverview from "@/app/components/AllHousesOverview/allHousesOverview";
 type Params = { uid: string };
 export async function generateMetadata({
   params,
@@ -76,6 +76,7 @@ export default async function OneOrlofshus({ params }: { params: Params }) {
         </FadeIn>
       </div>
       <SliceZone slices={page.data.slices} components={components} />
+      <AllHousesOverview />
     </section>
   );
 }
