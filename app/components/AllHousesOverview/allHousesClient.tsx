@@ -65,7 +65,7 @@ export default function AllHousesClient({
   }, []);
 
   return (
-    <section className="flex justify-center">
+    <section className="flex justify-center overflow-y-visible">
       <Container className=" flex-col gap-fluid-48 sm:gap-fluid-72  overflow-hidden ">
         <div className="flex flex-col xs:flex-row justify-between w-fill">
           <div className="w-fill flex flex-col gap-fluid-18">
@@ -120,7 +120,7 @@ export default function AllHousesClient({
           <div
             ref={carouselElement}
             onScroll={handleScroll}
-            className="flex gap-fluid-56 w-fill no-scrollbar overflow-scroll snap-x snap-mandatory snap-always snap-center"
+            className="flex gap-fluid-56 w-fill no-scrollbar overflow-scroll overflow-y-hidden snap-x snap-mandatory snap-always snap-center"
           >
             {content.houses.map((item: any, i: number) => {
               return (

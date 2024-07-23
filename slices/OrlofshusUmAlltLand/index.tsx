@@ -31,12 +31,12 @@ const OrlofshusUmAlltLand = ({
                 {section.title}
               </h2>
             </FadeIn>
-            <FadeIn delay={0.2}>
+            <FadeIn>
               <p className=" text-navLinks font-body font-regular text-bodyGrey">
                 {section.paragraph}
               </p>
             </FadeIn>
-            <FadeIn delay={0.4} className="  ">
+            <FadeIn className="  ">
               <Button
                 text={section.link_text}
                 href={section.link}
@@ -74,7 +74,7 @@ const OrlofshusUmAlltLand = ({
           </div>
           <FadeIn className="flex  gap-fluid-24 overflow-hidden  md:w-[40%]">
             <div className="relative  min-w-[100%] overflow-hidden  sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-3">
-              <div className="relative pb-[100%] md:pb-[110%] ">
+              <FadeIn className="relative pb-[100%] md:pb-[110%] ">
                 <PrismicNextImage
                   field={section.image_big}
                   className="object-cover z-0 rounded-6"
@@ -82,7 +82,7 @@ const OrlofshusUmAlltLand = ({
                   alt={""}
                   sizes="(max-width: 768px) 100vw"
                 />
-              </div>
+              </FadeIn>
             </div>
           </FadeIn>
         </section>
