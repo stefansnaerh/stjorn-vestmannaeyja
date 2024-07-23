@@ -134,7 +134,7 @@ export default function AllHousesClient({
                     field={item.link}
                   >
                     <div className="relative w-fill xxs:w-[80%] sm:w-fill  self-center">
-                      <div className="relative pb-[80%] overflow-hidden rounded-6 ">
+                      <div className="relative pb-[70%] overflow-hidden rounded-6 ">
                         <PrismicNextImage
                           field={item.image}
                           className="object-cover z-0 rounded-8 group-hover:scale-105 transition-all duration-300 ease-in-out"
@@ -144,7 +144,7 @@ export default function AllHousesClient({
                         />
                       </div>
                     </div>
-                    <FadeIn className="flex self-start flex-col gap-fluid-8">
+                    <div className="flex self-start flex-col gap-fluid-8">
                       <h3 className="mt-8  text-h5 text-headlineColor font-headline font-semiBold w-fit ">
                         {item.address}
                       </h3>
@@ -167,7 +167,7 @@ export default function AllHousesClient({
                           />
                         </svg>
                       </div>
-                    </FadeIn>
+                    </div>
                   </PrismicNextLink>
                 </div>
               );
