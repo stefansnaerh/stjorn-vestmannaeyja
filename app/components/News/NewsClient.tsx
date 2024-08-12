@@ -174,7 +174,7 @@ export default function NewsClient({ news }: { news: any }) {
           arrow
           noShadow
           aHref={"/frettir"}
-          className=" hover:text-pureWhite text-[16px] hover:bg-purple  text-purple font-semiBold flex justify-center border-[1.5px]  border-purple [&_img]:filterButtonBlue rounded-12"
+          className=" hover:text-pureWhite text-[16px] hover:bg-purple text-purple font-semiBold flex justify-center border-[1.5px] border-purple rounded-12"
           type="nextLink"
           text={"Sjá allar fréttir"}
         />

@@ -9,7 +9,7 @@ import Image from "next/image";
 import Chevron from "../../public/icons/chevronUp.svg";
 import { FadeIn } from "../components/FadeIn/fadeIn";
 import { PrismicRichText } from "@prismicio/react";
-import Container from "../components/Container/container";
+import RichText from "../components/RichText/RichText";
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
   const page = await client.getSingle("about_us");
@@ -40,19 +40,32 @@ export default async function AboutUs() {
           />
           <p className="text-sm text-headlineColor font-semiBold">Um okkur</p>
         </FadeIn>
-        <FadeIn className=" flex flex-col gap-fluid-72 xxs:gap-fluid-96 smmd:flex-row-reverse smmd:justify-between">
-          <FadeIn className="self-center relative min-w-[90%]  md:min-w-[35%] lg2:min-w-[40%]">
-            <div className=" relative pb-[100%]">
-              <PrismicNextImage
-                field={section.image}
-                className="object-contain z-0 rounded-6 "
-                fill
-                alt={""}
-                sizes="(max-width: 768px) 100vw"
-              />
-            </div>
+        <FadeIn className=" flex flex-col-reverse gap-fluid-72 xxs:gap-fluid-96  ">
+          <FadeIn className="self-center grid grid-rows-1 xs:grid-cols-2 gap-fluid-32 relative w-fill">
+            <FadeIn>
+              <div className=" relative pb-[60%]">
+                <PrismicNextImage
+                  field={section.image}
+                  className="object-cover z-0 rounded-6 "
+                  fill
+                  alt={""}
+                  sizes="(max-width: 768px) 100vw"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn className="">
+              <div className="hidden xs:flex relative pb-[60%]">
+                <PrismicNextImage
+                  field={section.image_2}
+                  className="object-cover z-0 rounded-6 "
+                  fill
+                  alt={""}
+                  sizes="(max-width: 768px) 100vw"
+                />
+              </div>
+            </FadeIn>
           </FadeIn>
-          <div className="flex flex-col gap-fluid-32 md:gap-fluid-48 smmd:w-[50%]">
+          <div className="flex flex-col gap-fluid-32 md:gap-fluid-48 ">
             <FadeIn>
               <h1 className="font-headline  text-headlineColor text-h2 font-semiBold">
                 {section.title}
@@ -62,7 +75,7 @@ export default async function AboutUs() {
               className="[&_p]:text-navLinks [&_p]:text-bodyGrey [&_p]:font-body"
               delay={0.2}
             >
-              <PrismicRichText field={section.paragraph} />
+              <RichText text={section.paragraph} />
             </FadeIn>
           </div>
         </FadeIn>

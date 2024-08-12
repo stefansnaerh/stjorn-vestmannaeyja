@@ -47,6 +47,17 @@ interface AboutUsDocumentData {
   image: prismic.ImageField<never>;
 
   /**
+   * Image 2 field in *Um okkur*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.image_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_2: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *Um okkur*
    *
    * - **Field Type**: Slice Zone

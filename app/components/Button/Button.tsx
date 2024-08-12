@@ -131,7 +131,7 @@ export default function Button({
         href={`${aHref}`}
         aria-label={ariaLabel}
         className={cx(
-          `group flex pointer-events-auto  gap-8 py-fluid-16 px-fluid-24  h-fit w-fit text-navLinks font-body font-semiBold transition-all duration-300 ease-in-out ${className} `,
+          `group flex pointer-events-auto gap-8 py-fluid-16 px-fluid-24  h-fit w-fit text-navLinks font-body font-semiBold transition-all duration-300 ease-in-out ${className} `,
           {
             ["shadow-none"]: noShadow,
             ["shadow-button"]: !noShadow,
@@ -143,7 +143,7 @@ export default function Button({
         {text}
         {arrow ? (
           <svg
-            className="w-[30px]  transition-all filter  duration-300 ease-in-out self-center h-16  group-hover:pl-[14px]"
+            className="w-[30px] transition-all ease-in-out self-center h-16 group-hover:pl-[14px]"
             width="100%"
             height="100%"
             viewBox="0 0 18 18"

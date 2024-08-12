@@ -1,3 +1,5 @@
+
+
 import { createClient } from "@/prismicio";
 import AllHousesClient from "./allHousesClient";
 export default async function AllHousesOverview() {

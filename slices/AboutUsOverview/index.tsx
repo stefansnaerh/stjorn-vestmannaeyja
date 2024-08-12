@@ -44,9 +44,9 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
               </div>
             </FadeIn>
             <div className=" relative h-fit sm:row-start-1 sm:col-start-2 sm:col-end-7  md:col-start-4 md:col-end-8 grid grid-col-1 grid-flow-row gap-fluid-40  w-fill">
-              <div className="flex flex-col gap-fluid-40 sm:absolute w-fill sm:mt-[20%] md:mt-[10%] lg:mt-[8%] lg2:mt-[12%] sm:bg-pureWhite rounded-8 sm:py-fluid-48 sm:px-fluid-40 sm:border-[1px] border-greyInput border-opacity-15">
+              <FadeIn className="flex flex-col gap-fluid-40 sm:absolute w-fill sm:mt-[20%] md:mt-[10%] lg:mt-[8%] lg2:mt-[12%] sm:bg-pureWhite rounded-8 sm:py-fluid-48 sm:px-fluid-40 sm:border-[1px] border-greyInput border-opacity-15">
                 <FadeIn delay={0.2}>
-                  <div className=" [&_p]:text-[16px] xl:[&_p]:text-md font-body font-regular text-bodyGrey">
+                  <div className="[&_p]:pb-fluid-12 [&_p]:text-[16px] xl:[&_p]:text-md font-body font-regular text-bodyGrey">
                     <PrismicRichText field={section.paragraph} />
                   </div>
                 </FadeIn>
@@ -61,7 +61,7 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                     className=" text-[16px] bg-purple hover:bg-purpleHover text-pureWhite  font-semiBold flex justify-center   border-buttonBlue  rounded-12"
                   ></Button>
                 </FadeIn>
-              </div>
+              </FadeIn>
             </div>
           </div>
         </section>
