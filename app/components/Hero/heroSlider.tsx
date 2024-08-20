@@ -45,14 +45,32 @@ export default function HeroSlider({
             ["bg-greyDarker"]: slide != 0,
           })}
         ></div>
-        <p
-          className={cx("font-body  font-semiBold text-sm", {
-            ["text-white"]: slide === 0,
-            ["text-greyDarker"]: slide != 0,
-          })}
-        >
-          01 / 03
-        </p>
+        <div className="flex gap-6">
+          <p
+            className={cx("font-body  font-semiBold text-sm", {
+              ["text-white"]: slide === 0,
+              ["text-greyDarker"]: slide != 0,
+            })}
+          >
+            01 / 03
+          </p>
+          <button onClick={() => setSlide(1)} className="h-16 w-16 self-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              className="h-16 w-16 rotate-90"
+              viewBox="0 0 32 32"
+            >
+              <path
+                stroke="#FFFFFF"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.67"
+                d="m24 20-8-8-8 8"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
       <div
         className={cx("w-fill  flex flex-col gap-6", {
@@ -71,14 +89,32 @@ export default function HeroSlider({
             ["bg-greyDarker"]: slide != 1,
           })}
         ></div>
-        <p
-          className={cx("font-body  font-semiBold text-sm", {
-            ["text-white"]: slide === 1,
-            ["text-greyDarker"]: slide != 1,
-          })}
-        >
-          02 / 03
-        </p>
+        <div className="flex gap-6">
+          <p
+            className={cx("font-body  font-semiBold text-sm", {
+              ["text-white"]: slide === 1,
+              ["text-greyDarker"]: slide != 1,
+            })}
+          >
+            02 / 03
+          </p>
+          <button onClick={() => setSlide(2)} className="h-16 w-16 self-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              className="h-16 w-16 rotate-90"
+              viewBox="0 0 32 32"
+            >
+              <path
+                stroke="#FFFFFF"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.67"
+                d="m24 20-8-8-8 8"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
       <div
         className={cx("w-fill  flex flex-col gap-6", {
@@ -97,14 +133,32 @@ export default function HeroSlider({
             ["bg-greyDarker"]: slide != 2,
           })}
         ></div>
-        <p
-          className={cx("font-body  font-semiBold text-sm", {
-            ["text-white"]: slide === 2,
-            ["text-greyDarker"]: slide != 2,
-          })}
-        >
-          03 / 03
-        </p>
+        <div className="flex gap-6">
+          <p
+            className={cx("font-body  font-semiBold text-sm", {
+              ["text-white"]: slide === 2,
+              ["text-greyDarker"]: slide != 2,
+            })}
+          >
+            03 / 03
+          </p>
+          <button onClick={() => setSlide(0)} className="h-16 w-16 self-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              className="h-16 w-16 rotate-90"
+              viewBox="0 0 32 32"
+            >
+              <path
+                stroke="#FFFFFF"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.67"
+                d="m24 20-8-8-8 8"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   );
