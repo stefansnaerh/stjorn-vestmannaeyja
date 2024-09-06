@@ -61,12 +61,86 @@ export default function UserLinks() {
     setCurrentElement(0);
   });
   return (
-    <div className=" flex self-center gap-fluid-12 xs:gap-fluid-24 ">
+    <div className="flex self-center gap-fluid-12 xs:gap-fluid-24 ">
+      <a
+        className="hidden lg:flex gap-6 text-[15px] xl:text-navLinks self-center h-fit content-center font-body text-backgroundBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
+        aria-label="hlekkur á mínar síður"
+        href="https://innskraning.island.is/?id=thjonusta.stf.is"
+        target="_blank"
+      >
+        <svg
+          className="text-backgroundBlue self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
+          width="20"
+          height="16"
+          viewBox="0 0 17 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M14.1663 14.875V13.4583C14.1663 12.7069 13.8678 11.9862 13.3365 11.4549C12.8051 10.9235 12.0845 10.625 11.333 10.625H5.66634C4.91489 10.625 4.19422 10.9235 3.66287 11.4549C3.13152 11.9862 2.83301 12.7069 2.83301 13.4583V14.875"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M8.50033 7.79167C10.0651 7.79167 11.3337 6.52314 11.3337 4.95833C11.3337 3.39353 10.0651 2.125 8.50033 2.125C6.93552 2.125 5.66699 3.39353 5.66699 4.95833C5.66699 6.52314 6.93552 7.79167 8.50033 7.79167Z"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+        <span className="self-center"> Mínar síður</span>
+      </a>
+      <a
+        className="hidden lg:flex  h-fit self-center gap-6 text-[15px] xl:text-navLinks text-backgroundBlue font-body group hover:text-buttonBlue transition-all duration-300 ease-in-out"
+        aria-label="hlekkur á orlofsvef"
+        href="https://stf.orlof.is/"
+        target="_blank"
+      >
+        <svg
+          className="text-backgroundBlue self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
+          width="20"
+          height="16"
+          viewBox="0 0 17 17"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g clipPath="url(#clip0_230_296)">
+            <path
+              d="M2.29688 6.1873L8.29688 1.52063L14.2969 6.1873V13.5206C14.2969 13.8743 14.1564 14.2134 13.9064 14.4634C13.6563 14.7135 13.3172 14.854 12.9635 14.854H3.63021C3.27659 14.854 2.93745 14.7135 2.6874 14.4634C2.43735 14.2134 2.29688 13.8743 2.29688 13.5206V6.1873Z"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M6.29688 14.8539V8.18726H10.2969V14.8539"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_230_296">
+              <rect
+                width="16"
+                height="16"
+                fill="white"
+                transform="translate(0.296875 0.187256)"
+              />
+            </clipPath>
+          </defs>
+        </svg>
+        <span className="self-center">Orlofsvefur</span>
+      </a>
       <button
         aria-label="Hnappur sem sýnir valmynd fyrir mínar síður og orlofsvef"
         onClick={() => toggleShowLockLinks(1)}
         className={cx(
-          "rounded-24 group hover:bg-backgroundBlue  p-fluid-12 self-center h-fit w-fit border-[1px] border-grey transition-all duration-300 ease-in-out",
+          "rounded-24 group lg:hidden hover:bg-backgroundBlue  p-fluid-12 self-center h-fit w-fit border-[1px] border-grey transition-all duration-300 ease-in-out",
           {
             ["bg-backgroundBlue"]: showLockLinks,
             ["bg-pureWhite"]: !showLockLinks,
@@ -133,86 +207,88 @@ export default function UserLinks() {
       <SearchButton />
 
       {currentElement === 1 ? (
-        <div
-          ref={cardElement}
-          className={
-            showLockLinks ? styles.lockDropdownShow : styles.lockDropdown
-          }
-        >
-          <a
-            className="flex gap-fluid-16 text-backgroundBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
-            aria-label="hlekkur á mínar síður"
-            href="https://innskraning.island.is/?id=thjonusta.stf.is"
-            target="_blank"
+        <div className="lg:hidden">
+          <div
+            ref={cardElement}
+            className={
+              showLockLinks ? styles.lockDropdownShow : styles.lockDropdown
+            }
           >
-            <svg
-              className="text-backgroundBlue self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
-              width="20"
-              height="20"
-              viewBox="0 0 17 17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+            <a
+              className="flex gap-fluid-16 text-backgroundBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
+              aria-label="hlekkur á mínar síður"
+              href="https://innskraning.island.is/?id=thjonusta.stf.is"
+              target="_blank"
             >
-              <path
-                d="M14.1663 14.875V13.4583C14.1663 12.7069 13.8678 11.9862 13.3365 11.4549C12.8051 10.9235 12.0845 10.625 11.333 10.625H5.66634C4.91489 10.625 4.19422 10.9235 3.66287 11.4549C3.13152 11.9862 2.83301 12.7069 2.83301 13.4583V14.875"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M8.50033 7.79167C10.0651 7.79167 11.3337 6.52314 11.3337 4.95833C11.3337 3.39353 10.0651 2.125 8.50033 2.125C6.93552 2.125 5.66699 3.39353 5.66699 4.95833C5.66699 6.52314 6.93552 7.79167 8.50033 7.79167Z"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            Mínar síður
-          </a>
-          <a
-            className="flex gap-fluid-16 text-backgroundBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
-            aria-label="hlekkur á orlofsvef"
-            href="https://orlof.is/vssi/"
-            target="_blank"
-          >
-            <svg
-              className="text-backgroundBlue self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
-              width="20"
-              height="20"
-              viewBox="0 0 17 17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clipPath="url(#clip0_230_296)">
+              <svg
+                className="text-backgroundBlue self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
+                width="20"
+                height="20"
+                viewBox="0 0 17 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
                 <path
-                  d="M2.29688 6.1873L8.29688 1.52063L14.2969 6.1873V13.5206C14.2969 13.8743 14.1564 14.2134 13.9064 14.4634C13.6563 14.7135 13.3172 14.854 12.9635 14.854H3.63021C3.27659 14.854 2.93745 14.7135 2.6874 14.4634C2.43735 14.2134 2.29688 13.8743 2.29688 13.5206V6.1873Z"
+                  d="M14.1663 14.875V13.4583C14.1663 12.7069 13.8678 11.9862 13.3365 11.4549C12.8051 10.9235 12.0845 10.625 11.333 10.625H5.66634C4.91489 10.625 4.19422 10.9235 3.66287 11.4549C3.13152 11.9862 2.83301 12.7069 2.83301 13.4583V14.875"
                   stroke="currentColor"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
                 <path
-                  d="M6.29688 14.8539V8.18726H10.2969V14.8539"
+                  d="M8.50033 7.79167C10.0651 7.79167 11.3337 6.52314 11.3337 4.95833C11.3337 3.39353 10.0651 2.125 8.50033 2.125C6.93552 2.125 5.66699 3.39353 5.66699 4.95833C5.66699 6.52314 6.93552 7.79167 8.50033 7.79167Z"
                   stroke="currentColor"
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 />
-              </g>
-              <defs>
-                <clipPath id="clip0_230_296">
-                  <rect
-                    width="16"
-                    height="16"
-                    fill="white"
-                    transform="translate(0.296875 0.187256)"
+              </svg>
+              Mínar síður
+            </a>
+            <a
+              className="flex gap-fluid-16 text-backgroundBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
+              aria-label="hlekkur á orlofsvef"
+              href="https://stf.orlof.is/"
+              target="_blank"
+            >
+              <svg
+                className="text-backgroundBlue self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
+                width="20"
+                height="20"
+                viewBox="0 0 17 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clipPath="url(#clip0_230_296)">
+                  <path
+                    d="M2.29688 6.1873L8.29688 1.52063L14.2969 6.1873V13.5206C14.2969 13.8743 14.1564 14.2134 13.9064 14.4634C13.6563 14.7135 13.3172 14.854 12.9635 14.854H3.63021C3.27659 14.854 2.93745 14.7135 2.6874 14.4634C2.43735 14.2134 2.29688 13.8743 2.29688 13.5206V6.1873Z"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
-                </clipPath>
-              </defs>
-            </svg>
-            Orlofsvefur
-          </a>
+                  <path
+                    d="M6.29688 14.8539V8.18726H10.2969V14.8539"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_230_296">
+                    <rect
+                      width="16"
+                      height="16"
+                      fill="white"
+                      transform="translate(0.296875 0.187256)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+              Orlofsvefur
+            </a>
+          </div>
         </div>
       ) : (
         ""

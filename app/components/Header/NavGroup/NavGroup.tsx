@@ -116,7 +116,7 @@ export default function NavGroup({
               <button
                 aria-label={`Takki til að sjá hlekki fyrir ${group.title}`}
                 className={cx(
-                  "flex group gap-6 pb-2 text-navLinks transition-all duration-300 ease-in-out ",
+                  "flex group gap-6 pb-2 text-[15px] xl:text-navLinks transition-all duration-300 ease-in-out ",
                   {
                     ["text-purple"]: currentIndex === i,
                     ["text-headlineColor"]: currentIndex !== i,
@@ -164,7 +164,7 @@ export default function NavGroup({
                               aria-label={`Hlekkur á ${el.link_text}`}
                               field={el.link}
                               onClick={linkClick}
-                              className=" transition-all  flex justify-between gap-12  text-navLinks py-[10px] px-fluid-18 group-hover:text-purple duration-300 w-fill ease-in-out border-[1px] rounded-6 hover:shadow-sm border-pureWhite hover:border-opacity-20 hover:border-greyInput"
+                              className=" transition-all  flex justify-between gap-12  text-[15px] xl:text-navLinks py-[10px] px-fluid-18 group-hover:text-purple duration-300 w-fill ease-in-out border-[1px] rounded-6 hover:shadow-sm border-pureWhite hover:border-opacity-20 hover:border-greyInput"
                             >
                               {el.link_text}
                               {/* <div className="w-[16px]"></div> */}
@@ -196,7 +196,9 @@ export default function NavGroup({
                     </h3>
                   </FadeIn>
                   <FadeIn delay={0.1}>
-                    <p className="text-sm text-bodyGrey">{group.paragraph}</p>
+                    <p className="text-[15px] xl:text-navLinks text-bodyGrey">
+                      {group.paragraph}
+                    </p>
                   </FadeIn>
                   <FadeIn
                     delay={0.2}

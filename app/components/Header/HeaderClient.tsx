@@ -114,7 +114,7 @@ export default function HeaderClient({
       <MobileNav content={content} setIsMobileNavOpen={setIsMobileNavOpen} />
 
       <nav className="hidden md:flex justify-between w-fill px-fluid-16 lg:px-fluid-32 text-white  ">
-        <div className="flex text-headlineColor font-body font-semiBold  self-center gap-fluid-24 lg:gap-fluid-32 lg2:gap-fluid-40">
+        <div className="flex text-headlineColor font-body font-semiBold  self-center gap-fluid-24 xl:gap-fluid-32 ">
           <Link
             aria-label="hlekkur til að fara heim á forsíðu"
             href="/"
@@ -122,7 +122,7 @@ export default function HeaderClient({
             className=" h-fit self-center "
           >
             <Image
-              alt="STF logo"
+              alt="Félag stjórnenda logo"
               src={Logo}
               height={80}
               className=" h-[100px] xs:h-[80px] w-[100px] lg:w-[100px] lg2:w-[120px] "
@@ -135,27 +135,27 @@ export default function HeaderClient({
           />
           <div className="group h-fit self-center">
             <PrismicNextLink
-              className="flex group gap-6 pb-2 text-navLinks transition-all duration-300 ease-in-out"
+              className="flex group gap-6 pb-2 text-[15px] xl:text-navLinks transition-all duration-300 ease-in-out"
               field={content.link_5}
               onClick={handleNavClick}
             >
               {content.link_5_name}
             </PrismicNextLink>
-            <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-70 group-hover:bg-purple transition-all duration-300 ease-in-out"></div>
+            <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-50 group-hover:bg-purple transition-all duration-300 ease-in-out"></div>
           </div>
           <div className="group h-fit self-center">
             <PrismicNextLink
-              className="flex group gap-6 pb-2 text-navLinks transition-all duration-300 ease-in-out"
+              className="flex group gap-6 pb-2 text-[15px] xl:text-navLinks transition-all duration-300 ease-in-out"
               field={content.link_6}
               onClick={handleNavClick}
             >
               {content.link_6_name}
             </PrismicNextLink>
-            <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-70 group-hover:bg-purple transition-all duration-300 ease-in-out"></div>
+            <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-50 group-hover:bg-purple transition-all duration-300 ease-in-out"></div>
           </div>
         </div>
 
-        <div className="flex gap-fluid-24 lg:gap-fluid-32 self-center">
+        <div className="flex gap-fluid-24 xl:gap-fluid-32 self-center">
           <UserLinks />
           <Button
             text={"Sækja um aðild"}
@@ -163,7 +163,7 @@ export default function HeaderClient({
             ariaLabel={`Hlekkur til að hafa samband`}
             onClick={handleNavClick}
             type="htmla"
-            className="text-fontBlue rounded-8   bg-backgroundBlue hover:bg-buttonBlue text-navLinks  transition-all duration-300 ease-in-out"
+            className="text-fontBlue rounded-8   bg-backgroundBlue hover:bg-buttonBlue text-[15px] xl:text-navLinks  transition-all duration-300 ease-in-out"
           />
         </div>
       </nav>
