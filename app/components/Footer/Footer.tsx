@@ -33,7 +33,7 @@ export default function Footer() {
                   Austurvegur 56, 800 Selfoss
                 </a>
               </li>
-              <li>Kennitala: 680269-7699</li>
+              <li>Kennitala: 540775-1339</li>
             </ul>
           </div>
         </div>

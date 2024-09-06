@@ -56,27 +56,29 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
                       </h4>
                     </div>
                     <div className="flex flex-col gap-fluid-12">
-                      <a
-                        className="text-sm self-start w-fit group bg-greyPurple text-purple py-fluid-8 px-fluid-16 rounded-32 flex gap-6 hover:text-buttonBlue transition-all duration-300 ease-in-out"
-                        href={`mailto:${item.email}`}
-                        aria-label={`Hlekkur til að senda tölvupóst á ${item.member_name}`}
-                      >
-                        <svg
-                          width="100%"
-                          height="100%"
-                          viewBox="0 0 14 11"
-                          fill="none"
-                          className="h-[12px] w-[12px] self-center  text-purple group-hover:text-buttonBlue ease-in-out transition-all duration-300"
-                          xmlns="http://www.w3.org/2000/svg"
+                      {item.email && (
+                        <a
+                          className="text-sm self-start w-fit group bg-greyPurple text-purple py-fluid-8 px-fluid-16 rounded-32 flex gap-6 hover:text-buttonBlue transition-all duration-300 ease-in-out"
+                          href={`mailto:${item.email}`}
+                          aria-label={`Hlekkur til að senda tölvupóst á ${item.member_name}`}
                         >
-                          <path
-                            d="M13 0.416504H1C0.801088 0.416504 0.610322 0.495521 0.46967 0.636174C0.329018 0.776826 0.25 0.967592 0.25 1.1665V9.6665C0.25 9.99802 0.381696 10.316 0.616117 10.5504C0.850537 10.7848 1.16848 10.9165 1.5 10.9165H12.5C12.8315 10.9165 13.1495 10.7848 13.3839 10.5504C13.6183 10.316 13.75 9.99802 13.75 9.6665V1.1665C13.75 0.967592 13.671 0.776826 13.5303 0.636174C13.3897 0.495521 13.1989 0.416504 13 0.416504ZM11.0719 1.9165L7 5.649L2.92812 1.9165H11.0719ZM1.75 9.4165V2.8715L6.49312 7.21963C6.63146 7.34647 6.81232 7.41684 7 7.41684C7.18768 7.41684 7.36854 7.34647 7.50688 7.21963L12.25 2.8715V9.4165H1.75Z"
-                            fill="currentColor"
-                          />
-                        </svg>
-                        {item.email}
-                      </a>
-                      <a
+                          <svg
+                            width="100%"
+                            height="100%"
+                            viewBox="0 0 14 11"
+                            fill="none"
+                            className="h-[12px] w-[12px] self-center  text-purple group-hover:text-buttonBlue ease-in-out transition-all duration-300"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M13 0.416504H1C0.801088 0.416504 0.610322 0.495521 0.46967 0.636174C0.329018 0.776826 0.25 0.967592 0.25 1.1665V9.6665C0.25 9.99802 0.381696 10.316 0.616117 10.5504C0.850537 10.7848 1.16848 10.9165 1.5 10.9165H12.5C12.8315 10.9165 13.1495 10.7848 13.3839 10.5504C13.6183 10.316 13.75 9.99802 13.75 9.6665V1.1665C13.75 0.967592 13.671 0.776826 13.5303 0.636174C13.3897 0.495521 13.1989 0.416504 13 0.416504ZM11.0719 1.9165L7 5.649L2.92812 1.9165H11.0719ZM1.75 9.4165V2.8715L6.49312 7.21963C6.63146 7.34647 6.81232 7.41684 7 7.41684C7.18768 7.41684 7.36854 7.34647 7.50688 7.21963L12.25 2.8715V9.4165H1.75Z"
+                              fill="currentColor"
+                            />
+                          </svg>
+                          {item.email}
+                        </a>
+                      )}
+                      {/* <a
                         className="text-sm bg-greyPurple group text-purple py-fluid-8 px-fluid-16 rounded-32 w-fit max-w-[111px] xxs:max-w-fit whitespace-nowrap  flex gap-6 hover:text-buttonBlue transition-all duration-300 ease-in-out"
                         href={`tel:${item.phone_number}`}
                         aria-label={`Hlekkur til að hringja í ${item.member_name}`}
@@ -95,7 +97,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
                           />
                         </svg>
                         {item.phone_number}
-                      </a>
+                      </a> */}
                     </div>
                   </FadeIn>
                 </div>
