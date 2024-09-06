@@ -37,7 +37,7 @@ export default async function Service({ params }: { params: Params }) {
   return (
     <section className="flex flex-col justify-center bg-backgroundGreyDarker">
       <div className="lg:pb-fluid-122 pt-fluid-40 smmd:pt-fluid-64  pb-64 px-container-56 xxs:px-container-88 self-center flex flex-col gap-fluid-56 smmd:w-[90%] lg2:w-[80%] max-w-[2000px] ">
-        <FadeIn className="flex  font-body text-sm  w-fit">
+        <div className="flex  font-body text-sm  w-fit">
           <Link
             className="text-bodyGrey  hover:text-buttonBlue transition-all duration-300"
             href={"/"}
@@ -63,13 +63,13 @@ export default async function Service({ params }: { params: Params }) {
           <p className="text-sm text-headlineColor font-semiBold">
             {section.title}
           </p>
-        </FadeIn>
+        </div>
         <div className="mt-fluid-56 py-fluid-24 sm:py-fluid-48 px-fluid-24 sm:px-fluid-72  rounded-6 bg-pureWhite flex flex-col gap-fluid-48">
-          <FadeIn>
+          <div>
             <h1 className="font-headline  text-headlineColor text-h2 font-semiBold">
               {section.title}
             </h1>
-          </FadeIn>
+          </div>
           <RichText text={section.paragraph} />
         </div>
       </div>
