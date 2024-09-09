@@ -38,12 +38,12 @@ export default function Footer() {
           </div>
         </div>
         <div className="flex w-fill lg:max-w-[70%] md:justify-end flex-row flex-wrap lg:flex-nowrap gap-fluid-64 gap-y-fluid-48 md:gap-fluid-144 xs:gap-fluid-96  ">
-          <nav className="flex overflow-hidden font-body text-pureWhite flex-wrap   sm:p-0 ">
+          <nav className="flex   font-body text-pureWhite flex-wrap   sm:p-0 ">
             <ul
               aria-label={`Hagnýtt`}
-              className="flex gap-8 text-navLinks   md:min-h-[160px] w-fit  md:w-[160px] lg2:w-fit flex-col font-medium before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
+              className="flex gap-8 text-navLinks text-nowrap   md:min-h-[160px] w-fit  md:w-[160px] lg2:w-fit flex-col font-medium before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
             >
-              <li className="hover:text-buttonBlue transition-all duration-300 ease-in-out">
+              <li className="hover:text-buttonBlue  transition-all duration-300 ease-in-out">
                 <a
                   href={"https://stf.is/algengar-spurningar"}
                   target="_blank"

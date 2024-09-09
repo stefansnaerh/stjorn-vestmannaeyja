@@ -64,7 +64,7 @@ export default async function Service({ params }: { params: Params }) {
             {section.title}
           </p>
         </div>
-        <div className="mt-fluid-56 py-fluid-24 sm:py-fluid-48 px-fluid-24 sm:px-fluid-72  rounded-6 bg-pureWhite flex flex-col gap-fluid-48">
+        <div className="mt-fluid-56 py-fluid-24 sm:py-fluid-48 px-fluid-24 sm:px-fluid-72  rounded-6 bg-pureWhite flex flex-col gap-fluid-32">
           <div>
             <h1 className="font-headline  text-headlineColor text-h2 font-semiBold">
               {section.title}
