@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type AboutUsDocumentDataSlicesSlice =
+  | ServicesOverviewSlice
   | BoardSlice
   | MemberQuoteSlice
   | ServiceOverviewSlice;
@@ -27,13 +28,13 @@ interface AboutUsDocumentData {
   /**
    * Paragraph field in *Um okkur*
    *
-   * - **Field Type**: Rich Text
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
    * - **API ID Path**: about_us.paragraph
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  paragraph: prismic.RichTextField;
+  paragraph: prismic.KeyTextField;
 
   /**
    * Image field in *Um okkur*
@@ -56,6 +57,17 @@ interface AboutUsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image_2: prismic.ImageField<never>;
+
+  /**
+   * Sub paragraph field in *Um okkur*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.sub_paragraph
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_paragraph: prismic.KeyTextField;
 
   /**
    * Slice Zone field in *Um okkur*
@@ -1823,11 +1835,11 @@ export type OrlofshusUmAlltLandSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *ServiceOverview → Default → Primary → items*
+ * Item in *CardsWithLink → Default → Primary → items*
  */
 export interface ServiceOverviewSliceDefaultPrimaryItemsItem {
   /**
-   * title field in *ServiceOverview → Default → Primary → items*
+   * title field in *CardsWithLink → Default → Primary → items*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1837,7 +1849,7 @@ export interface ServiceOverviewSliceDefaultPrimaryItemsItem {
   title: prismic.KeyTextField;
 
   /**
-   * paragraph field in *ServiceOverview → Default → Primary → items*
+   * paragraph field in *CardsWithLink → Default → Primary → items*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1847,7 +1859,7 @@ export interface ServiceOverviewSliceDefaultPrimaryItemsItem {
   paragraph: prismic.KeyTextField;
 
   /**
-   * link field in *ServiceOverview → Default → Primary → items*
+   * link field in *CardsWithLink → Default → Primary → items*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
@@ -1858,11 +1870,11 @@ export interface ServiceOverviewSliceDefaultPrimaryItemsItem {
 }
 
 /**
- * Primary content in *ServiceOverview → Default → Primary*
+ * Primary content in *CardsWithLink → Default → Primary*
  */
 export interface ServiceOverviewSliceDefaultPrimary {
   /**
-   * Title field in *ServiceOverview → Default → Primary*
+   * Title field in *CardsWithLink → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1872,7 +1884,7 @@ export interface ServiceOverviewSliceDefaultPrimary {
   title: prismic.KeyTextField;
 
   /**
-   * Sub title field in *ServiceOverview → Default → Primary*
+   * Sub title field in *CardsWithLink → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
@@ -1882,7 +1894,7 @@ export interface ServiceOverviewSliceDefaultPrimary {
   sub_title: prismic.KeyTextField;
 
   /**
-   * items field in *ServiceOverview → Default → Primary*
+   * items field in *CardsWithLink → Default → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
@@ -1895,7 +1907,7 @@ export interface ServiceOverviewSliceDefaultPrimary {
 }
 
 /**
- * Default variation for ServiceOverview Slice
+ * Default variation for CardsWithLink Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -1908,12 +1920,12 @@ export type ServiceOverviewSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *ServiceOverview*
+ * Slice variation for *CardsWithLink*
  */
 type ServiceOverviewSliceVariation = ServiceOverviewSliceDefault;
 
 /**
- * ServiceOverview Shared Slice
+ * CardsWithLink Shared Slice
  *
  * - **API ID**: `service_overview`
  * - **Description**: ServiceOverview
@@ -1922,6 +1934,190 @@ type ServiceOverviewSliceVariation = ServiceOverviewSliceDefault;
 export type ServiceOverviewSlice = prismic.SharedSlice<
   "service_overview",
   ServiceOverviewSliceVariation
+>;
+
+/**
+ * Item in *CardsWithLink → Default → Primary → items*
+ */
+export interface ServiceOverviewSliceDefaultPrimaryItemsItem {
+  /**
+   * title field in *CardsWithLink → Default → Primary → items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.default.primary.items[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * paragraph field in *CardsWithLink → Default → Primary → items*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.default.primary.items[].paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField;
+
+  /**
+   * link field in *CardsWithLink → Default → Primary → items*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.default.primary.items[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Primary content in *CardsWithLink → Default → Primary*
+ */
+export interface ServiceOverviewSliceDefaultPrimary {
+  /**
+   * Title field in *CardsWithLink → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Sub title field in *CardsWithLink → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.default.primary.sub_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_title: prismic.KeyTextField;
+
+  /**
+   * items field in *CardsWithLink → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: service_overview.default.primary.items[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  items: prismic.GroupField<
+    Simplify<ServiceOverviewSliceDefaultPrimaryItemsItem>
+  >;
+}
+
+/**
+ * Default variation for CardsWithLink Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServiceOverviewSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ServiceOverviewSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *CardsWithLink*
+ */
+type ServiceOverviewSliceVariation = ServiceOverviewSliceDefault;
+
+/**
+ * CardsWithLink Shared Slice
+ *
+ * - **API ID**: `service_overview`
+ * - **Description**: ServiceOverview
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServiceOverviewSlice = prismic.SharedSlice<
+  "service_overview",
+  ServiceOverviewSliceVariation
+>;
+
+/**
+ * Item in *ServicesOverview → Default → Primary → Service*
+ */
+export interface ServicesOverviewSliceDefaultPrimaryServiceItem {
+  /**
+   * Title field in *ServicesOverview → Default → Primary → Service*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_overview.default.primary.service[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Paragraph field in *ServicesOverview → Default → Primary → Service*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_overview.default.primary.service[].paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *ServicesOverview → Default → Primary*
+ */
+export interface ServicesOverviewSliceDefaultPrimary {
+  /**
+   * Title field in *ServicesOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_overview.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Service field in *ServicesOverview → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_overview.default.primary.service[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  service: prismic.GroupField<
+    Simplify<ServicesOverviewSliceDefaultPrimaryServiceItem>
+  >;
+}
+
+/**
+ * Default variation for ServicesOverview Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServicesOverviewSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ServicesOverviewSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *ServicesOverview*
+ */
+type ServicesOverviewSliceVariation = ServicesOverviewSliceDefault;
+
+/**
+ * ServicesOverview Shared Slice
+ *
+ * - **API ID**: `services_overview`
+ * - **Description**: ServicesOverview
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ServicesOverviewSlice = prismic.SharedSlice<
+  "services_overview",
+  ServicesOverviewSliceVariation
 >;
 
 /**
@@ -2133,6 +2329,16 @@ declare module "@prismicio/client" {
       ServiceOverviewSliceDefaultPrimary,
       ServiceOverviewSliceVariation,
       ServiceOverviewSliceDefault,
+      ServiceOverviewSlice,
+      ServiceOverviewSliceDefaultPrimaryItemsItem,
+      ServiceOverviewSliceDefaultPrimary,
+      ServiceOverviewSliceVariation,
+      ServiceOverviewSliceDefault,
+      ServicesOverviewSlice,
+      ServicesOverviewSliceDefaultPrimaryServiceItem,
+      ServicesOverviewSliceDefaultPrimary,
+      ServicesOverviewSliceVariation,
+      ServicesOverviewSliceDefault,
       TextOnlySlice,
       TextOnlySliceDefaultPrimary,
       TextOnlySliceVariation,

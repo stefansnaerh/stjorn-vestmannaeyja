@@ -14,12 +14,10 @@
         }
       },
       "paragraph": {
-        "type": "StructuredText",
+        "type": "Text",
         "config": {
           "label": "Paragraph",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "paragraph,heading2,heading3,heading4,strong,em,hyperlink,embed,list-item,o-list-item"
+          "placeholder": ""
         }
       },
       "image": {
@@ -38,11 +36,21 @@
           "thumbnails": []
         }
       },
+      "sub_paragraph": {
+        "type": "Text",
+        "config": {
+          "label": "Sub paragraph",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "services_overview": {
+              "type": "SharedSlice"
+            },
             "board": {
               "type": "SharedSlice"
             },

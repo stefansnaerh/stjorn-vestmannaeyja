@@ -8,7 +8,6 @@ import { PrismicNextImage } from "@prismicio/next";
 import Image from "next/image";
 import Chevron from "../../public/icons/chevronUp.svg";
 import { FadeIn } from "../components/FadeIn/fadeIn";
-import { PrismicRichText } from "@prismicio/react";
 import RichText from "../components/RichText/RichText";
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
@@ -28,9 +27,12 @@ export default async function AboutUs() {
 
   return (
     <section className="flex flex-col justify-center">
-      <div className="lg:pb-fluid-122 pt-fluid-40 smmd:pt-fluid-64 max-w-[2000px]  pb-64 px-container-88 self-center flex flex-col gap-fluid-56 smmd:w-[95%] lg2:w-[90%]  ">
+      <div className="lg:pb-fluid-40 pt-fluid-40 smmd:pt-fluid-64 max-w-[2000px]  pb-64 px-container-88 self-center flex flex-col gap-fluid-56 smmd:w-[95%] lg2:w-[90%]  ">
         <FadeIn className="flex  font-body text-sm ">
-          <Link className="text-bodyGrey" href={"/"}>
+          <Link
+            className="text-bodyGrey hover:text-buttonBlue transition-all duration-300"
+            href={"/"}
+          >
             Heim
           </Link>
           <Image
@@ -65,17 +67,16 @@ export default async function AboutUs() {
               </div>
             </FadeIn>
           </FadeIn>
-          <div className="flex flex-col gap-fluid-32 md:gap-fluid-48 ">
-            <FadeIn>
+          <div className="flex flex-col gap-fluid-32 lg:gap-fluid-40  ">
+            <FadeIn className="md:self-center">
               <h1 className="font-headline  text-headlineColor text-h2 font-semiBold">
                 {section.title}
               </h1>
             </FadeIn>
-            <FadeIn
-              className="[&_p]:text-navLinks [&_p]:text-bodyGrey [&_p]:font-body"
-              delay={0.2}
-            >
-              <RichText text={section.paragraph} />
+            <FadeIn className="w-fill flex flex-col" delay={0.2}>
+              <p className="md:self-center text-[16px] md:w-[80%] md:text-center text-bodyGrey font-body">
+                {section.paragraph}
+              </p>
             </FadeIn>
           </div>
         </FadeIn>

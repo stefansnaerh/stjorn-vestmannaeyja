@@ -3,12 +3,9 @@ import { createClient } from "../../../prismicio";
 import { UmOkkurTextasidaDocument } from "@/prismicio-types";
 import { SliceZone } from "@prismicio/react";
 import { components } from "../../../slices";
-import { FadeIn } from "@/app/components/FadeIn/fadeIn";
 import Image from "next/image";
 import Link from "next/link";
 import Chevron from "../../../public/icons/chevronUp.svg";
-import LogoStandandi from "../../../public/icons/LogoStandandiStafir.svg";
-import Logo from "../../../public/icons/LogoLiggjandiStafir.svg";
 import RichText from "@/app/components/RichText/RichText";
 type Params = { uid: string };
 export async function generateMetadata({

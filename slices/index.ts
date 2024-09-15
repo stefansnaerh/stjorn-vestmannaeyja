@@ -10,7 +10,9 @@ export const components = {
   house_amenities: dynamic(() => import("./HouseAmenities")),
   member_quote: dynamic(() => import("./MemberQuote")),
   orlofshus_um_allt_land: dynamic(() => import("./OrlofshusUmAlltLand")),
-  service_overview: dynamic(() => import("./ServiceOverview")),
+  service_overview: dynamic(() => import("./CardsWithLink")),
+  service_overview: dynamic(() => import("./CardsWithLink")),
+  services_overview: dynamic(() => import("./ServicesOverview")),
   text_only: dynamic(() => import("./TextOnly")),
   why_us_overview: dynamic(() => import("./WhyUsOverview")),
 };

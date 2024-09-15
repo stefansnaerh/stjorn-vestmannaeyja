@@ -3,7 +3,12 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"items": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "every",
+				"type": "Text"
+			},
+			"service": {
 				"__TYPE__": "GroupContentType",
 				"value": [
 					{
@@ -13,7 +18,7 @@
 								"title",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "curious",
+									"value": "end",
 									"type": "Text"
 								}
 							],
@@ -21,33 +26,13 @@
 								"paragraph",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "pull",
+									"value": "whole",
 									"type": "Text"
-								}
-							],
-							[
-								"link",
-								{
-									"__TYPE__": "LinkContent",
-									"value": {
-										"__TYPE__": "ExternalLink",
-										"url": "http://google.com"
-									}
 								}
 							]
 						]
 					}
 				]
-			},
-			"title": {
-				"__TYPE__": "FieldContent",
-				"value": "mean",
-				"type": "Text"
-			},
-			"sub_title": {
-				"__TYPE__": "FieldContent",
-				"value": "graph",
-				"type": "Text"
 			}
 		},
 		"items": []
