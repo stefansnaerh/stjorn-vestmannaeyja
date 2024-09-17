@@ -69,7 +69,7 @@ const LanguageSwitcher = () => {
     // console.log("Cookies after destroy:", cookiesAfterDestroy);
     setCookie(null, COOKIE_NAME, "/auto/" + lang, {
       path: "/",
-      domain: ".stf.is",
+      domain: ".https://felag-stjornenda.netlify.app/",
     });
     const cookiesAfterSet = parseCookies();
     // console.log("Cookies after set:", cookiesAfterSet);
