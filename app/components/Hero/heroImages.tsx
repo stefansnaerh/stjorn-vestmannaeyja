@@ -14,43 +14,24 @@ export default function HeroImages({
 }) {
   return (
     <>
-      <>
-        {" "}
-        <div className=" relative overflow-hidden ">
-          <div className="relative pb-[170%] xxs:pb-[140%] xs:pb-[95%] sm:pb-[77%] md:pb-[63%] lg:pb-[50%]">
-            <PrismicNextImage
-              field={content.hero_image}
-              className="object-cover z-0 animate-imageFade brightness-[30%] "
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-        </div>
-        <div className="absolute sm:left-[5%] md:left-auto top-[5%] md:top-[20%] w-fill flex flex-col md:flex-row gap-fluid-72 md:gap-fluid-56 justify-around px-fluid-48 xxxl:max-w-[2000px] xxxl:ml-auto xxxl:mr-auto xxxl:left-0 xxxl:right-0">
-          <div className="mt-[5%]  flex flex-col gap-fluid-16">
-            <FadeIn>
-              <p className="font-body font-bold text-pureWhite text-md xs:text-h3">
-                Við erum hér,{" "}
-                <span className="text-buttonBlue">fyrir þig.</span>
-              </p>
-            </FadeIn>
-            <FadeIn delay={0.2}>
-              <h1 className="font-headline text-h1 font-semiBold text-pureWhite">
-                Félag stjórnenda
-              </h1>
-            </FadeIn>
-          </div>
-          <div className="flex flex-col gap-fluid-40  xs:max-w-[90%] sm:max-w-[70%] md:max-w-[46%] lg:max-w-[44%] xl:max-w-[44%]">
+      <div className="grid grid-cols-2">
+        <div className=" flex flex-col  gap-fluid-72 md:gap-fluid-56 py-fluid-48 px-fluid-72 xxxl:max-w-[2000px]">
+          <FadeIn delay={0.2}>
+            <h1 className="font-headline text-h1 font-semiBold text-headlineColor">
+              Stjórnendafélag Vestfjarða
+            </h1>
+          </FadeIn>
+
+          <div className="flex flex-col gap-fluid-40  max-w-[90%]">
             {slide === 0 ? (
-              <FadeIn className=" bg-white shadow-button rounded-8 px-fluid-32 smmd:px-fluid-40 py-fluid-40 sm:py-fluid-56   flex flex-col gap-fluid-24">
+              <FadeIn className="flex flex-col gap-fluid-24">
                 <FadeIn>
-                  <h2 className="tracking-[0px] font-bold font-headline text-headlineColor text-h2">
+                  <h2 className="tracking-[0px] font-bold font-headline text-headlineColor text-h6">
                     {content.hero_title_1}
                   </h2>
                 </FadeIn>
                 <FadeIn className="" delay={0.2}>
-                  <p className=" text-bodyGrey font-body text-lg">
+                  <p className=" text-bodyGrey font-body text-md">
                     {content.hero_paragraph_1}
                   </p>
                 </FadeIn>
@@ -60,7 +41,7 @@ export default function HeroImages({
                     href={content.hero_link_1}
                     ariaLabel={`Hlekkur til að hafa samband`}
                     type="anchor"
-                    className="text-fontBlue rounded-8  text-white bg-purple hover:bg-purpleHover text-navLinks  transition-all duration-300 ease-in-out"
+                    className="text-fontBlue rounded-8  text-white bg-buttonBlue hover:bg-buttonBlueHover text-navLinks  transition-all duration-300 ease-in-out"
                   />
                 </FadeIn>
               </FadeIn>
@@ -69,14 +50,14 @@ export default function HeroImages({
             )}
             {slide === 1 ? (
               <>
-                <FadeIn className=" bg-white shadow-button  rounded-8 px-fluid-32 smmd:px-fluid-40 py-fluid-40 sm:py-fluid-56  flex flex-col gap-fluid-24">
+                <FadeIn className="flex flex-col gap-fluid-24">
                   <FadeIn>
-                    <h2 className="tracking-[0px] font-bold font-headline text-headlineColor text-h2">
+                    <h2 className="tracking-[0px] font-bold font-headline text-headlineColor text-h6">
                       {content.hero_title_2}
                     </h2>
                   </FadeIn>
                   <FadeIn className="" delay={0.2}>
-                    <p className=" text-bodyGrey font-body text-lg">
+                    <p className=" text-bodyGrey font-body text-md">
                       {content.hero_paragraph_2}
                     </p>
                   </FadeIn>
@@ -86,7 +67,7 @@ export default function HeroImages({
                       href={content.hero_link_2}
                       ariaLabel={`Hlekkur til að hafa samband`}
                       type="anchor"
-                      className="text-fontBlue rounded-8  text-white bg-purple hover:bg-purpleHover text-navLinks  transition-all duration-300 ease-in-out"
+                      className="text-fontBlue rounded-8  text-white bg-buttonBlue hover:bg-buttonBlueHover text-navLinks  transition-all duration-300 ease-in-out"
                     />
                   </FadeIn>
                 </FadeIn>
@@ -96,14 +77,14 @@ export default function HeroImages({
             )}
             {slide === 2 ? (
               <>
-                <FadeIn className=" bg-white shadow-button rounded-8 px-fluid-32 smmd:px-fluid-40 py-fluid-40 sm:py-fluid-56 flex flex-col gap-fluid-24">
+                <FadeIn className=" flex flex-col gap-fluid-24">
                   <FadeIn>
-                    <h2 className="tracking-[0px] font-bold font-headline text-headlineColor text-h2">
+                    <h2 className="tracking-[0px] font-bold font-headline text-headlineColor text-h6">
                       {content.hero_title_3}
                     </h2>
                   </FadeIn>
                   <FadeIn className="" delay={0.2}>
-                    <p className=" text-bodyGrey font-body text-lg">
+                    <p className=" text-bodyGrey font-body text-md">
                       {content.hero_paragraph_3}
                     </p>
                   </FadeIn>
@@ -113,7 +94,7 @@ export default function HeroImages({
                       href={content.hero_link_3}
                       ariaLabel={`Hlekkur til að hafa samband`}
                       type="anchor"
-                      className="text-fontBlue rounded-8  text-white bg-purple hover:bg-purpleHover text-navLinks  transition-all duration-300 ease-in-out"
+                      className="text-fontBlue rounded-8  text-white bg-buttonBlue hover:bg-buttonBlueHover text-navLinks  transition-all duration-300 ease-in-out"
                     />
                   </FadeIn>
                 </FadeIn>
@@ -124,7 +105,18 @@ export default function HeroImages({
             <HeroSlider setSlide={setSlide} slide={slide} />
           </div>
         </div>
-      </>
+        <div className="relative overflow-hidden ">
+          <div className="relative pb-[170%] xxs:pb-[140%] xs:pb-[95%] sm:pb-[77%] md:pb-[63%] lg:pb-[80%]">
+            <PrismicNextImage
+              field={content.hero_image}
+              className="object-cover z-0 animate-imageFade  "
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 }

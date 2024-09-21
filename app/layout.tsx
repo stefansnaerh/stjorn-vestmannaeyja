@@ -6,24 +6,28 @@ import Main from "./components/Main/main";
 import Script from "next/script";
 import HeaderContext from "./components/ContextProvider/Provider";
 
-const lora = localFont({
+const eb_garamond = localFont({
   src: [
     {
-      path: "../public/fonts/lora-v35-latin-600.woff2",
+      path: "../public/fonts/eb-garamond-v27-latin-600.woff2",
       weight: "600",
     },
   ],
   variable: "--font-headline",
 });
-const open_sans = localFont({
+const manrope = localFont({
   src: [
     {
-      path: "../public/fonts/open-sans-v40-latin-600.woff2",
+      path: "../public/fonts/manrope-v15-latin-600.woff2",
       weight: "600",
+    },
+    {
+      path: "../public/fonts/manrope-v15-latin-500.woff2",
+      weight: "500",
     },
 
     {
-      path: "../public/fonts/open-sans-v40-latin-regular.woff2",
+      path: "../public/fonts/manrope-v15-latin-regular.woff2",
       weight: "400",
     },
   ],
@@ -36,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${lora.variable} ${open_sans.variable} `} lang="en">
+    <html className={`${eb_garamond.variable} ${manrope.variable} `} lang="en">
       <head>
         <link rel="icon" href="/icon.ico" sizes="any" />
         <Script

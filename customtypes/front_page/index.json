@@ -13,13 +13,6 @@
           "placeholder": ""
         }
       },
-      "main_sub_title": {
-        "type": "Text",
-        "config": {
-          "label": "Main sub title",
-          "placeholder": ""
-        }
-      },
       "hero_image": {
         "type": "Image",
         "config": {

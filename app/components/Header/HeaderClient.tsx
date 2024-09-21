@@ -9,7 +9,7 @@ import MobileNav from "./MobileNav/mobileNav";
 import Button from "../Button/Button";
 import { HeaderDocumentData } from "@/prismicio-types";
 import NavGroup from "./NavGroup/NavGroup";
-import Logo from "../../../public/icons/felag-stjornenda-placeholderLogo.svg";
+import Logo from "../../../public/icons/stjornVestLogo.svg";
 import UserLinks from "./UserLinks/UserLinks";
 import { BackGroundGreyContext } from "../ContextProvider/Provider";
 export default function HeaderClient({
@@ -125,7 +125,7 @@ export default function HeaderClient({
               alt="Félag stjórnenda logo"
               src={Logo}
               height={80}
-              className=" h-[100px] xs:h-[80px] w-[100px] lg:w-[100px] lg2:w-[120px] "
+              className=" h-[100px] xs:h-[70px] w-[100px] lg:w-[100px] lg2:w-[120px] "
             />
           </Link>
           <NavGroup
@@ -163,7 +163,7 @@ export default function HeaderClient({
             ariaLabel={`Hlekkur til að hafa samband`}
             onClick={handleNavClick}
             type="htmla"
-            className="text-fontBlue rounded-8   bg-backgroundBlue hover:bg-buttonBlue text-[15px] xl:text-navLinks  transition-all duration-300 ease-in-out"
+            className="text-fontBlue rounded-8 font-body bg-buttonBlue hover:bg-buttonBlueHover text-[15px] xl:text-navLinks transition-all duration-300 ease-in-out"
           />
         </div>
       </nav>
