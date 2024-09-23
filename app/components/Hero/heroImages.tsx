@@ -39,7 +39,7 @@ export default function HeroImages({
                   <Button
                     text={"Sækja um aðild"}
                     href={content.hero_link_1}
-                    ariaLabel={`Hlekkur til að hafa samband`}
+                    ariaLabel={`Hlekkur til að hafa samband `}
                     type="anchor"
                     className="text-fontBlue rounded-8  text-white bg-buttonBlue hover:bg-buttonBlueHover text-navLinks  transition-all duration-300 ease-in-out"
                   />
