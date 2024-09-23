@@ -15,7 +15,7 @@ export default function HeroImages({
   return (
     <>
       <div className="grid grid-cols-2">
-        <div className=" flex flex-col  gap-fluid-72 md:gap-fluid-56 py-fluid-48 px-fluid-72 xxxl:max-w-[2000px]">
+        <div className="relative flex flex-col  gap-fluid-72 md:gap-fluid-56 py-fluid-48 px-fluid-72 xxxl:max-w-[2000px]">
           <FadeIn delay={0.2}>
             <h1 className="font-headline text-h1 font-semiBold text-headlineColor">
               Stjórnendafélag Vestfjarða
@@ -106,7 +106,7 @@ export default function HeroImages({
           </div>
         </div>
         <div className="relative overflow-hidden ">
-          <div className="relative pb-[170%] xxs:pb-[140%] xs:pb-[95%] sm:pb-[77%] md:pb-[63%] lg:pb-[80%]">
+          <div className="relative pb-[170%] xxs:pb-[140%] xs:pb-[95%] sm:pb-[77%] md:pb-[63%] lg:pb-[90%]">
             <PrismicNextImage
               field={content.hero_image}
               className="object-cover z-0 animate-imageFade  "
