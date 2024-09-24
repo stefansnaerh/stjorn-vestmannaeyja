@@ -1,9 +1,7 @@
 import Container from "../Container/container";
 import { FadeIn } from "../FadeIn/fadeIn";
 import { PrismicNextLink } from "@prismicio/next";
-import Image from "next/image";
 import { FrontPageDocumentData } from "@/prismicio-types";
-import Arrow from "../../../public/icons/ArrowRight.svg";
 const ServiceOverview = ({
   content,
 }: {
@@ -19,22 +17,22 @@ const ServiceOverview = ({
                 <PrismicNextLink
                   key={`${index}${item.title}`}
                   field={item.link}
-                  className=" flex w-fill group border-2 border-buttonBlue border-opacity-35 flex-col gap-fluid-32  justify-between hover:bg-white hover:border-white px-fluid-32 xs:px-fluid-40  pt-fluid-40  pb-fluid-32  rounded-6 transition-all duration-300 ease-in-out snap-x snap-mandatory snap-always snap-center  "
+                  className=" flex w-fill group border-2 border-grey  border-opacity-25 flex-col gap-fluid-32  justify-between hover:bg-pureWhite hover:bg-opacity-15  px-fluid-32 xs:px-fluid-40  pt-fluid-40  pb-fluid-32  rounded-6 transition-all duration-300 ease-in-out snap-x snap-mandatory snap-always snap-center  "
                 >
                   <div className="flex flex-col gap-fluid-16">
                     <FadeIn className="flex justify-between">
-                      <h3 className="text-paragraph group-hover:text-headlineColor font-headline font-semiBold self-center">
+                      <h3 className="text-paragraph  font-headline font-semiBold self-center">
                         {item.title}
                       </h3>
                     </FadeIn>
                     <FadeIn>
-                      <p className="text-[16px] group-hover:text-bodyGrey font-regular font-body line-clamp-3">
+                      <p className="text-[16px] font-regular font-body line-clamp-3">
                         {item.paragraph}
                       </p>
                     </FadeIn>
                   </div>
                   <FadeIn className="flex self-end  gap-6 ">
-                    <p className="text-[16px] group-hover:text-bodyGrey font-body font-semiBold transition-all duration-75 ease-in-out">
+                    <p className="text-[16px]  font-body font-semiBold transition-all duration-75 ease-in-out">
                       Lesa nánar
                     </p>
 
@@ -43,7 +41,7 @@ const ServiceOverview = ({
                       height="100%"
                       viewBox="0 0 18 18"
                       fill="none"
-                      className="w-[30px] text-pureWhite group-hover:text-bodyGrey transition-all filter  duration-300 ease-in-out self-center h-16  group-hover:pl-[14px]"
+                      className="w-[30px] text-pureWhite transition-all filter duration-300 ease-in-out self-center h-[14px]  group-hover:pl-[14px]"
                       xmlns="http://www.w3.org/2000/svg"
                     >
                       <path

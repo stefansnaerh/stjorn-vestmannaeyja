@@ -15,7 +15,7 @@ export default function Footer() {
               alt="Félag stjórnenda logo"
               src={Logo}
               height={60}
-              className="lg2:w-[400px] "
+              className="w-[120px] lg2:w-[160px] "
             />
           </Link>
           <div className="flex flex-col gap-fluid-12">
@@ -37,13 +37,13 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="flex w-fill lg:max-w-[70%] md:justify-end flex-row flex-wrap lg:flex-nowrap gap-fluid-64 gap-y-fluid-48 md:gap-fluid-144 xs:gap-fluid-96  ">
+        <div className="flex w-fill lg:max-w-[70%] md:justify-end flex-row flex-wrap lg:flex-nowrap gap-fluid-64 gap-y-fluid-48  xs:gap-fluid-96  ">
           <nav className="flex   font-body text-pureWhite flex-wrap   sm:p-0 ">
             <ul
               aria-label={`Hagnýtt`}
               className="flex gap-8 text-navLinks text-nowrap   md:min-h-[160px] w-fit  md:w-[160px] lg2:w-fit flex-col font-medium before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
             >
-              <li className="hover:text-buttonBlue  transition-all duration-300 ease-in-out">
+              <li className="hover:text-pureWhite text-greyMedium   transition-all duration-300 ease-in-out">
                 <a
                   href={"https://stf.is/algengar-spurningar"}
                   target="_blank"
@@ -52,7 +52,7 @@ export default function Footer() {
                   Algengar spurningar
                 </a>
               </li>
-              <li className="hover:text-buttonBlue transition-all duration-300 ease-in-out">
+              <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
                 <a
                   href={`https://stf.is/saekja-um-adild`}
                   target="_blank"
@@ -61,7 +61,7 @@ export default function Footer() {
                   Sækja um aðild
                 </a>
               </li>
-              <li className="hover:text-buttonBlue transition-all duration-300 ease-in-out">
+              <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
                 <a
                   href={`https://attin.is/`}
                   target="_blank"
@@ -70,7 +70,7 @@ export default function Footer() {
                   Áttin fyrirtækjastyrkir
                 </a>
               </li>
-              <li className="hover:text-buttonBlue transition-all duration-300 ease-in-out">
+              <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
                 <Link
                   href={`/um-okkur/personuverndarstefna`}
                   aria-label={`Hlekkur til þess að lesa persónuverndarstefnu`}
@@ -78,7 +78,7 @@ export default function Footer() {
                   Persónuverndarstefna
                 </Link>
               </li>
-              <li className="hover:text-buttonBlue transition-all duration-300 ease-in-out">
+              <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
                 <Link
                   href={`/um-okkur/umhverfisstefna`}
                   aria-label={`Hlekkur þess að lesa umhverfisstefnu`}
@@ -101,7 +101,7 @@ export default function Footer() {
             aria-label={`Hafðu samband`}
             className="flex gap-8 text-navLinks font-body text-pureWhite md:min-h-[160px] w-fit  md:w-[160px] lg2:w-fit flex-col  before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
           >
-            <li className="hover:text-buttonBlue transition-all duration-300 ease-in-out">
+            <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
               <a
                 href={`mailto:stjornandi@stjornandi.is`}
                 aria-label={`Opnar tölvupóst til fylla inn í nýjum glugga`}
@@ -110,7 +110,7 @@ export default function Footer() {
                 Netfang: stjornandi@stjornandi.is
               </a>
             </li>
-            <li className="hover:text-buttonBlue transition-all duration-300 ease-in-out">
+            <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
               <a href={`tel:4805000`} aria-label={`Hringja í síma fylla inn`}>
                 Sími : 480-5000
               </a>
@@ -128,12 +128,12 @@ export default function Footer() {
             aria-label={`Opnunartími skrifstofu`}
             className=" flex  gap-8 text-navLinks font-body text-pureWhite   md:min-h-[160px] w-fit md:w-[160px] lg2:w-fit flex-col  before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
           >
-            <li className=" transition-all duration-300 ease-in-out">
-              <span className="text-pureWhite text-sm pr-6">{"●"} </span> Mán -
+            <li className="text-greyMedium">
+              <span className="text-greyMedium text-sm pr-6">{"●"} </span> Mán -
               fim : 08:00 - 16:00
             </li>
-            <li className="transition-all duration-300 ease-in-out">
-              <span className="text-pureWhite text-sm pr-6">{"●"} </span> Fös :
+            <li className="text-greyMedium">
+              <span className="text-greyMedium text-sm pr-6">{"●"} </span> Fös :
               08:00 - 15:00
             </li>
           </ul>

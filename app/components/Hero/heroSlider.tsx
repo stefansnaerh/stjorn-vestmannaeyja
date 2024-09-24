@@ -42,7 +42,7 @@ export default function HeroSlider({
   };
 
   return (
-    <div className=" absolute flex gap-6 w-fill bottom-[28px]">
+    <div className=" absolute flex gap-6 w-fill bottom-[40px]">
       <div className="w-fill relative flex flex-col gap-fluid-24">
         <div className="flex gap-8 ">
           <div
@@ -95,12 +95,12 @@ export default function HeroSlider({
         <div className="flex gap-6">
           <button
             onClick={setPreviousSlide}
-            className="p-fluid-18 bg-pureWhite self-center shadow-heroSlide border-[1px] border-greyInput border-opacity-15"
+            className="p-fluid-18 bg-pureWhite self-center group shadow-heroSlide hover:shadow-heroSlideHover hover:scale-105 border-[1px] border-greyInput border-opacity-15 transition-all duration-300 ease-in-out"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              className="h-24 w-24 rotate-[270deg]"
+              className="h-24 w-24 rotate-[270deg] group-hover:scale-105 duration-300 transition-all ease-in-out"
               viewBox="0 0 32 32"
             >
               <path
@@ -114,12 +114,12 @@ export default function HeroSlider({
           </button>
           <button
             onClick={setNextSlide}
-            className="p-fluid-18 bg-pureWhite self-center shadow-heroSlide border-[1px] border-greyInput border-opacity-15"
+            className="p-fluid-18 bg-pureWhite self-center group shadow-heroSlide hover:shadow-heroSlideHover hover:scale-105 border-[1px] border-greyInput border-opacity-15 transition-all duration-300 ease-in-out"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              className="h-24 w-24 rotate-90"
+              className="h-24 w-24 rotate-90 group-hover:scale-105 duration-300 transition-all ease-in-out"
               viewBox="0 0 32 32"
             >
               <path

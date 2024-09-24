@@ -64,7 +64,7 @@ export default function NewsClient({ news }: { news: any }) {
   }, []);
 
   return (
-    <Container className=" flex-col gap-fluid-48 sm:gap-fluid-72  overflow-hidden ">
+    <Container className=" flex-col gap-fluid-48  overflow-hidden ">
       <div className="flex flex-col xs:flex-row justify-between w-fill">
         <div className="w-fill flex flex-col gap-fluid-18">
           <FadeIn className="self-start">
@@ -73,42 +73,42 @@ export default function NewsClient({ news }: { news: any }) {
             </h2>
           </FadeIn>
         </div>
-        <FadeIn className="xs:flex  gap-fluid-24 self-center hidden">
+        <FadeIn className="xs:flex  gap-fluid-12 self-center hidden">
           <button
             onClick={() => scrollCarousel("left")}
-            className=" hover:bg-purple bg-pureWhite group shadow-none flex justify-center border-[1px] h-fluid-56 w-fluid-56 border-purple border-opacity-10 rounded-[50%] transition-all duration-150 ease-in-out"
+            className="p-fluid-18 bg-pureWhite self-center group shadow-heroSlide hover:shadow-heroSlideHover hover:scale-105 border-[1px] border-greyInput border-opacity-15 transition-all duration-300 ease-in-out"
           >
             <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 18 18"
-              fill="none"
-              className="rotate-180 text-purple group-hover:text-pureWhite h-fluid-18 self-center transition-all duration-300 ease-in-out"
               xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              className="h-24 w-24 rotate-[270deg] group-hover:scale-105 duration-300 transition-all ease-in-out"
+              viewBox="0 0 32 32"
             >
               <path
-                d="M14.2917 10.0493L15.1585 9.19348H13.9404H1.145C0.944498 9.19348 0.801088 9.13175 0.68047 9.01267C0.560197 8.89393 0.5 8.75538 0.5 8.56304C0.5 8.3707 0.560196 8.23216 0.680471 8.11342C0.801089 7.99433 0.944499 7.93261 1.145 7.93261H13.9404H15.1585L14.2917 7.0768L8.68116 1.53767C8.5792 1.43701 8.52329 1.31189 8.52909 1.11706L8.02931 1.10217L8.52909 1.11706C8.53517 0.913143 8.59964 0.775418 8.70978 0.666679C8.81636 0.561458 8.9527 0.5 9.16 0.5C9.3673 0.5 9.50364 0.561458 9.61022 0.666678L17.1672 8.12755L17.1833 8.14346L17.2008 8.15786C17.2428 8.19235 17.2701 8.23158 17.2881 8.28494C17.3182 8.37416 17.3334 8.46612 17.3334 8.56304C17.3334 8.66012 17.3182 8.74347 17.2916 8.81687C17.2727 8.86915 17.2366 8.93008 17.1672 8.99854L9.61022 16.4594C9.50364 16.5646 9.3673 16.6261 9.16 16.6261C8.9527 16.6261 8.81636 16.5646 8.70978 16.4594C8.59964 16.3507 8.53517 16.2129 8.52909 16.009C8.52329 15.8142 8.5792 15.6891 8.68116 15.5884L14.2917 10.0493Z"
-                fill="currentColor"
-                stroke="currentColor"
+                stroke="#003896"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.67"
+                d="m24 20-8-8-8 8"
               />
             </svg>
           </button>
           <button
             onClick={() => scrollCarousel("right")}
-            className="group hover:bg-purple bg-pureWhite shadow-none flex justify-center border-[1px] border-opacity-10 h-fluid-56 w-fluid-56 border-purple rounded-[50%] transition-all duration-150 ease-in-out "
+            className="p-fluid-18 bg-pureWhite self-center group shadow-heroSlide hover:shadow-heroSlideHover hover:scale-105 border-[1px] border-greyInput border-opacity-15 transition-all duration-300 ease-in-out"
           >
             <svg
-              width="100%"
-              height="100%"
-              viewBox="0 0 18 18"
-              fill="none"
-              className="text-purple group-hover:text-pureWhite h-fluid-18 self-center transition-all filter duration-300 ease-in-out"
               xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              className="h-24 w-24 rotate-90 group-hover:scale-105 duration-300 transition-all ease-in-out"
+              viewBox="0 0 32 32"
             >
               <path
-                d="M14.2917 10.0493L15.1585 9.19348H13.9404H1.145C0.944498 9.19348 0.801088 9.13175 0.68047 9.01267C0.560197 8.89393 0.5 8.75538 0.5 8.56304C0.5 8.3707 0.560196 8.23216 0.680471 8.11342C0.801089 7.99433 0.944499 7.93261 1.145 7.93261H13.9404H15.1585L14.2917 7.0768L8.68116 1.53767C8.5792 1.43701 8.52329 1.31189 8.52909 1.11706L8.02931 1.10217L8.52909 1.11706C8.53517 0.913143 8.59964 0.775418 8.70978 0.666679C8.81636 0.561458 8.9527 0.5 9.16 0.5C9.3673 0.5 9.50364 0.561458 9.61022 0.666678L17.1672 8.12755L17.1833 8.14346L17.2008 8.15786C17.2428 8.19235 17.2701 8.23158 17.2881 8.28494C17.3182 8.37416 17.3334 8.46612 17.3334 8.56304C17.3334 8.66012 17.3182 8.74347 17.2916 8.81687C17.2727 8.86915 17.2366 8.93008 17.1672 8.99854L9.61022 16.4594C9.50364 16.5646 9.3673 16.6261 9.16 16.6261C8.9527 16.6261 8.81636 16.5646 8.70978 16.4594C8.59964 16.3507 8.53517 16.2129 8.52909 16.009C8.52329 15.8142 8.5792 15.6891 8.68116 15.5884L14.2917 10.0493Z"
-                fill="currentColor"
-                stroke="currentColor"
+                stroke="#003896"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.67"
+                d="m24 20-8-8-8 8"
               />
             </svg>
           </button>
@@ -118,7 +118,7 @@ export default function NewsClient({ news }: { news: any }) {
         <div
           ref={carouselElement}
           onScroll={handleScroll}
-          className="flex  gap-fluid-56 w-fill no-scrollbar overflow-scroll snap-x snap-mandatory snap-always snap-center"
+          className="flex py-26 gap-fluid-56 w-fill no-scrollbar overflow-scroll snap-x snap-mandatory snap-always snap-center"
         >
           {news.map((item: any, i: number) => {
             function formatDate(dateString: string): string {
@@ -135,31 +135,31 @@ export default function NewsClient({ news }: { news: any }) {
             return (
               <div
                 ref={cardElement}
-                className="min-w-[80%] xs:min-w-[60%] smmd:min-w-[40%] md:min-w-[26%] snap-x snap-mandatory snap-always snap-center bg-pureWhite border-b-[1px] border-l-[1px] border-r-[1px] rounded-b-8 border-greyInput border-opacity-20"
+                className="min-w-[80%] xs:min-w-[60%] group hover:shadow-news  smmd:min-w-[40%] md:min-w-[26%] snap-x snap-mandatory snap-always snap-center bg-pureWhite border-b-[1px] border-l-[1px] border-r-[1px] rounded-b-8 border-greyInput border-opacity-20 transition-all duration-150 ease-in-out"
                 key={`${i}${section.title}`}
               >
-                <Link className="group flex flex-col " href={`${item.url}`}>
-                  <div className="relative snap-center snap-mandatory overflow-hidden rounded-6 ">
+                <Link className=" flex flex-col " href={`${item.url}`}>
+                  <div className="relative snap-center snap-mandatory overflow-hidden rounded-t-6 ">
                     <div className="relative pb-[60%] ">
                       <PrismicNextImage
                         field={section.image}
-                        className="object-cover z-0 rounded-6 group-hover:scale-105 transition-all duration-300 ease-in-out"
+                        className="object-cover z-0 rounded-t-6 group-hover:scale-105 transition-all duration-300 ease-in-out"
                         fill
                         alt={""}
                         sizes="(max-width: 768px) 80vw, 25vw"
                       />
                     </div>
-                    <div className="absolute bottom-0 px-fluid-8 bg-backgroundBlue rounded-6 py-fluid-8">
+                  </div>
+                  <div className="flex flex-col gap-12  py-fluid-24 px-fluid-18">
+                    <div className="px-fluid-8 bg-backgroundGreyDarker w-fit rounded-6 py-fluid-8">
                       <p
                         suppressHydrationWarning
-                        className="font-body text-sm text-pureWhite"
+                        className="font-body text-sm font-semiBold text-bodyGrey"
                       >
                         {formattedDate}
                       </p>
                     </div>
-                  </div>
-                  <div className="flex flex-col gap-6  py-fluid-32 px-fluid-18">
-                    <h2 className="font-body font-semiBold text-headlineColor text-navLinksMobile group-hover:text-purple transition-all duration-300 ease-in-out">
+                    <h2 className="font-body font-semiBold text-headlineColor text-md group-hover:text-buttonBlue transition-all duration-300 ease-in-out">
                       {section.title}
                     </h2>
                   </div>
@@ -174,7 +174,7 @@ export default function NewsClient({ news }: { news: any }) {
           arrow
           noShadow
           aHref={"/frettir"}
-          className=" hover:text-pureWhite text-[16px] hover:bg-purple text-purple font-semiBold flex justify-center border-[1.5px] border-purple rounded-12"
+          className=" text-[16px]  text-buttonBlue font-semiBold flex justify-center "
           type="nextLink"
           text={"Sjá allar fréttir"}
         />

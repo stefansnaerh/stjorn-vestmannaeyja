@@ -24,15 +24,10 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
     >
       <Container className="bg-backgroundGrey">
         <section className="relative text-black  flex flex-col gap-fluid-32 md:gap-fluid-40  w-fill  ">
-          <FadeIn className="w-fill">
-            <h2 className="text-h2 font-headline text-headlineColor font-semiBold w-fill">
-              {section.title}
-            </h2>
-          </FadeIn>
-          <div className="relative sm:grid-rows-1 sm:grid sm:grid-cols-7 w-fill">
-            <FadeIn className="flex row-span-1 col-end-8 col-start-1 md:col-end-7 gap-fluid-24 overflow-hidden  md:w-[65%]">
-              <div className="sm:block relative hidden min-w-[100%] overflow-hidden  sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-3">
-                <div className="relative  pb-[80%] md:pb-[100%] lg:pb-[80%] ">
+          <div className="relative flex w-fill gap-fluid-40 sm:gap-fluid-56 flex-col md:flex-row">
+            <FadeIn className="flex gap-fluid-24 overflow-hidden w-fill">
+              <div className="relative  min-w-[100%] overflow-hidden  sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-3">
+                <div className="relative  pb-[70%] md:pb-[100%] lg:pb-[80%] ">
                   <PrismicNextImage
                     field={section.image}
                     className="object-cover z-0 rounded-6"
@@ -43,8 +38,13 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                 </div>
               </div>
             </FadeIn>
-            <div className=" relative h-fit sm:row-start-1 sm:col-start-2 sm:col-end-7  md:col-start-4 md:col-end-8 grid grid-col-1 grid-flow-row gap-fluid-40  w-fill">
-              <FadeIn className="flex flex-col gap-fluid-40 sm:absolute w-fill sm:mt-[20%] md:mt-[10%] lg:mt-[8%] lg2:mt-[12%] sm:bg-pureWhite rounded-8 sm:py-fluid-48 sm:px-fluid-40 sm:border-[1px] border-greyInput border-opacity-15">
+            <div className="self-center relative h-fit sm:row-start-1 sm:col-start-2 sm:col-end-3  md:col-start-2 md:col-end-3 grid grid-col-1 grid-flow-row gap-fluid-40  w-fill">
+              <FadeIn className="flex flex-col gap-fluid-40 w-fill">
+                <FadeIn className="w-fill">
+                  <h2 className="text-h2 font-headline text-headlineColor font-semiBold w-fill">
+                    {section.title}
+                  </h2>
+                </FadeIn>
                 <FadeIn delay={0.2}>
                   <div className="[&_p]:pb-fluid-12 [&_p]:text-[16px] xl:[&_p]:text-md font-body font-regular text-bodyGrey">
                     <PrismicRichText field={section.paragraph} />
@@ -58,7 +58,7 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                     noShadow
                     arrow
                     ariaLabel={`hlekkur til að lesa meira um okkur`}
-                    className=" text-[16px] bg-purple hover:bg-purpleHover text-pureWhite  font-semiBold flex justify-center   border-buttonBlue  rounded-12"
+                    className=" text-[16px] bg-buttonBlue hover:bg-buttonBlueHover text-pureWhite  font-semiBold flex justify-center   border-buttonBlue  rounded-12"
                   ></Button>
                 </FadeIn>
               </FadeIn>

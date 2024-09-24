@@ -1555,95 +1555,6 @@ type HouseSliceVariation = HouseSliceDefault;
 export type HouseSlice = prismic.SharedSlice<"house", HouseSliceVariation>;
 
 /**
- * Primary content in *HouseAmenities → Default → Primary*
- */
-export interface HouseAmenitiesSliceDefaultPrimary {
-  /**
-   * Internet field in *HouseAmenities → Default → Primary*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: house_amenities.default.primary.internet
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  internet: prismic.BooleanField;
-
-  /**
-   * Grill field in *HouseAmenities → Default → Primary*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: house_amenities.default.primary.grill
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  grill: prismic.BooleanField;
-
-  /**
-   * Þvottavel field in *HouseAmenities → Default → Primary*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: house_amenities.default.primary.thvottavel
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  thvottavel: prismic.BooleanField;
-
-  /**
-   * Heitur pottur field in *HouseAmenities → Default → Primary*
-   *
-   * - **Field Type**: Boolean
-   * - **Placeholder**: *None*
-   * - **Default Value**: false
-   * - **API ID Path**: house_amenities.default.primary.heitur_pottur
-   * - **Documentation**: https://prismic.io/docs/field#boolean
-   */
-  heitur_pottur: prismic.BooleanField;
-
-  /**
-   * Svefnpláss field in *HouseAmenities → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: house_amenities.default.primary.svefnplass
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  svefnplass: prismic.KeyTextField;
-}
-
-/**
- * Default variation for HouseAmenities Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HouseAmenitiesSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<HouseAmenitiesSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *HouseAmenities*
- */
-type HouseAmenitiesSliceVariation = HouseAmenitiesSliceDefault;
-
-/**
- * HouseAmenities Shared Slice
- *
- * - **API ID**: `house_amenities`
- * - **Description**: HouseAmenities
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HouseAmenitiesSlice = prismic.SharedSlice<
-  "house_amenities",
-  HouseAmenitiesSliceVariation
->;
-
-/**
  * Primary content in *MemberQuote → Default → Primary*
  */
 export interface MemberQuoteSliceDefaultPrimary {
@@ -2082,26 +1993,6 @@ export interface WhyUsOverviewSliceDefaultPrimaryTitleAndTextItemsItem {
  */
 export interface WhyUsOverviewSliceDefaultPrimary {
   /**
-   * Members field in *WhyUsOverview → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: why_us_overview.default.primary.members
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  members: prismic.KeyTextField;
-
-  /**
-   * Houses field in *WhyUsOverview → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: why_us_overview.default.primary.houses
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  houses: prismic.KeyTextField;
-
-  /**
    * title and text items field in *WhyUsOverview → Default → Primary*
    *
    * - **Field Type**: Group
@@ -2199,10 +2090,6 @@ declare module "@prismicio/client" {
       HouseSliceDefaultPrimary,
       HouseSliceVariation,
       HouseSliceDefault,
-      HouseAmenitiesSlice,
-      HouseAmenitiesSliceDefaultPrimary,
-      HouseAmenitiesSliceVariation,
-      HouseAmenitiesSliceDefault,
       MemberQuoteSlice,
       MemberQuoteSliceDefaultPrimary,
       MemberQuoteSliceVariation,

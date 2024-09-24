@@ -3,16 +3,6 @@
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
 		"primary": {
-			"members": {
-				"__TYPE__": "FieldContent",
-				"value": "spin",
-				"type": "Text"
-			},
-			"houses": {
-				"__TYPE__": "FieldContent",
-				"value": "feed",
-				"type": "Text"
-			},
 			"title_and_text_items": {
 				"__TYPE__": "GroupContentType",
 				"value": [

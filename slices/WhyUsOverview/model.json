@@ -12,20 +12,6 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "members": {
-          "type": "Text",
-          "config": {
-            "label": "Members",
-            "placeholder": ""
-          }
-        },
-        "houses": {
-          "type": "Text",
-          "config": {
-            "label": "Houses",
-            "placeholder": ""
-          }
-        },
         "title_and_text_items": {
           "type": "Group",
           "config": {
