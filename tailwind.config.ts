@@ -40,12 +40,11 @@ const config: Config = {
       greenHover: "#CBFECA",
       buttonBlue: "#003896",
       buttonBlueHover: "#2E5CA9",
+      buttunSecondary: "#D81E5B",
       softBLue: "#EAF2F8",
       red: "#D03C3C",
       softRed: "#FFCCCC",
-      orange: "#DE9047",
-      orangeHover: "#FFC478",
-      orangeDark: "#FBB359",
+
       filterOrange:
         "invert-[.83] sepia-[.44] saturate-[31.73] hue-rotate-[326deg] brightness-[.92] contrast-[.87]",
     },

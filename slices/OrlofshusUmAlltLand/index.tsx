@@ -23,8 +23,8 @@ const OrlofshusUmAlltLand = ({
       data-slice-variation={slice.variation}
       className="flex justify-center"
     >
-      <Container className="bg-purpleLight xs:bg-backgroundGrey">
-        <section className="bg-purpleLight xs:py-fluid-56 xs:px-fluid-48 rounded-8 text-black flex flex-col md:flex-row justify-between">
+      <Container className="">
+        <section className="rounded-8 flex flex-col md:flex-row justify-between gap-fluid-96">
           <div className="relative flex flex-col gap-fluid-32 md:gap-fluid-40  md:w-[50%] justify-center">
             <FadeIn className="w-fill">
               <h2 className="text-h2 font-headline text-headlineColor font-semiBold w-fill">
@@ -36,7 +36,7 @@ const OrlofshusUmAlltLand = ({
                 {section.paragraph}
               </p>
             </FadeIn>
-            <FadeIn className="  ">
+            <FadeIn>
               <Button
                 text={section.link_text}
                 href={section.link}
@@ -44,37 +44,36 @@ const OrlofshusUmAlltLand = ({
                 noShadow
                 arrow
                 ariaLabel={`hlekkur til að lesa meira um okkur`}
-                className=" text-[16px] bg-purple hover:bg-purpleHover text-pureWhite  font-semiBold flex justify-center   border-buttonBlue  rounded-12"
+                className=" text-[16px] bg-buttonBlue hover:bg-buttonBlueHover text-pureWhite  font-semiBold flex justify-center   border-buttonBlue  rounded-12"
               ></Button>
             </FadeIn>
-            <div className="flex w-fill justify-between">
-              <FadeIn className="relative min-w-[80%]  sm:min-w-[48%]">
-                <div className="hidden md:flex relative pb-[55%]">
-                  <PrismicNextImage
-                    field={section.image_1_small}
-                    className="object-cover z-0 rounded-6 "
-                    fill
-                    alt={""}
-                    sizes="(max-width: 768px) 100vw"
-                  />
-                </div>
-              </FadeIn>
-              <FadeIn className="relative min-w-[80%]  sm:min-w-[48%]">
-                <div className="hidden md:flex relative pb-[55%]">
-                  <PrismicNextImage
-                    field={section.image_2_small}
-                    className="object-cover z-0 rounded-6 "
-                    fill
-                    alt={""}
-                    sizes="(max-width: 768px) 100vw"
-                  />
-                </div>
-              </FadeIn>
-            </div>
           </div>
-          <FadeIn className="flex  gap-fluid-24 overflow-hidden  md:w-[40%]">
-            <div className="relative  min-w-[100%] overflow-hidden  sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-3">
-              <FadeIn className="relative pb-[100%] md:pb-[110%] ">
+          <div className="w-[60%] gap-fluid-48 grid grid-cols-2 grid-rows-3">
+            <FadeIn className="relative place-self-end w-[90%] col-start-0 col-end-2 row-start-0 row-end-3 row-span-3">
+              <div className="hidden md:flex relative pb-[120%] ">
+                <PrismicNextImage
+                  field={section.image_1_small}
+                  className="object-cover z-0 rounded-6  "
+                  fill
+                  alt={""}
+                  sizes="(max-width: 768px) 100vw"
+                />
+              </div>
+            </FadeIn>
+            <FadeIn className="relative col-start-0 col-end-2 row-start-3 row-end-6  ">
+              <div className="hidden md:flex relative pb-[65%]">
+                <PrismicNextImage
+                  field={section.image_2_small}
+                  className="object-cover z-0 rounded-6 "
+                  fill
+                  alt={""}
+                  sizes="(max-width: 768px) 100vw"
+                />
+              </div>
+            </FadeIn>
+
+            <div className="relative   col-start-2 col-end-3 row-start-1 row-end-5 row-span-5">
+              <FadeIn className="relative pb-[100%] md:pb-[155%] ">
                 <PrismicNextImage
                   field={section.image_big}
                   className="object-cover z-0 rounded-6"
@@ -84,7 +83,7 @@ const OrlofshusUmAlltLand = ({
                 />
               </FadeIn>
             </div>
-          </FadeIn>
+          </div>
         </section>
       </Container>
     </section>

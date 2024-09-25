@@ -1674,7 +1674,7 @@ export interface OrlofshusUmAlltLandSliceDefaultPrimary {
   link_text: prismic.KeyTextField;
 
   /**
-   * image 1 small field in *OrlofshusUmAlltLand → Default → Primary*
+   * image 1 field in *OrlofshusUmAlltLand → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -1684,7 +1684,7 @@ export interface OrlofshusUmAlltLandSliceDefaultPrimary {
   image_1_small: prismic.ImageField<never>;
 
   /**
-   * image 2 small field in *OrlofshusUmAlltLand → Default → Primary*
+   * image 2 field in *OrlofshusUmAlltLand → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
@@ -1694,7 +1694,7 @@ export interface OrlofshusUmAlltLandSliceDefaultPrimary {
   image_2_small: prismic.ImageField<never>;
 
   /**
-   * Image big field in *OrlofshusUmAlltLand → Default → Primary*
+   * Image 3 field in *OrlofshusUmAlltLand → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*

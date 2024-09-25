@@ -44,7 +44,7 @@
         "image_1_small": {
           "type": "Image",
           "config": {
-            "label": "image 1 small",
+            "label": "image 1",
             "constraint": {},
             "thumbnails": []
           }
@@ -52,7 +52,7 @@
         "image_2_small": {
           "type": "Image",
           "config": {
-            "label": "image 2 small",
+            "label": "image 2",
             "constraint": {},
             "thumbnails": []
           }
@@ -60,7 +60,7 @@
         "image_big": {
           "type": "Image",
           "config": {
-            "label": "Image big",
+            "label": "Image 3",
             "constraint": {},
             "thumbnails": []
           }
