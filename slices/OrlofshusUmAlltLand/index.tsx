@@ -27,7 +27,7 @@ const OrlofshusUmAlltLand = ({
         <section className="rounded-8 flex flex-col md:flex-row justify-between gap-fluid-96">
           <div className="relative flex flex-col gap-fluid-32 md:gap-fluid-40  md:w-[50%] justify-center">
             <FadeIn className="w-fill">
-              <h2 className="text-h2 font-headline text-headlineColor font-semiBold w-fill">
+              <h2 className=" text-h2 font-headline text-headlineColor font-semiBold w-fill">
                 {section.title}
               </h2>
             </FadeIn>

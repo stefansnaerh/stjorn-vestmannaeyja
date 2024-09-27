@@ -14,15 +14,30 @@ export default function HeroImages({
 }) {
   return (
     <>
-      <div className="grid grid-cols-2 xxxl:max-w-[2000px] xxxl:w-[2000px]">
-        <div className="relative flex flex-col  gap-fluid-72 md:gap-fluid-56 py-fluid-48 px-fluid-72 xxxl:max-w-[2000px]">
-          <FadeIn delay={0.2}>
-            <h1 className="font-headline text-h1 font-semiBold text-headlineColor">
-              Stjórnendafélag Vestfjarða
-            </h1>
-          </FadeIn>
-
-          <div className="flex flex-col gap-fluid-40  max-w-[90%]">
+      <div className="grid grid-cols-1 md:grid-cols-2 min-w-fill md:min-w-0 xxxl:max-w-[2000px] xxxl:w-[2000px]">
+        <div className="relative  flex flex-col min-w-fill  gap-fluid-56 md:gap-fluid-56 md:py-fluid-48  md:px-fluid-72 xxxl:max-w-[2000px]">
+          <div className="relative flex flex-col md:gap-0 gap-fluid-40 md:pt-0 pt-fluid-40">
+            <FadeIn delay={0.2}>
+              <h1 className="font-headline px-fluid-32 md:px-0 text-h1 font-semiBold text-headlineColor">
+                Stjórnendafélag Vestfjarða
+              </h1>
+            </FadeIn>
+            <div className="relative overflow-hidden w-fill ">
+              <div className="relative md:hidden pb-[80%] xs:pb-[60%]">
+                <PrismicNextImage
+                  field={content.hero_image}
+                  className="brightness-50 md:brightness-100 object-cover z-0 animate-imageFade  "
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+            </div>
+            <div className="md:hidden">
+              <HeroSlider setSlide={setSlide} slide={slide} />
+            </div>
+          </div>
+          <div className="flex flex-col gap-fluid-40  md:max-w-[90%] px-fluid-32 md:px-0  pb-fluid-48">
             {slide === 0 ? (
               <FadeIn className="flex flex-col gap-fluid-24">
                 <FadeIn>
@@ -102,11 +117,13 @@ export default function HeroImages({
             ) : (
               ""
             )}
-            <HeroSlider setSlide={setSlide} slide={slide} />
+            <div className="hidden md:flex">
+              <HeroSlider setSlide={setSlide} slide={slide} />
+            </div>
           </div>
         </div>
-        <div className="relative overflow-hidden ">
-          <div className="relative smmd:pb-[120%] md:pb-[100%] lg:pb-[90%] ">
+        <div className="relative overflow-hidden   md:w-fill ">
+          <div className="relative hidden md:flex md:pb-[110%] lg:pb-[95%] lg2:pb-[90%] ">
             <PrismicNextImage
               field={content.hero_image}
               className="object-cover z-0 animate-imageFade  "
