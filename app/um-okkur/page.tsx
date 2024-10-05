@@ -9,6 +9,7 @@ import Image from "next/image";
 import Chevron from "../../public/icons/chevronUp.svg";
 import { FadeIn } from "../components/FadeIn/fadeIn";
 import RichText from "../components/RichText/RichText";
+import styles from "./umOkkur.module.css";
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
   const page = await client.getSingle("about_us");
@@ -27,7 +28,7 @@ export default async function AboutUs() {
 
   return (
     <section className="flex flex-col justify-center">
-      <div className="lg:pb-fluid-40 pt-fluid-40 smmd:pt-fluid-64 max-w-[2000px]  pb-64 px-container-88 self-center flex flex-col gap-fluid-56 smmd:w-[95%] lg2:w-[90%]  ">
+      <div className=" pt-fluid-40 smmd:pt-fluid-64 max-w-[2000px]  pb-64 px-container-88 self-center flex flex-col gap-fluid-56 bg-gradient-to-t from-blueLight to-backgroundGrey ">
         <FadeIn className="flex  font-body text-sm ">
           <Link
             className="text-bodyGrey hover:text-buttonBlue transition-all duration-300"
@@ -42,24 +43,13 @@ export default async function AboutUs() {
           />
           <p className="text-sm text-headlineColor font-semiBold">Um okkur</p>
         </FadeIn>
-        <FadeIn className=" flex flex-col-reverse gap-fluid-72 xxs:gap-fluid-96  ">
-          <FadeIn className="self-center grid grid-rows-1 xs:grid-cols-2 gap-fluid-32 relative w-fill">
+        <FadeIn className=" flex flex-col md:flex-row-reverse gap-fluid-72 xxs:gap-fluid-96  ">
+          <FadeIn className="self-center  relative w-fill md:w-[50%]">
             <FadeIn>
-              <div className=" relative pb-[60%]">
+              <div className=" relative pb-[80%]">
                 <PrismicNextImage
                   field={section.image}
-                  className="object-cover z-0 rounded-6 "
-                  fill
-                  alt={""}
-                  sizes="(max-width: 768px) 100vw"
-                />
-              </div>
-            </FadeIn>
-            <FadeIn className="">
-              <div className="hidden xs:flex relative pb-[60%]">
-                <PrismicNextImage
-                  field={section.image_2}
-                  className="object-cover z-0 rounded-6 "
+                  className={`${styles.image} ${styles.mask1}`}
                   fill
                   alt={""}
                   sizes="(max-width: 768px) 100vw"
@@ -67,16 +57,14 @@ export default async function AboutUs() {
               </div>
             </FadeIn>
           </FadeIn>
-          <div className="flex flex-col gap-fluid-32 lg:gap-fluid-40  ">
-            <FadeIn className="md:self-center">
-              <h1 className="font-headline  text-headlineColor text-h2 font-semiBold">
+          <div className="flex flex-col gap-fluid-32 lg:gap-fluid-40 md:w-[50%] justify-center ">
+            <FadeIn className="">
+              <h1 className="self-start font-headline  text-headlineColor text-h4 font-semiBold">
                 {section.title}
               </h1>
             </FadeIn>
             <FadeIn className="w-fill flex flex-col" delay={0.2}>
-              <p className="md:self-center text-[16px] md:w-[80%] md:text-center text-bodyGrey font-body">
-                {section.paragraph}
-              </p>
+              <RichText text={section.paragraph} />
             </FadeIn>
           </div>
         </FadeIn>

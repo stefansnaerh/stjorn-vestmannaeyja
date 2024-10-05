@@ -23,7 +23,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
       <Container className="">
         <section className="flex flex-col w-fill  gap-fluid-56 md:gap-fluid-96">
           <FadeIn>
-            <h2 className="font-headline font-semiBold text-h2 text-headlineColor w-fit">
+            <h2 className="font-headline font-semiBold text-h4 text-headlineColor w-fit">
               {section.title}
             </h2>
           </FadeIn>
@@ -32,7 +32,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
             {section.board_members.map((item, index) => {
               return (
                 <div
-                  className="flex flex-col  gap-fluid-12 border-[1px] border-greyInput border-opacity-20 bg-pureWhite px-fluid-32 xs:px-fluid-40  pt-fluid-40  pb-fluid-32 rounded-6"
+                  className="flex flex-col  gap-fluid-12 border-[1px] border-greyInput border-opacity-20 bg-pureWhite shadow-servicesOverview px-fluid-32 xs:px-fluid-40  pt-fluid-40  pb-fluid-32 rounded-6"
                   key={index}
                 >
                   {/* <FadeIn className="relative w-fill xxs:w-[80%] sm:w-fill  self-center">
@@ -51,14 +51,14 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
                       <h3 className="mt-8 self-start text-h5 text-headlineColor font-headline font-semiBold w-fit ">
                         {item.member_name}
                       </h3>
-                      <h4 className="text-md  text-bodyGrey font-regular w-fit ">
+                      <h4 className="text-navLinks  text-bodyGrey font-regular w-fit ">
                         {item.member_job}
                       </h4>
                     </div>
                     <div className="flex flex-col gap-fluid-12">
                       {item.email && (
                         <a
-                          className="text-sm self-start w-fit group bg-greyPurple text-purple py-fluid-8 px-fluid-16 rounded-32 flex gap-6 hover:text-buttonBlue transition-all duration-300 ease-in-out"
+                          className="text-sm self-start w-fit group bg-softBlue text-buttonBlue py-fluid-8 px-fluid-16 rounded-4 flex gap-6 hover:text-buttonBlue transition-all duration-300 ease-in-out"
                           href={`mailto:${item.email}`}
                           aria-label={`Hlekkur til að senda tölvupóst á ${item.member_name}`}
                         >
@@ -67,7 +67,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
                             height="100%"
                             viewBox="0 0 14 11"
                             fill="none"
-                            className="h-[12px] w-[12px] self-center  text-purple group-hover:text-buttonBlue ease-in-out transition-all duration-300"
+                            className="h-[12px] w-[12px] self-center  text-buttonBlue group-hover:text-buttonBlue ease-in-out transition-all duration-300"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path

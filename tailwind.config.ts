@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import ServicesOverview from "./slices/ServicesOverview";
 
 const config: Config = {
   content: [
@@ -35,11 +36,12 @@ const config: Config = {
       green: "#80FF72",
       purple: "#87469C",
       purpleHover: "#BB73D2",
-      purpleLight: "#F9F5FA",
+      blueLight: "#F4F8FF",
       greyPurple: "#F3EDF5",
       greenHover: "#CBFECA",
       buttonBlue: "#003896",
       buttonBlueHover: "#2E5CA9",
+      softBlue: "#EBEFF7",
       buttunSecondary: "#D81E5B",
       softBLue: "#EAF2F8",
       red: "#D03C3C",
@@ -99,7 +101,7 @@ const config: Config = {
         { lineHeight: "1.08", letterSpacing: "-0.02em" },
       ],
       h4: [
-        "clamp(3.2rem, 2.022rem + 2.996vw, 6.4rem)",
+        "clamp(2.6rem, 2.129rem + 1.199vw, 4.2rem)",
         { lineHeight: "1.08", letterSpacing: "-0.02em" },
       ],
       h5: [
@@ -223,6 +225,7 @@ const config: Config = {
         news: " 4px 12px 12px 4px rgba(0, 0, 0, 0.05)",
         heroSlide: " 4px 6px 6px 4px rgba(0, 0, 0, 0.02)",
         heroSlideHover: " 2px 4px 4px 2px rgba(0, 0, 0, 0.04)",
+        servicesOverview: " 4px 4px 24px 8px rgba(0, 0, 0, 0.03)",
       },
     },
   },

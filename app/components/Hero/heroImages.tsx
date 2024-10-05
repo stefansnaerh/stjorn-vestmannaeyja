@@ -15,7 +15,7 @@ export default function HeroImages({
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 min-w-fill md:min-w-0 xxxl:max-w-[2000px] xxxl:w-[2000px]">
-        <div className="relative  flex flex-col min-w-fill  gap-fluid-56 md:gap-fluid-56 md:py-fluid-48  md:px-fluid-72 xxxl:max-w-[2000px]">
+        <div className="relative flex flex-col min-w-fill  gap-fluid-56 md:gap-fluid-56 md:py-fluid-48  md:px-fluid-72 xxxl:max-w-[2000px]">
           <div className="relative flex flex-col md:gap-0 gap-fluid-40 md:pt-0 pt-fluid-40">
             <FadeIn delay={0.2}>
               <h1 className="font-headline px-fluid-32 md:px-0 text-h1 font-semiBold text-headlineColor">

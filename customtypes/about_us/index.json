@@ -14,10 +14,12 @@
         }
       },
       "paragraph": {
-        "type": "Text",
+        "type": "StructuredText",
         "config": {
           "label": "Paragraph",
-          "placeholder": ""
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
         }
       },
       "image": {
@@ -26,21 +28,6 @@
           "label": "Image",
           "constraint": {},
           "thumbnails": []
-        }
-      },
-      "image_2": {
-        "type": "Image",
-        "config": {
-          "label": "Image 2",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "sub_paragraph": {
-        "type": "Text",
-        "config": {
-          "label": "Sub paragraph",
-          "placeholder": ""
         }
       },
       "slices": {

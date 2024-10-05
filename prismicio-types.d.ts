@@ -28,13 +28,13 @@ interface AboutUsDocumentData {
   /**
    * Paragraph field in *Um okkur*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: about_us.paragraph
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  paragraph: prismic.KeyTextField;
+  paragraph: prismic.RichTextField;
 
   /**
    * Image field in *Um okkur*
@@ -46,28 +46,6 @@ interface AboutUsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
-
-  /**
-   * Image 2 field in *Um okkur*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us.image_2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image_2: prismic.ImageField<never>;
-
-  /**
-   * Sub paragraph field in *Um okkur*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us.sub_paragraph
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  sub_paragraph: prismic.KeyTextField;
 
   /**
    * Slice Zone field in *Um okkur*
@@ -1886,6 +1864,26 @@ export interface ServicesOverviewSliceDefaultPrimary {
   service: prismic.GroupField<
     Simplify<ServicesOverviewSliceDefaultPrimaryServiceItem>
   >;
+
+  /**
+   * Image bigger field in *ServicesOverview → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_overview.default.primary.image_bigger
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_bigger: prismic.ImageField<never>;
+
+  /**
+   * Image smaller field in *ServicesOverview → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: services_overview.default.primary.image_smaller
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_smaller: prismic.ImageField<never>;
 }
 
 /**
