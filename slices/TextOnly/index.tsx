@@ -29,7 +29,7 @@ const TextOnly = ({ slice }: TextOnlyProps): JSX.Element => {
     [&_h4]:font-headline [&_h4]:font-semiBold [&_h4]:text-h6 [&_h4]:text-headlineColor [&_h4]:pb-fluid-20 [&_h4]:pt-fluid-16 
     [&_h5]:font-body [&_h5]:font-semiBold [&_h5]:text-buttonBlue [&_h5]:text-md [&_h5]:pt-fluid-18 
     [&_img]:py-fluid-32 [&_img]:max-h-[400px] [&_img]:w-fill [&_img]:rounded-12  [&_img]:object-cover 
-    [&_a]:text-body  [&_a]:font-semiBold  [&_a]:text-buttonBlue
+    [&_a]:text-body  [&_a]:font-semiBold  [&_a]:text-buttonBlue [&_a]:hover:text-lightBlue [&_a]:transition-all [&_a]:duration-300 [&_a]:ease-in-out
     [&_ul]:list-disc [&_li]:marker:text-headlineColor [&_li]:text-navLinks [&_li]:text-bodyGrey [&_li]:py-4 [&_ul]:py-8 [&_ol]:list-inside [&_ul]:list-inside [&_ol]:list-decimal [&_li]:marker:text-navLinks "
           >
             <PrismicRichText field={slice.primary.paragraph} />

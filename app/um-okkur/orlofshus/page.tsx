@@ -31,7 +31,7 @@ export default async function AboutUs() {
         <div className=" relative z-0 lg:pb-[30%] xxs:pb-[60%] md:pb-[40%]  sm:pb-[50%] pb-[80%]">
           <PrismicNextImage
             field={section.hero_image}
-            className="object-cover z-0 animate-imageFade  brightness-[25%]"
+            className="object-cover z-0 animate-imageFade  brightness-[55%]"
             fill
             alt={""}
             sizes="(max-width: 768px) 100vw"

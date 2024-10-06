@@ -53,11 +53,11 @@ const AllHouses = ({ slice }: AllHousesProps): JSX.Element => {
                       {item.house_address}
                     </h3>
                     <div className="flex gap-4">
-                      <p className="text-[16px] font-semiBold font-body text-purple group-hover:text-buttonBlue transition-all duration-300 ease-in-out">
+                      <p className="text-[16px] font-semiBold font-body text-buttonBlue group-hover:text-lightBlue transition-all duration-300 ease-in-out">
                         Sjá meira um húsið
                       </p>
                       <svg
-                        className="w-[30px] text-purple group-hover:text-buttonBlue  transition-all  duration-300 ease-in-out self-center h-[14px]   group-hover:pl-[14px]"
+                        className="w-[30px] text-buttonBlue group-hover:text-lightBlue  transition-all  duration-300 ease-in-out self-center h-[14px]   group-hover:pl-[14px]"
                         width="100%"
                         height="100%"
                         viewBox="0 0 18 18"
