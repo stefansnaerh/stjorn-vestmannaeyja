@@ -101,6 +101,37 @@ export default function MobileNav({
         >
           {content.link_6_name}
         </PrismicNextLink>
+        <a
+          className="flex gap-fluid-16 text-headlineColor  text-navLinksMobile transition-all duration-300 ease-in-out"
+          aria-label="hlekkur á mínar síður"
+          href="https://stf.orlof.is/"
+          target="_blank"
+        >
+          <svg
+            className=" self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
+            width="20"
+            height="20"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14.1663 14.875V13.4583C14.1663 12.7069 13.8678 11.9862 13.3365 11.4549C12.8051 10.9235 12.0845 10.625 11.333 10.625H5.66634C4.91489 10.625 4.19422 10.9235 3.66287 11.4549C3.13152 11.9862 2.83301 12.7069 2.83301 13.4583V14.875"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+            <path
+              d="M8.50033 7.79167C10.0651 7.79167 11.3337 6.52314 11.3337 4.95833C11.3337 3.39353 10.0651 2.125 8.50033 2.125C6.93552 2.125 5.66699 3.39353 5.66699 4.95833C5.66699 6.52314 6.93552 7.79167 8.50033 7.79167Z"
+              stroke="currentColor"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          Félagavefur
+        </a>
 
         <Button
           onClick={handleNavClick}

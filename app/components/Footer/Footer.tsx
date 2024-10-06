@@ -103,11 +103,11 @@ export default function Footer() {
           >
             <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
               <a
-                href={`mailto:stjornandi@stjornandi.is`}
+                href={`mailto:stjornvest@stjornvest.is`}
                 aria-label={`Opnar tölvupóst til fylla inn í nýjum glugga`}
                 target="_blank"
               >
-                Netfang: stjornandi@stjornandi.is
+                Netfang: stjornvest@stjornvest.is
               </a>
             </li>
             <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">

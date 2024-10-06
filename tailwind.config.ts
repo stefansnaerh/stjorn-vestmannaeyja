@@ -40,6 +40,7 @@ const config: Config = {
       greyPurple: "#F3EDF5",
       greenHover: "#CBFECA",
       buttonBlue: "#003896",
+      lightBlue: "#0072FF",
       buttonBlueHover: "#2E5CA9",
       softBlue: "#EBEFF7",
       buttunSecondary: "#D81E5B",

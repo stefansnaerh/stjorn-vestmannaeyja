@@ -5,7 +5,7 @@
   padding-left: clamp(56px, 3.7vw, 64px);
   padding-top: clamp(48px, 3.2vw, 56px);
   padding-bottom: clamp(48px, 3.2vw, 56px);
-  background-color: #ffffff;
+  background-color: #fafbfd;
   border-radius: 8px;
   height: fit-content;
   left: 120px;
@@ -31,7 +31,7 @@
   padding-top: clamp(48px, 3.2vw, 56px);
   padding-bottom: clamp(48px, 3.2vw, 56px);
   left: 120px;
-  background-color: #ffffff;
+  background-color: #fafbfd;
   border-radius: 8px;
   height: fit-content;
   top: 100px;
