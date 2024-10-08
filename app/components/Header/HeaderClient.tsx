@@ -141,7 +141,7 @@ export default function HeaderClient({
             >
               {content.link_5_name}
             </PrismicNextLink>
-            <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-50 group-hover:bg-purple transition-all duration-300 ease-in-out"></div>
+            <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-80 group-hover:bg-buttonBlue transition-all duration-300 ease-in-out"></div>
           </div>
           <div className="group h-fit self-center">
             <PrismicNextLink
@@ -151,7 +151,7 @@ export default function HeaderClient({
             >
               {content.link_6_name}
             </PrismicNextLink>
-            <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-50 group-hover:bg-purple transition-all duration-300 ease-in-out"></div>
+            <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-80 group-hover:bg-buttonBlue transition-all duration-300 ease-in-out"></div>
           </div>
         </div>
 
