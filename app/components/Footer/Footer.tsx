@@ -23,17 +23,8 @@ export default function Footer() {
               Félag stjórnenda
             </h3> */}
             <ul className="flex flex-col gap-fluid-8 font-body text-pureWhite text-navLinks">
-              <li>
-                <a
-                  className="hover:text-buttonBlue transition-all duration-300 ease-in-out"
-                  href={`https://maps.app.goo.gl/o37MTEuf6nBDr95AA`}
-                  aria-label={`Opnar leiðbeiningar að staðsetningu skrifstofu Félags stjórnenda`}
-                  target="_blank"
-                >
-                  Austurvegur 56, 800 Selfoss
-                </a>
-              </li>
-              <li>Kennitala: 540775-1339</li>
+              <li>Heiðarbraut 7, 410 Hnífsdalur</li>
+              <li>Kennitala: 451275-3809</li>
             </ul>
           </div>
         </div>
