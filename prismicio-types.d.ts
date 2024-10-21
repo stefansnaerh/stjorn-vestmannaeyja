@@ -875,6 +875,28 @@ interface HeaderDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link_6: prismic.LinkField;
+
+  /**
+   * Link 7 name field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.link_7_name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_7_name: prismic.KeyTextField;
+
+  /**
+   * Link 7 field in *Header*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.link_7
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_7: prismic.LinkField;
 }
 
 /**

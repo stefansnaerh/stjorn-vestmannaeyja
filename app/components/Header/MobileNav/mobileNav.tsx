@@ -101,6 +101,13 @@ export default function MobileNav({
         >
           {content.link_6_name}
         </PrismicNextLink>
+        <PrismicNextLink
+          className="flex group gap-6 pb-2 text-navLinksMobile transition-all duration-300 ease-in-out"
+          field={content.link_7}
+          onClick={handleNavClick}
+        >
+          {content.link_7_name}
+        </PrismicNextLink>
         <a
           className="flex gap-fluid-16 text-headlineColor  text-navLinksMobile transition-all duration-300 ease-in-out"
           aria-label="hlekkur á mínar síður"

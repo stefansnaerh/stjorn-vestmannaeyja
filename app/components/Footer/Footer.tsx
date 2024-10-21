@@ -102,8 +102,8 @@ export default function Footer() {
               </a>
             </li>
             <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
-              <a href={`tel:4805000`} aria-label={`Hringja í síma fylla inn`}>
-                Sími : 480-5000
+              <a href={`tel:553-0220`} aria-label={`Hringja í síma fylla inn`}>
+                Sími : 553-0220
               </a>
             </li>
             {/* <li className="leading-[30px]  transition-all duration-300 ease-in-out">

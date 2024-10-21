@@ -279,6 +279,21 @@
           "placeholder": "",
           "select": null
         }
+      },
+      "link_7_name": {
+        "type": "Text",
+        "config": {
+          "label": "Link 7 name",
+          "placeholder": ""
+        }
+      },
+      "link_7": {
+        "type": "Link",
+        "config": {
+          "label": "Link 7",
+          "placeholder": "",
+          "select": null
+        }
       }
     }
   }
