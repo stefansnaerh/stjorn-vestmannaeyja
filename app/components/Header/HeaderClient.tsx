@@ -9,7 +9,7 @@ import MobileNav from "./MobileNav/mobileNav";
 import Button from "../Button/Button";
 import { HeaderDocumentData } from "@/prismicio-types";
 import NavGroup from "./NavGroup/NavGroup";
-import Logo from "../../../public/icons/stjornvestLogo.svg";
+import Logo from "../../../public/icons/stjornvestLogoNew.svg";
 import UserLinks from "./UserLinks/UserLinks";
 import { BackGroundGreyContext } from "../ContextProvider/Provider";
 export default function HeaderClient({
