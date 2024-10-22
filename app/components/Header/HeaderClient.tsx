@@ -102,12 +102,7 @@ export default function HeaderClient({
           onClick={handleNavClick}
           className=" h-fit self-center"
         >
-          <Image
-            alt="STF logo"
-            src={Logo}
-            height={60}
-            className=" md:hidden h-[60px]  w-[100px] xs:w-[120px]  "
-          />
+          <Image alt="STF logo" src={Logo} height={70} className=" " />
         </Link>
         <UserLinks />
       </div>
@@ -125,7 +120,7 @@ export default function HeaderClient({
               alt="Félag stjórnenda logo"
               src={Logo}
               height={80}
-              className=" h-[100px] xs:h-[70px] w-[100px] lg:w-[100px] lg2:w-[120px] "
+              className="  "
             />
           </Link>
           <NavGroup
