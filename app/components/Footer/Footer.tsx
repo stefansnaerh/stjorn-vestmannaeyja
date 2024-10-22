@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../../public/icons/stjornvestLogoNew.svg";
+import Logo from "../../../public/icons/stjornvestLogoTest.svg";
 export default function Footer() {
   return (
     <footer className="  px-fluid-24 sm:px-fluid-40 mt-fluid-96 ">
