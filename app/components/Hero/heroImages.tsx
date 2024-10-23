@@ -60,7 +60,7 @@ export default function HeroImages({
         <div className="absolute  flex px-container-56 smmd:px-0  smmd:left-container-56  top-[50%] translate-y-[-50%] smmd:w-[40%] max-w-[2000px] ">
           <div className=" flex flex-col gap-fluid-40  md:max-w-[90%]  pb-fluid-48">
             <FadeIn delay={0.2}>
-              <h1 className="font-headline  text-h1 font-semiBold text-white">
+              <h1 className="font-headline  text-h1 font-semiBold  text-white">
                 Stjórnendafélag Vestfjarða
               </h1>
             </FadeIn>
