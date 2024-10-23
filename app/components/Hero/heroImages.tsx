@@ -35,6 +35,7 @@ export default function HeroImages({
               field={content.hero_image_2}
               className="object-cover z-0 animate-imageFade brightness-[35%] smmd:brightness-100  "
               fill
+              quality={100}
               priority
               sizes="(min-width: 768px) 100vw, 100vw"
             />
@@ -48,6 +49,7 @@ export default function HeroImages({
               field={content.hero_image_3}
               className="object-cover z-0 animate-imageFade brightness-[35%] smmd:brightness-100  "
               fill
+              quality={100}
               priority
               sizes="(min-width: 768px) 100vw, 100vw"
             />
