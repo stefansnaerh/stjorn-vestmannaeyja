@@ -28,10 +28,10 @@ export default async function AboutUs() {
   return (
     <section className="relative flex flex-col justify-center">
       <div className="relative self-center w-[100%]  overflow-hidden  sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-3">
-        <div className=" relative z-0 lg:pb-[30%] xxs:pb-[60%] md:pb-[40%]  sm:pb-[50%] pb-[80%]">
+        <div className=" relative z-0 xxl:pb-[30%] lg:pb-[40%] xxs:pb-[60%] md:pb-[40%]  sm:pb-[50%] pb-[80%]">
           <PrismicNextImage
             field={section.hero_image}
-            className="object-cover z-0 animate-imageFade  brightness-[55%]"
+            className="object-cover z-0 animate-imageFade  brightness-[70%]"
             fill
             alt={""}
             sizes="(max-width: 768px) 100vw"

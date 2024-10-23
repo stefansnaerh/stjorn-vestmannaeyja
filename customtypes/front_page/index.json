@@ -50,6 +50,14 @@
           "select": null
         }
       },
+      "hero_image_2": {
+        "type": "Image",
+        "config": {
+          "label": "Hero image 2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "hero_title_2": {
         "type": "Text",
         "config": {
@@ -77,6 +85,14 @@
           "label": "Hero link 2",
           "placeholder": "",
           "select": null
+        }
+      },
+      "hero_image_3": {
+        "type": "Image",
+        "config": {
+          "label": "Hero image 3",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "hero_title_3": {

@@ -63,13 +63,13 @@ export default function UserLinks() {
   return (
     <div className="flex self-center gap-fluid-12 xs:gap-fluid-24 ">
       <a
-        className="hidden lg:flex gap-6 text-[15px] xl:text-navLinks self-center h-fit content-center font-body text-backgroundBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
+        className="hidden lg:flex gap-6 text-[15px] xl:text-navLinks self-center h-fit content-center font-body text-buttonBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
         aria-label="hlekkur á mínar síður"
         href="https://stf.orlof.is/"
         target="_blank"
       >
         <svg
-          className="text-backgroundBlue self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
+          className="text-buttonBlue self-center group-hover:text-backgroundBlue transition-all duration-300 ease-in-out"
           width="20"
           height="16"
           viewBox="0 0 17 17"
@@ -173,13 +173,13 @@ export default function UserLinks() {
             }
           >
             <a
-              className="flex gap-fluid-16 text-backgroundBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
+              className="flex gap-fluid-16 text-buttonBlue group hover:text-backgroundBlue transition-all duration-300 ease-in-out"
               aria-label="hlekkur á mínar síður"
               href="https://stf.orlof.is/"
               target="_blank"
             >
               <svg
-                className="text-backgroundBlue self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
+                className="text-buttonBlue self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
                 width="20"
                 height="20"
                 viewBox="0 0 17 17"

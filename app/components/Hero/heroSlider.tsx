@@ -42,8 +42,8 @@ export default function HeroSlider({
   };
 
   return (
-    <div className="absolute px-fluid-32 md:px-0 flex gap-6 w-fill bottom-0 md:bottom-[40px]">
-      <div className="w-fill relative flex md:flex-col flex-col-reverse md:gap-fluid-24 gap-fluid-40">
+    <div className="px-fluid-32 md:px-0 flex gap-6 w-fill">
+      <div className="w-fill relative flex md:flex-col flex-col-reverse md:gap-fluid-40 gap-fluid-40">
         <div className="flex gap-8 ">
           <div
             className={cx(" relative transition-all duration-500 ease-in-out", {
@@ -53,8 +53,7 @@ export default function HeroSlider({
           >
             <div
               className={cx("h-10 rounded-2  ", {
-                ["absolute orangeFiller w-[30%]  bg-buttonBlueHover"]:
-                  slide === 0,
+                ["absolute orangeFiller w-[30%]  bg-buttonBlue"]: slide === 0,
                 ["hidden orangeFiller bg-orange w-[15%]"]: slide != 0,
               })}
             ></div>
@@ -69,8 +68,7 @@ export default function HeroSlider({
           >
             <div
               className={cx("h-10 rounded-2  ", {
-                ["absolute orangeFiller w-[30%]  bg-buttonBlueHover"]:
-                  slide === 1,
+                ["absolute orangeFiller w-[30%]  bg-buttonBlue"]: slide === 1,
                 ["hidden orangeFiller bg-orange w-[15%]"]: slide != 1,
               })}
             ></div>
@@ -84,8 +82,7 @@ export default function HeroSlider({
           >
             <div
               className={cx("h-10 rounded-2  ", {
-                ["absolute orangeFiller w-[30%]  bg-buttonBlueHover"]:
-                  slide === 2,
+                ["absolute orangeFiller w-[30%]  bg-buttonBlue"]: slide === 2,
                 ["hidden orangeFiller bg-orange w-[15%]"]: slide != 2,
               })}
             ></div>

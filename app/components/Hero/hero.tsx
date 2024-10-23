@@ -29,7 +29,7 @@ export default function Hero({ content }: { content: FrontPageDocumentData }) {
   };
 
   return (
-    <section className="relative w-fill flex justify-center">
+    <section className="relative ">
       {/* <div className={styles.gradient}></div> */}
       <HeroImages content={content} slide={slide} setSlide={setSlide} />
     </section>

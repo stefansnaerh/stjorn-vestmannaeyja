@@ -109,13 +109,13 @@ export default function MobileNav({
           {content.link_7_name}
         </PrismicNextLink>
         <a
-          className="flex gap-fluid-16 text-headlineColor  text-navLinksMobile transition-all duration-300 ease-in-out"
+          className="flex gap-fluid-16 text-buttonBlue  text-navLinksMobile transition-all duration-300 ease-in-out"
           aria-label="hlekkur á mínar síður"
           href="https://stf.orlof.is/"
           target="_blank"
         >
           <svg
-            className=" self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
+            className=" self-center text-buttonBlue transition-all duration-300 ease-in-out"
             width="20"
             height="20"
             viewBox="0 0 17 17"

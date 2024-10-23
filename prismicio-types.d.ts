@@ -305,6 +305,17 @@ interface FrontPageDocumentData {
   hero_link_1: prismic.LinkField;
 
   /**
+   * Hero image 2 field in *Forsíða*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.hero_image_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  hero_image_2: prismic.ImageField<never>;
+
+  /**
    * Hero title 2 field in *Forsíða*
    *
    * - **Field Type**: Text
@@ -347,6 +358,17 @@ interface FrontPageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   hero_link_2: prismic.LinkField;
+
+  /**
+   * Hero image 3 field in *Forsíða*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.hero_image_3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  hero_image_3: prismic.ImageField<never>;
 
   /**
    * Hero title 3 field in *Forsíða*
