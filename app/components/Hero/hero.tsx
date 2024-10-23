@@ -1,13 +1,11 @@
 "use client";
 
 import { FrontPageDocumentData } from "@/prismicio-types";
-import { PrismicNextImage } from "@prismicio/next";
+
 import { useState, useEffect } from "react";
-import styles from "./hero.module.css";
-import { FadeIn } from "../FadeIn/fadeIn";
-import Button from "../Button/Button";
+
 import HeroImages from "./heroImages";
-import cx from "classnames";
+
 export default function Hero({ content }: { content: FrontPageDocumentData }) {
   const [slide, setSlide] = useState(0);
 

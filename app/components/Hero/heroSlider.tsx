@@ -42,8 +42,8 @@ export default function HeroSlider({
   };
 
   return (
-    <div className="px-fluid-32 md:px-0 flex gap-6 w-fill">
-      <div className="w-fill relative flex md:flex-col flex-col-reverse md:gap-fluid-40 gap-fluid-40">
+    <div className="px-0 flex gap-6 w-fill">
+      <div className="w-fill relative flex flex-col  md:gap-fluid-40 gap-fluid-40">
         <div className="flex gap-8 ">
           <div
             className={cx(" relative transition-all duration-500 ease-in-out", {
