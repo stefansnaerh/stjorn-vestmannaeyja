@@ -31,7 +31,7 @@ export default async function AboutUs() {
         <div className=" relative z-0 xxl:pb-[30%] lg:pb-[40%] xxs:pb-[60%] md:pb-[40%]  sm:pb-[50%] pb-[80%]">
           <PrismicNextImage
             field={section.hero_image}
-            className="object-cover z-0 animate-imageFade  brightness-[70%]"
+            className="object-cover z-0 animate-imageFade  brightness-[60%]"
             fill
             alt={""}
             sizes="(max-width: 768px) 100vw"
@@ -41,7 +41,7 @@ export default async function AboutUs() {
           <div className="flex flex-col gap-fluid-40  ">
             <FadeIn className=" flex font-body text-sm h-fit">
               <Link
-                className="text-pureWhite hover:text-buttonBlue transition-all duration-300 ease-in-out"
+                className="text-pureWhite  transition-all duration-300 ease-in-out"
                 href={"/"}
               >
                 Heim
@@ -52,7 +52,7 @@ export default async function AboutUs() {
                 className="h-fluid-16 rotate-90 self-center filterWhite "
               />
               <Link
-                className="text-pureWhite hover:text-buttonBlue transition-all duration-300 ease-in-out"
+                className="text-pureWhite transition-all duration-300 ease-in-out"
                 href={"/um-okkur"}
               >
                 Um okkur
