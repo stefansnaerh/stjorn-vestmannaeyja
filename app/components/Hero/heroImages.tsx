@@ -20,7 +20,7 @@ export default function HeroImages({
           <div className="relative h-[100vh]">
             <PrismicNextImage
               field={content.hero_image}
-              className="object-cover z-0 brightness-[35%] smmd:brightness-100 "
+              className="object-cover z-0 brightness-[35%] animate-imageFade smmd:brightness-100 "
               fill
               priority
               sizes="(min-width: 768px) 100vw, 100vw"

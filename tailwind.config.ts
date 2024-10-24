@@ -199,7 +199,7 @@ const config: Config = {
           "100%": { opacity: "1" },
         },
         imageFade: {
-          "0%": { opacity: "0.1" },
+          "0%": { opacity: "0.6" },
           "100%": { opacity: "1" },
         },
       },
