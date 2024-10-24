@@ -70,7 +70,7 @@ const WhyUsOverview = ({ slice }: WhyUsOverviewProps): JSX.Element => {
             };
             return (
               <FadeIn
-                className="sm:w-fill sm:h-fill xs:w-[80%]   self-center w-[90%] rounded-12 flex flex-col gap-fluid-24 bg-white  py-fluid-32 sm:py-fluid-40 px-fluid-32 xs:px-fluid-40 sm:px-fluid-56 border-[1px] border-greyInput border-opacity-10"
+                className="sm:w-fill sm:h-fill   self-center w-fill rounded-12 flex flex-col gap-fluid-24 bg-white  py-fluid-32 sm:py-fluid-40 px-fluid-32 xs:px-fluid-40 sm:px-fluid-56 border-[1px] border-greyInput border-opacity-10"
                 key={`${i}${item.title}`}
               >
                 {iconToShow(item.title)}

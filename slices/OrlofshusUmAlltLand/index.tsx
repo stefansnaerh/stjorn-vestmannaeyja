@@ -48,13 +48,14 @@ const OrlofshusUmAlltLand = ({
               ></Button>
             </FadeIn>
           </div>
-          <div className="w-[60%] gap-fluid-48 grid grid-cols-2 grid-rows-3">
+          <div className="md:w-[60%] gap-fluid-48 md:grid md:grid-cols-2 md:grid-rows-3">
             <FadeIn className="relative place-self-end w-[90%] col-start-0 col-end-2 row-start-0 row-end-3 row-span-3">
               <div className="hidden md:flex relative pb-[120%] ">
                 <PrismicNextImage
                   field={section.image_1_small}
                   className="object-cover z-0 rounded-6  "
                   fill
+                  quality={100}
                   alt={""}
                   sizes="(max-width: 768px) 100vw"
                 />
@@ -73,7 +74,7 @@ const OrlofshusUmAlltLand = ({
             </FadeIn>
 
             <div className="relative   col-start-2 col-end-3 row-start-1 row-end-5 row-span-5">
-              <FadeIn className="relative pb-[100%] md:pb-[155%] ">
+              <FadeIn className="relative pb-[60%] md:pb-[155%] ">
                 <PrismicNextImage
                   field={section.image_big}
                   className="object-cover z-0 rounded-6"
