@@ -55,10 +55,19 @@ export default function RootLayout({
           src="//translate.google.com/translate_a/element.js?cb=TranslateInit"
           strategy="afterInteractive"
         />
+        <meta property="og:title" content="Stjórnendafélag Vestfjarða" />
+        <meta
+          property="og:description"
+          content="Stjórnendafélag Vestfjarða er stéttarfélag sem þjónustar stjórnendur og einyrkja á Vestfirðum"
+        />
         <meta
           property="og:image"
-          content="https://i.ibb.co/DGKz38y/DEF2-EA73-1-BBF-4-FBA-BAEF-BCF3-C5298-EB1.jpg"
+          content="https://images.prismic.io/stjornendafelag-vestfjarda/Zx-6K68jQArTz6LW_91FC7BB9-C2B4-4444-910C-D63C102C9269.jpeg?auto=format,compress"
         />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={"www.stjornvest.is"} />
       </head>
       <body className={` flex flex-col justify-center`}>
         <HeaderContext>
