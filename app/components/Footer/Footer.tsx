@@ -132,7 +132,7 @@ export default function Footer() {
       </div>
       <div className=" flex w-fill justify-center bg-backgroundGrey py-fluid-24">
         <p className="font-body text-sm text-bodyGrey text-center">
-          Ⓒ 2024 Allur réttur áskilinn | Félag stjórnenda{" "}
+          Ⓒ 2024 Allur réttur áskilinn | Stjórnendafélag Vestfjarða{" "}
         </p>
       </div>
     </footer>
