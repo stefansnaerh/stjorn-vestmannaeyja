@@ -1,0 +1,84 @@
+{
+  "format": "custom",
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "address": {
+        "type": "Text",
+        "config": {
+          "label": "Address",
+          "placeholder": ""
+        }
+      },
+      "ssd_number": {
+        "type": "Text",
+        "config": {
+          "label": "SSD number",
+          "placeholder": ""
+        }
+      },
+      "link_group_1_title": {
+        "type": "Text",
+        "config": {
+          "label": "Link group 1 title",
+          "placeholder": ""
+        }
+      },
+      "link_group_1": {
+        "type": "Group",
+        "config": {
+          "label": "Link group 1",
+          "repeat": true,
+          "fields": {
+            "link_name": {
+              "type": "Text",
+              "config": {
+                "label": "Link name",
+                "placeholder": ""
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": ""
+        }
+      },
+      "phone_number": {
+        "type": "Text",
+        "config": {
+          "label": "Phone number",
+          "placeholder": ""
+        }
+      },
+      "opening_hours_1": {
+        "type": "Text",
+        "config": {
+          "label": "Opening hours 1",
+          "placeholder": ""
+        }
+      },
+      "opening_hours_2": {
+        "type": "Text",
+        "config": {
+          "label": "Opening hours 2",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}

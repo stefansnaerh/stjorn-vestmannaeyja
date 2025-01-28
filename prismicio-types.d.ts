@@ -194,6 +194,140 @@ export type AllNewsDocument<Lang extends string = string> =
   >;
 
 /**
+ * Item in *Footer → Link group 1*
+ */
+export interface FooterDocumentDataLinkGroup1Item {
+  /**
+   * Link name field in *Footer → Link group 1*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_1[].link_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_name: prismic.KeyTextField;
+
+  /**
+   * Link field in *Footer → Link group 1*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_1[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
+ * Content for Footer documents
+ */
+interface FooterDocumentData {
+  /**
+   * Address field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.address
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  address: prismic.KeyTextField;
+
+  /**
+   * SSD number field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.ssd_number
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  ssd_number: prismic.KeyTextField;
+
+  /**
+   * Link group 1 title field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_1_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_group_1_title: prismic.KeyTextField;
+
+  /**
+   * Link group 1 field in *Footer*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.link_group_1[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  link_group_1: prismic.GroupField<Simplify<FooterDocumentDataLinkGroup1Item>>;
+
+  /**
+   * Email field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.email
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  email: prismic.KeyTextField;
+
+  /**
+   * Phone number field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.phone_number
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  phone_number: prismic.KeyTextField;
+
+  /**
+   * Opening hours 1 field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.opening_hours_1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  opening_hours_1: prismic.KeyTextField;
+
+  /**
+   * Opening hours 2 field in *Footer*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: footer.opening_hours_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  opening_hours_2: prismic.KeyTextField;
+}
+
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<FooterDocumentData>,
+    "footer",
+    Lang
+  >;
+
+/**
  * Item in *Forsíða → ServiceOverview*
  */
 export interface FrontPageDocumentDataServiceoverviewItem {
@@ -1219,6 +1353,7 @@ export type UmOkkurTextasidaDocument<Lang extends string = string> =
 export type AllDocumentTypes =
   | AboutUsDocument
   | AllNewsDocument
+  | FooterDocument
   | FrontPageDocument
   | HeaderDocument
   | NewsDocument
@@ -2093,6 +2228,9 @@ declare module "@prismicio/client" {
       AllNewsDocument,
       AllNewsDocumentData,
       AllNewsDocumentDataSlicesSlice,
+      FooterDocument,
+      FooterDocumentData,
+      FooterDocumentDataLinkGroup1Item,
       FrontPageDocument,
       FrontPageDocumentData,
       FrontPageDocumentDataServiceoverviewItem,

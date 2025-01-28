@@ -1,7 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../../public/icons/stjornvestLogoTest.svg";
-export default function Footer() {
+import { createClient } from "../../../prismicio";
+import { PrismicNextLink } from "@prismicio/next";
+export default async function Footer() {
+  const client = createClient();
+
+  const data = await client.getSingle("footer");
+  const content = data.data;
   return (
     <footer className="  px-fluid-24 sm:px-fluid-40 mt-fluid-96 ">
       <div className=" flex bg-backgroundBlue rounded-6  pt-fluid-48 pb-fluid-56  lg:py-fluid-72   w-fill smmd:flex-nowrap smmd:flex-row flex-wrap px-24 xs:px-fluid-40 sm:px-fluid-56 flex-col  gap-y-fluid-48   gap-64 lg2:gap-fluid-96 lg2:px-[7%] xl:px-[9%] xxl:px-[12%] ">
@@ -23,69 +29,33 @@ export default function Footer() {
               Félag stjórnenda
             </h3> */}
             <ul className="flex flex-col gap-fluid-8 font-body text-pureWhite text-navLinks">
-              <li>Heiðarbraut 7, 410 Hnífsdalur</li>
-              <li>Kennitala: 451275-3809</li>
+              {content.address ? <li>{content.address}</li> : ""}
+              <li>Kennitala: 540775-1339</li>
             </ul>
           </div>
         </div>
-        <div className="flex w-fill lg:max-w-[70%] md:justify-end flex-row flex-wrap lg:flex-nowrap gap-fluid-64 gap-y-fluid-48  xs:gap-fluid-96  ">
+        <div className="flex w-fill lg:max-w-[70%] md:justify-end flex-row flex-wrap lg:flex-nowrap gap-fluid-64 gap-y-fluid-48 md:gap-fluid-96 xs:gap-fluid-96  ">
           <nav className="flex   font-body text-pureWhite flex-wrap   sm:p-0 ">
             <ul
-              aria-label={`Hagnýtt`}
+              aria-label={`${content.link_group_1_title}`}
               className="flex gap-8 text-navLinks text-nowrap   md:min-h-[160px] w-fit  md:w-[160px] lg2:w-fit flex-col font-medium before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
             >
-              <li className="hover:text-pureWhite text-greyMedium   transition-all duration-300 ease-in-out">
-                <a
-                  href={"https://stf.is/algengar-spurningar"}
-                  target="_blank"
-                  aria-label={`Hlekkur til þess að sjá algengar spurningar og svör`}
-                >
-                  Algengar spurningar
-                </a>
-              </li>
-              <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
-                <a
-                  href={`https://stf.is/saekja-um-adild`}
-                  target="_blank"
-                  aria-label={`Hlekkur til þess að sækja um aðild`}
-                >
-                  Sækja um aðild
-                </a>
-              </li>
-              <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
-                <a
-                  href={`https://attin.is/`}
-                  target="_blank"
-                  aria-label={`Hlekkur á Áttin - fyrirtækjastyrkir`}
-                >
-                  Áttin fyrirtækjastyrkir
-                </a>
-              </li>
-              <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
-                <Link
-                  href={`/um-okkur/personuverndarstefna`}
-                  aria-label={`Hlekkur til þess að lesa persónuverndarstefnu`}
-                >
-                  Persónuverndarstefna
-                </Link>
-              </li>
-              <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
-                <Link
-                  href={`/um-okkur/umhverfisstefna`}
-                  aria-label={`Hlekkur þess að lesa umhverfisstefnu`}
-                >
-                  Umhverfisstefna
-                </Link>
-              </li>
-              {/* <li className="hover:text-orange transition-all duration-300 ease-in-out">
-                <a
-                  href={`https://www.facebook.com/SambandStjornendafelagaSTF/`}
-                  target="_blank"
-                  aria-label={`Hlekkur á facebook síðu STF`}
-                >
-                  Facebook
-                </a>
-              </li> */}
+              {content.link_group_1.map((item, i) => {
+                return (
+                  <li
+                    key={`${i}${item.link_name}`}
+                    className="hover:text-pureWhite text-greyMedium   transition-all duration-300 ease-in-out"
+                  >
+                    <PrismicNextLink
+                      field={item.link}
+                      target="_blank"
+                      aria-label={`Hlekkur til þess að sjá algengar spurningar og svör`}
+                    >
+                      {item.link_name}
+                    </PrismicNextLink>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
           <ul
@@ -94,45 +64,40 @@ export default function Footer() {
           >
             <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
               <a
-                href={`mailto:stjornvest@stjornvest.is`}
+                href={`mailto:${content.email}`}
                 aria-label={`Opnar tölvupóst til fylla inn í nýjum glugga`}
                 target="_blank"
               >
-                Netfang: stjornvest@stjornvest.is
+                Netfang: {content.email}
               </a>
             </li>
-            <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
-              <a href={`tel:553-0220`} aria-label={`Hringja í síma fylla inn`}>
-                Sími : 553-0220
+            <li className="hover:text-pureWhite text-greyMedium transition-all duration-300 ease-in-out">
+              <a
+                href={`tel:${content.phone_number}`}
+                aria-label={`Hringja í síma fylla inn`}
+              >
+                Sími : {content.phone_number}
               </a>
             </li>
-            {/* <li className="leading-[30px]  transition-all duration-300 ease-in-out">
-              Símatími : <br />
-              <span className="text-bodyGrey text-sm pr-6">{"●"} </span>Mán -
-              fim: 08:00 - 16:00
-              <br />
-              <span className="text-bodyGrey text-sm pr-6">{"●"} </span> Fös:
-              08:00 - 15:00
-            </li> */}
           </ul>
           <ul
             aria-label={`Opnunartími skrifstofu`}
             className=" flex  gap-8 text-navLinks font-body text-pureWhite   md:min-h-[160px] w-fit md:w-[160px] lg2:w-fit flex-col  before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
           >
-            <li className="text-greyMedium">
-              <span className="text-greyMedium text-sm pr-6">{"●"} </span> Mán -
-              fim : 08:00 - 16:00
+            <li className=" transition-all text-greyMedium duration-300 ease-in-out">
+              <span className=" text-sm pr-6">{"●"} </span>{" "}
+              {content.opening_hours_1}
             </li>
-            <li className="text-greyMedium">
-              <span className="text-greyMedium text-sm pr-6">{"●"} </span> Fös :
-              08:00 - 15:00
+            <li className="transition-all text-greyMedium duration-300 ease-in-out">
+              <span className=" text-sm pr-6">{"●"} </span>{" "}
+              {content.opening_hours_2}
             </li>
           </ul>
         </div>
       </div>
       <div className=" flex w-fill justify-center bg-backgroundGrey py-fluid-24">
         <p className="font-body text-sm text-bodyGrey text-center">
-          Ⓒ 2024 Allur réttur áskilinn | Stjórnendafélag Vestfjarða{" "}
+          Ⓒ 2025 Allur réttur áskilinn | Stjórnendafélag Vestfjarða{" "}
         </p>
       </div>
     </footer>
