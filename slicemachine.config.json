@@ -1,5 +1,5 @@
 {
-  "repositoryName": "stjornendafelag-vestfjarda",
+  "repositoryName": "stjornendafelag-nordurland-vestra",
   "adapter": "@slicemachine/adapter-next",
   "libraries": ["./slices"],
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"

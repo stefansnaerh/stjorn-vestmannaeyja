@@ -18,11 +18,11 @@ const eb_garamond = localFont({
 const manrope = localFont({
   src: [
     {
-      path: "../public/fonts/manrope-v15-latin-600.woff2",
-      weight: "600",
+      path: "../public/fonts/readex-pro-v22-latin-500.woff2",
+      weight: "500",
     },
     {
-      path: "../public/fonts/manrope-v15-latin-500.woff2",
+      path: "../public/fonts/readex-pro-v22-latin-500.woff2",
       weight: "500",
     },
 

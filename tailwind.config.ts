@@ -11,7 +11,7 @@ const config: Config = {
 
   theme: {
     fontFamily: {
-      headline: "var(--font-headline)",
+      headline: "var(--font-body)",
       body: "var(--font-body)",
     },
     colors: {
@@ -21,7 +21,7 @@ const config: Config = {
       backgroundGreyDarker: "#F5F6F7",
       backgroundBlue: "#101A2B",
       backgroundLightBlue: "#FAFBFDs",
-      headlineColor: "#15294B",
+      headlineColor: "#293342",
       bodyGrey: "#42526D",
       greyInput: "#bababa",
       greyLight: "#DFE2E6",
@@ -39,7 +39,7 @@ const config: Config = {
       blueLight: "#F4F8FF",
       greyPurple: "#F3EDF5",
       greenHover: "#CBFECA",
-      buttonBlue: "#003896",
+      buttonBlue: "#0F74BC",
       lightBlue: "#0072FF",
       buttonBlueHover: "#2E5CA9",
       softBlue: "#EBEFF7",
