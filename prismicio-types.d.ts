@@ -439,17 +439,6 @@ interface FrontPageDocumentData {
   hero_link_1: prismic.LinkField;
 
   /**
-   * Hero image 2 field in *Forsíða*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.hero_image_2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  hero_image_2: prismic.ImageField<never>;
-
-  /**
    * Hero title 2 field in *Forsíða*
    *
    * - **Field Type**: Text
@@ -494,17 +483,6 @@ interface FrontPageDocumentData {
   hero_link_2: prismic.LinkField;
 
   /**
-   * Hero image 3 field in *Forsíða*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.hero_image_3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  hero_image_3: prismic.ImageField<never>;
-
-  /**
    * Hero title 3 field in *Forsíða*
    *
    * - **Field Type**: Text
@@ -547,6 +525,50 @@ interface FrontPageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   hero_link_3: prismic.LinkField;
+
+  /**
+   * Image 1 field in *Forsíða*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.image_1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_1: prismic.ImageField<never>;
+
+  /**
+   * Image 2 field in *Forsíða*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.image_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_2: prismic.ImageField<never>;
+
+  /**
+   * Image 3 field in *Forsíða*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.image_3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_3: prismic.ImageField<never>;
+
+  /**
+   * Image 4 field in *Forsíða*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.image_4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_4: prismic.ImageField<never>;
 
   /**
    * ServiceOverview field in *Forsíða*

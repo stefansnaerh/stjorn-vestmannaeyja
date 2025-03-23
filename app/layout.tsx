@@ -6,28 +6,28 @@ import Main from "./components/Main/main";
 import Script from "next/script";
 import HeaderContext from "./components/ContextProvider/Provider";
 
-const eb_garamond = localFont({
+// const eb_garamond = localFont({
+//   src: [
+//     {
+//       path: "../public/fonts/eb-garamond-v27-latin-600.woff2",
+//       weight: "600",
+//     },
+//   ],
+//   variable: "--font-headline",
+// });
+const readexPro = localFont({
   src: [
     {
-      path: "../public/fonts/eb-garamond-v27-latin-600.woff2",
+      path: "../public/fonts/readex-pro-v22-latin-500.woff2",
+      weight: "500",
+    },
+    {
+      path: "../public/fonts/readex-pro-v22-latin-600.woff2",
       weight: "600",
-    },
-  ],
-  variable: "--font-headline",
-});
-const manrope = localFont({
-  src: [
-    {
-      path: "../public/fonts/readex-pro-v22-latin-500.woff2",
-      weight: "500",
-    },
-    {
-      path: "../public/fonts/readex-pro-v22-latin-500.woff2",
-      weight: "500",
     },
 
     {
-      path: "../public/fonts/manrope-v15-latin-regular.woff2",
+      path: "../public/fonts/readex-pro-v22-latin-regular.woff2",
       weight: "400",
     },
   ],
@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${eb_garamond.variable} ${manrope.variable} `} lang="en">
+    <html className={` ${readexPro.variable} `} lang="en">
       <head>
         <link rel="icon" href="/icon.ico" sizes="any" />
         <Script
@@ -58,7 +58,7 @@ export default function RootLayout({
         <meta property="og:title" content="Stjórnendafélag Vestfjarða" />
         <meta
           property="og:description"
-          content="Stjórnendafélag Vestfjarða er stéttarfélag sem þjónustar stjórnendur og einyrkja á Vestfirðum"
+          content="Stjórnendafélag Norðurlands vestra er stéttarfélag sem þjónustar stjórnendur og einyrkja á Norðurlandi vestra"
         />
         <meta
           property="og:image"
@@ -67,7 +67,7 @@ export default function RootLayout({
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={"www.stjornvest.is"} />
+        <meta property="og:url" content={"www.stjornendafelagid.is"} />
       </head>
       <body className={` flex flex-col justify-center`}>
         <HeaderContext>
