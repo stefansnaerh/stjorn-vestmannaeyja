@@ -47,8 +47,8 @@ export default function HeroSlider({
         <div className="flex gap-8 ">
           <div
             className={cx(" relative transition-all duration-500 ease-in-out", {
-              ["w-[30%]"]: slide === 0,
-              ["w-[15%]"]: slide != 0,
+              ["w-[20%]"]: slide === 0,
+              ["w-[10%]"]: slide != 0,
             })}
           >
             <div
@@ -62,8 +62,8 @@ export default function HeroSlider({
 
           <div
             className={cx(" relative transition-all duration-500 ease-in-out", {
-              ["w-[30%]"]: slide === 1,
-              ["w-[15%]"]: slide != 1,
+              ["w-[20%]"]: slide === 1,
+              ["w-[10%]"]: slide != 1,
             })}
           >
             <div
@@ -76,8 +76,8 @@ export default function HeroSlider({
           </div>
           <div
             className={cx(" relative transition-all duration-500 ease-in-out", {
-              ["w-[30%]"]: slide === 2,
-              ["w-[15%]"]: slide != 2,
+              ["w-[20%]"]: slide === 2,
+              ["w-[10%]"]: slide != 2,
             })}
           >
             <div
@@ -89,7 +89,7 @@ export default function HeroSlider({
             <div className=" h-10 w-fill rounded-2 bg-greyLight "></div>
           </div>
         </div>
-        <div className="flex gap-6">
+        {/* <div className="flex gap-6">
           <button
             onClick={setPreviousSlide}
             className="p-fluid-18 bg-pureWhite rounded-4 self-center group shadow-heroSlide hover:shadow-heroSlideHover hover:scale-105 border-[1px] border-greyInput border-opacity-15 transition-all duration-300 ease-in-out"
@@ -128,7 +128,7 @@ export default function HeroSlider({
               />
             </svg>
           </button>
-        </div>
+        </div> */}
       </div>
     </div>
   );

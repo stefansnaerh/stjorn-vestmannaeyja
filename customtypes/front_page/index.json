@@ -50,14 +50,6 @@
           "select": null
         }
       },
-      "hero_image_2": {
-        "type": "Image",
-        "config": {
-          "label": "Hero image 2",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
       "hero_title_2": {
         "type": "Text",
         "config": {
@@ -87,14 +79,6 @@
           "select": null
         }
       },
-      "hero_image_3": {
-        "type": "Image",
-        "config": {
-          "label": "Hero image 3",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
       "hero_title_3": {
         "type": "Text",
         "config": {
@@ -122,6 +106,38 @@
           "label": "Hero link 3",
           "placeholder": "",
           "select": null
+        }
+      },
+      "image_1": {
+        "type": "Image",
+        "config": {
+          "label": "Image 1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "image_2": {
+        "type": "Image",
+        "config": {
+          "label": "Image 2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "image_3": {
+        "type": "Image",
+        "config": {
+          "label": "Image 3",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "image_4": {
+        "type": "Image",
+        "config": {
+          "label": "Image 4",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "serviceoverview": {
