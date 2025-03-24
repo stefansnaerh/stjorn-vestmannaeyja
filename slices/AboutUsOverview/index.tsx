@@ -79,7 +79,7 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                     noShadow
                     arrow
                     ariaLabel={`hlekkur til að lesa meira um okkur`}
-                    className=" text-[16px] bg-buttonBlue hover:bg-buttonBlueHover text-pureWhite  font-semiBold flex justify-center   border-buttonBlue  rounded-12"
+                    className=" text-[16px] bg-buttonBlue hover:bg-buttonBlueHover text-pureWhite  font-semiBold flex justify-center   border-buttonBlue  rounded-6"
                   ></Button>
                 </FadeIn>
               </FadeIn>

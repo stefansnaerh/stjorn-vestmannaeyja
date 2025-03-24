@@ -97,7 +97,7 @@ export default async function Footer() {
       </div>
       <div className=" flex w-fill justify-center bg-backgroundGrey py-fluid-24">
         <p className="font-body text-sm text-bodyGrey text-center">
-          Ⓒ 2025 Allur réttur áskilinn | Stjórnendafélag Vestfjarða{" "}
+          Ⓒ 2025 Allur réttur áskilinn | Stjórnendafélag Norðurlands vestra{" "}
         </p>
       </div>
     </footer>
