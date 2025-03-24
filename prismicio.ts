@@ -19,18 +19,18 @@ const routes: prismic.ClientConfig["routes"] = [
     type: "front_page",
     path: "/",
   },
-  // {
-  //   type: "about_us",
-  //   path: "/um-okkur",
-  // },
-  // {
-  //   type: "orlofshus",
-  //   path: "/um-okkur/orlofshus",
-  // },
-  // {
-  //   type: "um_okkur_textasida",
-  //   path: "/um-okkur/:uid",
-  // },
+  {
+    type: "about_us",
+    path: "/um-okkur",
+  },
+  {
+    type: "orlofshus",
+    path: "/um-okkur/orlofshus",
+  },
+  {
+    type: "um_okkur_textasida",
+    path: "/um-okkur/:uid",
+  },
   {
     type: "all_news",
     path: "/frettir",
