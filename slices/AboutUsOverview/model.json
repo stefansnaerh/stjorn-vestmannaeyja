@@ -43,6 +43,22 @@
             "placeholder": "",
             "select": null
           }
+        },
+        "list": {
+          "type": "Group",
+          "config": {
+            "label": "List",
+            "repeat": true,
+            "fields": {
+              "list_item": {
+                "type": "Text",
+                "config": {
+                  "label": "List item",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
         }
       },
       "items": {}

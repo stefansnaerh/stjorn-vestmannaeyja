@@ -88,14 +88,14 @@ export default function HeaderClient({
     <header
       ref={headerElement}
       className={cx(
-        "fixed z-50 bg-white max-w-[100vw] lg2:max-w-[2000px] lg2:self-center px-fluid-24 md:px-0 justify-between gap-fluid-24 flex  h-[80px] xs:h-[90px]   text-md font-semiBold text-softBlack transition-all duration-500 ",
+        "fixed z-50 bg-white max-w-[100vw] lg2:max-w-[2000px] lg2:self-center px-fluid-24 lg:px-0 justify-between gap-fluid-24 flex  h-[80px] xs:h-[90px]   text-md font-semiBold text-softBlack transition-all duration-500 ",
         {
           ["-top-[120px] w-fill"]: show,
           ["top-0 w-fill "]: !show,
         }
       )}
     >
-      <div className="md:hidden w-fill justify-between flex xxs:gap-fluid-32   ">
+      <div className="lg:hidden w-fill justify-between flex xxs:gap-fluid-32   ">
         <Link
           aria-label="hlekkur til að fara heim á forsíðu"
           href="/"
@@ -108,8 +108,8 @@ export default function HeaderClient({
       </div>
       <MobileNav content={content} setIsMobileNavOpen={setIsMobileNavOpen} />
 
-      <nav className="hidden md:flex justify-between w-fill px-fluid-16 lg:px-fluid-32 text-white  ">
-        <div className="flex text-headlineColor font-body font-semiBold  self-center gap-fluid-24 xl:gap-fluid-32 ">
+      <nav className="hidden lg:flex justify-between w-fill px-fluid-16 lg:px-fluid-32 text-white  ">
+        <div className="flex text-headlineColor font-body font-medium  self-center gap-fluid-24 xl:gap-fluid-32 ">
           <Link
             aria-label="hlekkur til að fara heim á forsíðu"
             href="/"
@@ -119,7 +119,7 @@ export default function HeaderClient({
             <Image
               alt="Félag stjórnenda logo"
               src={Logo}
-              height={80}
+              height={65}
               className="  "
             />
           </Link>
@@ -165,10 +165,10 @@ export default function HeaderClient({
           <Button
             text={"Sækja um aðild"}
             aHref={"https://stf.is/saekja-um-adild"}
-            ariaLabel={`Hlekkur til að hafa samband`}
+            ariaLabel={`Hlekkur til að sækja um aðild`}
             onClick={handleNavClick}
             type="htmla"
-            className="text-fontBlue rounded-8 font-body bg-buttonBlue hover:bg-buttonBlueHover text-[15px] xl:text-navLinks transition-all duration-300 ease-in-out"
+            className="text-fontBlue rounded-6 font-body bg-buttonBlue hover:bg-buttonBlueHover text-[16px] xl:text-navLinks transition-all duration-300 ease-in-out"
           />
         </div>
       </nav>

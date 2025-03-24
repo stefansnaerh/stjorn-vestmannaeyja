@@ -61,9 +61,9 @@ export default function UserLinks() {
     setCurrentElement(0);
   });
   return (
-    <div className="flex self-center gap-fluid-12 xs:gap-fluid-24 ">
+    <div className="flex self-center gap-fluid-12 xs:gap-fluid-16 ">
       <a
-        className="hidden lg:flex gap-6 text-[15px] xl:text-navLinks self-center h-fit content-center font-body text-buttonBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
+        className="hidden lg:flex font-medium gap-6 text-[15px] xl:text-navLinks self-center h-fit content-center font-body text-buttonBlue group hover:text-buttonBlue transition-all duration-300 ease-in-out"
         aria-label="hlekkur á mínar síður"
         href="https://stf.orlof.is/"
         target="_blank"

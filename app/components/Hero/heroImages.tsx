@@ -67,7 +67,7 @@ export default function HeroImages({
                   </h1>
                 </FadeIn>
                 <div className="flex gap-fluid-40">
-                  <div className="relative self-end h-[50%] w-[34%] pb-[70%] md:pb-[20%] ">
+                  <FadeIn className="relative self-end h-[50%] w-[34%] pb-[70%] md:pb-[20%] ">
                     <PrismicNextImage
                       field={content.image_1}
                       className="object-cover z-0 rounded-6"
@@ -75,8 +75,8 @@ export default function HeroImages({
                       alt={""}
                       sizes="(max-width: 768px) 100vw"
                     />
-                  </div>
-                  <div className="relative w-[66%] pb-[70%] md:pb-[40%] ">
+                  </FadeIn>
+                  <FadeIn className="relative w-[66%] pb-[70%] md:pb-[40%] ">
                     <PrismicNextImage
                       field={content.image_2}
                       className="object-cover z-0 rounded-6"
@@ -84,7 +84,7 @@ export default function HeroImages({
                       alt={""}
                       sizes="(max-width: 768px) 100vw"
                     />
-                  </div>
+                  </FadeIn>
                 </div>
               </div>
               <HeroSlideElements

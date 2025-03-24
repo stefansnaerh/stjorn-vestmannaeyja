@@ -43,7 +43,7 @@ export default function MobileNav({
       <button
         onClick={toggleShowNav}
         aria-label="Takki til að sýna farsíma valmynd"
-        className="md:hidden flex justify-between flex-col h-[30px] w-40 self-center "
+        className="lg:hidden flex justify-between flex-col h-[30px] w-40 self-center "
       >
         <div
           className={cx(
@@ -75,7 +75,7 @@ export default function MobileNav({
 
       <nav
         className={cx(
-          " md:hidden absolute overflow-x-hidden z-10 flex flex-col gap-fluid-48 bg-backgroundGrey top-[80px] xs:top-[90px] overflow-y-auto h-fill min-h-[100vh] min-w-fill px-fluid-40 py-fluid-56 xs:py-fluid-72 xs:px-fluid-56 transform duration-500 ease-in-out",
+          " lg:hidden absolute overflow-x-hidden z-10 flex flex-col gap-fluid-48 bg-backgroundGrey top-[80px] xs:top-[90px] overflow-y-auto h-fill min-h-[100vh] min-w-fill px-fluid-40 py-fluid-56 xs:py-fluid-72 xs:px-fluid-56 transform duration-500 ease-in-out",
           { ["ml-[110%]"]: !showMobileNav, ["-ml-[18px]"]: showMobileNav }
         )}
       >

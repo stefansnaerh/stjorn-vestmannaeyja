@@ -32,12 +32,12 @@ export default function HeroSlideElements({
             href={content.hero_link_1}
             ariaLabel={`Hlekkur til að hafa samband `}
             type="anchor"
-            className="text-fontBlue rounded-8  text-white bg-buttonBlue hover:bg-buttonBlueHover text-navLinks  transition-all duration-300 ease-in-out"
+            className="text-fontBlue rounded-8  text-white bg-buttonBlue hover:bg-buttonBlueHover text-[16px] xl:text-navLinks  transition-all duration-300 ease-in-out"
           />
         </FadeIn>
       </FadeIn>
       <div className="flex gap-fluid-40">
-        <div className="relative self-end w-[50%] pb-[70%] md:pb-[30%] ">
+        <FadeIn className="relative self-end w-[50%] pb-[70%] md:pb-[30%] ">
           <PrismicNextImage
             field={content.image_3}
             className="object-cover z-0 rounded-6"
@@ -45,8 +45,8 @@ export default function HeroSlideElements({
             alt={""}
             sizes="(max-width: 768px) 100vw"
           />
-        </div>
-        <div className="relative w-[50%]  pb-[70%] md:pb-[30%] ">
+        </FadeIn>
+        <FadeIn className="relative w-[50%]  pb-[70%] md:pb-[30%] ">
           <PrismicNextImage
             field={content.image_4}
             className="object-cover z-0 rounded-6"
@@ -54,7 +54,7 @@ export default function HeroSlideElements({
             alt={""}
             sizes="(max-width: 768px) 100vw"
           />
-        </div>
+        </FadeIn>
       </div>
       {/* {slide === 0 ? (
         <FadeIn className="flex flex-col gap-fluid-24">

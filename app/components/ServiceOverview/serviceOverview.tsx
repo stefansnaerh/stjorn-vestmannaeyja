@@ -17,22 +17,25 @@ const ServiceOverview = ({
                 <PrismicNextLink
                   key={`${index}${item.title}`}
                   field={item.link}
-                  className=" flex w-fill group border-2 border-grey  border-opacity-25 flex-col gap-fluid-32  justify-between hover:bg-pureWhite hover:bg-opacity-15  px-fluid-32 xs:px-fluid-40  pt-fluid-40  pb-fluid-32  rounded-6 transition-all duration-300 ease-in-out snap-x snap-mandatory snap-always snap-center  "
+                  className=" flex w-fill group border-[1px] border-greyInput  border-opacity-25 flex-col gap-fluid-32  justify-between hover:bg-pureWhite hover:bg-opacity-10  px-fluid-32 xs:px-fluid-40  pt-fluid-40  pb-fluid-32  rounded-6 transition-all duration-300 ease-in-out snap-x snap-mandatory snap-always snap-center  "
                 >
+                  <p className="font-headline text-lg font-semiBold">
+                    0{index + 1}
+                  </p>
                   <div className="flex flex-col gap-fluid-16">
                     <FadeIn className="flex justify-between">
-                      <h3 className="text-paragraph  font-headline font-semiBold self-center">
+                      <h3 className="text-paragraph  font-headline font-regular self-center">
                         {item.title}
                       </h3>
                     </FadeIn>
                     <FadeIn>
-                      <p className="text-[16px] font-regular font-body line-clamp-3">
+                      <p className="text-[16px] font-regular font-body text-bodyGreyOnDark line-clamp-3">
                         {item.paragraph}
                       </p>
                     </FadeIn>
                   </div>
-                  <FadeIn className="flex self-end  gap-6 ">
-                    <p className="text-[16px]  font-body font-semiBold transition-all duration-75 ease-in-out">
+                  <FadeIn className="flex self-start  gap-6 ">
+                    <p className="text-[16px]  font-body font-regular transition-all duration-75 ease-in-out">
                       Lesa nánar
                     </p>
 

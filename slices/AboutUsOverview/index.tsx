@@ -4,7 +4,9 @@ import { FadeIn } from "@/app/components/FadeIn/fadeIn";
 import Container from "@/app/components/Container/container";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
+import Image from "next/image";
 import Button from "@/app/components/Button/Button";
+import Checkmark from "../../public/icons/checkMark2.svg";
 /**
  * Props for `AboutUsOverview`.
  */
@@ -25,9 +27,9 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
       <Container className="bg-backgroundGrey">
         <section className="relative text-black  flex flex-col gap-fluid-32 md:gap-fluid-40  w-fill  ">
           <div className="relative flex w-fill gap-fluid-40 sm:gap-fluid-56 flex-col md:flex-row">
-            <FadeIn className="flex gap-fluid-24 overflow-hidden w-fill">
-              <div className="relative  min-w-[100%] overflow-hidden  sm:col-start-1 sm:col-end-4 sm:row-start-1 sm:row-end-3">
-                <div className="relative  pb-[70%] md:pb-[100%] lg:pb-[80%] ">
+            <FadeIn className="flex gap-fluid-24 overflow-hidden w-fill md:w-[40%]">
+              <div className="relative  min-w-[100%] overflow-hidden  ">
+                <div className="relative  pb-[70%] md:pb-[120%] lg:pb-[140%] ">
                   <PrismicNextImage
                     field={section.image}
                     className="object-cover z-0 rounded-6"
@@ -38,7 +40,7 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                 </div>
               </div>
             </FadeIn>
-            <div className="self-center relative h-fit sm:row-start-1 sm:col-start-2 sm:col-end-3  md:col-start-2 md:col-end-3 grid grid-col-1 grid-flow-row gap-fluid-40  w-fill">
+            <div className="self-center relative h-fit  grid grid-col-1 grid-flow-row gap-fluid-40  w-fill md:w-[60%]">
               <FadeIn className="flex flex-col gap-fluid-40 w-fill">
                 <FadeIn className="w-fill">
                   <h2 className="text-h2 font-headline text-headlineColor font-semiBold w-fill">
@@ -50,6 +52,25 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                     <PrismicRichText field={section.paragraph} />
                   </div>
                 </FadeIn>
+                <ul className="flex flex-col gap-fluid-18 text-[16px] font-regular text-bodyGrey font-body">
+                  {section.list.map((item, i) => {
+                    return (
+                      <li
+                        key={`${i}${item.list_item}`}
+                        className="flex gap-fluid-12"
+                      >
+                        <Image
+                          width={20}
+                          height={20}
+                          className="h-20"
+                          alt="checkmark"
+                          src={Checkmark}
+                        />
+                        {item.list_item}
+                      </li>
+                    );
+                  })}
+                </ul>
                 <FadeIn delay={0.4} className="  ">
                   <Button
                     text="Lesa meira"

@@ -167,7 +167,7 @@ export default function Button({
         href={`${aHref}`}
         target="_blank"
         className={cx(
-          `group flex pointer-events-auto  gap-8 py-fluid-16 px-fluid-24  h-fit w-fit text-navLinks font-body font-semiBold transition-all duration-300 ease-in-out ${className} `,
+          `group flex pointer-events-auto  gap-8 py-fluid-16 px-fluid-24  h-fit w-fit  font-body font-semiBold transition-all duration-300 ease-in-out ${className} `,
           {
             ["shadow-none"]: noShadow,
             ["shadow-button"]: !noShadow,
