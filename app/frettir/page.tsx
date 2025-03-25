@@ -34,7 +34,7 @@ export default async function AboutUs() {
           <p className="text-sm text-headlineColor font-semiBold">Fréttir</p>
         </FadeIn>
         <FadeIn>
-          <div className="self-start flex flex-col gap-fluid-32 smmd:w-[50%]">
+          <div className="self-start flex flex-col gap-fluid-32 ">
             <FadeIn>
               <h1 className="font-headline  text-headlineColor text-h1 font-semiBold">
                 {section.title}

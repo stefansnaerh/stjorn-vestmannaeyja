@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PrismicNextImage } from "@prismicio/next";
-
+import Button from "../Button/Button";
 import { FadeIn } from "../FadeIn/fadeIn";
 import { SubFadeIn } from "../FadeIn/subFadeIn";
 export default function NewsClientNoScroll({ news }: { news: any }) {
@@ -23,10 +23,7 @@ export default function NewsClientNoScroll({ news }: { news: any }) {
             const formattedDate = formatDate(`${section.date}`);
 
             return (
-              <div
-                className=" bg-pureWhite border-b-[1px] border-l-[1px] border-r-[1px] rounded-b-8 border-greyInput border-opacity-20"
-                key={`${i}${section.title}`}
-              >
+              <div className=" " key={`${i}${section.title}`}>
                 <Link className="group flex flex-col " href={`${item.url}`}>
                   <div className="relative snap-center snap-mandatory overflow-hidden rounded-6 ">
                     <div className="relative pb-[60%] ">
@@ -38,19 +35,27 @@ export default function NewsClientNoScroll({ news }: { news: any }) {
                         sizes="(max-width: 768px) 80vw, 25vw"
                       />
                     </div>
-                    <div className="absolute bottom-0 px-fluid-8 bg-backgroundBlue rounded-6 py-fluid-8">
+                  </div>
+
+                  <div className="flex flex-col gap-12  py-fluid-24 ">
+                    <div className=" w-fit rounded-6 ">
                       <p
                         suppressHydrationWarning
-                        className="font-body text-sm text-pureWhite"
+                        className="font-body text-sm font-semiBold text-bodyGrey"
                       >
                         {formattedDate}
                       </p>
                     </div>
-                  </div>
-                  <div className="flex flex-col gap-6  py-fluid-32 px-fluid-18">
-                    <h2 className="font-body font-semiBold text-headlineColor text-navLinksMobile group-hover:text-purple transition-all duration-300 ease-in-out">
+                    <h2 className="font-body font-semiBold text-headlineColor text-paragraph group-hover:text-buttonBlue transition-all duration-300 ease-in-out">
                       {section.title}
                     </h2>
+                    <Button
+                      className="text-[16px] mt-fluid-12 "
+                      text={"Lesa meira"}
+                      noShadow
+                      arrow
+                      type="none"
+                    />
                   </div>
                 </Link>
               </div>

@@ -118,7 +118,7 @@ export default function NewsClient({ news }: { news: any }) {
         <div
           ref={carouselElement}
           onScroll={handleScroll}
-          className="flex py-26 gap-fluid-56 w-fill no-scrollbar overflow-scroll lg:grid lg:grid-cols-3 snap-x snap-mandatory snap-always snap-center"
+          className="flex py-26 gap-fluid-56 w-fill no-scrollbar overflow-scroll lg:grid lg:grid-cols-3 snap-x snap-mandatory snap-always snap-center h-full"
         >
           {news.slice(0, 5).map((item: any, i: number) => {
             function formatDate(dateString: string): string {
@@ -135,10 +135,10 @@ export default function NewsClient({ news }: { news: any }) {
             return (
               <div
                 ref={cardElement}
-                className="min-w-[80%] xs:min-w-[60%]  group  smmd:min-w-[40%] md:min-w-[26%] lg:w-fill snap-x snap-mandatory snap-always snap-center   transition-all duration-150 ease-in-out"
+                className="min-w-[80%] xs:min-w-[60%] group smmd:min-w-[40%] md:min-w-[26%] lg:w-fill snap-x snap-mandatory snap-always snap-center   transition-all duration-150 ease-in-out"
                 key={`${i}${section.title}`}
               >
-                <Link className=" flex flex-col " href={`${item.url}`}>
+                <Link className=" flex flex-col h-full" href={`${item.url}`}>
                   <div className="relative snap-center snap-mandatory overflow-hidden rounded-4">
                     <div className="relative pb-[60%] ">
                       <PrismicNextImage
@@ -174,10 +174,13 @@ export default function NewsClient({ news }: { news: any }) {
               </div>
             );
           })}
-          <div className="self-end  justify-center bg-greyLight flex flex-col gap-fluid-24 w-full h-full rounded-4 py-fluid-40 px-fluid-40">
+          <Link
+            href={"/frettir"}
+            className="min-w-[80%] xs:min-w-[60%]  group  smmd:min-w-[40%] md:min-w-[26%] justify-center  bg-greyLight flex flex-col gap-fluid-24 w-full h-full rounded-4 py-fluid-40 px-fluid-40 snap-x snap-mandatory snap-always snap-center "
+          >
             <FadeIn className="flex flex-col gap-fluid-12">
               <p className="font-body font-semiBold text-headlineColor text-paragraph">
-                Ýttu á hnappinn til að sjá allar fréttir
+                Ýttu hér til að sjá allar fréttir
               </p>
               <p className="font-body font-regular text-bodyGrey text-[16px]">
                 Hér deilum við öllum tilkynningum og fréttum af félaginu fyrir
@@ -194,7 +197,7 @@ export default function NewsClient({ news }: { news: any }) {
                 text={"Sjá allar fréttir"}
               />
             </FadeIn>
-          </div>
+          </Link>
         </div>
       </FadeIn>
     </Container>
