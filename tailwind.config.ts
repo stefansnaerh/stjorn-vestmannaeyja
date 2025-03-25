@@ -25,7 +25,7 @@ const config: Config = {
       bodyGrey: "#556276",
       bodyGreyOnDark: "#A0AEC0",
       greyInput: "#bababa",
-      greyLight: "#DFE2E6",
+      greyLight: "#f0f0f0",
       greyDarker: "#5D6B82",
       white: "#Fdfdfd",
       pureWhite: "#ffffff",

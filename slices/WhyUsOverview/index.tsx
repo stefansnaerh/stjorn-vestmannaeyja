@@ -32,7 +32,19 @@ const WhyUsOverview = ({ slice }: WhyUsOverviewProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <Container className=" flex flex-col gap-fluid-56 w-fill">
-        <div className="flex flex-col lg:w-fill xl:w-[80%] lg:self-center sm:grid grid-cols-2 grid-rows-2 justify-center gap-fluid-32">
+        <div className="flex flex-col gap-fluid-24">
+          <FadeIn className="w-fill">
+            <h2 className=" text-h2 font-headline text-headlineColor font-semiBold w-fill">
+              {section.title}
+            </h2>
+          </FadeIn>
+          <FadeIn className="w-[60%]">
+            <p className=" text-navLinks font-body font-regular text-bodyGrey">
+              {section.sub_title}
+            </p>
+          </FadeIn>
+        </div>
+        <div className="flex flex-col lg:w-fill  lg:self-center sm:grid grid-cols-2 grid-rows-2 justify-center gap-fluid-32">
           {section.title_and_text_items.map((item, i) => {
             const iconToShow = (iconText: KeyTextField | void) => {
               if (iconText === "Launavernd") {
@@ -70,15 +82,15 @@ const WhyUsOverview = ({ slice }: WhyUsOverviewProps): JSX.Element => {
             };
             return (
               <FadeIn
-                className="sm:w-fill sm:h-fill   self-center w-fill rounded-12 flex flex-col gap-fluid-24 bg-white  py-fluid-32 sm:py-fluid-40 px-fluid-32 xs:px-fluid-40 sm:px-fluid-56 border-[1px] border-greyInput border-opacity-10"
+                className="sm:w-fill sm:h-fill   self-center w-fill rounded-6 flex flex-col gap-fluid-24 bg-pureWhite  py-fluid-32 sm:py-fluid-40 px-fluid-32 xs:px-fluid-40 sm:px-fluid-56 border-[1px] border-greyInput border-opacity-30"
                 key={`${i}${item.title}`}
               >
                 {iconToShow(item.title)}
-                <h4 className="text-h3  font-headline text-headlineColor font-semiBold ">
+                <h4 className="text-h5  font-headline text-headlineColor font-medium ">
                   {item.title}
                 </h4>
 
-                <div className="w-fill  [&_a]:text-purple [&_a]:font-semiBold   [&_p]:text-navLinks [&_p]:font-regular [&_p]:font-body [&_p]:text-bodyGrey">
+                <div className="w-fill  [&_a]:text-purple [&_a]:font-semiBold   [&_p]:text-[16px] [&_p]:font-regular [&_p]:font-body [&_p]:text-bodyGrey">
                   <PrismicRichText field={item.paragraph} />
                 </div>
               </FadeIn>

@@ -65,10 +65,10 @@
           "placeholder": ""
         }
       },
-      "opening_hours_1": {
+      "facebook_link": {
         "type": "Text",
         "config": {
-          "label": "Opening hours 1",
+          "label": "Facebook hlekkur",
           "placeholder": ""
         }
       },

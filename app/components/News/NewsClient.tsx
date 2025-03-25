@@ -73,7 +73,7 @@ export default function NewsClient({ news }: { news: any }) {
             </h2>
           </FadeIn>
         </div>
-        <FadeIn className="xs:flex  gap-fluid-12 self-center hidden">
+        <FadeIn className="xs:flex  lg:hidden gap-fluid-12 self-center hidden">
           <button
             onClick={() => scrollCarousel("left")}
             className="p-fluid-18 bg-pureWhite self-center group shadow-heroSlide hover:shadow-heroSlideHover hover:scale-105 border-[1px] border-greyInput border-opacity-15 transition-all duration-300 ease-in-out"
@@ -118,9 +118,9 @@ export default function NewsClient({ news }: { news: any }) {
         <div
           ref={carouselElement}
           onScroll={handleScroll}
-          className="flex py-26 gap-fluid-56 w-fill no-scrollbar overflow-scroll snap-x snap-mandatory snap-always snap-center"
+          className="flex py-26 gap-fluid-56 w-fill no-scrollbar overflow-scroll lg:grid lg:grid-cols-3 snap-x snap-mandatory snap-always snap-center"
         >
-          {news.map((item: any, i: number) => {
+          {news.slice(0, 5).map((item: any, i: number) => {
             function formatDate(dateString: string): string {
               const options: Intl.DateTimeFormatOptions = {
                 day: "numeric",
@@ -135,23 +135,23 @@ export default function NewsClient({ news }: { news: any }) {
             return (
               <div
                 ref={cardElement}
-                className="min-w-[80%] xs:min-w-[60%] group hover:shadow-news  smmd:min-w-[40%] md:min-w-[26%] snap-x snap-mandatory snap-always snap-center bg-pureWhite border-b-[1px] border-l-[1px] border-r-[1px] rounded-b-8 border-greyInput border-opacity-20 transition-all duration-150 ease-in-out"
+                className="min-w-[80%] xs:min-w-[60%]  group  smmd:min-w-[40%] md:min-w-[26%] lg:w-fill snap-x snap-mandatory snap-always snap-center   transition-all duration-150 ease-in-out"
                 key={`${i}${section.title}`}
               >
                 <Link className=" flex flex-col " href={`${item.url}`}>
-                  <div className="relative snap-center snap-mandatory overflow-hidden rounded-t-6 ">
+                  <div className="relative snap-center snap-mandatory overflow-hidden rounded-4">
                     <div className="relative pb-[60%] ">
                       <PrismicNextImage
                         field={section.image}
-                        className="object-cover z-0 rounded-t-6 group-hover:scale-105 transition-all duration-300 ease-in-out"
+                        className="object-cover z-0 rounded-4 group-hover:scale-105 transition-all duration-300 ease-in-out"
                         fill
                         alt={""}
                         sizes="(max-width: 768px) 80vw, 25vw"
                       />
                     </div>
                   </div>
-                  <div className="flex flex-col gap-12  py-fluid-24 px-fluid-18">
-                    <div className="px-fluid-8 bg-backgroundGreyDarker w-fit rounded-6 py-fluid-8">
+                  <div className="flex flex-col gap-12  py-fluid-24 ">
+                    <div className=" w-fit rounded-6 ">
                       <p
                         suppressHydrationWarning
                         className="font-body text-sm font-semiBold text-bodyGrey"
@@ -159,25 +159,43 @@ export default function NewsClient({ news }: { news: any }) {
                         {formattedDate}
                       </p>
                     </div>
-                    <h2 className="font-body font-semiBold text-headlineColor text-md group-hover:text-buttonBlue transition-all duration-300 ease-in-out">
+                    <h2 className="font-body font-semiBold text-headlineColor text-paragraph group-hover:text-buttonBlue transition-all duration-300 ease-in-out">
                       {section.title}
                     </h2>
+                    <Button
+                      className="text-[16px] mt-fluid-12 "
+                      text={"Lesa meira"}
+                      noShadow
+                      arrow
+                      type="none"
+                    />
                   </div>
                 </Link>
               </div>
             );
           })}
+          <div className="self-end  justify-center bg-greyLight flex flex-col gap-fluid-24 w-full h-full rounded-4 py-fluid-40 px-fluid-40">
+            <FadeIn className="flex flex-col gap-fluid-12">
+              <p className="font-body font-semiBold text-headlineColor text-paragraph">
+                Ýttu á hnappinn til að sjá allar fréttir
+              </p>
+              <p className="font-body font-regular text-bodyGrey text-[16px]">
+                Hér deilum við öllum tilkynningum og fréttum af félaginu fyrir
+                félagsmenn.
+              </p>
+            </FadeIn>
+            <FadeIn>
+              <Button
+                arrow
+                noShadow
+                aHref={"/frettir"}
+                className=" text-[16px] bg-pureWhite  text-buttonBlue  font-semiBold flex justify-center rounded-4 "
+                type="nextLink"
+                text={"Sjá allar fréttir"}
+              />
+            </FadeIn>
+          </div>
         </div>
-      </FadeIn>
-      <FadeIn className="self-end">
-        <Button
-          arrow
-          noShadow
-          aHref={"/frettir"}
-          className=" text-[16px]  text-buttonBlue font-semiBold flex justify-center "
-          type="nextLink"
-          text={"Sjá allar fréttir"}
-        />
       </FadeIn>
     </Container>
   );

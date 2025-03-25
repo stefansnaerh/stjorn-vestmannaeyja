@@ -289,15 +289,15 @@ interface FooterDocumentData {
   phone_number: prismic.KeyTextField;
 
   /**
-   * Opening hours 1 field in *Footer*
+   * Facebook hlekkur field in *Footer*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: footer.opening_hours_1
+   * - **API ID Path**: footer.facebook_link
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  opening_hours_1: prismic.KeyTextField;
+  facebook_link: prismic.KeyTextField;
 
   /**
    * Opening hours 2 field in *Footer*
@@ -2218,6 +2218,26 @@ export interface WhyUsOverviewSliceDefaultPrimaryTitleAndTextItemsItem {
  * Primary content in *WhyUsOverview → Default → Primary*
  */
 export interface WhyUsOverviewSliceDefaultPrimary {
+  /**
+   * Title field in *WhyUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_us_overview.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Sub title field in *WhyUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_us_overview.default.primary.sub_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_title: prismic.KeyTextField;
+
   /**
    * title and text items field in *WhyUsOverview → Default → Primary*
    *

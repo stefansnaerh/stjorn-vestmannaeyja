@@ -68,29 +68,30 @@ export default async function Footer() {
                 aria-label={`Opnar tölvupóst til fylla inn í nýjum glugga`}
                 target="_blank"
               >
-                Netfang: {content.email}
+                {content.email}
               </a>
             </li>
-            <li className="hover:text-pureWhite text-greyMedium transition-all duration-300 ease-in-out">
+            {/* <li className="hover:text-pureWhite text-greyMedium transition-all duration-300 ease-in-out">
               <a
                 href={`tel:${content.phone_number}`}
                 aria-label={`Hringja í síma fylla inn`}
               >
                 Sími : {content.phone_number}
               </a>
-            </li>
+            </li> */}
           </ul>
           <ul
-            aria-label={`Opnunartími skrifstofu`}
+            aria-label={`Samfélagsmiðlar`}
             className=" flex  gap-8 text-navLinks font-body text-pureWhite   md:min-h-[160px] w-fit md:w-[160px] lg2:w-fit flex-col  before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
           >
             <li className=" transition-all text-greyMedium duration-300 ease-in-out">
-              <span className=" text-sm pr-6">{"●"} </span>{" "}
-              {content.opening_hours_1}
-            </li>
-            <li className="transition-all text-greyMedium duration-300 ease-in-out">
-              <span className=" text-sm pr-6">{"●"} </span>{" "}
-              {content.opening_hours_2}
+              <a
+                href={`https://www.facebook.com/profile.php?id=100064358182681`}
+                aria-label={`Opnar facebook síðu félagsins`}
+                target="_blank"
+              >
+                Facebook
+              </a>
             </li>
           </ul>
         </div>

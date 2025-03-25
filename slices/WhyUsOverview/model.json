@@ -12,6 +12,20 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "sub_title": {
+          "type": "Text",
+          "config": {
+            "label": "Sub title",
+            "placeholder": ""
+          }
+        },
         "title_and_text_items": {
           "type": "Group",
           "config": {
