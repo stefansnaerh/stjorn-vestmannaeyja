@@ -194,41 +194,31 @@ export default function NavGroup({
                     }
                   )}
                 </ul>
-                <div className="flex flex-col  gap-fluid-32 relative w-[63%]">
-                  <FadeIn>
-                    <h3 className="text-h3 font-semiBold font-body w-fill ">
-                      {group.headline}
-                    </h3>
-                  </FadeIn>
-                  <FadeIn delay={0.1}>
-                    <p className="text-[15px] xl:text-navLinks text-bodyGrey">
-                      {group.paragraph}
-                    </p>
-                  </FadeIn>
+                <div className="grid grid-flow-col w-fill">
+                  <div className="flex flex-col  gap-fluid-32 relative w-[63%]">
+                    <FadeIn>
+                      <h3 className="text-h3 font-semiBold font-body w-fill ">
+                        {group.headline}
+                      </h3>
+                    </FadeIn>
+                    <FadeIn delay={0.1}>
+                      <p className="text-[15px] xl:text-navLinks text-bodyGrey">
+                        {group.paragraph}
+                      </p>
+                    </FadeIn>
+                  </div>
+
                   <FadeIn
                     delay={0.2}
-                    className="relative grid mt-fluid-12 grid-cols-3 gap-24  overflow-hidden "
+                    className="relative h-[100%] sm:pb-[100%] w-[20%] col-span-1"
                   >
-                    <div className="relative  col-span-1 w-fill ">
-                      <PrismicNextImage
-                        field={group.image1}
-                        className="object-cover z-0 rounded-4 "
-                        fill
-                        alt={""}
-                        sizes=""
-                      />
-                    </div>
-                    {group.image2 && (
-                      <div className="relative col-span-2 sm:pb-[60%] h-[50%]">
-                        <PrismicNextImage
-                          field={group.image2}
-                          className="object-cover z-0 rounded-4 "
-                          fill
-                          alt={""}
-                          sizes=""
-                        />
-                      </div>
-                    )}
+                    <PrismicNextImage
+                      field={group.image1}
+                      className="object-cover z-0 rounded-4 "
+                      fill
+                      alt={""}
+                      sizes=""
+                    />
                   </FadeIn>
                 </div>
               </div>
