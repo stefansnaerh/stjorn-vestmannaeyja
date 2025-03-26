@@ -88,7 +88,7 @@ export default function NewsClient({ news }: { news: any }) {
                 stroke="#003896"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="2.67"
+                strokeWidth="2.67"
                 d="m24 20-8-8-8 8"
               />
             </svg>
@@ -107,7 +107,7 @@ export default function NewsClient({ news }: { news: any }) {
                 stroke="#003896"
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="2.67"
+                strokeWidth="2.67"
                 d="m24 20-8-8-8 8"
               />
             </svg>

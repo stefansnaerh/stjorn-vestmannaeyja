@@ -14,7 +14,7 @@ export default function HeroSlideElements({
   setSlide: React.Dispatch<React.SetStateAction<number>>;
 }) {
   return (
-    <div className="w-[40%] self-end flex flex-col gap-fluid-48">
+    <div className="hidden sm:flex w-[40%] self-end flex flex-col gap-fluid-48">
       <FadeIn className="flex flex-col gap-fluid-24">
         <FadeIn>
           <h2 className="tracking-[0px] font-bold font-headline text-headlineColor text-h6">
@@ -37,7 +37,7 @@ export default function HeroSlideElements({
         </FadeIn>
       </FadeIn>
       <div className="flex gap-fluid-40">
-        <FadeIn className="relative self-end w-[50%] pb-[70%] md:pb-[30%] ">
+        <FadeIn className="relative self-end w-fill md:w-[50%] pb-[70%] md:pb-[30%] ">
           <PrismicNextImage
             field={content.image_3}
             className="object-cover z-0 rounded-6"
@@ -46,7 +46,7 @@ export default function HeroSlideElements({
             sizes="(max-width: 768px) 100vw"
           />
         </FadeIn>
-        <FadeIn className="relative w-[50%]  pb-[70%] md:pb-[30%] ">
+        <FadeIn className="relative  w-[50%] hidden md:flex  pb-[70%] md:pb-[30%] ">
           <PrismicNextImage
             field={content.image_4}
             className="object-cover z-0 rounded-6"
