@@ -86,8 +86,8 @@ export default function NewsClient({ news }: { news: any }) {
             >
               <path
                 stroke="#003896"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="2.67"
                 d="m24 20-8-8-8 8"
               />
@@ -105,8 +105,8 @@ export default function NewsClient({ news }: { news: any }) {
             >
               <path
                 stroke="#003896"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 strokeWidth="2.67"
                 d="m24 20-8-8-8 8"
               />
@@ -193,7 +193,7 @@ export default function NewsClient({ news }: { news: any }) {
                 noShadow
                 aHref={"/frettir"}
                 className=" text-[16px] bg-pureWhite  text-buttonBlue  font-semiBold flex justify-center rounded-4 "
-                type="nextLink"
+                type="none"
                 text={"Sjá allar fréttir"}
               />
             </FadeIn>

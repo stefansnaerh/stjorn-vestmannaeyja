@@ -128,7 +128,7 @@ export default function NavGroup({
               </button>
               <div
                 className={cx(
-                  " h-[3px] w-0 rounded-24 opacity-80 group-hover:w-fill group-hover:bg-lightBlue focus:bg-buttonBlue focus:w-fill transition-all duration-300 ease-in-out",
+                  " h-[3px] w-0 rounded-6 opacity-80 group-hover:w-fill group-hover:bg-lightBlue focus:bg-buttonBlue focus:w-fill transition-all duration-300 ease-in-out",
                   {
                     ["w-fill"]: currentIndex === i,
                     ["w-0"]: currentIndex !== i,
@@ -145,7 +145,7 @@ export default function NavGroup({
                     : styles.dropdownMenu
                 }
               >
-                <ul className="flex flex-col  w-[37%]">
+                <ul className="bg-pureWhite  flex flex-col py-fluid-56 px-fluid-40  w-[37%] border-r-[1px] border-greyInput border-opacity-20">
                   {Object.values(group.navElements).map(
                     (
                       el: {
@@ -194,8 +194,8 @@ export default function NavGroup({
                     }
                   )}
                 </ul>
-                <div className="grid grid-flow-col w-fill">
-                  <div className="flex flex-col  gap-fluid-32 relative w-[63%]">
+                <div className="flex  w-fill gap-fluid-56 py-fluid-56 px-fluid-40">
+                  <div className="flex flex-col  w-[60%]  gap-fluid-32 relative ">
                     <FadeIn>
                       <h3 className="text-h3 font-semiBold font-body w-fill ">
                         {group.headline}
@@ -210,7 +210,7 @@ export default function NavGroup({
 
                   <FadeIn
                     delay={0.2}
-                    className="relative h-[100%] sm:pb-[100%] w-[20%] col-span-1"
+                    className="relative h-[100%] w-[40%] sm:pb-[50%] col-span-1"
                   >
                     <PrismicNextImage
                       field={group.image1}

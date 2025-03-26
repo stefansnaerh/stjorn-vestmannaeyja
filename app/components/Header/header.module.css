@@ -6,9 +6,9 @@
   padding-top: clamp(48px, 3.2vw, 56px);
   padding-bottom: clamp(48px, 3.2vw, 56px);
   background-color: #fafbfd;
-  border-radius: 8px;
+  border-radius: 4px;
   height: fit-content;
-  left: 120px;
+  /*left: 120px;*/
   top: 100px;
   width: 55vw;
   max-width: 1000px;
@@ -16,7 +16,7 @@
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  gap: clamp(64px, 4.6vw, 80px);
+  /* gap: clamp(64px, 4.6vw, 80px); */
   visibility: hidden;
   z-index: 99;
   opacity: 0;
@@ -26,13 +26,13 @@
 .dropdownMenuShow {
   margin: 0;
   position: absolute;
-  padding-right: clamp(56px, 3.7vw, 64px);
-  padding-left: clamp(56px, 3.7vw, 64px);
+  /* padding-right: clamp(32px, 2.31vw, 40px);
+  padding-left: clamp(32px, 2.31vw, 40px);
   padding-top: clamp(48px, 3.2vw, 56px);
-  padding-bottom: clamp(48px, 3.2vw, 56px);
-  left: 120px;
+  padding-bottom: clamp(48px, 3.2vw, 56px); */
+  left: 5%;
   background-color: #fafbfd;
-  border-radius: 8px;
+  border-radius: 4px;
   height: fit-content;
   top: 100px;
   width: 55vw;
@@ -41,7 +41,7 @@
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  gap: clamp(64px, 4.6vw, 80px);
+  /* gap: clamp(48px, 3.2vw, 56px); */
   z-index: 99;
   opacity: 0;
   transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
@@ -52,10 +52,10 @@
 .lockDropdown {
   margin: 0;
   position: absolute;
-  padding-right: clamp(32px, 2.31vw, 40px);
+  /* padding-right: clamp(32px, 2.31vw, 40px);
   padding-left: clamp(32px, 2.31vw, 40px);
   padding-top: clamp(24px, 1.85vw, 32px);
-  padding-bottom: clamp(24px, 1.85vw, 32px);
+  padding-bottom: clamp(24px, 1.85vw, 32px); */
   background-color: #ffffff;
   border-radius: 8px;
   height: fit-content;
@@ -84,7 +84,7 @@
   right: 8%;
   display: flex;
   flex-direction: column;
-  gap: clamp(24px, 1.85vw, 32px);
+  gap: clamp(18px, 1.4vw, 24px);
   z-index: 99;
   opacity: 0;
   transition: all 0.4s cubic-bezier(0.93, 0.88, 0.1, 0.8);
@@ -94,23 +94,39 @@
 }
 @media screen and (min-width: 1059px) {
   .lockDropdown {
-    right: 13%;
+    right: 8%;
   }
   .lockDropdownShow {
-    right: 13%;
+    right: 8%;
   }
   .dropdownMenu {
-    width: 70vw;
+    width: 90vw;
+    min-width: 90vw;
   }
   .dropdownMenuShow {
-    width: 70vw;
+    width: 90vw;
+    min-width: 90vw;
   }
 }
 @media screen and (min-width: 1400px) {
   .dropdownMenu {
-    width: 70vw;
+    width: 80vw;
+    min-width: 80vw;
   }
   .dropdownMenuShow {
-    width: 70vw;
+    width: 80vw;
+    min-width: 80vw;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .dropdownMenu {
+    width: 75vw;
+    min-width: auto;
+    max-width: 1500px;
+  }
+  .dropdownMenuShow {
+    width: 75vw;
+    min-width: auto;
+    max-width: 1500px;
   }
 }

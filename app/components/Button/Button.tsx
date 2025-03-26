@@ -109,11 +109,10 @@ export default function Button({
     return (
       <div
         className={cx(
-          `group flex pointer-events-auto  gap-8 text-buttonBlue h-fit w-fit  font-body font-regular transition-all duration-300 ease-in-out ${className} `,
+          `group flex pointer-events-auto gap-8 py-fluid-16 px-fluid-24  h-fit w-fit text-navLinks font-body font-semiBold transition-all duration-300 ease-in-out ${className} `,
           {
             ["shadow-none"]: noShadow,
             ["shadow-button"]: !noShadow,
-            ["py-fluid-16 px-fluid-24"]: !arrow,
           }
         )}
       >
