@@ -14,7 +14,7 @@ export default function HeroSlideElements({
   setSlide: React.Dispatch<React.SetStateAction<number>>;
 }) {
   return (
-    <div className="hidden sm:flex w-[40%] self-end flex flex-col gap-fluid-48">
+    <div className="hidden  sm:flex w-[40%] self-end  flex-col gap-fluid-48">
       <FadeIn className="flex flex-col gap-fluid-24">
         <FadeIn>
           <h2 className="tracking-[0px] font-bold font-headline text-headlineColor text-h6">

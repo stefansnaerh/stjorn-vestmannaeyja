@@ -57,7 +57,7 @@ export default function HeroImages({
             sizes="(min-width: 768px) 100vw, 100vw"
           />
         </div> */}
-        <div className=" z-30 bg-transparent max-h-[100vh]   w-[100vw] max-w-[2000px] self-center   ">
+        <div className=" z-0 bg-transparent max-h-[100vh]   w-[100vw] max-w-[2000px] self-center   ">
           <div className="relative flex max-w-[2000px] ">
             <div className=" flex  gap-fluid-40    pb-fluid-48">
               <div className="sm:w-[60%] flex flex-col gap-fluid-32">
