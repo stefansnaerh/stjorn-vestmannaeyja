@@ -1198,7 +1198,7 @@ interface NewsDocumentData {
 export type NewsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<NewsDocumentData>, "news", Lang>;
 
-type OrlofshusDocumentDataSlicesSlice = AllHousesSlice | TextOnlySlice;
+type OrlofshusDocumentDataSlicesSlice = TextOnlySlice;
 
 /**
  * Content for Orlofshús yfirlit documents
@@ -1485,96 +1485,6 @@ export type AboutUsOverviewSlice = prismic.SharedSlice<
 >;
 
 /**
- * Item in *AllHouses → Default → Primary → Houses*
- */
-export interface AllHousesSliceDefaultPrimaryHousesItem {
-  /**
-   * House image field in *AllHouses → Default → Primary → Houses*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: all_houses.default.primary.houses[].house_image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  house_image: prismic.ImageField<never>;
-
-  /**
-   * House address field in *AllHouses → Default → Primary → Houses*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: all_houses.default.primary.houses[].house_address
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  house_address: prismic.KeyTextField;
-
-  /**
-   * House link field in *AllHouses → Default → Primary → Houses*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: all_houses.default.primary.houses[].house_link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  house_link: prismic.LinkField;
-}
-
-/**
- * Primary content in *AllHouses → Default → Primary*
- */
-export interface AllHousesSliceDefaultPrimary {
-  /**
-   * Title field in *AllHouses → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: all_houses.default.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Houses field in *AllHouses → Default → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: all_houses.default.primary.houses[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  houses: prismic.GroupField<Simplify<AllHousesSliceDefaultPrimaryHousesItem>>;
-}
-
-/**
- * Default variation for AllHouses Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type AllHousesSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<AllHousesSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *AllHouses*
- */
-type AllHousesSliceVariation = AllHousesSliceDefault;
-
-/**
- * AllHouses Shared Slice
- *
- * - **API ID**: `all_houses`
- * - **Description**: AllHouses
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type AllHousesSlice = prismic.SharedSlice<
-  "all_houses",
-  AllHousesSliceVariation
->;
-
-/**
  * Item in *Board → Default → Primary → Board members*
  */
 export interface BoardSliceDefaultPrimaryBoardMembersItem {
@@ -1672,93 +1582,6 @@ type BoardSliceVariation = BoardSliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type BoardSlice = prismic.SharedSlice<"board", BoardSliceVariation>;
-
-/**
- * Item in *House → Default → Primary → Images*
- */
-export interface HouseSliceDefaultPrimaryImagesItem {
-  /**
-   * Image field in *House → Default → Primary → Images*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: house.default.primary.images[].image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-}
-
-/**
- * Primary content in *House → Default → Primary*
- */
-export interface HouseSliceDefaultPrimary {
-  /**
-   * Title field in *House → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: house.default.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Paragraph field in *House → Default → Primary*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: house.default.primary.paragraph
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  paragraph: prismic.RichTextField;
-
-  /**
-   * Link to house field in *House → Default → Primary*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: house.default.primary.link_to_house
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link_to_house: prismic.LinkField;
-
-  /**
-   * Images field in *House → Default → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: house.default.primary.images[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  images: prismic.GroupField<Simplify<HouseSliceDefaultPrimaryImagesItem>>;
-}
-
-/**
- * Default variation for House Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HouseSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<HouseSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *House*
- */
-type HouseSliceVariation = HouseSliceDefault;
-
-/**
- * House Shared Slice
- *
- * - **API ID**: `house`
- * - **Description**: House
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type HouseSlice = prismic.SharedSlice<"house", HouseSliceVariation>;
 
 /**
  * Primary content in *MemberQuote → Default → Primary*
@@ -2092,26 +1915,6 @@ export interface ServicesOverviewSliceDefaultPrimary {
   service: prismic.GroupField<
     Simplify<ServicesOverviewSliceDefaultPrimaryServiceItem>
   >;
-
-  /**
-   * Image bigger field in *ServicesOverview → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: services_overview.default.primary.image_bigger
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image_bigger: prismic.ImageField<never>;
-
-  /**
-   * Image smaller field in *ServicesOverview → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: services_overview.default.primary.image_smaller
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image_smaller: prismic.ImageField<never>;
 }
 
 /**
@@ -2325,21 +2128,11 @@ declare module "@prismicio/client" {
       AboutUsOverviewSliceDefaultPrimary,
       AboutUsOverviewSliceVariation,
       AboutUsOverviewSliceDefault,
-      AllHousesSlice,
-      AllHousesSliceDefaultPrimaryHousesItem,
-      AllHousesSliceDefaultPrimary,
-      AllHousesSliceVariation,
-      AllHousesSliceDefault,
       BoardSlice,
       BoardSliceDefaultPrimaryBoardMembersItem,
       BoardSliceDefaultPrimary,
       BoardSliceVariation,
       BoardSliceDefault,
-      HouseSlice,
-      HouseSliceDefaultPrimaryImagesItem,
-      HouseSliceDefaultPrimary,
-      HouseSliceVariation,
-      HouseSliceDefault,
       MemberQuoteSlice,
       MemberQuoteSliceDefaultPrimary,
       MemberQuoteSliceVariation,

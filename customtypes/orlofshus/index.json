@@ -26,9 +26,6 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "all_houses": {
-              "type": "SharedSlice"
-            },
             "text_only": {
               "type": "SharedSlice"
             }

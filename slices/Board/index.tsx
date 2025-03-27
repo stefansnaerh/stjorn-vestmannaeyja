@@ -28,7 +28,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
             </h2>
           </FadeIn>
 
-          <FadeIn className="grid grid-flow-row xs:grid-cols-2 lg:grid-cols-4 gap-fluid-32  w-fill md:gap-fluid-24 lg:gap-fluid-32 lg2:gap-fluid-40  ">
+          <FadeIn className="grid grid-flow-row xs:grid-cols-2 lg:grid-cols-3 gap-fluid-32  w-fill md:gap-fluid-24 lg:gap-fluid-32 lg2:gap-fluid-40  ">
             {section.board_members.map((item, index) => {
               return (
                 <div
@@ -48,17 +48,17 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
                   </FadeIn> */}
                   <FadeIn className="flex flex-col  gap-fluid-32 justify-start ">
                     <div className="flex flex-col gap-fluid-8">
-                      <h3 className="mt-8 self-start text-h5 text-headlineColor font-headline font-semiBold w-fit ">
+                      <h3 className="mt-8 self-start text-h5 text-headlineColor font-headline font-medium w-fit  ">
                         {item.member_name}
                       </h3>
-                      <h4 className="text-navLinks  text-bodyGrey font-regular w-fit ">
-                        {item.member_job}
+                      <h4 className="text-[16px]  text-bodyGrey font-medium w-fit ">
+                        ({item.member_job})
                       </h4>
                     </div>
                     <div className="flex flex-col gap-fluid-12">
                       {item.email && (
                         <a
-                          className="text-sm self-start w-fit group bg-softBlue text-buttonBlue py-fluid-8 px-fluid-16 rounded-4 flex gap-6 hover:text-buttonBlue transition-all duration-300 ease-in-out"
+                          className="text-[16px] self-start w-fit group  text-buttonBlue  flex gap-6  transition-all duration-300 ease-in-out"
                           href={`mailto:${item.email}`}
                           aria-label={`Hlekkur til að senda tölvupóst á ${item.member_name}`}
                         >
@@ -67,7 +67,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
                             height="100%"
                             viewBox="0 0 14 11"
                             fill="none"
-                            className="h-[12px] w-[12px] self-center  text-buttonBlue group-hover:text-buttonBlue ease-in-out transition-all duration-300"
+                            className="h-[14px] w-[14px] self-center  text-buttonBlue group-hover:text-buttonBlue ease-in-out transition-all duration-300"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
@@ -80,7 +80,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
                       )}
                       {item.phone_number && (
                         <a
-                          className="text-sm self-start w-fit group bg-softBlue text-buttonBlue py-fluid-8 px-fluid-16 rounded-4 flex gap-6 hover:text-buttonBlue transition-all duration-300 ease-in-out"
+                          className="text-[16px] self-start w-fit group text-buttonBlue  flex gap-6 hover:text-buttonBlue transition-all duration-300 ease-in-out"
                           href={`tel:${item.phone_number}`}
                           aria-label={`Hlekkur til að hringja í ${item.member_name}`}
                         >
@@ -89,7 +89,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
                             height="100%"
                             viewBox="0 0 14 14"
                             fill="none"
-                            className="h-[12px] w-[12px] self-center  text-buttonBlue group-hover:text-buttonBlue ease-in-out transition-all duration-300"
+                            className="h-[14px] w-[14px] self-center  text-buttonBlue group-hover:text-buttonBlue ease-in-out transition-all duration-300"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path

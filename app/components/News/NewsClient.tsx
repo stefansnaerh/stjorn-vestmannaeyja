@@ -163,10 +163,11 @@ export default function NewsClient({ news }: { news: any }) {
                       {section.title}
                     </h2>
                     <Button
-                      className="text-[16px] mt-fluid-12 "
+                      className="text-[16px] mt-fluid-12 group-hover:text-buttonBlue"
                       text={"Lesa meira"}
                       noShadow
                       arrow
+                      noPadding
                       type="none"
                     />
                   </div>

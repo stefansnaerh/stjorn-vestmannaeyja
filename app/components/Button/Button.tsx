@@ -16,6 +16,7 @@ export default function Button({
   icon,
   arrow,
   type,
+  noPadding,
   href,
   aHref,
   onClick,
@@ -26,6 +27,7 @@ export default function Button({
   noShadow?: boolean;
   icon?: ReactNode;
   arrow?: boolean;
+  noPadding?: boolean;
   type: "button" | "anchor" | "none" | "nextLink" | "htmla";
   href?: LinkField | null | undefined;
   aHref?: string;
@@ -109,10 +111,11 @@ export default function Button({
     return (
       <div
         className={cx(
-          `group flex pointer-events-auto gap-8 py-fluid-16 px-fluid-24  h-fit w-fit text-navLinks font-body font-semiBold transition-all duration-300 ease-in-out ${className} `,
+          `group flex pointer-events-auto  gap-8 hover:text-buttonBlue h-fit w-fit  font-body font-regular transition-all duration-300 ease-in-out ${className} `,
           {
             ["shadow-none"]: noShadow,
             ["shadow-button"]: !noShadow,
+            ["py-fluid-16 px-fluid-24"]: !noPadding,
           }
         )}
       >
@@ -120,7 +123,7 @@ export default function Button({
         {text}
         {arrow ? (
           <svg
-            className="w-[12px] transition-all ease-in-out self-center h-12 text-buttonBlue group-hover:ml-[4px]"
+            className="w-[12px] transition-all ease-in-out self-center h-12 group-hover:text-buttonBlue group-hover:ml-[4px]"
             width="100%"
             height="100%"
             viewBox="0 0 18 18"

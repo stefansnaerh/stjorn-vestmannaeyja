@@ -9,7 +9,7 @@ import Image from "next/image";
 import Chevron from "../../public/icons/chevronUp.svg";
 import { FadeIn } from "../components/FadeIn/fadeIn";
 import RichText from "../components/RichText/RichText";
-import styles from "./umOkkur.module.css";
+
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
   const page = await client.getSingle("about_us");
@@ -43,23 +43,21 @@ export default async function AboutUs() {
           />
           <p className="text-sm text-headlineColor font-semiBold">Um okkur</p>
         </FadeIn>
-        <FadeIn className=" flex flex-col md:flex-row-reverse gap-fluid-72 xxs:gap-fluid-96  ">
+        <FadeIn className=" flex flex-col md:flex-row gap-fluid-72 xxs:gap-fluid-96  ">
           <FadeIn className="self-center  relative w-fill md:w-[50%]">
-            <FadeIn>
-              <div className=" relative pb-[80%]">
-                <PrismicNextImage
-                  field={section.image}
-                  className={`${styles.image} ${styles.mask1}`}
-                  fill
-                  alt={""}
-                  sizes="(max-width: 768px) 100vw"
-                />
-              </div>
-            </FadeIn>
+            <div className=" relative pb-[80%]">
+              <PrismicNextImage
+                field={section.image}
+                className={`rounded-4`}
+                fill
+                alt={""}
+                sizes="(max-width: 768px) 100vw"
+              />
+            </div>
           </FadeIn>
           <div className="flex flex-col gap-fluid-32 lg:gap-fluid-40 md:w-[50%] justify-center ">
             <FadeIn className="">
-              <h1 className="self-start font-headline  text-headlineColor text-h4 font-semiBold">
+              <h1 className="font-headline text-h2 font-semiBold text-headlineColor">
                 {section.title}
               </h1>
             </FadeIn>

@@ -41,22 +41,6 @@
               }
             }
           }
-        },
-        "image_bigger": {
-          "type": "Image",
-          "config": {
-            "label": "Image bigger",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "image_smaller": {
-          "type": "Image",
-          "config": {
-            "label": "Image smaller",
-            "constraint": {},
-            "thumbnails": []
-          }
         }
       },
       "items": {}

@@ -12,7 +12,7 @@ export default function RichText(props: RichTextProps) {
     <>
       {!noStyle ? (
         <div
-          className="w-fill [&_p]:text-[16px] [&_p]:font-medium [&_p]:font-body [&_p]:pt-fluid-12 [&_p]:text-bodyGrey
+          className="w-fill [&_p]:pb-fluid-12 [&_p]:text-[16px] xl:[&_p]:text-md font-body font-regular text-bodyGrey
     [&_h2]:text-h5 [&_h2]:font-body [&_h2]:font-semiBold  [&_h2]:pt-fluid-40 [&_h2]:text-headlineColor
     [&_h3]:text-[20px] [&_h3]:font-body  [&_h3]:font-semiBold   [&_h3]:pt-fluid-32   [&_h3]:w-fit [&_h3]:text-backgroundBlue
     [&_h4]:font-body [&_h4]:font-semiBold [&_h4]:text-h6 [&_h4]:text-headlineColor [&_h4]:pb-fluid-20 [&_h4]:pt-fluid-16 

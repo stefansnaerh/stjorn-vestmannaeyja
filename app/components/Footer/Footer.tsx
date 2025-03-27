@@ -30,7 +30,7 @@ export default async function Footer() {
             </h3> */}
             <ul className="flex flex-col gap-fluid-8 font-body text-pureWhite text-navLinks">
               {content.address ? <li>{content.address}</li> : ""}
-              <li>Kennitala: 540775-1339</li>
+              <li>Kennitala: 451275-3649</li>
             </ul>
           </div>
         </div>
