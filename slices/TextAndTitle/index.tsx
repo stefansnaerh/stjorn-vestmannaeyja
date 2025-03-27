@@ -14,15 +14,21 @@ export type TextOnlyProps = SliceComponentProps<Content.TextOnlySlice>;
  * Component for "TextOnly" Slices.
  */
 const TextOnly = ({ slice }: TextOnlyProps): JSX.Element => {
+  const section = slice.primary;
   return (
     <section
-      className="flex justify-center w-fill"
+      className="flex justify-center w-fill items-center content-center bg-white"
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <Container className="overflow-hidden">
-        <div className="md:w-[80%] lg2:w-[60%] w-fit ">
-          <FadeIn
+      <Container className="overflow-hidden flex flex-col self-center content-center items-center">
+        <div className="md:w-[80%] lg2:w-[60%] self-center w-fit flex flex-col gap-fluid-40">
+          <div className="self-center">
+            <h2 className="font-headline font-semiBold text-h4 text-headlineColor w-fit">
+              {section.title}
+            </h2>
+          </div>
+          <div
             className="w-fill [&_p]:text-navLinks [&_p]:font-regular [&_p]:font-body [&_p]:pt-fluid-12 [&_p]:text-bodyGrey
     [&_h2]:text-h2 [&_h2]:font-headline [&_h2]:font-semiBold   [&_h2]:pb-fluid-24 [&_h2]:text-headlineColor
     [&_h3]:text-h5 [&_h3]:font-body  [&_h3]:font-semiBold   [&_h3]:pt-fluid-32   [&_h3]:w-fit [&_h3]:text-orange
@@ -33,7 +39,7 @@ const TextOnly = ({ slice }: TextOnlyProps): JSX.Element => {
     [&_ul]:list-disc [&_li]:marker:text-headlineColor [&_li]:text-navLinks [&_li]:text-bodyGrey [&_li]:py-4 [&_ul]:py-8 [&_ol]:list-inside [&_ul]:list-inside [&_ol]:list-decimal [&_li]:marker:text-navLinks "
           >
             <PrismicRichText field={slice.primary.paragraph} />
-          </FadeIn>
+          </div>
         </div>
       </Container>
     </section>

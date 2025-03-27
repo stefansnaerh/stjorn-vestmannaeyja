@@ -5,6 +5,7 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 type AboutUsDocumentDataSlicesSlice =
+  | TextOnlySlice
   | ServicesOverviewSlice
   | BoardSlice
   | MemberQuoteSlice
@@ -1948,11 +1949,21 @@ export type ServicesOverviewSlice = prismic.SharedSlice<
 >;
 
 /**
- * Primary content in *TextOnly → Default → Primary*
+ * Primary content in *TextAndTitle → Default → Primary*
  */
 export interface TextOnlySliceDefaultPrimary {
   /**
-   * Paragraph field in *TextOnly → Default → Primary*
+   * Title field in *TextAndTitle → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_only.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Paragraph field in *TextAndTitle → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
@@ -1963,7 +1974,7 @@ export interface TextOnlySliceDefaultPrimary {
 }
 
 /**
- * Default variation for TextOnly Slice
+ * Default variation for TextAndTitle Slice
  *
  * - **API ID**: `default`
  * - **Description**: Default
@@ -1976,12 +1987,12 @@ export type TextOnlySliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Slice variation for *TextOnly*
+ * Slice variation for *TextAndTitle*
  */
 type TextOnlySliceVariation = TextOnlySliceDefault;
 
 /**
- * TextOnly Shared Slice
+ * TextAndTitle Shared Slice
  *
  * - **API ID**: `text_only`
  * - **Description**: TextOnly

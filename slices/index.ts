@@ -9,6 +9,6 @@ export const components = {
   orlofshus_um_allt_land: dynamic(() => import("./OrlofshusUmAlltLand")),
   service_overview: dynamic(() => import("./CardsWithLink")),
   services_overview: dynamic(() => import("./ServicesOverview")),
-  text_only: dynamic(() => import("./TextOnly")),
+  text_only: dynamic(() => import("./TextAndTitle")),
   why_us_overview: dynamic(() => import("./WhyUsOverview")),
 };

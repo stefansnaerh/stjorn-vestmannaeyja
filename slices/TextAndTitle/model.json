@@ -1,7 +1,7 @@
 {
   "id": "text_only",
   "type": "SharedSlice",
-  "name": "TextOnly",
+  "name": "TextAndTitle",
   "description": "TextOnly",
   "variations": [
     {
@@ -12,6 +12,13 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
         "paragraph": {
           "type": "StructuredText",
           "config": {

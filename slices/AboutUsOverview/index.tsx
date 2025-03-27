@@ -47,11 +47,12 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                     {section.title}
                   </h2>
                 </FadeIn>
-                <FadeIn delay={0.2}>
+                <FadeIn>
                   <div className="[&_p]:pb-fluid-12 [&_p]:text-[16px] xl:[&_p]:text-md font-body font-regular text-bodyGrey">
                     <PrismicRichText field={section.paragraph} />
                   </div>
                 </FadeIn>
+
                 <ul className="flex flex-col gap-fluid-18 text-[16px] font-regular text-bodyGrey font-body">
                   {section.list.map((item, i) => {
                     return (
@@ -71,7 +72,7 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                     );
                   })}
                 </ul>
-                <FadeIn delay={0.4} className="  ">
+                <FadeIn className="  ">
                   <Button
                     text="Lesa meira"
                     href={section.link}

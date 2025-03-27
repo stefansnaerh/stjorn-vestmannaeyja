@@ -22,7 +22,7 @@ const config: Config = {
       backgroundBlue: "#111827",
       backgroundLightBlue: "#FAFBFDs",
       headlineColor: "#293342",
-      bodyGrey: "#556276",
+      bodyGrey: "#323A46",
       bodyGreyOnDark: "#A0AEC0",
       greyInput: "#bababa",
       greyLight: "#f0f0f0",
