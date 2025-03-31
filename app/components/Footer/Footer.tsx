@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../../public/icons/stjornNordurVLogo.svg";
+import Logo from "../../../public/icons/stjornNordVestLogo.svg";
 import { createClient } from "../../../prismicio";
 import { PrismicNextLink } from "@prismicio/next";
 export default async function Footer() {
@@ -21,7 +21,7 @@ export default async function Footer() {
               alt="Félag stjórnenda logo"
               src={Logo}
               height={60}
-              className="w-[120px] lg2:w-[160px] "
+              className="w-[180px] md:w-[240px] "
             />
           </Link>
           <div className="flex flex-col gap-fluid-12">
