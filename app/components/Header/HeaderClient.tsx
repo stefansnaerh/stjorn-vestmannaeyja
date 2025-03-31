@@ -9,7 +9,7 @@ import MobileNav from "./MobileNav/mobileNav";
 import Button from "../Button/Button";
 import { HeaderDocumentData } from "@/prismicio-types";
 import NavGroup from "./NavGroup/NavGroup";
-import Logo from "../../../public/icons/stjornNordurVLogo.svg";
+import Logo from "../../../public/icons/stjornNordVestLogo.svg";
 import UserLinks from "./UserLinks/UserLinks";
 import { BackGroundGreyContext } from "../ContextProvider/Provider";
 export default function HeaderClient({
@@ -102,7 +102,7 @@ export default function HeaderClient({
           onClick={handleNavClick}
           className=" h-fit self-center"
         >
-          <Image alt="STF logo" src={Logo} height={70} className=" " />
+          <Image alt="Logo" src={Logo} height={70} className=" " />
         </Link>
         <UserLinks />
       </div>

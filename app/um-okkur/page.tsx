@@ -29,7 +29,7 @@ export default async function AboutUs() {
   return (
     <section className="flex flex-col justify-center ">
       <div className=" pt-fluid-40 smmd:pt-fluid-64 max-w-[2000px]  pb-64 px-container-88 self-center flex flex-col gap-fluid-56 bg-gradient-to-t from-blueLight to-backgroundGrey ">
-        <FadeIn className="flex  font-body text-sm ">
+        <FadeIn className="flex flex-wrap gap-y-6 font-body text-sm ">
           <Link
             className="text-bodyGrey hover:text-buttonBlue transition-all duration-300"
             href={"/"}

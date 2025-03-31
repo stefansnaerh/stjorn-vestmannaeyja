@@ -98,20 +98,20 @@ export default function UserLinks() {
         aria-label="Hnappur sem sýnir valmynd fyrir mínar síður og orlofsvef"
         onClick={() => toggleShowLockLinks(1)}
         className={cx(
-          "rounded-24 group lg:hidden hover:bg-backgroundBlue  p-fluid-12 self-center h-fit w-fit border-[1px] border-grey transition-all duration-300 ease-in-out",
+          "rounded-24 group lg:hidden hover:bg-backgroundBlue  p-fluid-12 self-center h-fit w-fit border-[1px] border-bodyGrey border-opacity-70 transition-all duration-300 ease-in-out",
           {
-            ["bg-backgroundBlue"]: showLockLinks,
+            ["bg-bodyGrey"]: showLockLinks,
             ["bg-pureWhite"]: !showLockLinks,
           }
         )}
       >
         <svg
-          width="16"
-          height="16"
+          width="14"
+          height="14"
           viewBox="0 0 16 16"
           className={cx("group-hover:text-pureWhite ", {
             ["text-pureWhite"]: showLockLinks,
-            ["text-backgroundBlue"]: !showLockLinks,
+            ["text-bodyGrey"]: !showLockLinks,
           })}
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -136,16 +136,16 @@ export default function UserLinks() {
         aria-label="Hnappur sem sýnir tungumálavalmynd"
         onClick={() => toggleShowLanguages(2)}
         className={cx(
-          "rounded-24 group hover:bg-backgroundBlue  p-fluid-12 self-center h-fit w-fit border-[1px] border-grey transition-all duration-300 ease-in-out",
+          "rounded-24 group hover:bg-backgroundBlue  p-fluid-12 self-center h-fit w-fit border-[1px] border-bodyGrey border-opacity-70 transition-all duration-300 ease-in-out",
           {
-            ["bg-backgroundBlue"]: showLanguages,
+            ["bg-bodyGrey"]: showLanguages,
             ["bg-pureWhite"]: !showLanguages,
           }
         )}
       >
         <svg
-          width="16"
-          height="16"
+          width="14"
+          height="14"
           className={cx("group-hover:text-pureWhite ", {
             ["text-pureWhite"]: showLanguages,
             ["text-backgroundBlue"]: !showLanguages,
@@ -180,8 +180,8 @@ export default function UserLinks() {
             >
               <svg
                 className="text-buttonBlue self-center group-hover:text-buttonBlue transition-all duration-300 ease-in-out"
-                width="20"
-                height="20"
+                width="14"
+                height="14"
                 viewBox="0 0 17 17"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"

@@ -29,7 +29,7 @@ export default function SearchButton() {
         aria-label="hnappur sem til að opna leitarglugga"
         onClick={handleOpenSearch}
         className={cx(
-          "rounded-24 group p-fluid-12 self-center h-fit w-fit border-[1px] border-grey hover:bg-backgroundBlue transition-all duration-300 ease-in-out ",
+          "rounded-24 group p-fluid-12 self-center h-fit w-fit border-[1px] border-bodyGrey border-opacity-70 hover:bg-backgroundBlue transition-all duration-300 ease-in-out ",
           {
             ["bg-pureWhite"]: !isSearchOpen,
             ["bg-backgroundBlue"]: isSearchOpen,
@@ -40,8 +40,8 @@ export default function SearchButton() {
           className={cx("group-hover:text-pureWhite text-backgroundBlue", {
             ["text-pureWhite"]: isSearchOpen,
           })}
-          width="16"
-          height="16"
+          width="14"
+          height="14"
           viewBox="0 0 16 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
