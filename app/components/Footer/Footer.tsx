@@ -44,7 +44,7 @@ export default async function Footer() {
                 return (
                   <li
                     key={`${i}${item.link_name}`}
-                    className="hover:text-pureWhite text-greyMedium   transition-all duration-300 ease-in-out"
+                    className="hover:text-bodyGreyOnDark text-greyMedium   transition-all duration-300 ease-in-out"
                   >
                     <PrismicNextLink
                       field={item.link}
@@ -62,7 +62,7 @@ export default async function Footer() {
             aria-label={`Hafðu samband`}
             className="flex gap-8 text-navLinks font-body text-pureWhite md:min-h-[160px] w-fit  md:w-[160px] lg2:w-fit flex-col  before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
           >
-            <li className="hover:text-pureWhite text-greyMedium  transition-all duration-300 ease-in-out">
+            <li className="hover:text-bodyGreyOnDark transition-all duration-300 ease-in-out">
               <a
                 href={`mailto:${content.email}`}
                 aria-label={`Opnar tölvupóst til fylla inn í nýjum glugga`}
@@ -84,7 +84,7 @@ export default async function Footer() {
             aria-label={`Samfélagsmiðlar`}
             className=" flex  gap-8 text-navLinks font-body text-pureWhite   md:min-h-[160px] w-fit md:w-[160px] lg2:w-fit flex-col  before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
           >
-            <li className=" transition-all text-greyMedium duration-300 ease-in-out">
+            <li className=" transition-all hover:text-bodyGreyOnDark duration-300 ease-in-out">
               <a
                 href={`https://www.facebook.com/profile.php?id=100064358182681`}
                 aria-label={`Opnar facebook síðu félagsins`}

@@ -23,7 +23,7 @@ const TextOnly = ({ slice }: TextOnlyProps): JSX.Element => {
     >
       <Container className="overflow-hidden flex flex-col self-center content-center items-center">
         <div className="md:w-[80%] lg2:w-[60%] self-center w-fit flex flex-col gap-fluid-40">
-          <div className="self-center">
+          <div className="">
             <h2 className="font-headline font-semiBold text-h4 text-headlineColor w-fit">
               {section.title}
             </h2>
