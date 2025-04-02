@@ -117,7 +117,7 @@ export default function HeaderClient({
             className=" h-fit self-center "
           >
             <Image
-              alt="Félag stjórnenda logo"
+              alt="Logo félagsins"
               src={Logo}
               height={65}
               className="  "
