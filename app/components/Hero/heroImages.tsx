@@ -28,7 +28,7 @@ export default function HeroImages({
             <Austurland className=" w-fill" />
           </FadeIn>
         </div>
-        <div className="  max-h-[100vh]    max-w-[2000px] self-center   ">
+        <div className="max-h-[100vh] max-w-[2000px] self-center">
           <div className="relative flex max-w-[2000px] ">
             <div className="flex flex-col smmd:flex-row  gap-fluid-56  pb-fluid-48">
               <HeroSlideElements
