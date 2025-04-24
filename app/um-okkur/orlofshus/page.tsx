@@ -5,7 +5,7 @@ import Link from "next/link";
 import { createClient } from "../../../prismicio";
 import { OrlofshusDocument } from "@/prismicio-types";
 import Image from "next/image";
-import Chevron from "../../../public/icons/chevronUp.svg";
+import Chevron from "../../icons/chevronUp.svg";
 import { FadeIn } from "../../components/FadeIn/fadeIn";
 import { PrismicNextImage } from "@prismicio/next";
 import Button from "@/app/components/Button/Button";
@@ -46,22 +46,14 @@ export default async function AboutUs() {
               >
                 Heim
               </Link>
-              <Image
-                alt="ör til hægri"
-                src={Chevron}
-                className="h-fluid-16 rotate-90 self-center filterWhite "
-              />
+              <Chevron className="h-fluid-16 rotate-90 self-center filterWhite " />
               <Link
                 className="text-pureWhite transition-all duration-300 ease-in-out"
                 href={"/um-okkur"}
               >
                 Um okkur
               </Link>
-              <Image
-                alt="ör til hægri"
-                src={Chevron}
-                className="h-fluid-16 rotate-90 self-center filterWhite "
-              />
+              <Chevron className="h-fluid-16 rotate-90 self-center filterWhite " />
 
               <p className="text-sm text-pureWhite font-semiBold">
                 {section.hero_title}

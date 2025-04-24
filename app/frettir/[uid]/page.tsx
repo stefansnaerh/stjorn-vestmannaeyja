@@ -4,7 +4,7 @@ import { NewsDocument } from "../../../prismicio-types";
 import { SliceZone } from "@prismicio/react";
 import { components } from "../../../slices";
 import { FadeIn } from "@/app/components/FadeIn/fadeIn";
-import Chevron from "../../../public/icons/chevronUp.svg";
+import Chevron from "../../icons/chevronUp.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { PrismicNextImage } from "@prismicio/next";
@@ -47,11 +47,7 @@ export default async function Service({ params }: { params: Params }) {
           <Link className="text-bodyGrey" href={"/"}>
             Heim
           </Link>
-          <Image
-            alt="ör til hægri"
-            src={Chevron}
-            className="h-fluid-16 rotate-90 self-center"
-          />
+          <Chevron className="h-fluid-16 rotate-90 self-center" />
           <Link className="text-bodyGrey" href={"/frettir"}>
             Fréttir
           </Link>

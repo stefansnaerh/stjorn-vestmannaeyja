@@ -5,7 +5,7 @@ import { HeaderDocumentData } from "@/prismicio-types";
 import { KeyTextField, LinkField, ImageField } from "@prismicio/client";
 import { FadeInSide } from "../../FadeIn/fadeInSide";
 import ArrowRight from "../../../../public/icons/ArrowRight.svg";
-import Chevron from "../../../../public/icons/chevronUp.svg";
+import Chevron from "../../../icons/chevronUp.svg";
 import Image from "next/image";
 import cx from "classnames";
 interface navGroups {
@@ -95,11 +95,7 @@ export default function NavGroupMobile({
                 onClick={() => setNavGroupCurrentIndex(-1)}
               >
                 Valmynd
-                <Image
-                  alt="ör til baka"
-                  className="self-center h-16 rotate-[-90deg] filterHeadlineBlue transition-all  filter  duration-150 ease-in-out"
-                  src={Chevron}
-                />
+                <Chevron className="self-center h-16 rotate-[-90deg] filterHeadlineBlue transition-all  filter  duration-150 ease-in-out" />
                 {group.title}
               </button>
               <ul className="flex flex-col gap-fluid-32 ">

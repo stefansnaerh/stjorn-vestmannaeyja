@@ -3,7 +3,7 @@ import Link from "next/link";
 import { createClient } from "../../prismicio";
 import { AllNewsDocument } from "@/prismicio-types";
 import Image from "next/image";
-import Chevron from "../../public/icons/chevronUp.svg";
+import Chevron from "../icons/chevronUp.svg";
 import { FadeIn } from "../components/FadeIn/fadeIn";
 import News from "../components/News/News";
 export async function generateMetadata(): Promise<Metadata> {
@@ -26,11 +26,7 @@ export default async function AboutUs() {
           <Link className="text-bodyGrey" href={"/"}>
             Heim
           </Link>
-          <Image
-            alt="STF logo"
-            src={Chevron}
-            className="h-fluid-16 rotate-90 self-center"
-          />
+          <Chevron className="h-fluid-16 rotate-90 self-center" />
           <p className="text-sm text-headlineColor font-semiBold">Fréttir</p>
         </FadeIn>
         <FadeIn>

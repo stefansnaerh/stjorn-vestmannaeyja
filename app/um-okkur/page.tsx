@@ -6,7 +6,7 @@ import { createClient } from "../../prismicio";
 import { AboutUsDocument } from "@/prismicio-types";
 import { PrismicNextImage } from "@prismicio/next";
 import Image from "next/image";
-import Chevron from "../../public/icons/chevronUp.svg";
+import Chevron from "../icons/chevronUp.svg";
 import { FadeIn } from "../components/FadeIn/fadeIn";
 import RichText from "../components/RichText/RichText";
 
@@ -36,11 +36,7 @@ export default async function AboutUs() {
           >
             Heim
           </Link>
-          <Image
-            alt="STF logo"
-            src={Chevron}
-            className="h-fluid-16 rotate-90 self-center"
-          />
+          <Chevron className="h-fluid-16 rotate-90 self-center" />
           <p className="text-sm text-headlineColor font-semiBold">Um okkur</p>
         </FadeIn>
         <FadeIn className=" flex flex-col md:flex-row gap-fluid-72 xxs:gap-fluid-96  ">
