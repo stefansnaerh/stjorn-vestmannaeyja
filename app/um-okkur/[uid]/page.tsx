@@ -5,7 +5,7 @@ import { SliceZone } from "@prismicio/react";
 import { components } from "../../../slices";
 import Image from "next/image";
 import Link from "next/link";
-import Chevron from "../../../public/icons/chevronUp.svg";
+import Chevron from "../../icons/chevronUp.svg";
 import RichText from "@/app/components/RichText/RichText";
 type Params = { uid: string };
 export async function generateMetadata({
@@ -41,11 +41,7 @@ export default async function Service({ params }: { params: Params }) {
           >
             Heim
           </Link>
-          <Image
-            alt="ör til hægri"
-            src={Chevron}
-            className="h-fluid-16 rotate-90 self-center"
-          />
+          <Chevron className="h-fluid-16 rotate-90 self-center" />
           <Link
             className="text-sm text-bodyGrey hover:text-buttonBlue transition-all duration-300"
             href={"/um-okkur"}
