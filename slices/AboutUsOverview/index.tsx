@@ -60,13 +60,13 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                         key={`${i}${item.list_item}`}
                         className="flex gap-fluid-12"
                       >
-                        <Image
+                        {/* <Image
                           width={20}
                           height={20}
                           className="h-20"
                           alt="checkmark"
                           src={Checkmark}
-                        />
+                        /> */}
                         {item.list_item}
                       </li>
                     );

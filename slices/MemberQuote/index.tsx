@@ -24,11 +24,11 @@ const MemberQuote = ({ slice }: MemberQuoteProps): JSX.Element => {
       <Container lessPadding className="flex justify-center">
         <FadeIn className="flex bg-pureWhite sm:bg-transparent flex-col gap-fluid-32 pb-fluid-40 sm:pb-0 lg:gap-fluid-48 max-w-[1200px]">
           <FadeIn className="flex sm:bg-pureWhite shadow-quote gap-fluid-32 md:gap-fluid-40 flex-col px-fluid-24 pt-fluid-32 sm:pb-[100px]  smmd:px-fluid-56 smmd:pt-fluid-80  smmd:pb-[160px]  smmd:justify-around lg:justify-center ">
-            <Image
+            {/* <Image
               alt="kommur"
               src={Kommur}
               className=" h-[40px] md:w-fluid-96 self-center"
-            />
+            /> */}
 
             <FadeIn className="flex w-fit justify-center">
               <p className="font-body  self-center text-center w-[80%] text-md font-regular text-headlineColor">

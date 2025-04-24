@@ -6,13 +6,6 @@
   "status": true,
   "json": {
     "Main": {
-      "main_title": {
-        "type": "Text",
-        "config": {
-          "label": "Main title",
-          "placeholder": ""
-        }
-      },
       "hero_image": {
         "type": "Image",
         "config": {
@@ -21,10 +14,10 @@
           "thumbnails": []
         }
       },
-      "hero_title_1": {
+      "hero_title": {
         "type": "Text",
         "config": {
-          "label": "Hero title 1",
+          "label": "Hero title",
           "placeholder": ""
         }
       },
@@ -50,64 +43,6 @@
           "select": null
         }
       },
-      "hero_title_2": {
-        "type": "Text",
-        "config": {
-          "label": "Hero title 2",
-          "placeholder": ""
-        }
-      },
-      "hero_paragraph_2": {
-        "type": "Text",
-        "config": {
-          "label": "Hero paragraph 2",
-          "placeholder": ""
-        }
-      },
-      "hero_link_text_2": {
-        "type": "Text",
-        "config": {
-          "label": "Hero link text 2",
-          "placeholder": ""
-        }
-      },
-      "hero_link_2": {
-        "type": "Link",
-        "config": {
-          "label": "Hero link 2",
-          "placeholder": "",
-          "select": null
-        }
-      },
-      "hero_title_3": {
-        "type": "Text",
-        "config": {
-          "label": "Hero title 3",
-          "placeholder": ""
-        }
-      },
-      "hero_paragraph_3": {
-        "type": "Text",
-        "config": {
-          "label": "Hero paragraph 3",
-          "placeholder": ""
-        }
-      },
-      "hero_link_text_3": {
-        "type": "Text",
-        "config": {
-          "label": "Hero link text 3",
-          "placeholder": ""
-        }
-      },
-      "hero_link_3": {
-        "type": "Link",
-        "config": {
-          "label": "Hero link 3",
-          "placeholder": "",
-          "select": null
-        }
-      },
       "image_1": {
         "type": "Image",
         "config": {
@@ -124,46 +59,51 @@
           "thumbnails": []
         }
       },
-      "image_3": {
-        "type": "Image",
+      "members_benefits_sub_title": {
+        "type": "Text",
         "config": {
-          "label": "Image 3",
-          "constraint": {},
-          "thumbnails": []
+          "label": "Members benefits sub title",
+          "placeholder": ""
         }
       },
-      "image_4": {
-        "type": "Image",
+      "members_benefits_title": {
+        "type": "Text",
         "config": {
-          "label": "Image 4",
-          "constraint": {},
-          "thumbnails": []
+          "label": "Members benefits title",
+          "placeholder": ""
         }
       },
-      "serviceoverview": {
+      "members_benefits_paragraph": {
+        "type": "Text",
+        "config": {
+          "label": "Members benefits paragraph",
+          "placeholder": ""
+        }
+      },
+      "benefits": {
         "type": "Group",
         "config": {
-          "label": "ServiceOverview",
+          "label": "Benefits",
           "repeat": true,
           "fields": {
             "title": {
               "type": "Text",
               "config": {
-                "label": "title",
+                "label": "Title",
                 "placeholder": ""
               }
             },
             "paragraph": {
               "type": "Text",
               "config": {
-                "label": "paragraph",
+                "label": "Paragraph",
                 "placeholder": ""
               }
             },
             "link": {
               "type": "Link",
               "config": {
-                "label": "link",
+                "label": "Link",
                 "placeholder": "",
                 "select": null
               }

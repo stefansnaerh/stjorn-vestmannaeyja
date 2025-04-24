@@ -9,7 +9,7 @@ import MobileNav from "./MobileNav/mobileNav";
 import Button from "../Button/Button";
 import { HeaderDocumentData } from "@/prismicio-types";
 import NavGroup from "./NavGroup/NavGroup";
-import Logo from "../../../public/icons/stjornNordVestLogo.svg";
+import Logo from "../../../public/icons/staLogo.png";
 import UserLinks from "./UserLinks/UserLinks";
 import { BackGroundGreyContext } from "../ContextProvider/Provider";
 export default function HeaderClient({
@@ -116,12 +116,7 @@ export default function HeaderClient({
             onClick={handleNavClick}
             className=" h-fit self-center "
           >
-            <Image
-              alt="Logo félagsins"
-              src={Logo}
-              height={65}
-              className="  "
-            />
+            <Image alt="Logo félagsins" src={Logo} height={65} className="  " />
           </Link>
           <NavGroup
             showNav={showNav}

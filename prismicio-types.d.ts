@@ -329,35 +329,35 @@ export type FooterDocument<Lang extends string = string> =
   >;
 
 /**
- * Item in *Forsíða → ServiceOverview*
+ * Item in *Forsíða → Benefits*
  */
-export interface FrontPageDocumentDataServiceoverviewItem {
+export interface FrontPageDocumentDataBenefitsItem {
   /**
-   * title field in *Forsíða → ServiceOverview*
+   * Title field in *Forsíða → Benefits*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.serviceoverview[].title
+   * - **API ID Path**: front_page.benefits[].title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
 
   /**
-   * paragraph field in *Forsíða → ServiceOverview*
+   * Paragraph field in *Forsíða → Benefits*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.serviceoverview[].paragraph
+   * - **API ID Path**: front_page.benefits[].paragraph
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   paragraph: prismic.KeyTextField;
 
   /**
-   * link field in *Forsíða → ServiceOverview*
+   * Link field in *Forsíða → Benefits*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.serviceoverview[].link
+   * - **API ID Path**: front_page.benefits[].link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
@@ -374,17 +374,6 @@ type FrontPageDocumentDataSlicesSlice =
  */
 interface FrontPageDocumentData {
   /**
-   * Main title field in *Forsíða*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.main_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  main_title: prismic.KeyTextField;
-
-  /**
    * Hero image field in *Forsíða*
    *
    * - **Field Type**: Image
@@ -396,15 +385,15 @@ interface FrontPageDocumentData {
   hero_image: prismic.ImageField<never>;
 
   /**
-   * Hero title 1 field in *Forsíða*
+   * Hero title field in *Forsíða*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.hero_title_1
+   * - **API ID Path**: front_page.hero_title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  hero_title_1: prismic.KeyTextField;
+  hero_title: prismic.KeyTextField;
 
   /**
    * Hero paragraph 1 field in *Forsíða*
@@ -440,94 +429,6 @@ interface FrontPageDocumentData {
   hero_link_1: prismic.LinkField;
 
   /**
-   * Hero title 2 field in *Forsíða*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.hero_title_2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  hero_title_2: prismic.KeyTextField;
-
-  /**
-   * Hero paragraph 2 field in *Forsíða*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.hero_paragraph_2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  hero_paragraph_2: prismic.KeyTextField;
-
-  /**
-   * Hero link text 2 field in *Forsíða*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.hero_link_text_2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  hero_link_text_2: prismic.KeyTextField;
-
-  /**
-   * Hero link 2 field in *Forsíða*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.hero_link_2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  hero_link_2: prismic.LinkField;
-
-  /**
-   * Hero title 3 field in *Forsíða*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.hero_title_3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  hero_title_3: prismic.KeyTextField;
-
-  /**
-   * Hero paragraph 3 field in *Forsíða*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.hero_paragraph_3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  hero_paragraph_3: prismic.KeyTextField;
-
-  /**
-   * Hero link text 3 field in *Forsíða*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.hero_link_text_3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  hero_link_text_3: prismic.KeyTextField;
-
-  /**
-   * Hero link 3 field in *Forsíða*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.hero_link_3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  hero_link_3: prismic.LinkField;
-
-  /**
    * Image 1 field in *Forsíða*
    *
    * - **Field Type**: Image
@@ -550,39 +451,48 @@ interface FrontPageDocumentData {
   image_2: prismic.ImageField<never>;
 
   /**
-   * Image 3 field in *Forsíða*
+   * Members benefits sub title field in *Forsíða*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.image_3
+   * - **API ID Path**: front_page.members_benefits_sub_title
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  image_3: prismic.ImageField<never>;
+  members_benefits_sub_title: prismic.KeyTextField;
 
   /**
-   * Image 4 field in *Forsíða*
+   * Members benefits title field in *Forsíða*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.image_4
+   * - **API ID Path**: front_page.members_benefits_title
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  image_4: prismic.ImageField<never>;
+  members_benefits_title: prismic.KeyTextField;
 
   /**
-   * ServiceOverview field in *Forsíða*
+   * Members benefits paragraph field in *Forsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.members_benefits_paragraph
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  members_benefits_paragraph: prismic.KeyTextField;
+
+  /**
+   * Benefits field in *Forsíða*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.serviceoverview[]
+   * - **API ID Path**: front_page.benefits[]
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#group
    */
-  serviceoverview: prismic.GroupField<
-    Simplify<FrontPageDocumentDataServiceoverviewItem>
-  >;
+  benefits: prismic.GroupField<Simplify<FrontPageDocumentDataBenefitsItem>>;
 
   /**
    * Slice Zone field in *Forsíða*
@@ -2116,7 +2026,7 @@ declare module "@prismicio/client" {
       FooterDocumentDataLinkGroup1Item,
       FrontPageDocument,
       FrontPageDocumentData,
-      FrontPageDocumentDataServiceoverviewItem,
+      FrontPageDocumentDataBenefitsItem,
       FrontPageDocumentDataSlicesSlice,
       HeaderDocument,
       HeaderDocumentData,
