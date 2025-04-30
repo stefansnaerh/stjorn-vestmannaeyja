@@ -49,23 +49,25 @@
 					"url": "https://prismic.io"
 				}
 			},
-			"list": {
-				"__TYPE__": "GroupContentType",
-				"value": [
-					{
-						"__TYPE__": "GroupItemContent",
-						"value": [
-							[
-								"list_item",
-								{
-									"__TYPE__": "FieldContent",
-									"value": "particular",
-									"type": "Text"
-								}
-							]
-						]
-					}
-				]
+			"sub_title": {
+				"__TYPE__": "FieldContent",
+				"value": "list",
+				"type": "Text"
+			},
+			"card_title": {
+				"__TYPE__": "FieldContent",
+				"value": "concerned",
+				"type": "Text"
+			},
+			"card_paragraph": {
+				"__TYPE__": "FieldContent",
+				"value": "college",
+				"type": "Text"
+			},
+			"link_text": {
+				"__TYPE__": "FieldContent",
+				"value": "aid",
+				"type": "Text"
 			}
 		},
 		"items": []

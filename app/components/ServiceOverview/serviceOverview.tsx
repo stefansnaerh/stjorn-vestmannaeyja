@@ -29,7 +29,7 @@ const ServiceOverview = ({
               {content.members_benefits_title}
             </h2>
           </FadeIn>
-          <FadeIn className="md:w-[70%] lg:w-fill">
+          <FadeIn className="md:w-[70%] xl:w-[80%]  lg:w-fill">
             <p className=" text-[16px] font-body font-regular text-bodyGreyOnDark">
               {content.members_benefits_paragraph}
             </p>

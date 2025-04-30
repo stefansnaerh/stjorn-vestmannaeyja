@@ -1294,21 +1294,6 @@ export type AllDocumentTypes =
   | UmOkkurTextasidaDocument;
 
 /**
- * Item in *AboutUsOverview → Default → Primary → List*
- */
-export interface AboutUsOverviewSliceDefaultPrimaryListItem {
-  /**
-   * List item field in *AboutUsOverview → Default → Primary → List*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us_overview.default.primary.list[].list_item
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  list_item: prismic.KeyTextField;
-}
-
-/**
  * Primary content in *AboutUsOverview → Default → Primary*
  */
 export interface AboutUsOverviewSliceDefaultPrimary {
@@ -1321,6 +1306,16 @@ export interface AboutUsOverviewSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   image: prismic.ImageField<never>;
+
+  /**
+   * Sub title field in *AboutUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us_overview.default.primary.sub_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_title: prismic.KeyTextField;
 
   /**
    * Title field in *AboutUsOverview → Default → Primary*
@@ -1343,6 +1338,36 @@ export interface AboutUsOverviewSliceDefaultPrimary {
   paragraph: prismic.RichTextField;
 
   /**
+   * Card title field in *AboutUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us_overview.default.primary.card_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  card_title: prismic.KeyTextField;
+
+  /**
+   * Card paragraph field in *AboutUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us_overview.default.primary.card_paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  card_paragraph: prismic.KeyTextField;
+
+  /**
+   * Link text field in *AboutUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us_overview.default.primary.link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
+
+  /**
    * Link field in *AboutUsOverview → Default → Primary*
    *
    * - **Field Type**: Link
@@ -1351,18 +1376,6 @@ export interface AboutUsOverviewSliceDefaultPrimary {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link: prismic.LinkField;
-
-  /**
-   * List field in *AboutUsOverview → Default → Primary*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us_overview.default.primary.list[]
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  list: prismic.GroupField<
-    Simplify<AboutUsOverviewSliceDefaultPrimaryListItem>
-  >;
 }
 
 /**
@@ -2045,7 +2058,6 @@ declare module "@prismicio/client" {
       UmOkkurTextasidaDocumentDataSlicesSlice,
       AllDocumentTypes,
       AboutUsOverviewSlice,
-      AboutUsOverviewSliceDefaultPrimaryListItem,
       AboutUsOverviewSliceDefaultPrimary,
       AboutUsOverviewSliceVariation,
       AboutUsOverviewSliceDefault,

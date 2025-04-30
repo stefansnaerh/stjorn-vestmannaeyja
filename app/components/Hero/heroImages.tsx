@@ -24,7 +24,7 @@ export default function HeroImages({
               <span className="text-buttonBlue text-h1">Austurlandi</span>
             </h1>
           </FadeIn>
-          <FadeIn className="hidden sm:flex sm:w-[30%]">
+          <FadeIn className="hidden sm:flex sm:w-[30%] lg:w-[25%] xl:w-[20%]">
             <Austurland className=" w-fill" />
           </FadeIn>
         </div>

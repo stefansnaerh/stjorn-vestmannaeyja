@@ -20,6 +20,13 @@
             "thumbnails": []
           }
         },
+        "sub_title": {
+          "type": "Text",
+          "config": {
+            "label": "Sub title",
+            "placeholder": ""
+          }
+        },
         "title": {
           "type": "Text",
           "config": {
@@ -36,28 +43,33 @@
             "multi": "paragraph,strong,em"
           }
         },
+        "card_title": {
+          "type": "Text",
+          "config": {
+            "label": "Card title",
+            "placeholder": ""
+          }
+        },
+        "card_paragraph": {
+          "type": "Text",
+          "config": {
+            "label": "Card paragraph",
+            "placeholder": ""
+          }
+        },
+        "link_text": {
+          "type": "Text",
+          "config": {
+            "label": "Link text",
+            "placeholder": ""
+          }
+        },
         "link": {
           "type": "Link",
           "config": {
             "label": "Link",
             "placeholder": "",
             "select": null
-          }
-        },
-        "list": {
-          "type": "Group",
-          "config": {
-            "label": "List",
-            "repeat": true,
-            "fields": {
-              "list_item": {
-                "type": "Text",
-                "config": {
-                  "label": "List item",
-                  "placeholder": ""
-                }
-              }
-            }
           }
         }
       },

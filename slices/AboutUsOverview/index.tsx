@@ -4,9 +4,9 @@ import { FadeIn } from "@/app/components/FadeIn/fadeIn";
 import Container from "@/app/components/Container/container";
 import { PrismicNextImage } from "@prismicio/next";
 import { PrismicRichText } from "@prismicio/react";
-import Image from "next/image";
-import Button from "@/app/components/Button/Button";
-import Checkmark from "../../public/icons/checkMark2.svg";
+import LightBulp from "../../app/icons/lightBulp.svg";
+import { PrismicNextLink } from "@prismicio/next";
+import Arrow from "../../app/icons/arrow.svg";
 /**
  * Props for `AboutUsOverview`.
  */
@@ -24,12 +24,12 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
       data-slice-variation={slice.variation}
       className="flex justify-center"
     >
-      <Container className="bg-backgroundGrey">
+      <Container className="bg-white">
         <section className="relative text-black  flex flex-col gap-fluid-32 md:gap-fluid-40  w-fill  ">
-          <div className="relative flex w-fill gap-fluid-40 sm:gap-fluid-56 flex-col md:flex-row">
-            <FadeIn className="flex gap-fluid-24 overflow-hidden w-fill md:w-[40%]">
+          <div className="relative flex w-fill gap-fluid-40 sm:gap-fluid-56 lg:gap-fluid-64 flex-col md:flex-row">
+            <FadeIn className="flex gap-fluid-24 overflow-hidden w-fill md:w-[55%]">
               <div className="relative  min-w-[100%] overflow-hidden  ">
-                <div className="relative  pb-[70%] md:pb-[120%] lg:pb-[140%] ">
+                <div className="relative  pb-[70%] md:pb-[120%] lg:pb-[100%] ">
                   <PrismicNextImage
                     field={section.image}
                     className="object-cover z-0 rounded-6"
@@ -40,9 +40,12 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                 </div>
               </div>
             </FadeIn>
-            <div className="self-center relative h-fit  grid grid-col-1 grid-flow-row gap-fluid-40  w-fill md:w-[60%]">
+            <div className="self-center relative h-fit  grid grid-col-1 grid-flow-row gap-fluid-40  w-fill md:w-[45%]">
               <FadeIn className="flex flex-col gap-fluid-40 w-fill">
-                <FadeIn className="w-fill">
+                <FadeIn className="w-fill flex flex-col gap-8">
+                  <h2 className="text-[20px] font-headline text-buttonBlue font-semiBold w-fill">
+                    {section.sub_title}
+                  </h2>
                   <h2 className="text-h2 font-headline text-headlineColor font-semiBold w-fill">
                     {section.title}
                   </h2>
@@ -52,36 +55,27 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                     <PrismicRichText field={section.paragraph} />
                   </div>
                 </FadeIn>
+                <FadeIn className="relative flex mt-fluid-40 flex-col gap-fluid-24 bg-softBlue pb-fluid-48 pt-fluid-64 px-fluid-40 rounded-6">
+                  <LightBulp className="w-72 absolute -top-40" />
+                  <h3 className="text-h5 font-body text-headlineColor font-semiBold">
+                    {section.card_title}
+                  </h3>
+                  <p className="text-[16px] xl:text-md font-body text-bodyGrey">
+                    {section.card_paragraph}
+                  </p>
+                </FadeIn>
 
-                <ul className="flex flex-col gap-fluid-18 text-[16px] font-regular text-bodyGrey font-body">
-                  {section.list.map((item, i) => {
-                    return (
-                      <li
-                        key={`${i}${item.list_item}`}
-                        className="flex gap-fluid-12"
-                      >
-                        {/* <Image
-                          width={20}
-                          height={20}
-                          className="h-20"
-                          alt="checkmark"
-                          src={Checkmark}
-                        /> */}
-                        {item.list_item}
-                      </li>
-                    );
-                  })}
-                </ul>
                 <FadeIn className="  ">
-                  <Button
-                    text="Lesa meira"
-                    href={section.link}
-                    type="anchor"
-                    noShadow
-                    arrow
-                    ariaLabel={`hlekkur til að lesa meira um okkur`}
-                    className=" text-[16px] bg-buttonBlue hover:bg-buttonBlueHover text-pureWhite  font-semiBold flex justify-center   border-buttonBlue  rounded-6"
-                  ></Button>
+                  <PrismicNextLink
+                    field={section.link}
+                    aria-label={"hlekkur til að lesa meira um okkur"}
+                    className="group text-[16px] hover:bg-buttonBlue hover:text-pureWhite text-buttonBlue flex pointer-events-auto rounded-32 border-[1.5px] border-buttonBlue border-opacity-60  gap-16 py-fluid-8 items-center pr-fluid-12 pl-fluid-24  h-fit w-fit  font-body font-medium transition-all duration-300 ease-in-out ${className} "
+                  >
+                    {section.link_text}
+                    <div className="p-12  group-hover:bg-pureWhite group-hover:ml-4   bg-buttonBlue w-fit rounded-full transition-all duration-300 ease-in-out">
+                      <Arrow className="text-pureWhite group-hover:text-black -rotate-45 h-[14px]  transition-all duration-300 ease-in-out " />
+                    </div>
+                  </PrismicNextLink>
                 </FadeIn>
               </FadeIn>
             </div>

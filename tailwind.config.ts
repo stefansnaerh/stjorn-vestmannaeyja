@@ -42,7 +42,7 @@ const config: Config = {
       cyanideBlue: "#2DCAE1",
       lightBlue: "#67A7D5",
       buttonBlueHover: "#2E5CA9",
-      softBlue: "#EBEFF7",
+      softBlue: "#ECFCFE",
       buttunSecondary: "#D81E5B",
       softBLue: "#EAF2F8",
       red: "#D03C3C",
