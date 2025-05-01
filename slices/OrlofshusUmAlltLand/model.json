@@ -12,6 +12,13 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
+        "sub_title": {
+          "type": "Text",
+          "config": {
+            "label": "Sub title",
+            "placeholder": ""
+          }
+        },
         "title": {
           "type": "Text",
           "config": {
@@ -41,26 +48,10 @@
             "placeholder": ""
           }
         },
-        "image_1_small": {
+        "image": {
           "type": "Image",
           "config": {
-            "label": "image 1",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "image_2_small": {
-          "type": "Image",
-          "config": {
-            "label": "image 2",
-            "constraint": {},
-            "thumbnails": []
-          }
-        },
-        "image_big": {
-          "type": "Image",
-          "config": {
-            "label": "Image 3",
+            "label": "image",
             "constraint": {},
             "thumbnails": []
           }

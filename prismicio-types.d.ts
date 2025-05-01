@@ -1587,6 +1587,16 @@ export type MemberQuoteSlice = prismic.SharedSlice<
  */
 export interface OrlofshusUmAlltLandSliceDefaultPrimary {
   /**
+   * Sub title field in *OrlofshusUmAlltLand → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: orlofshus_um_allt_land.default.primary.sub_title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_title: prismic.KeyTextField;
+
+  /**
    * Title field in *OrlofshusUmAlltLand → Default → Primary*
    *
    * - **Field Type**: Text
@@ -1627,34 +1637,14 @@ export interface OrlofshusUmAlltLandSliceDefaultPrimary {
   link_text: prismic.KeyTextField;
 
   /**
-   * image 1 field in *OrlofshusUmAlltLand → Default → Primary*
+   * image field in *OrlofshusUmAlltLand → Default → Primary*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: orlofshus_um_allt_land.default.primary.image_1_small
+   * - **API ID Path**: orlofshus_um_allt_land.default.primary.image
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  image_1_small: prismic.ImageField<never>;
-
-  /**
-   * image 2 field in *OrlofshusUmAlltLand → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: orlofshus_um_allt_land.default.primary.image_2_small
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image_2_small: prismic.ImageField<never>;
-
-  /**
-   * Image 3 field in *OrlofshusUmAlltLand → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: orlofshus_um_allt_land.default.primary.image_big
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image_big: prismic.ImageField<never>;
+  image: prismic.ImageField<never>;
 }
 
 /**

@@ -73,7 +73,7 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                   >
                     {section.link_text}
                     <div className="p-12  group-hover:bg-pureWhite group-hover:ml-4   bg-buttonBlue w-fit rounded-full transition-all duration-300 ease-in-out">
-                      <Arrow className="text-pureWhite group-hover:text-black -rotate-45 h-[14px]  transition-all duration-300 ease-in-out " />
+                      <Arrow className="text-pureWhite group-hover:text-buttonBlue -rotate-45 h-[14px]  transition-all duration-300 ease-in-out " />
                     </div>
                   </PrismicNextLink>
                 </FadeIn>

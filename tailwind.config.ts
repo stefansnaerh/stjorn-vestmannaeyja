@@ -33,20 +33,12 @@ const config: Config = {
       softWhite: "#FFFBF9",
       black: "#000B13",
       pureBlack: "#000000",
-      purple: "#87469C",
-      purpleHover: "#BB73D2",
-      blueLight: "#F4F8FF",
-      greyPurple: "#F3EDF5",
-      greenHover: "#CBFECA",
       buttonBlue: "#0E6CAE",
       cyanideBlue: "#2DCAE1",
-      lightBlue: "#67A7D5",
+
       buttonBlueHover: "#2E5CA9",
       softBlue: "#ECFCFE",
-      buttunSecondary: "#D81E5B",
-      softBLue: "#EAF2F8",
-      red: "#D03C3C",
-      softRed: "#FFCCCC",
+      lightBLue: "#F4FDFE",
 
       filterOrange:
         "invert-[.83] sepia-[.44] saturate-[31.73] hue-rotate-[326deg] brightness-[.92] contrast-[.87]",
