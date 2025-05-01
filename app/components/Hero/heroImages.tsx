@@ -21,7 +21,7 @@ export default function HeroImages({
           <FadeIn className="sm:py-fluid-40 ">
             <h1 className="font-body text-headlineColor text-h3 font-semiBold ">
               Við styðjum við <span>stjórnendur</span> á<br />
-              <span className="text-buttonBlue text-h1">Austurlandi</span>
+              <span className="text-buttonBlue text-h1 ">Austurlandi</span>
             </h1>
           </FadeIn>
           <FadeIn className="hidden sm:flex sm:w-[30%] lg:w-[25%] xl:w-[20%]">

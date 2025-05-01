@@ -6,6 +6,7 @@ import { FadeIn } from "../FadeIn/fadeIn";
 import Container from "../Container/container";
 import Button from "../Button/Button";
 import Arrow from "../../icons/arrow.svg";
+import FourCyanPolygons from "../../icons/fourCyanPolygons.svg";
 
 export default function NewsClient({ news }: { news: any }) {
   const carouselElement = useRef<HTMLDivElement>(null);
@@ -176,7 +177,7 @@ export default function NewsClient({ news }: { news: any }) {
           })}
           <Link
             href={"/frettir"}
-            className="min-w-[80%] xs:min-w-[60%]  group  smmd:min-w-[40%] md:min-w-[26%] justify-center  bg-cyanideBlue flex flex-col gap-fluid-24 w-full h-full rounded-4 py-fluid-40 px-fluid-40 snap-x snap-mandatory snap-always snap-center "
+            className="min-w-[80%] relative xs:min-w-[60%]  group  smmd:min-w-[40%] md:min-w-[26%] justify-center  bg-cyanideBlue flex flex-col gap-fluid-24 w-full h-full rounded-4 py-fluid-40 px-fluid-40 snap-x snap-mandatory snap-always snap-center "
           >
             <FadeIn className="flex flex-col gap-fluid-12">
               <p className="font-body font-semiBold text-pureWhite text-paragraph">
@@ -194,6 +195,7 @@ export default function NewsClient({ news }: { news: any }) {
                 <Arrow className="text-pureWhite group-hover:text-buttonBlue -rotate-45 h-[14px]  transition-all duration-300 ease-in-out " />
               </div>
             </div>
+            <FourCyanPolygons className="absolute -bottom-20 -right-12" />
           </Link>
         </div>
       </FadeIn>

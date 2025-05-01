@@ -27,7 +27,7 @@ const OrlofshusUmAlltLand = ({
     >
       <Container className="">
         <section className="rounded-8 bg-cyanideBlue bg-opacity-10 py-fluid-40 px-fluid-24 md:p-fluid-56 flex flex-col md:flex-row justify-between gap-fluid-48 lg:gap-fluid-56 lg2:gap-fluid-80">
-          <div className="relative flex flex-col  gap-fluid-48  justify-end md:w-[50%] xl:self-center xl:gap-fluid-56">
+          <div className="relative flex flex-col  gap-fluid-32 lg:gap-fluid-40 justify-center md:w-[50%] xl:self-center xl:gap-fluid-56">
             <FadeIn className="w-fill flex flex-col gap-8">
               <h2 className="text-[20px] font-headline text-buttonBlue font-semiBold w-fill">
                 {section.sub_title}
@@ -38,7 +38,7 @@ const OrlofshusUmAlltLand = ({
             </FadeIn>
 
             <FadeIn className="">
-              <p className=" text-navLinks font-body font-regular text-bodyGrey">
+              <p className=" text-[16px] font-body font-regular text-bodyGrey">
                 {section.paragraph}
               </p>
             </FadeIn>

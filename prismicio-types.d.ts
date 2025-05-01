@@ -1966,6 +1966,16 @@ export interface WhyUsOverviewSliceDefaultPrimary {
   sub_title: prismic.KeyTextField;
 
   /**
+   * Paragraph field in *WhyUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: why_us_overview.default.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  paragraph: prismic.KeyTextField;
+
+  /**
    * title and text items field in *WhyUsOverview → Default → Primary*
    *
    * - **Field Type**: Group

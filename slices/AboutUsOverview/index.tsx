@@ -41,7 +41,7 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
               </div>
             </FadeIn>
             <div className="self-center relative h-fit  grid grid-col-1 grid-flow-row gap-fluid-40  w-fill md:w-[45%]">
-              <FadeIn className="flex flex-col gap-fluid-40 w-fill">
+              <FadeIn className="flex flex-col gap-fluid-32  w-fill">
                 <FadeIn className="w-fill flex flex-col gap-8">
                   <h2 className="text-[20px] font-headline text-buttonBlue font-semiBold w-fill">
                     {section.sub_title}

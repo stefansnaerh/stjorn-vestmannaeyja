@@ -26,6 +26,13 @@
             "placeholder": ""
           }
         },
+        "paragraph": {
+          "type": "Text",
+          "config": {
+            "label": "Paragraph",
+            "placeholder": ""
+          }
+        },
         "title_and_text_items": {
           "type": "Group",
           "config": {

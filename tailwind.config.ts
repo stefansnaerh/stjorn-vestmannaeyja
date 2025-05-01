@@ -82,7 +82,7 @@ const config: Config = {
         { lineHeight: "1.38", letterSpacing: "0em" },
       ],
       h1: [
-        "clamp(4rem, 1.056rem + 7.491vw, 14rem)",
+        "clamp(4.8rem, 2.092rem + 6.891vw, 14rem)",
         { lineHeight: "1.08", letterSpacing: "0.00em" },
       ],
       h2: [

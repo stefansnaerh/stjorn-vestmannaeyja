@@ -5,10 +5,11 @@ import { FadeIn } from "@/app/components/FadeIn/fadeIn";
 import Image from "next/image";
 import { PrismicRichText } from "@prismicio/react";
 import { KeyTextField } from "@prismicio/client";
-import Book from "../../public/icons/bookIcon.svg";
-import Launavernd from "../../public/icons/launavernd-nytt.svg";
-import Sjukrasjodur from "../../public/icons/sjukrasjodur-nytt.svg";
-import Heilsustyrkir from "../../public/icons/heilsustyrkir-nytt.svg";
+import Menntastyrkur from "../../app/icons/menntastyrkir.svg";
+import Launavernd from "../../app/icons/launavernd.svg";
+import Sjukrasjodur from "../../app/icons/sjukrasjodur.svg";
+import Heilsustyrkir from "../../app/icons/heilsustyrkir.svg";
+
 /**
  * Props for `WhyUsOverview`.
  */
@@ -44,41 +45,16 @@ const WhyUsOverview = ({ slice }: WhyUsOverviewProps): JSX.Element => {
             </p>
           </FadeIn>
         </div>
-        {/* <div className="flex flex-col lg:w-fill  lg:self-center sm:grid grid-cols-2 grid-rows-2 justify-center gap-fluid-32">
+        <div className="flex flex-col lg:w-fill  lg:self-center sm:grid grid-cols-2 grid-rows-2 justify-center gap-fluid-32">
           {section.title_and_text_items.map((item, i) => {
             const iconToShow = (iconText: KeyTextField | void) => {
               if (iconText === "Launavernd") {
-                return (
-                  <Image
-                    className="h-fluid-40   self-start"
-                    alt="Manns icon"
-                    src={launavernd}
-                  />
-                );
+                return <Launavernd className="h-fluid-40  self-start" />;
               } else if (iconText === "Menntastyrkir") {
-                return (
-                  <Image
-                    className="h-fluid-40  self-start"
-                    alt="Manns icon"
-                    src={book}
-                  />
-                );
+                return <Menntastyrkur className="h-fluid-40  self-start" />;
               } else if (iconText === "Heilsutengdir styrkir") {
-                return (
-                  <Image
-                    className="h-fluid-40 self-start"
-                    alt="Manns icon"
-                    src={heilsustyrkir}
-                  />
-                );
-              } else
-                return (
-                  <Image
-                    className="h-fluid-40  self-start"
-                    alt="Manns icon"
-                    src={sjukrasjodur}
-                  />
-                );
+                return <Heilsustyrkir className="h-fluid-40  self-start" />;
+              } else return <Sjukrasjodur className="h-fluid-40  self-start" />;
             };
             return (
               <FadeIn
@@ -96,7 +72,7 @@ const WhyUsOverview = ({ slice }: WhyUsOverviewProps): JSX.Element => {
               </FadeIn>
             );
           })}
-        </div> */}
+        </div>
       </Container>
     </section>
   );
