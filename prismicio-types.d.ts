@@ -38,15 +38,37 @@ interface AboutUsDocumentData {
   paragraph: prismic.RichTextField;
 
   /**
-   * Image field in *Um okkur*
+   * image 1 field in *Um okkur*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: about_us.image
+   * - **API ID Path**: about_us.image_1
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  image: prismic.ImageField<never>;
+  image_1: prismic.ImageField<never>;
+
+  /**
+   * image 2 field in *Um okkur*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.image_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_2: prismic.ImageField<never>;
+
+  /**
+   * Image 3 field in *Um okkur*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us.image_3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_3: prismic.ImageField<never>;
 
   /**
    * Slice Zone field in *Um okkur*

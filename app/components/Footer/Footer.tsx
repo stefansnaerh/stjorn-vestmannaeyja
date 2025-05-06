@@ -10,7 +10,7 @@ export default async function Footer() {
   const content = data.data;
   return (
     <footer className="  px-fluid-24 sm:px-fluid-40 mt-fluid-96 ">
-      <div className=" flex  rounded-6  pt-fluid-48 pb-fluid-56  lg:py-fluid-72   w-fill smmd:flex-nowrap smmd:flex-row flex-wrap px-24 xs:px-fluid-40 sm:px-fluid-56 flex-col  gap-y-fluid-48   gap-64 lg2:gap-fluid-96 lg2:px-[7%] xl:px-[9%] xxl:px-[12%] ">
+      <div className=" flex  rounded-6  pt-fluid-48 pb-fluid-56 bg-pureWhite lg:py-fluid-72   w-fill smmd:flex-nowrap smmd:flex-row flex-wrap px-24 xs:px-fluid-40 sm:px-fluid-56 flex-col  gap-y-fluid-48   gap-64 lg2:gap-fluid-96 lg2:px-[7%] xl:px-[9%] xxl:px-[12%] ">
         <div className="flex flex-col gap-fluid-40">
           <Link
             aria-label="hlekkur til að fara heim á forsíðu"
@@ -38,13 +38,13 @@ export default async function Footer() {
           <nav className="flex  font-body text-bodyGrey flex-wrap   sm:p-0 ">
             <ul
               aria-label={`${content.link_group_1_title}`}
-              className="flex gap-8 text-navLinks text-nowrap   md:min-h-[160px] w-fit  md:w-[160px] lg2:w-fit flex-col font-medium before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
+              className="flex gap-8 text-navLinks text-nowrap   md:min-h-[160px] w-fit  md:w-[160px] lg2:w-fit flex-col font-medium before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineColor "
             >
               {content.link_group_1.map((item, i) => {
                 return (
                   <li
                     key={`${i}${item.link_name}`}
-                    className="hover:text-bodyGreyOnDark text-greyMedium   transition-all duration-300 ease-in-out"
+                    className="hover:text-buttonBlue text-greyMedium   transition-all duration-300 ease-in-out"
                   >
                     <PrismicNextLink
                       field={item.link}
@@ -60,9 +60,9 @@ export default async function Footer() {
           </nav>
           <ul
             aria-label={`Hafðu samband`}
-            className="flex gap-8 text-navLinks font-body text-bodyGrey md:min-h-[160px] w-fit  md:w-[160px] lg2:w-fit flex-col  before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
+            className="flex gap-8 text-navLinks font-medium font-body text-greyMedium md:min-h-[160px] w-fit  md:w-[160px] lg2:w-fit flex-col  before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineColor"
           >
-            <li className="hover:text-bodyGreyOnDark transition-all duration-300 ease-in-out">
+            <li className="hover:text-buttonBlue  transition-all duration-300 ease-in-out">
               <a
                 href={`mailto:${content.email}`}
                 aria-label={`Opnar tölvupóst til fylla inn í nýjum glugga`}
@@ -82,9 +82,9 @@ export default async function Footer() {
           </ul>
           <ul
             aria-label={`Samfélagsmiðlar`}
-            className=" flex  gap-8 text-navLinks font-body text-bodyGrey   md:min-h-[160px] w-fit md:w-[160px] lg2:w-fit flex-col  before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineBlue "
+            className=" flex  gap-8 text-navLinks font-body text-greyMedium font-medium   md:min-h-[160px] w-fit md:w-[160px] lg2:w-fit flex-col  before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineColor "
           >
-            <li className=" transition-all hover:text-bodyGreyOnDark duration-300 ease-in-out">
+            <li className=" transition-all hover:text-buttonBlue duration-300 ease-in-out">
               <a
                 href={`https://www.facebook.com/profile.php?id=100064358182681`}
                 aria-label={`Opnar facebook síðu félagsins`}

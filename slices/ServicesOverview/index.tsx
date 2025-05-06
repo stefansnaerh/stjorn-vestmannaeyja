@@ -20,7 +20,7 @@ const ServicesOverview = ({ slice }: ServicesOverviewProps): JSX.Element => {
         <section className="flex flex-col gap-fluid-40  overflow-hidden ">
           <FadeIn className="flex flex-col  gap-fluid-32  sm:max-w-[50%]">
             {section.title ? (
-              <h2 className="font-headline text-headlineColor font-regular text-paragraph h-fit w-fit">
+              <h2 className="font-headline text-headlineColor font-medium text-paragraph h-fit w-fit">
                 {section.title}
               </h2>
             ) : (

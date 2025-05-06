@@ -69,7 +69,7 @@ const LanguageSwitcher = () => {
     // console.log("Cookies after destroy:", cookiesAfterDestroy);
     setCookie(null, COOKIE_NAME, "/auto/" + lang, {
       path: "/",
-      domain: ".stjornvest.is",
+      domain: ".sta.is",
     });
     const cookiesAfterSet = parseCookies();
     // console.log("Cookies after set:", cookiesAfterSet);

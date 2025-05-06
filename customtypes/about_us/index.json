@@ -22,10 +22,26 @@
           "multi": "paragraph,strong,em,hyperlink,list-item,o-list-item"
         }
       },
-      "image": {
+      "image_1": {
         "type": "Image",
         "config": {
-          "label": "Image",
+          "label": "image 1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "image_2": {
+        "type": "Image",
+        "config": {
+          "label": "image 2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "image_3": {
+        "type": "Image",
+        "config": {
+          "label": "Image 3",
           "constraint": {},
           "thumbnails": []
         }

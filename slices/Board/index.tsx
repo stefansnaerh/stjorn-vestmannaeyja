@@ -23,7 +23,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
       <Container className="">
         <section className="flex flex-col w-fill  gap-fluid-56 md:gap-fluid-96">
           <FadeIn>
-            <h2 className="font-headline font-semiBold text-h4 text-headlineColor w-fit">
+            <h2 className="font-headline font-medium text-h4 text-headlineColor w-fit">
               {section.title}
             </h2>
           </FadeIn>
@@ -58,7 +58,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
                     <div className="flex flex-col gap-fluid-12">
                       {item.email && (
                         <a
-                          className="text-[16px] self-start w-fit group  text-buttonBlue  flex gap-6  transition-all duration-300 ease-in-out"
+                          className="text-[16px] self-start w-fit group  text-buttonBlue hover:text-cyanideBlue  flex gap-6  transition-all duration-300 ease-in-out"
                           href={`mailto:${item.email}`}
                           aria-label={`Hlekkur til að senda tölvupóst á ${item.member_name}`}
                         >
@@ -67,7 +67,7 @@ const Board = ({ slice }: BoardProps): JSX.Element => {
                             height="100%"
                             viewBox="0 0 14 11"
                             fill="none"
-                            className="h-[14px] w-[14px] self-center  text-buttonBlue group-hover:text-buttonBlue ease-in-out transition-all duration-300"
+                            className="h-[14px] w-[14px] self-center  text-buttonBlue group-hover:text-cyanideBlue ease-in-out transition-all duration-300"
                             xmlns="http://www.w3.org/2000/svg"
                           >
                             <path
