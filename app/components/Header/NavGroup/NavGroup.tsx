@@ -118,7 +118,7 @@ export default function NavGroup({
                 className={cx(
                   "flex group gap-6 pb-2 text-[15px] xl:text-navLinks transition-all duration-300 ease-in-out ",
                   {
-                    ["text-lightBlue"]: currentIndex === i,
+                    ["text-buttonBlue"]: currentIndex === i,
                     ["text-headlineColor"]: currentIndex !== i,
                   }
                 )}
@@ -126,6 +126,7 @@ export default function NavGroup({
               >
                 {group.title}
               </button>
+              <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-80 group-hover:bg-buttonBlue transition-all duration-300 ease-in-out"></div>
               <div
                 className={cx(
                   " h-[3px] w-0 rounded-6 opacity-80 group-hover:w-fill group-hover:bg-lightBlue focus:bg-buttonBlue focus:w-fill transition-all duration-300 ease-in-out",
@@ -164,7 +165,7 @@ export default function NavGroup({
                               aria-label={`Hlekkur á ${el.link_text}`}
                               field={el.link}
                               onClick={linkClick}
-                              className=" transition-all group-hover:bg-pureWhite text-bodyGrey flex justify-between gap-12 text-[15px] xl:text-navLinks py-[10px] px-fluid-18 group-hover:text-headlineColor duration-300 w-fill ease-in-out rounded-6 hover:shadow-heroSlide"
+                              className=" transition-all group-hover:bg-pureWhite text-bodyGrey flex justify-between gap-12 text-[15px] xl:text-navLinks py-[10px] px-fluid-18 group-hover:text-buttonBlue duration-300 w-fill ease-in-out rounded-6 hover:shadow-heroSlide"
                             >
                               <div className="flex gap-16">
                                 <span className="font-bold group-hover:text-lightBlue transition-all  ease-in-out">
