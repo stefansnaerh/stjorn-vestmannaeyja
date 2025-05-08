@@ -1131,7 +1131,7 @@ interface NewsDocumentData {
 export type NewsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<NewsDocumentData>, "news", Lang>;
 
-type OrlofshusDocumentDataSlicesSlice = TextOnlySlice;
+type OrlofshusDocumentDataSlicesSlice = AllHousesSlice | TextOnlySlice;
 
 /**
  * Content for Orlofshús yfirlit documents
@@ -1428,6 +1428,96 @@ type AboutUsOverviewSliceVariation = AboutUsOverviewSliceDefault;
 export type AboutUsOverviewSlice = prismic.SharedSlice<
   "about_us_overview",
   AboutUsOverviewSliceVariation
+>;
+
+/**
+ * Item in *AllHouses → Default → Primary → House*
+ */
+export interface AllHousesSliceDefaultPrimaryHouseItem {
+  /**
+   * House image field in *AllHouses → Default → Primary → House*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses.default.primary.house[].house_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  house_image: prismic.ImageField<never>;
+
+  /**
+   * House address field in *AllHouses → Default → Primary → House*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses.default.primary.house[].house_address
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  house_address: prismic.KeyTextField;
+
+  /**
+   * House link field in *AllHouses → Default → Primary → House*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses.default.primary.house[].house_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  house_link: prismic.LinkField;
+}
+
+/**
+ * Primary content in *AllHouses → Default → Primary*
+ */
+export interface AllHousesSliceDefaultPrimary {
+  /**
+   * Title field in *AllHouses → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * House field in *AllHouses → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: all_houses.default.primary.house[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  house: prismic.GroupField<Simplify<AllHousesSliceDefaultPrimaryHouseItem>>;
+}
+
+/**
+ * Default variation for AllHouses Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AllHousesSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<AllHousesSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *AllHouses*
+ */
+type AllHousesSliceVariation = AllHousesSliceDefault;
+
+/**
+ * AllHouses Shared Slice
+ *
+ * - **API ID**: `all_houses`
+ * - **Description**: AllHouses
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type AllHousesSlice = prismic.SharedSlice<
+  "all_houses",
+  AllHousesSliceVariation
 >;
 
 /**
@@ -2083,6 +2173,11 @@ declare module "@prismicio/client" {
       AboutUsOverviewSliceDefaultPrimary,
       AboutUsOverviewSliceVariation,
       AboutUsOverviewSliceDefault,
+      AllHousesSlice,
+      AllHousesSliceDefaultPrimaryHouseItem,
+      AllHousesSliceDefaultPrimary,
+      AllHousesSliceVariation,
+      AllHousesSliceDefault,
       BoardSlice,
       BoardSliceDefaultPrimaryBoardMembersItem,
       BoardSliceDefaultPrimary,
