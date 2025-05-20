@@ -27,8 +27,8 @@ export default async function AboutUs() {
   const section = page.data;
 
   return (
-    <div className="">
-      <section className=" text-black flex flex-col md:flex-row gap-fluid-64 md:gap-fluid-144 px-container-88 pt-fluid-122 py-64 ">
+    <div className="flex flex-col">
+      <section className=" text-black flex flex-col md:flex-row gap-fluid-64 md:gap-fluid-144 px-container-88 pt-fluid-122 py-64 max-w-screen-xxl  self-center">
         <div className="relative flex flex-col gap-fluid-40 md:gap-fluid-56 md:w-[40%]">
           <FadeIn className=" w-fit">
             <h2 className="text-h2 font-headline text-headlineColor font-medium w-fit">
