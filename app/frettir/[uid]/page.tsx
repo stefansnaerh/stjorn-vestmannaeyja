@@ -43,7 +43,7 @@ export default async function Service({ params }: { params: Params }) {
   return (
     <section className="flex flex-col justify-center">
       <div className="lg:pb-fluid-122 pt-fluid-40 smmd:pt-fluid-64  pb-64 px-container-88 self-center flex flex-col gap-fluid-56 smmd:w-[90%] lg2:w-[85%] ">
-        <FadeIn className="flex  font-body text-sm ">
+        <FadeIn className="flex gap-4  font-body text-sm ">
           <Link className="text-bodyGrey" href={"/"}>
             Heim
           </Link>
@@ -51,11 +51,7 @@ export default async function Service({ params }: { params: Params }) {
           <Link className="text-bodyGrey" href={"/frettir"}>
             Fréttir
           </Link>
-          <Image
-            alt="ör til hægri"
-            src={Chevron}
-            className="h-fluid-16 rotate-90 self-center"
-          />
+          <Chevron className="h-fluid-16 rotate-90 self-center" />
           <p className="text-sm text-headlineColor font-semiBold">
             {section.title}
           </p>
