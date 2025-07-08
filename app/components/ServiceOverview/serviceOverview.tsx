@@ -47,29 +47,31 @@ const ServiceOverview = ({
               } else return <GraduationCapIcon className="w-48" />;
             };
             return (
-              <PrismicNextLink
-                className=""
-                key={`${i}${item.title}`}
-                field={item.link}
-              >
-                <FadeIn className="sm:w-fill sm:h-fill  w-fill rounded-6 flex flex-col justify-between gap-fluid-32 bg-greyDarker p-fluid-32 border-[1px] border-greyInput border-opacity-20 hover:border-cyanideBlue group hover:border-opacity-60 transition-all duration-300 ease-in-out">
-                  <div className="flex flex-col gap-fluid-32">
-                    {iconToShow(item.title)}
-                    <div className="flex flex-col gap-fluid-8">
-                      <h4 className="text-[20px]  font-headline text-pureWhite font-semiBold ">
-                        {item.title}
-                      </h4>
+              <FadeIn>
+                <PrismicNextLink
+                  className=""
+                  key={`${i}${item.title}`}
+                  field={item.link}
+                >
+                  <div className="sm:w-fill sm:h-fill  w-fill rounded-6 flex flex-col justify-between gap-fluid-32 bg-greyDarker p-fluid-32 border-[1px] border-greyInput border-opacity-20 hover:border-cyanideBlue group hover:border-opacity-60 transition-all duration-300 ease-in-out">
+                    <div className="flex flex-col gap-fluid-32">
+                      {iconToShow(item.title)}
+                      <div className="flex flex-col gap-fluid-8">
+                        <h4 className="text-[20px]  font-headline text-pureWhite font-semiBold ">
+                          {item.title}
+                        </h4>
 
-                      <p className="font-body text-[16px] text-bodyGreyOnDark">
-                        {item.paragraph}
-                      </p>
+                        <p className="font-body text-[16px] text-bodyGreyOnDark">
+                          {item.paragraph}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="p-16 group-hover:bg-pureBlack  bg-greyMedium w-fit rounded-full transition-all duration-300 ease-in-out">
+                      <Arrow className="text-pureWhite group-hover:text-cyanideBlue -rotate-45 h-16 transition-all duration-300 ease-in-out " />
                     </div>
                   </div>
-                  <div className="p-16 group-hover:bg-pureBlack  bg-greyMedium w-fit rounded-full transition-all duration-300 ease-in-out">
-                    <Arrow className="text-pureWhite group-hover:text-cyanideBlue -rotate-45 h-16 transition-all duration-300 ease-in-out " />
-                  </div>
-                </FadeIn>
-              </PrismicNextLink>
+                </PrismicNextLink>
+              </FadeIn>
             );
           })}
         </div>
