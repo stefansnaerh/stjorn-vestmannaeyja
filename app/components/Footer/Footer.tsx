@@ -80,7 +80,7 @@ export default async function Footer() {
               </a>
             </li> */}
           </ul>
-          <ul
+          {/* <ul
             aria-label={`Samfélagsmiðlar`}
             className=" flex  gap-8 text-navLinks font-body text-greyMedium font-medium   md:min-h-[160px] w-fit md:w-[160px] lg2:w-fit flex-col  before:content-[attr(aria-label)] before:font-semiBold before:font-headline before:text-md before:text-headlineColor "
           >
@@ -93,7 +93,7 @@ export default async function Footer() {
                 Facebook
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </div>
       <div className=" flex w-fill justify-center bg-backgroundGrey py-fluid-24">
