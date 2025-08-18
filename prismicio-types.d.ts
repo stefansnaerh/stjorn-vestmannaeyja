@@ -8,7 +8,6 @@ type AboutUsDocumentDataSlicesSlice =
   | TextOnlySlice
   | ServicesOverviewSlice
   | BoardSlice
-  | MemberQuoteSlice
   | ServiceOverviewSlice;
 
 /**
@@ -386,7 +385,6 @@ export interface FrontPageDocumentDataBenefitsItem {
 }
 
 type FrontPageDocumentDataSlicesSlice =
-  | MemberQuoteSlice
   | WhyUsOverviewSlice
   | OrlofshusUmAlltLandSlice
   | AboutUsOverviewSlice;
@@ -395,6 +393,39 @@ type FrontPageDocumentDataSlicesSlice =
  * Content for Forsíða documents
  */
 interface FrontPageDocumentData {
+  /**
+   * main title 1 field in *Forsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.main_title_1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  main_title_1: prismic.KeyTextField;
+
+  /**
+   * Main title 2 field in *Forsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.main_title_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  main_title_2: prismic.KeyTextField;
+
+  /**
+   * Hero title 1 field in *Forsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.hero_title_1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_title_1: prismic.KeyTextField;
+
   /**
    * Hero image field in *Forsíða*
    *
@@ -405,17 +436,6 @@ interface FrontPageDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   hero_image: prismic.ImageField<never>;
-
-  /**
-   * Hero title field in *Forsíða*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.hero_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  hero_title: prismic.KeyTextField;
 
   /**
    * Hero paragraph 1 field in *Forsíða*
@@ -451,26 +471,114 @@ interface FrontPageDocumentData {
   hero_link_1: prismic.LinkField;
 
   /**
-   * Image 1 field in *Forsíða*
+   * Hero image 2 field in *Forsíða*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.image_1
+   * - **API ID Path**: front_page.hero_image_2
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  image_1: prismic.ImageField<never>;
+  hero_image_2: prismic.ImageField<never>;
 
   /**
-   * Image 2 field in *Forsíða*
+   * Hero title 2 field in *Forsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.hero_title_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_title_2: prismic.KeyTextField;
+
+  /**
+   * Hero paragraph 2 field in *Forsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.hero_paragraph_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_paragraph_2: prismic.KeyTextField;
+
+  /**
+   * Hero link text 2 field in *Forsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.hero_link_text_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_link_text_2: prismic.KeyTextField;
+
+  /**
+   * Hero link 2 field in *Forsíða*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.hero_link_2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  hero_link_2: prismic.LinkField;
+
+  /**
+   * Hero image 3 field in *Forsíða*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: front_page.image_2
+   * - **API ID Path**: front_page.hero_image_3
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  image_2: prismic.ImageField<never>;
+  hero_image_3: prismic.ImageField<never>;
+
+  /**
+   * Hero title 3 field in *Forsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.hero_title_3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_title_3: prismic.KeyTextField;
+
+  /**
+   * Hero paragraph 3 field in *Forsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.hero_paragraph_3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_paragraph_3: prismic.KeyTextField;
+
+  /**
+   * Hero link text 3 field in *Forsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.hero_link_text_3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  hero_link_text_3: prismic.KeyTextField;
+
+  /**
+   * Hero link 3 field in *Forsíða*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: front_page.hero_link_3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  hero_link_3: prismic.LinkField;
 
   /**
    * Members benefits sub title field in *Forsíða*
@@ -1620,81 +1728,6 @@ type BoardSliceVariation = BoardSliceDefault;
 export type BoardSlice = prismic.SharedSlice<"board", BoardSliceVariation>;
 
 /**
- * Primary content in *MemberQuote → Default → Primary*
- */
-export interface MemberQuoteSliceDefaultPrimary {
-  /**
-   * Paragraph field in *MemberQuote → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: member_quote.default.primary.paragraph
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  paragraph: prismic.KeyTextField;
-
-  /**
-   * Image field in *MemberQuote → Default → Primary*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: member_quote.default.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image: prismic.ImageField<never>;
-
-  /**
-   * Name field in *MemberQuote → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: member_quote.default.primary.name
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  name: prismic.KeyTextField;
-
-  /**
-   * Job title field in *MemberQuote → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: member_quote.default.primary.job_title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  job_title: prismic.KeyTextField;
-}
-
-/**
- * Default variation for MemberQuote Slice
- *
- * - **API ID**: `default`
- * - **Description**: Default
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type MemberQuoteSliceDefault = prismic.SharedSliceVariation<
-  "default",
-  Simplify<MemberQuoteSliceDefaultPrimary>,
-  never
->;
-
-/**
- * Slice variation for *MemberQuote*
- */
-type MemberQuoteSliceVariation = MemberQuoteSliceDefault;
-
-/**
- * MemberQuote Shared Slice
- *
- * - **API ID**: `member_quote`
- * - **Description**: MemberQuote
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type MemberQuoteSlice = prismic.SharedSlice<
-  "member_quote",
-  MemberQuoteSliceVariation
->;
-
-/**
  * Primary content in *OrlofshusUmAlltLand → Default → Primary*
  */
 export interface OrlofshusUmAlltLandSliceDefaultPrimary {
@@ -2183,10 +2216,6 @@ declare module "@prismicio/client" {
       BoardSliceDefaultPrimary,
       BoardSliceVariation,
       BoardSliceDefault,
-      MemberQuoteSlice,
-      MemberQuoteSliceDefaultPrimary,
-      MemberQuoteSliceVariation,
-      MemberQuoteSliceDefault,
       OrlofshusUmAlltLandSlice,
       OrlofshusUmAlltLandSliceDefaultPrimary,
       OrlofshusUmAlltLandSliceVariation,

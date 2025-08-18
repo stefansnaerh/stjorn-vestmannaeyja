@@ -29,12 +29,10 @@
     width: 100%;
     height: 100%;
     animation: 1s ease-in-out;
-    border-radius: 100%;
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      #fff 0%,
-      #fff 49.5%,
-      rgba(255, 255, 255, 0.3) 95.5%
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8) 100%,
+      rgba(0, 0, 0, 0.4) 86%
     );
     mix-blend-mode: multiply;
   }
@@ -46,12 +44,10 @@
     width: 100%;
     height: 100%;
     animation: 1s ease-in-out;
-    border-radius: 100%;
-    background: radial-gradient(
-      50% 50% at 50% 50%,
-      #fff 0%,
-      #fff 49.5%,
-      rgba(255, 255, 255, 0.3) 95.5%
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8) 64%,
+      rgba(0, 0, 0, 0.4) 76%
     );
     mix-blend-mode: multiply;
   }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../../public/icons/staLogo.png";
+import Logo from "../../../public/icons/stjornVestmannaeyjaLogo.png";
 import { createClient } from "../../../prismicio";
 import { PrismicNextLink } from "@prismicio/next";
 export default async function Footer() {

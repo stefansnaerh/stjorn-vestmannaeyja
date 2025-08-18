@@ -60,9 +60,6 @@
             "board": {
               "type": "SharedSlice"
             },
-            "member_quote": {
-              "type": "SharedSlice"
-            },
             "service_overview": {
               "type": "SharedSlice"
             }

@@ -6,7 +6,6 @@ export const components = {
   about_us_overview: dynamic(() => import("./AboutUsOverview")),
   all_houses: dynamic(() => import("./AllHouses")),
   board: dynamic(() => import("./Board")),
-  member_quote: dynamic(() => import("./MemberQuote")),
   orlofshus_um_allt_land: dynamic(() => import("./OrlofshusUmAlltLand")),
   service_overview: dynamic(() => import("./CardsWithLink")),
   services_overview: dynamic(() => import("./ServicesOverview")),

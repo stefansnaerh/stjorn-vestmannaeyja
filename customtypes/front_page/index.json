@@ -6,19 +6,33 @@
   "status": true,
   "json": {
     "Main": {
+      "main_title_1": {
+        "type": "Text",
+        "config": {
+          "label": "main title 1",
+          "placeholder": ""
+        }
+      },
+      "main_title_2": {
+        "type": "Text",
+        "config": {
+          "label": "Main title 2",
+          "placeholder": ""
+        }
+      },
+      "hero_title_1": {
+        "type": "Text",
+        "config": {
+          "label": "Hero title 1",
+          "placeholder": ""
+        }
+      },
       "hero_image": {
         "type": "Image",
         "config": {
           "label": "Hero image",
           "constraint": {},
           "thumbnails": []
-        }
-      },
-      "hero_title": {
-        "type": "Text",
-        "config": {
-          "label": "Hero title",
-          "placeholder": ""
         }
       },
       "hero_paragraph_1": {
@@ -43,20 +57,78 @@
           "select": null
         }
       },
-      "image_1": {
+      "hero_image_2": {
         "type": "Image",
         "config": {
-          "label": "Image 1",
+          "label": "Hero image 2",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "image_2": {
+      "hero_title_2": {
+        "type": "Text",
+        "config": {
+          "label": "Hero title 2",
+          "placeholder": ""
+        }
+      },
+      "hero_paragraph_2": {
+        "type": "Text",
+        "config": {
+          "label": "Hero paragraph 2",
+          "placeholder": ""
+        }
+      },
+      "hero_link_text_2": {
+        "type": "Text",
+        "config": {
+          "label": "Hero link text 2",
+          "placeholder": ""
+        }
+      },
+      "hero_link_2": {
+        "type": "Link",
+        "config": {
+          "label": "Hero link 2",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "hero_image_3": {
         "type": "Image",
         "config": {
-          "label": "Image 2",
+          "label": "Hero image 3",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "hero_title_3": {
+        "type": "Text",
+        "config": {
+          "label": "Hero title 3",
+          "placeholder": ""
+        }
+      },
+      "hero_paragraph_3": {
+        "type": "Text",
+        "config": {
+          "label": "Hero paragraph 3",
+          "placeholder": ""
+        }
+      },
+      "hero_link_text_3": {
+        "type": "Text",
+        "config": {
+          "label": "Hero link text 3",
+          "placeholder": ""
+        }
+      },
+      "hero_link_3": {
+        "type": "Link",
+        "config": {
+          "label": "Hero link 3",
+          "placeholder": "",
+          "select": null
         }
       },
       "members_benefits_sub_title": {
@@ -116,9 +188,6 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "member_quote": {
-              "type": "SharedSlice"
-            },
             "why_us_overview": {
               "type": "SharedSlice"
             },

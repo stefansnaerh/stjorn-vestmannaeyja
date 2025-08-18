@@ -21,8 +21,8 @@ const config: Config = {
       backgroundGreyDarker: "#F5F6F7",
       backgroundBlue: "#111827",
       backgroundLightBlue: "#FAFBFD",
-      headlineColor: "#293342",
-      bodyGrey: "#323A46",
+      headlineColor: "#2B2B2B",
+      bodyGrey: "#5D5D5D",
       bodyGreyOnDark: "#BFBFBF",
       greyInput: "#bababa",
       greyLight: "#f0f0f0",
@@ -33,7 +33,7 @@ const config: Config = {
       softWhite: "#FFFBF9",
       black: "#000B13",
       pureBlack: "#000000",
-      buttonBlue: "#0E6CAE",
+      buttonBlue: "#176DFF",
       cyanideBlue: "#2DCAE1",
 
       buttonBlueHover: "#2E5CA9",
@@ -82,7 +82,7 @@ const config: Config = {
         { lineHeight: "1.38", letterSpacing: "0em" },
       ],
       h1: [
-        "clamp(4.8rem, 2.092rem + 6.891vw, 14rem)",
+        "clamp(4.8rem, 2.092rem + 6.891vw, 12rem)",
         { lineHeight: "1.08", letterSpacing: "0.00em" },
       ],
       h2: [
