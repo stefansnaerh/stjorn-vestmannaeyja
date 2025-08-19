@@ -20,7 +20,6 @@ export default async function Footer() {
             <Image
               alt="Félag stjórnenda logo"
               src={Logo}
-              height={60}
               className="w-[180px] md:w-[240px] "
             />
           </Link>
@@ -30,7 +29,7 @@ export default async function Footer() {
             </h3> */}
             <ul className="flex flex-col gap-fluid-8 font-body text-bodyGrey text-navLinks">
               {content.address ? <li>{content.address}</li> : ""}
-              <li>Kennitala: 451275-3059</li>
+              {/* <li>Kennitala: 451275-3059</li> */}
             </ul>
           </div>
         </div>
@@ -98,7 +97,8 @@ export default async function Footer() {
       </div>
       <div className=" flex w-fill justify-center bg-backgroundGrey py-fluid-24">
         <p className="font-body text-sm text-bodyGrey text-center">
-          Ⓒ 2025 Allur réttur áskilinn | Stjórnendafélag Austurlands{" "}
+          Ⓒ 2025 Allur réttur áskilinn | Verkstjóra- og stjórnendafélag
+          Vestmannaeyja{" "}
         </p>
       </div>
     </footer>

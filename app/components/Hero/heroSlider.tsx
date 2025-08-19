@@ -55,12 +55,17 @@ export default function HeroSlider({
             )}
           >
             <div
-              className={cx("h-10 rounded-2  ", {
+              className={cx("h-6 rounded-6  ", {
                 ["absolute orangeFiller w-[33%]  bg-buttonBlue"]: slide === 0,
                 ["hidden orangeFiller bg-orange w-[33%]"]: slide != 0,
               })}
             ></div>
-            <div className=" h-10 w-fill rounded-2 bg-greyLight "></div>
+            <div
+              className={cx(" h-6 w-fill rounded-6", {
+                ["bg-greyInput opacity-70"]: slide != 0,
+                ["bg-greyLight "]: slide === 0,
+              })}
+            ></div>
           </button>
 
           <button
@@ -73,12 +78,17 @@ export default function HeroSlider({
             )}
           >
             <div
-              className={cx("h-10 rounded-2  ", {
+              className={cx("h-6 rounded-6 ", {
                 ["absolute orangeFiller w-[30%]  bg-buttonBlue"]: slide === 1,
                 ["hidden orangeFiller bg-orange w-[15%]"]: slide != 1,
               })}
             ></div>
-            <div className=" h-10 w-fill rounded-2 bg-greyLight "></div>
+            <div
+              className={cx(" h-6 w-fill rounded-6", {
+                ["bg-greyInput opacity-70"]: slide != 1,
+                ["bg-greyLight "]: slide === 1,
+              })}
+            ></div>
           </button>
           <button
             onClick={() => setSlide(2)}
@@ -90,18 +100,23 @@ export default function HeroSlider({
             )}
           >
             <div
-              className={cx("h-10 rounded-2  ", {
+              className={cx("h-6 rounded-6  ", {
                 ["absolute orangeFiller w-[33%]  bg-buttonBlue"]: slide === 2,
                 ["hidden orangeFiller bg-orange w-[33%]"]: slide != 2,
               })}
             ></div>
-            <div className=" h-10 w-fill rounded-2 bg-greyLight "></div>
+            <div
+              className={cx(" h-6 w-fill rounded-6", {
+                ["bg-greyInput opacity-90"]: slide != 2,
+                ["bg-greyLight "]: slide === 2,
+              })}
+            ></div>
           </button>
         </div>
         <div className="flex gap-6">
           <button
             onClick={setPreviousSlide}
-            className="p-fluid-18 bg-pureWhite rounded-4 self-center group shadow-heroSlide hover:shadow-heroSlideHover hover:scale-105 border-[1px] border-greyInput border-opacity-15 transition-all duration-300 ease-in-out"
+            className="p-fluid-18 bg-pureWhite rounded-32 self-center group shadow-heroSlide hover:shadow-heroSlideHover hover:scale-105 border-[1px] border-greyInput border-opacity-15 transition-all duration-300 ease-in-out"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -120,7 +135,7 @@ export default function HeroSlider({
           </button>
           <button
             onClick={setNextSlide}
-            className="p-fluid-18 bg-pureWhite rounded-4  self-center group shadow-heroSlide hover:shadow-heroSlideHover hover:scale-105 border-[1px] border-greyInput border-opacity-15 transition-all duration-300 ease-in-out"
+            className="p-fluid-18 bg-pureWhite rounded-32  self-center group shadow-heroSlide hover:shadow-heroSlideHover hover:scale-105 border-[1px] border-greyInput border-opacity-15 transition-all duration-300 ease-in-out"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

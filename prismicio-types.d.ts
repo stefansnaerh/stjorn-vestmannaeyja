@@ -1428,14 +1428,14 @@ export type AllDocumentTypes =
  */
 export interface AboutUsOverviewSliceDefaultPrimary {
   /**
-   * image field in *AboutUsOverview → Default → Primary*
+   * Title field in *AboutUsOverview → Default → Primary*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: about_us_overview.default.primary.image
-   * - **Documentation**: https://prismic.io/docs/field#image
+   * - **API ID Path**: about_us_overview.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  image: prismic.ImageField<never>;
+  title: prismic.KeyTextField;
 
   /**
    * Sub title field in *AboutUsOverview → Default → Primary*
@@ -1448,44 +1448,54 @@ export interface AboutUsOverviewSliceDefaultPrimary {
   sub_title: prismic.KeyTextField;
 
   /**
-   * Title field in *AboutUsOverview → Default → Primary*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: about_us_overview.default.primary.title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Paragraph field in *AboutUsOverview → Default → Primary*
+   * Paragraph 1 field in *AboutUsOverview → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: about_us_overview.default.primary.paragraph
+   * - **API ID Path**: about_us_overview.default.primary.paragraph_1
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  paragraph: prismic.RichTextField;
+  paragraph_1: prismic.RichTextField;
 
   /**
-   * Card title field in *AboutUsOverview → Default → Primary*
+   * image 1 field in *AboutUsOverview → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: about_us_overview.default.primary.card_title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: about_us_overview.default.primary.image_1
+   * - **Documentation**: https://prismic.io/docs/field#image
    */
-  card_title: prismic.KeyTextField;
+  image_1: prismic.ImageField<never>;
 
   /**
-   * Card paragraph field in *AboutUsOverview → Default → Primary*
+   * Paragraph 2 field in *AboutUsOverview → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: about_us_overview.default.primary.card_paragraph
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **API ID Path**: about_us_overview.default.primary.paragraph_2
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  card_paragraph: prismic.KeyTextField;
+  paragraph_2: prismic.RichTextField;
+
+  /**
+   * Image 2 field in *AboutUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us_overview.default.primary.image_2
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image_2: prismic.ImageField<never>;
+
+  /**
+   * Paragraph 3 field in *AboutUsOverview → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: about_us_overview.default.primary.paragraph_3
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph_3: prismic.RichTextField;
 
   /**
    * Link text field in *AboutUsOverview → Default → Primary*

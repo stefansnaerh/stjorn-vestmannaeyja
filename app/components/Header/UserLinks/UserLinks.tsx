@@ -162,7 +162,7 @@ export default function UserLinks() {
           />
         </svg>
       </button>
-      <SearchButton />
+      {/* <SearchButton /> */}
 
       {currentElement === 1 ? (
         <div className="lg:hidden">

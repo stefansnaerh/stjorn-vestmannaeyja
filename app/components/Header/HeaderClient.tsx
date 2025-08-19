@@ -7,6 +7,7 @@ import Image from "next/image";
 import { PrismicNextLink } from "@prismicio/next";
 import MobileNav from "./MobileNav/mobileNav";
 import Button from "../Button/Button";
+import Arrow from "../../icons/arrow.svg";
 import { HeaderDocumentData } from "@/prismicio-types";
 import NavGroup from "./NavGroup/NavGroup";
 import Logo from "../../../public/icons/StjornVestmannaeyjaLogoIconOnly.png";
@@ -157,14 +158,27 @@ export default function HeaderClient({
 
         <div className="flex gap-fluid-24 xl:gap-fluid-32 self-center">
           <UserLinks />
-          <Button
+          {/* <Button
             text={"Sækja um aðild"}
             aHref={"https://stf.is/saekja-um-adild"}
             ariaLabel={`Hlekkur til að sækja um aðild`}
             onClick={handleNavClick}
             type="htmla"
-            className="text-fontBlue rounded-6 font-body bg-buttonBlue hover:bg-buttonBlueHover text-[16px] xl:text-navLinks transition-all duration-300 ease-in-out"
-          />
+            className="text-fontBlue rounded-6 font-body bg-buttonBlue  hover:bg-buttonBlueHover text-[16px] xl:text-navLinks transition-all duration-300 ease-in-out"
+          /> */}
+          <a
+            href={"https://stf.is/saekja-um-adild"}
+            target="_blank"
+            aria-label={
+              "hlekkur til að fara á stf.is og sækja um aðild að félaginu"
+            }
+            className="group text-[16px] bg-buttonBlue hover:bg-buttonBlueHover  text-pureWhite flex pointer-events-auto rounded-32   gap-16 py-fluid-8 items-center pr-fluid-12 pl-fluid-24  h-fit w-fit  font-body font-medium transition-all duration-300 ease-in-out"
+          >
+            Sækja um aðild
+            <div className="p-12  bg-pureWhite  w-fit rounded-full transition-all duration-300 ease-in-out">
+              <Arrow className="text-buttonBlue -rotate-45 h-[14px]  transition-all duration-300 ease-in-out " />
+            </div>
+          </a>
         </div>
       </nav>
     </header>

@@ -12,12 +12,11 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "image": {
-          "type": "Image",
+        "title": {
+          "type": "Text",
           "config": {
-            "label": "image",
-            "constraint": {},
-            "thumbnails": []
+            "label": "Title",
+            "placeholder": ""
           }
         },
         "sub_title": {
@@ -27,34 +26,47 @@
             "placeholder": ""
           }
         },
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        },
-        "paragraph": {
+        "paragraph_1": {
           "type": "StructuredText",
           "config": {
-            "label": "Paragraph",
+            "label": "Paragraph 1",
             "placeholder": "",
             "allowTargetBlank": true,
             "multi": "paragraph,strong,em"
           }
         },
-        "card_title": {
-          "type": "Text",
+        "image_1": {
+          "type": "Image",
           "config": {
-            "label": "Card title",
-            "placeholder": ""
+            "label": "image 1",
+            "constraint": {},
+            "thumbnails": []
           }
         },
-        "card_paragraph": {
-          "type": "Text",
+        "paragraph_2": {
+          "type": "StructuredText",
           "config": {
-            "label": "Card paragraph",
-            "placeholder": ""
+            "label": "Paragraph 2",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong"
+          }
+        },
+        "image_2": {
+          "type": "Image",
+          "config": {
+            "label": "Image 2",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "paragraph_3": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Paragraph 3",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong"
           }
         },
         "link_text": {
