@@ -29,7 +29,7 @@ export default async function Home() {
     <>
       <Hero content={section} />
       <ServiceOverview content={section} />
-      {/* <NewsDynamic type="scroll" /> */}
+      <NewsDynamic type="scroll" />
       <SliceZone slices={page.data.slices} components={components} />
     </>
   );

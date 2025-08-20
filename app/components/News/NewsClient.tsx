@@ -2,11 +2,12 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { PrismicNextImage } from "@prismicio/next";
+import ArrowRight from "../../../public/icons/ArrowRight.svg";
+
 import { FadeIn } from "../FadeIn/fadeIn";
 import Container from "../Container/container";
-import Button from "../Button/Button";
 import Arrow from "../../icons/arrow.svg";
-import FourCyanPolygons from "../../icons/fourCyanPolygons.svg";
+import Chevron from "../../icons/chevronUp.svg";
 
 export default function NewsClient({ news }: { news: any }) {
   const carouselElement = useRef<HTMLDivElement>(null);
@@ -64,7 +65,7 @@ export default function NewsClient({ news }: { news: any }) {
   }, []);
 
   return (
-    <Container className=" flex-col gap-fluid-48  overflow-hidden bg-lightBlue ">
+    <Container className=" flex-col gap-fluid-48 sm:gap-fluid-72  overflow-hidden bg-backgroundBlue ">
       <div className="flex flex-col xs:flex-row justify-between w-fill">
         <div className="w-fill flex flex-col gap-fluid-18">
           <FadeIn className="self-start">
@@ -73,44 +74,18 @@ export default function NewsClient({ news }: { news: any }) {
             </h2>
           </FadeIn>
         </div>
-        <FadeIn className="xs:flex  lg:hidden gap-fluid-12 self-center hidden">
+        <FadeIn className="xs:flex  gap-fluid-24 self-center hidden">
           <button
             onClick={() => scrollCarousel("left")}
-            className="p-fluid-18 bg-pureWhite self-center group shadow-heroSlide hover:shadow-heroSlideHover hover:scale-105 border-[1px] border-greyInput border-opacity-15 transition-all duration-300 ease-in-out"
+            className="group hover:bg-buttonBlue bg-pureWhite   shadow-none flex justify-center  h-[56px] w-[80px] border-purple rounded-32 transition-all duration-150 ease-in-out "
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              className="h-24 w-24 rotate-[270deg] group-hover:scale-105 duration-300 transition-all ease-in-out"
-              viewBox="0 0 32 32"
-            >
-              <path
-                stroke="#003896"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2.67"
-                d="m24 20-8-8-8 8"
-              />
-            </svg>
+            <Chevron className="-rotate-90 h-[24px] text-bodyGrey group-hover:text-pureWhite self-center transition-all duration-150 ease-in-out" />
           </button>
           <button
             onClick={() => scrollCarousel("right")}
-            className="p-fluid-18 bg-pureWhite self-center group shadow-heroSlide hover:shadow-heroSlideHover hover:scale-105 border-[1px] border-greyInput border-opacity-15 transition-all duration-300 ease-in-out"
+            className="group hover:bg-buttonBlue bg-pureWhite   shadow-none flex justify-center  h-[56px] w-[80px] border-purple rounded-32 transition-all duration-150 ease-in-out "
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              className="h-24 w-24 rotate-90 group-hover:scale-105 duration-300 transition-all ease-in-out"
-              viewBox="0 0 32 32"
-            >
-              <path
-                stroke="#003896"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2.67"
-                d="m24 20-8-8-8 8"
-              />
-            </svg>
+            <Chevron className="rotate-90 h-[24px] text-bodyGrey group-hover:text-pureWhite self-center transition-all duration-150 ease-in-out" />
           </button>
         </FadeIn>
       </div>
@@ -118,9 +93,9 @@ export default function NewsClient({ news }: { news: any }) {
         <div
           ref={carouselElement}
           onScroll={handleScroll}
-          className="flex py-26 gap-fluid-56 w-fill no-scrollbar overflow-scroll lg:grid lg:grid-cols-3 snap-x snap-mandatory snap-always snap-center h-full"
+          className="flex  gap-fluid-56 w-fill no-scrollbar overflow-scroll snap-x snap-mandatory snap-always snap-center"
         >
-          {news.slice(0, 5).map((item: any, i: number) => {
+          {news.map((item: any, i: number) => {
             function formatDate(dateString: string): string {
               const options: Intl.DateTimeFormatOptions = {
                 day: "numeric",
@@ -135,69 +110,57 @@ export default function NewsClient({ news }: { news: any }) {
             return (
               <div
                 ref={cardElement}
-                className="min-w-[80%] xs:min-w-[60%] group smmd:min-w-[40%] md:min-w-[26%] lg:w-fill snap-x snap-mandatory snap-always snap-center  transition-all duration-150 ease-in-out"
+                className="min-w-[80%] xs:min-w-[60%] smmd:min-w-[40%] md:min-w-[26%] snap-x snap-mandatory snap-always snap-center bg-pureWhite pt-[10px] px-[10px] rounded-24 border-greyInput border-opacity-20"
                 key={`${i}${section.title}`}
               >
-                <Link className=" flex flex-col" href={`${item.url}`}>
-                  <div className="relative snap-center snap-mandatory overflow-hidden rounded-4">
-                    <div className="relative pb-[60%] ">
+                <Link className="group flex flex-col " href={`${item.url}`}>
+                  <div className="relative snap-center snap-mandatory overflow-hidden rounded-b-4 rounded-t-24 ">
+                    <div className="relative pb-[85%] ">
                       <PrismicNextImage
                         field={section.image}
-                        className="object-cover z-0 rounded-4 group-hover:scale-105 transition-all duration-300 ease-in-out"
+                        className="object-cover z-0 rounded-t-24 group-hover:scale-105 transition-all duration-300 ease-in-out"
                         fill
                         alt={""}
                         sizes="(max-width: 768px) 80vw, 25vw"
                       />
                     </div>
                   </div>
-                  <div className="flex flex-col gap-12  py-fluid-24 min-h-full ">
-                    <div className=" w-fit rounded-6 ">
+                  <div className="flex  flex-col justify-between  gap-fluid-32 py-fluid-16 px-fluid-18">
+                    <div className="flex flex-col gap-fluid-16">
                       <p
                         suppressHydrationWarning
-                        className="font-body text-sm font-medium text-bodyGrey"
+                        className="font-body text-[14px] text-bodyGrey"
                       >
                         {formattedDate}
                       </p>
+                      <h2 className="font-body font-semiBold text-headlineColor text-[16px] group-hover:text-purple transition-all duration-300 ease-in-out">
+                        {section.title}
+                      </h2>
                     </div>
-                    <h2 className="font-body font-semiBold text-headlineColor text-[20px] group-hover:text-buttonBlue transition-all duration-300 ease-in-out">
-                      {section.title}
-                    </h2>
-                    <FadeIn className="mt-fluid-16 ">
-                      <div className="group text-[14px] group-hover:bg-buttonBlue group-hover:text-pureWhite text-buttonBlue flex pointer-events-auto rounded-32 border-[1.5px] border-buttonBlue border-opacity-60  gap-16 py-6 items-center pr-fluid-12 pl-fluid-24  h-fit w-fit  font-body font-medium transition-all duration-300 ease-in-out ${className} ">
+                    <div className="flex gap-8 ">
+                      <p className="text-[16px] text-buttonBlue group-hover:text-buttonBlueHover font-body font-medium justify-self-end">
                         Lesa meira
-                        <div className="p-10  group-hover:bg-pureWhite group-hover:ml-4   bg-buttonBlue w-fit rounded-full transition-all duration-300 ease-in-out">
-                          <Arrow className="text-pureWhite group-hover:text-buttonBlue -rotate-45 h-[12px]  transition-all duration-300 ease-in-out " />
-                        </div>
-                      </div>
-                    </FadeIn>
+                      </p>
+                      <Arrow className="w-[12px] group-hover:text-buttonBlueHover group-hover:pl-6 group-hover:w-18 self-center text-buttonBlue transition-all duration-300 ease-in-out" />
+                    </div>
                   </div>
                 </Link>
               </div>
             );
           })}
-          <Link
-            href={"/frettir"}
-            className="min-w-[80%] relative xs:min-w-[60%]  group  smmd:min-w-[40%] md:min-w-[26%] justify-center  bg-cyanideBlue flex flex-col gap-fluid-24 w-full h-full rounded-4 py-fluid-40 px-fluid-40 snap-x snap-mandatory snap-always snap-center "
-          >
-            <FadeIn className="flex flex-col gap-fluid-12">
-              <p className="font-body font-semiBold text-pureWhite text-paragraph">
-                Ýttu hér til að sjá allar fréttir
-              </p>
-              <p className="font-body font-regular text-pureWhite text-[16px]">
-                Hér deilum við öllum tilkynningum og fréttum af félaginu fyrir
-                félagsmenn.
-              </p>
-            </FadeIn>
-
-            <div className="group text-[16px] bg-pureWhite group-hover:bg-buttonBlue group-hover:text-pureWhite text-buttonBlue flex pointer-events-auto rounded-32  mt-fluid-12 gap-16 py-fluid-8 items-center pr-fluid-12 pl-fluid-24 h-fit w-fit font-body font-medium transition-all duration-300 ease-in-out ">
-              Sjá allar fréttir
-              <div className="p-12  group-hover:bg-pureWhite group-hover:ml-4   bg-buttonBlue w-fit rounded-full transition-all duration-300 ease-in-out">
-                <Arrow className="text-pureWhite group-hover:text-buttonBlue -rotate-45 h-[14px]  transition-all duration-300 ease-in-out " />
-              </div>
-            </div>
-            <FourCyanPolygons className="absolute -bottom-20 -right-12" />
-          </Link>
         </div>
+      </FadeIn>
+      <FadeIn className="self-center">
+        <Link
+          href={"/frettir"}
+          aria-label={"til að sjá allar fréttir"}
+          className="group text-[16px] bg-pureWhite hover:bg-buttonBlue  hover:text-pureWhite text-buttonBlue flex pointer-events-auto rounded-32   gap-16 py-fluid-8 items-center pr-fluid-12 pl-fluid-24  h-fit w-fit  font-body font-medium transition-all duration-300 ease-in-out"
+        >
+          Sjá allar fréttir
+          <div className="p-12  bg-pureWhite  w-fit rounded-full transition-all duration-300 ease-in-out">
+            <Arrow className="text-buttonBlue  h-[14px]  transition-all duration-300 ease-in-out " />
+          </div>
+        </Link>
       </FadeIn>
     </Container>
   );

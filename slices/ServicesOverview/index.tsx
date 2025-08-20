@@ -41,7 +41,7 @@ const ServicesOverview = ({ slice }: ServicesOverviewProps): JSX.Element => {
                       </p>
                     </FadeIn> */}
                     <FadeIn delay={0.1} className="flex justify-between">
-                      <h3 className="text-h5 font-headline text-headlineColor font-medium">
+                      <h3 className="text-paragraph font-headline text-headlineColor font-medium">
                         {item.title}
                       </h3>
                     </FadeIn>

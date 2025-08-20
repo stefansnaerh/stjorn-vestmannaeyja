@@ -34,12 +34,12 @@ const ServiceOverview = ({
           {content.benefits.map((item, i) => {
             const iconToShow = (iconText: KeyTextField | void) => {
               if (iconText === "Orlofshús") {
-                return <HouseIcon className="w-40" />;
+                return <HouseIcon className="w-[36px]" />;
               } else if (iconText === "Styrkir") {
-                return <HandIcon className="w-40" />;
+                return <HandIcon className="w-[36px]" />;
               } else if (iconText === "Sjúkrasjóður") {
-                return <HeartIcon className="w-40" />;
-              } else return <GraduationCapIcon className="w-40" />;
+                return <HeartIcon className="w-[36px]" />;
+              } else return <GraduationCapIcon className="w-[36px]" />;
             };
             return (
               <FadeIn>
@@ -54,12 +54,12 @@ const ServiceOverview = ({
                         <div className="h-72 w-72 rounded-[100%] flex justify-center bg-[#F5F8FF;]">
                           {iconToShow(item.title)}
                         </div>
-                        <div className="p-16 group-hover:bg-buttonBlue  bg-pureWhite w-fit h-fit rounded-full transition-all duration-300 ease-in-out">
+                        <div className="p-12 group-hover:bg-buttonBlue  bg-pureWhite w-fit h-fit rounded-full transition-all duration-300 ease-in-out">
                           <Arrow className="text-buttonBlue group-hover:text-pureWhite -rotate-45 h-16 transition-all duration-300 ease-in-out " />
                         </div>
                       </div>
                       <div className="flex flex-col gap-fluid-8">
-                        <h4 className="text-[24px]  font-headline text-headlineColor font-medium ">
+                        <h4 className="text-paragraph font-headline text-headlineColor font-medium ">
                           {item.title}
                         </h4>
 

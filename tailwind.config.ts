@@ -18,8 +18,9 @@ const config: Config = {
       transparent: "transparent",
       current: "currentColor",
       backgroundGrey: "##FAFBFC",
+      backgroundBlue: "#F5F8FF",
       backgroundGreyDarker: "#F5F6F7",
-      backgroundBlue: "#111827",
+
       backgroundLightBlue: "#FAFBFD",
       headlineColor: "#2B2B2B",
       bodyGrey: "#5D5D5D",
@@ -36,7 +37,7 @@ const config: Config = {
       buttonBlue: "#176DFF",
       cyanideBlue: "#2DCAE1",
 
-      buttonBlueHover: "#2E5CA9",
+      buttonBlueHover: "#4287ff",
       softBlue: "#ECFCFE",
       lightBLue: "#F4FDFE",
 
