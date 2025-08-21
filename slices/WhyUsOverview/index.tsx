@@ -33,17 +33,14 @@ const WhyUsOverview = ({ slice }: WhyUsOverviewProps): JSX.Element => {
       data-slice-variation={slice.variation}
     >
       <div className=" flex flex-col gap-fluid-64 md:gap-fluid-96 w-fill max-w-[2000px]  ">
-        <div className="flex flex-col gap-fluid-24 bg-softBlue px-container-88 pt-64 lg-pt-fluid-122 pb-fluid-64  self-center">
-          <FadeIn className="w-fill flex flex-col gap-8">
-            <h2 className="text-[20px] font-headline text-buttonBlue font-semiBold w-fill">
-              {section.sub_title}
-            </h2>
+        <div className="flex flex-col md:flex-row md:justify-between gap-fluid-24  px-container-88 pt-64 lg-pt-fluid-122 pb-fluid-64  self-center">
+          <FadeIn className="w-fill flex md:w-[40%] flex-col gap-8">
             <h2 className="text-h2 font-headline text-headlineColor font-semiBold w-fill">
               {section.title}
             </h2>
           </FadeIn>
-          <FadeIn className=" md:w-[50%]">
-            <p className=" text-[16px] font-body font-regular text-bodyGrey">
+          <FadeIn className=" md:w-[60%]">
+            <p className=" text-[20px] font-body font-regular text-bodyGrey">
               {section.paragraph}
             </p>
           </FadeIn>
