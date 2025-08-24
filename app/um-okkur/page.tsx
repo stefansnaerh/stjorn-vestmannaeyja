@@ -9,7 +9,7 @@ import Image from "next/image";
 import Chevron from "../icons/chevronUp.svg";
 import { FadeIn } from "../components/FadeIn/fadeIn";
 import RichText from "../components/RichText/RichText";
-import Container from "../components/Container/container";
+
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
   const page = await client.getSingle("about_us");

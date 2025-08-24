@@ -1239,7 +1239,10 @@ interface NewsDocumentData {
 export type NewsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<NewsDocumentData>, "news", Lang>;
 
-type OrlofshusDocumentDataSlicesSlice = AllHousesSlice | TextOnlySlice;
+type OrlofshusDocumentDataSlicesSlice =
+  | SummerHouseSlice
+  | AllHousesSlice
+  | TextOnlySlice;
 
 /**
  * Content for Orlofshús yfirlit documents
@@ -2037,6 +2040,128 @@ export type ServicesOverviewSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Item in *SummerHouse → Default → Primary → Images*
+ */
+export interface SummerHouseSliceDefaultPrimaryImagesItem {
+  /**
+   * Image field in *SummerHouse → Default → Primary → Images*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: summer_house.default.primary.images[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Primary content in *SummerHouse → Default → Primary*
+ */
+export interface SummerHouseSliceDefaultPrimary {
+  /**
+   * Title field in *SummerHouse → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: summer_house.default.primary.title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Paragraph field in *SummerHouse → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: summer_house.default.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField;
+
+  /**
+   * Link to house field in *SummerHouse → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: summer_house.default.primary.link_to_house
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_to_house: prismic.LinkField;
+
+  /**
+   * Link text field in *SummerHouse → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: summer_house.default.primary.link_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
+
+  /**
+   * Images field in *SummerHouse → Default → Primary*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: summer_house.default.primary.images[]
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  images: prismic.GroupField<
+    Simplify<SummerHouseSliceDefaultPrimaryImagesItem>
+  >;
+
+  /**
+   * Link to all houses field in *SummerHouse → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: summer_house.default.primary.link_to_all_houses
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_to_all_houses: prismic.LinkField;
+
+  /**
+   * Link to all houses text field in *SummerHouse → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: summer_house.default.primary.link_to_all_houses_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_to_all_houses_text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for SummerHouse Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SummerHouseSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<SummerHouseSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *SummerHouse*
+ */
+type SummerHouseSliceVariation = SummerHouseSliceDefault;
+
+/**
+ * SummerHouse Shared Slice
+ *
+ * - **API ID**: `summer_house`
+ * - **Description**: SummerHouse
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type SummerHouseSlice = prismic.SharedSlice<
+  "summer_house",
+  SummerHouseSliceVariation
+>;
+
+/**
  * Primary content in *TextAndTitle → Default → Primary*
  */
 export interface TextOnlySliceDefaultPrimary {
@@ -2260,6 +2385,11 @@ declare module "@prismicio/client" {
       ServicesOverviewSliceDefaultPrimary,
       ServicesOverviewSliceVariation,
       ServicesOverviewSliceDefault,
+      SummerHouseSlice,
+      SummerHouseSliceDefaultPrimaryImagesItem,
+      SummerHouseSliceDefaultPrimary,
+      SummerHouseSliceVariation,
+      SummerHouseSliceDefault,
       TextOnlySlice,
       TextOnlySliceDefaultPrimary,
       TextOnlySliceVariation,

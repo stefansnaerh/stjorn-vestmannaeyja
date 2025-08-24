@@ -26,6 +26,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "summer_house": {
+              "type": "SharedSlice"
+            },
             "all_houses": {
               "type": "SharedSlice"
             },

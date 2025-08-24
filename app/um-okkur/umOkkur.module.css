@@ -1,0 +1,20 @@
+.mask-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px; /* adjust as needed */
+  aspect-ratio: 1 / 1; /* keep it square */
+}
+
+.mask-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-mask-image: url("../../public/images/testMaskGroup.png"); /* your mask png/svg */
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
+  mask-image: url("../../public/images/testMaskGroup.png");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: center;
+}
