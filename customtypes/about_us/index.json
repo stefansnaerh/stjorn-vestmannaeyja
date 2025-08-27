@@ -51,6 +51,9 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "about_us_overview": {
+              "type": "SharedSlice"
+            },
             "text_only": {
               "type": "SharedSlice"
             },

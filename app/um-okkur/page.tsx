@@ -9,6 +9,7 @@ import Image from "next/image";
 import Chevron from "../icons/chevronUp.svg";
 import { FadeIn } from "../components/FadeIn/fadeIn";
 import RichText from "../components/RichText/RichText";
+import styles from "./umOkkur.module.css";
 
 export async function generateMetadata(): Promise<Metadata> {
   const client = createClient();
@@ -28,7 +29,7 @@ export default async function AboutUs() {
 
   return (
     <div className="flex flex-col">
-      <section className=" text-black flex flex-col md:flex-row gap-fluid-64 md:gap-fluid-144 px-container-88 pt-fluid-122 py-64 max-w-screen-xxl  self-center">
+      {/* <section className=" text-black flex flex-col md:flex-row gap-fluid-64 md:gap-fluid-144 px-container-88 pt-fluid-122 py-64 max-w-screen-xxl  self-center">
         <div className="relative flex flex-col gap-fluid-40 md:gap-fluid-56 md:w-[40%]">
           <FadeIn className=" w-fit">
             <h2 className="text-h2 font-headline text-headlineColor font-medium w-fit">
@@ -44,7 +45,7 @@ export default async function AboutUs() {
             <div className="relative pb-[110%] sm:pb-[122%] ">
               <PrismicNextImage
                 field={section.image_1}
-                className="object-cover z-0 rounded-4"
+                className={`${styles.image} ${styles.mask1}`}
                 fill
                 alt={""}
                 sizes="(max-width: 768px) 100vw"
@@ -76,7 +77,7 @@ export default async function AboutUs() {
             </div>
           </div>
         </FadeIn>
-      </section>
+      </section> */}
       <SliceZone slices={page.data.slices} components={components} />
     </div>
   );

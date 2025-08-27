@@ -49,18 +49,22 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                 <div className=" [&_p]:pb-fluid-12 [&_p]:text-[20px] [&_strong]:text-headlineColor xl:[&_p]:text-md font-body font-regular text-bodyGrey">
                   <PrismicRichText field={section.paragraph_2} />
                 </div>
-                <FadeIn className="  ">
-                  <PrismicNextLink
-                    field={section.link}
-                    aria-label={"hlekkur til að lesa meira um okkur"}
-                    className="group text-[16px] hover:bg-buttonBlue hover:text-pureWhite text-buttonBlue flex pointer-events-auto rounded-32 border-[1.5px] border-buttonBlue border-opacity-60  gap-16 py-fluid-8 items-center pr-fluid-12 pl-fluid-24  h-fit w-fit  font-body font-medium transition-all duration-300 ease-in-out ${className} "
-                  >
-                    {section.link_text}
-                    <div className="p-12  group-hover:bg-pureWhite group-hover:ml-4   bg-buttonBlue w-fit rounded-full transition-all duration-300 ease-in-out">
-                      <Arrow className="text-pureWhite group-hover:text-buttonBlue -rotate-45 h-[14px]  transition-all duration-300 ease-in-out " />
-                    </div>
-                  </PrismicNextLink>
-                </FadeIn>
+                {section.link_text ? (
+                  <FadeIn className="  ">
+                    <PrismicNextLink
+                      field={section.link}
+                      aria-label={"hlekkur til að lesa meira um okkur"}
+                      className="group text-[16px] hover:bg-buttonBlue hover:text-pureWhite text-buttonBlue flex pointer-events-auto rounded-32 border-[1.5px] border-buttonBlue border-opacity-60  gap-16 py-fluid-8 items-center pr-fluid-12 pl-fluid-24  h-fit w-fit  font-body font-medium transition-all duration-300 ease-in-out ${className} "
+                    >
+                      {section.link_text}
+                      <div className="p-12  group-hover:bg-pureWhite group-hover:ml-4   bg-buttonBlue w-fit rounded-full transition-all duration-300 ease-in-out">
+                        <Arrow className="text-pureWhite group-hover:text-buttonBlue -rotate-45 h-[14px]  transition-all duration-300 ease-in-out " />
+                      </div>
+                    </PrismicNextLink>
+                  </FadeIn>
+                ) : (
+                  ""
+                )}
               </FadeIn>
               <div className="relative  min-w-[60%] overflow-hidden  ">
                 <div className="relative  pb-[70%] md:pb-[120%] lg:pb-[80%] ">
@@ -91,18 +95,22 @@ const AboutUsOverview = ({ slice }: AboutUsOverviewProps): JSX.Element => {
                   <PrismicRichText field={section.paragraph_3} />
                 </div>
 
-                <FadeIn className="  ">
-                  <PrismicNextLink
-                    field={section.link}
-                    aria-label={"hlekkur til að lesa meira um okkur"}
-                    className="group text-[16px] hover:bg-buttonBlue hover:text-pureWhite text-buttonBlue flex pointer-events-auto rounded-32 border-[1.5px] border-buttonBlue border-opacity-60  gap-16 py-fluid-8 items-center pr-fluid-12 pl-fluid-24  h-fit w-fit  font-body font-medium transition-all duration-300 ease-in-out ${className} "
-                  >
-                    {section.link_text}
-                    <div className="p-12  group-hover:bg-pureWhite group-hover:ml-4   bg-buttonBlue w-fit rounded-full transition-all duration-300 ease-in-out">
-                      <Arrow className="text-pureWhite group-hover:text-buttonBlue -rotate-45 h-[14px]  transition-all duration-300 ease-in-out " />
-                    </div>
-                  </PrismicNextLink>
-                </FadeIn>
+                {section.link_text ? (
+                  <FadeIn className="  ">
+                    <PrismicNextLink
+                      field={section.link}
+                      aria-label={"hlekkur til að lesa meira um okkur"}
+                      className="group text-[16px] hover:bg-buttonBlue hover:text-pureWhite text-buttonBlue flex pointer-events-auto rounded-32 border-[1.5px] border-buttonBlue border-opacity-60  gap-16 py-fluid-8 items-center pr-fluid-12 pl-fluid-24  h-fit w-fit  font-body font-medium transition-all duration-300 ease-in-out ${className} "
+                    >
+                      {section.link_text}
+                      <div className="p-12  group-hover:bg-pureWhite group-hover:ml-4   bg-buttonBlue w-fit rounded-full transition-all duration-300 ease-in-out">
+                        <Arrow className="text-pureWhite group-hover:text-buttonBlue -rotate-45 h-[14px]  transition-all duration-300 ease-in-out " />
+                      </div>
+                    </PrismicNextLink>
+                  </FadeIn>
+                ) : (
+                  ""
+                )}
               </FadeIn>
             </FadeIn>
           </div>
