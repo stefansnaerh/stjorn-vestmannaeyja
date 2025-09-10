@@ -7,6 +7,7 @@ import Button from "../../Button/Button";
 import { PrismicNextLink } from "@prismicio/next";
 import { FadeInSide } from "../../FadeIn/fadeInSide";
 import { BackGroundGreyContext } from "../../ContextProvider/Provider";
+import Arrow from "../../../../public/icons/ArrowRight.svg";
 export default function MobileNav({
   setIsMobileNavOpen,
   content,
@@ -140,14 +141,18 @@ export default function MobileNav({
           Félagavefur
         </a>
 
-        <Button
-          onClick={handleNavClick}
-          text={"Sækja um aðild"}
-          aHref={"https://stf.is/saekja-um-adild"}
-          ariaLabel={`Hlekkur til þess að sækja um aðild að STF`}
-          type="htmla"
-          className="text-white rounded-8  bg-backgroundBlue hover:bg-buttonBlue  text-navLinksMobile  transition-all duration-300 ease-in-out"
-        />
+        <a
+          href="https://stf.is/saekja-um-adild"
+          aria-label={
+            "hlekkur til að fara á stf.is og sækja um aðild að félaginu"
+          }
+          className="group text-[16px] bg-buttonBlue text-pureWhite flex pointer-events-auto rounded-32   gap-16 py-fluid-8 items-center pr-fluid-12 pl-fluid-24  h-fit w-fit  font-body font-medium transition-all duration-300 ease-in-out"
+        >
+          Sækja um aðild
+          <div className="p-12   group-hover:ml-4   bg-pureWhite w-fit rounded-full transition-all duration-300 ease-in-out">
+            <Arrow className="text-buttonBlue -rotate-45 h-[14px]  transition-all duration-300 ease-in-out " />
+          </div>
+        </a>
       </nav>
     </>
   );

@@ -74,9 +74,9 @@ export default function NavGroupMobile({
               onClick={() => showNavGroup(i)}
             >
               <span> {group.title}</span>
-              <Image
+              <ArrowRight
                 alt="ör til hægri"
-                className="self-center filterHeadlineColor transition-all  filter  duration-150 ease-in-out"
+                className="self-center h-16 transition-all  filter  duration-150 ease-in-out"
                 src={ArrowRight}
               />
             </button>

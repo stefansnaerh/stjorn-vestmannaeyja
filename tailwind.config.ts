@@ -17,7 +17,7 @@ const config: Config = {
     colors: {
       transparent: "transparent",
       current: "currentColor",
-      backgroundGrey: "##FAFBFC",
+      backgroundGrey: "#FAFBFC",
       backgroundBlue: "#F5F8FF",
       backgroundGreyDarker: "#F5F6F7",
 
