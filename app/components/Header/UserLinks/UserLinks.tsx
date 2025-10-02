@@ -91,7 +91,7 @@ export default function UserLinks() {
             strokeLinejoin="round"
           />
         </svg>
-        <span className="self-center">Félagavefur</span>
+        <span className="self-center">Mínar síður</span>
       </a>
 
       <button
@@ -201,7 +201,7 @@ export default function UserLinks() {
                   strokeLinejoin="round"
                 />
               </svg>
-              Félagavefur
+              Mínar síður
             </a>
           </div>
         </div>
