@@ -117,6 +117,7 @@ export default function NavGroupMobile({
                           aria-label={`Hlekkur á ${el.link_text}`}
                           field={el.link}
                           onClick={toggleShowNav}
+                          target={el.link.link_type === "Web" ? "_blank" : ""}
                           className=" transition-all  text-navLinksMobile group-hover:text-orange duration-300 w-fit ease-in-out "
                         >
                           {el.link_text}

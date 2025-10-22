@@ -165,6 +165,9 @@ export default function NavGroup({
                               aria-label={`Hlekkur á ${el.link_text}`}
                               field={el.link}
                               onClick={linkClick}
+                              target={
+                                el.link.link_type === "Web" ? "_blank" : ""
+                              }
                               className=" transition-all group-hover:bg-pureWhite text-bodyGrey flex justify-between gap-12 text-[15px] xl:text-navLinks py-[10px] px-fluid-18 group-hover:text-buttonBlue duration-300 w-fill ease-in-out rounded-6 hover:shadow-heroSlide"
                             >
                               <div className="flex gap-16">
