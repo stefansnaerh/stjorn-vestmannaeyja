@@ -90,6 +90,7 @@ export default function MobileNav({
         <PrismicNextLink
           className="flex group gap-6 pb-2 text-navLinksMobile transition-all duration-300 ease-in-out"
           field={content.link_5}
+          target="_blank"
           onClick={handleNavClick}
         >
           {content.link_5_name}
@@ -98,6 +99,7 @@ export default function MobileNav({
         <PrismicNextLink
           className="flex group gap-6 pb-2 text-navLinksMobile transition-all duration-300 ease-in-out"
           field={content.link_6}
+          target="_blank"
           onClick={handleNavClick}
         >
           {content.link_6_name}

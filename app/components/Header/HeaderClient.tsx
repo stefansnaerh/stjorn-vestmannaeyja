@@ -128,6 +128,7 @@ export default function HeaderClient({
             <PrismicNextLink
               className="flex group gap-6 pb-2 text-[15px] xl:text-navLinks transition-all duration-300 ease-in-out"
               field={content.link_5}
+              target="_blank"
               onClick={handleNavClick}
             >
               {content.link_5_name}
@@ -139,6 +140,7 @@ export default function HeaderClient({
               className="flex group gap-6 pb-2 text-[15px] xl:text-navLinks transition-all duration-300 ease-in-out"
               field={content.link_6}
               onClick={handleNavClick}
+              target="_blank"
             >
               {content.link_6_name}
             </PrismicNextLink>
