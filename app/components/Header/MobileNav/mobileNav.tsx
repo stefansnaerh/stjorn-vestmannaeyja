@@ -140,7 +140,7 @@ export default function MobileNav({
               strokeLinejoin="round"
             />
           </svg>
-          Félagavefur
+          Mínar síður
         </a>
 
         <a
