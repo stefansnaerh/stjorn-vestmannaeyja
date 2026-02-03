@@ -161,7 +161,7 @@ export default function HeaderClient({
             href={"https://stf.is/saekja-um-adild"}
             target="_blank"
             aria-label={
-              "hlekkur til að fara á stf.is og sækja um aðild að félaginu"
+              "Hlekkur til að fara á stf.is og sækja um aðild að félaginu"
             }
             className="group text-[16px] bg-buttonBlue hover:bg-buttonBlueHover  text-pureWhite flex pointer-events-auto rounded-32   gap-16 py-fluid-8 items-center pr-fluid-12 pl-fluid-24  h-fit w-fit  font-body font-medium transition-all duration-300 ease-in-out"
           >
