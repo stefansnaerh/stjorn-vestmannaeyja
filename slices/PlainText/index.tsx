@@ -19,7 +19,7 @@ const PlainText = ({ slice }: PlainTextProps): JSX.Element => {
 [&_h5]:font-body [&_h5]:font-semiBold [&_h5]:text-buttonBlue [&_h5]:text-md [&_h5]:pt-fluid-18 
 [&_img]:py-fluid-32  [&_img]:w-fill [&_img]:rounded-12  [&_img]:object-cover [&_img]:max-h-[400px]
 [&_a]:font-semiBold  [&_a]:text-buttonBlue  
-[&_ul]:list-disc [&_li]:marker:text-headlineColor [&_li]:text-[16px] [&_li]:text-bodyGrey [&_li]:py-4 [&_ul]:py-8 [&_ol]:list-inside [&_ul]:list-inside [&_ol]:list-decimal [&_li]:marker:text-navLinks "
+[&_ul]:list-disc [&_li]:marker:text-headlineColor [&_li]:text-navLinks [&_li]:text-bodyGrey [&_li]:py-4 [&_ul]:py-8 [&_ol]:list-inside [&_ul]:list-inside [&_ol]:list-decimal [&_li]:marker:text-navLinks "
     >
       <PrismicRichText field={slice.primary.paragraph} />
     </div>
