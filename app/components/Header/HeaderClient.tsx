@@ -115,7 +115,7 @@ export default function HeaderClient({
             aria-label="hlekkur til að fara heim á forsíðu"
             href="/"
             onClick={handleNavClick}
-            className=" h-fit self-center "
+            className="h-fit self-center"
           >
             <Image alt="Logo félagsins" src={Logo} height={65} className="  " />
           </Link>
