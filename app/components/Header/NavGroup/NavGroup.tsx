@@ -104,7 +104,7 @@ export default function NavGroup({
       {headerNavGroups?.map((group, i) => {
         return (
           <div key={i} className="flex  self-center ">
-            <div className="group">
+            <div className="group ">
               <button
                 aria-label={`Takki til að sjá hlekki fyrir ${group.title}`}
                 className={cx(
@@ -119,15 +119,6 @@ export default function NavGroup({
                 {group.title}
               </button>
               <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-80 group-hover:bg-buttonBlue transition-all duration-300 ease-in-out"></div>
-              <div
-                className={cx(
-                  " h-[3px] w-0 rounded-6 opacity-80 group-hover:w-fill group-hover:bg-lightBlue focus:bg-buttonBlue focus:w-fill transition-all duration-300 ease-in-out",
-                  {
-                    ["w-fill"]: currentIndex === i,
-                    ["w-0"]: currentIndex !== i,
-                  }
-                )}
-              ></div>
             </div>
             {currentIndex === i ? (
               <div
