@@ -92,14 +92,6 @@ export default function NavGroup({
       image1: content.link_group_3_image_1,
       image2: content.link_group_3_image_2,
     },
-    {
-      title: content.link_group_4_name,
-      navElements: content.link_group_4,
-      headline: content.link_group_4_title,
-      paragraph: content.link_group_4_paragraph,
-      image1: content.link_group_4_image_1,
-      image2: content.link_group_4_image_2,
-    },
   ];
 
   return (

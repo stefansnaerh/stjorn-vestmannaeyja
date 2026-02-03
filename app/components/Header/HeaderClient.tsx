@@ -127,25 +127,14 @@ export default function HeaderClient({
           <div className="group h-fit self-center">
             <PrismicNextLink
               className="flex group gap-6 pb-2 text-[15px] xl:text-navLinks transition-all duration-300 ease-in-out"
-              field={content.link_5}
-              target="_blank"
+              field={content.link_4}
               onClick={handleNavClick}
             >
-              {content.link_5_name}
+              {content.link_4_name}
             </PrismicNextLink>
             <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-80 group-hover:bg-buttonBlue transition-all duration-300 ease-in-out"></div>
           </div>
-          <div className="group h-fit self-center">
-            <PrismicNextLink
-              className="flex group gap-6 pb-2 text-[15px] xl:text-navLinks transition-all duration-300 ease-in-out"
-              field={content.link_6}
-              onClick={handleNavClick}
-              target="_blank"
-            >
-              {content.link_6_name}
-            </PrismicNextLink>
-            <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-80 group-hover:bg-buttonBlue transition-all duration-300 ease-in-out"></div>
-          </div>
+
           <div className="group h-fit self-center">
             <PrismicNextLink
               className="flex group gap-6 pb-2 text-[15px] xl:text-navLinks transition-all duration-300 ease-in-out"

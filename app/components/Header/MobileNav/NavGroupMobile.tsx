@@ -54,12 +54,6 @@ export default function NavGroupMobile({
       headline: content.link_group_3_title,
       paragraph: content.link_group_3_paragraph,
     },
-    {
-      title: content.link_group_4_name,
-      navElements: content.link_group_4,
-      headline: content.link_group_4_title,
-      paragraph: content.link_group_4_paragraph,
-    },
   ];
 
   return (
