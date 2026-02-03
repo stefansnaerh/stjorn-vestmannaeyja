@@ -16,7 +16,7 @@ const Image = ({ slice }: ImageProps): JSX.Element => {
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
     >
-      <div className="relative pb-[45%] ">
+      <div className="relative pb-[55%] sm:pb-[45%] lg2:pb-[40%] ">
         <PrismicNextImage
           field={section.image}
           className="object-cover z-0 rounded-24"
