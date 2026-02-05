@@ -49,7 +49,7 @@ const ServiceOverview = ({
                   target={item.link.link_type === "Web" ? "_blank" : ""}
                   field={item.link}
                 >
-                  <div className="sm:w-fill sm:h-fill  w-fill rounded-6 flex flex-col justify-between gap-fluid-32 p-fluid-32 border-[1px] border-greyInput border-opacity-40 hover:border-buttonBlue group hover:border-opacity-60 transition-all duration-300 ease-in-out">
+                  <div className="sm:w-fill  sm:h-fill  w-fill rounded-6 flex flex-col justify-between gap-fluid-32 p-fluid-32 border-[1px] border-greyInput border-opacity-40 hover:border-buttonBlue group hover:border-opacity-60 transition-all duration-300 ease-in-out">
                     <div className="flex flex-col gap-fluid-32">
                       <div className="flex justify-between">
                         <div className="h-72 w-72 rounded-[100%] flex justify-center bg-[#F5F8FF;]">
