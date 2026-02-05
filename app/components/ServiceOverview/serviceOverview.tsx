@@ -46,6 +46,7 @@ const ServiceOverview = ({
                 <PrismicNextLink
                   className=""
                   key={`${i}${item.title}`}
+                  target={item.link.link_type === "Web" ? "_blank" : ""}
                   field={item.link}
                 >
                   <div className="sm:w-fill sm:h-fill  w-fill rounded-6 flex flex-col justify-between gap-fluid-32 p-fluid-32 border-[1px] border-greyInput border-opacity-40 hover:border-buttonBlue group hover:border-opacity-60 transition-all duration-300 ease-in-out">
