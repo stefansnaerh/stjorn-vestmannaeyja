@@ -118,7 +118,7 @@ export default function NavGroup({
               >
                 {group.title}
               </button>
-              <div className=" h-[3px] w-0 rounded-24 group-hover:w-fill opacity-80 group-hover:bg-buttonBlue transition-all duration-300 ease-in-out"></div>
+              <div className="h-[3px] w-0 rounded-24 group-hover:w-fill opacity-80 group-hover:bg-buttonBlue transition-all duration-300 ease-in-out"></div>
             </div>
             {currentIndex === i ? (
               <div
