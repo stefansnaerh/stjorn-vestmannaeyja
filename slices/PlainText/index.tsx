@@ -12,7 +12,7 @@ export type PlainTextProps = SliceComponentProps<Content.PlainTextSlice>;
 const PlainText = ({ slice }: PlainTextProps): JSX.Element => {
   return (
     <div
-      className="w-fill [&_p]:pb-fluid-12 [&_p]:text-navLinks [&_p]:font-regular  font-body font-regular text-bodyGrey
+      className="w-fill  [&_p]:pb-fluid-12 [&_p]:text-navLinks [&_p]:font-regular  font-body font-regular text-bodyGrey
 [&_h2]:text-h5 [&_h2]:font-body [&_h2]:font-semiBold [&_h2]:pb-fluid-12  [&_h2]:pt-fluid-40 [&_h2]:text-headlineColor
 [&_h3]:text-h4 [&_h3]:font-body [&_h3]:font-semiBold [&_h3]:pt-fluid-32 [&_h3]:pb-fluid-40  [&_h3]:w-fit [&_h3]:text-headlineColor
 [&_h4]:font-body [&_h4]:font-semiBold [&_h4]:text-h6 [&_h4]:text-headlineColor [&_h4]:pb-fluid-20 [&_h4]:pt-fluid-16 
