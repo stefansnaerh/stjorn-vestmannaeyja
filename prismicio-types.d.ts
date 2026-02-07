@@ -760,31 +760,6 @@ export interface HeaderDocumentDataLinkGroup3Item {
 }
 
 /**
- * Item in *Header → Link group 4*
- */
-export interface HeaderDocumentDataLinkGroup4Item {
-  /**
-   * Link text field in *Header → Link group 4*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.link_group_4[].link_text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  link_text: prismic.KeyTextField;
-
-  /**
-   * Link field in *Header → Link group 4*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.link_group_4[].link
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link: prismic.LinkField;
-}
-
-/**
  * Content for Header documents
  */
 interface HeaderDocumentData {
@@ -987,116 +962,6 @@ interface HeaderDocumentData {
   link_group_3: prismic.GroupField<Simplify<HeaderDocumentDataLinkGroup3Item>>;
 
   /**
-   * Link group 4 name field in *Header*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.link_group_4_name
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  link_group_4_name: prismic.KeyTextField;
-
-  /**
-   * Link group 4 title field in *Header*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.link_group_4_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  link_group_4_title: prismic.KeyTextField;
-
-  /**
-   * Link group 4 paragraph field in *Header*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.link_group_4_paragraph
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  link_group_4_paragraph: prismic.KeyTextField;
-
-  /**
-   * Link group 4 image 1 field in *Header*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.link_group_4_image_1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  link_group_4_image_1: prismic.ImageField<never>;
-
-  /**
-   * Link group 4 image 2 field in *Header*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.link_group_4_image_2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  link_group_4_image_2: prismic.ImageField<never>;
-
-  /**
-   * Link group 4 field in *Header*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.link_group_4[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  link_group_4: prismic.GroupField<Simplify<HeaderDocumentDataLinkGroup4Item>>;
-
-  /**
-   * Link 5 name field in *Header*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.link_5_name
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  link_5_name: prismic.KeyTextField;
-
-  /**
-   * Link 5 field in *Header*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.link_5
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link_5: prismic.LinkField;
-
-  /**
-   * Link 6 name field in *Header*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.link_6_name
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  link_6_name: prismic.KeyTextField;
-
-  /**
-   * Link 6 field in *Header*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: header.link_6
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  link_6: prismic.LinkField;
-
-  /**
    * Link 7 name field in *Header*
    *
    * - **Field Type**: Text
@@ -1117,6 +982,28 @@ interface HeaderDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   link_7: prismic.LinkField;
+
+  /**
+   * Link 4 name field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.link_4_name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_4_name: prismic.KeyTextField;
+
+  /**
+   * Link 4 field in *Header*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.link_4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link_4: prismic.LinkField;
 }
 
 /**
@@ -1132,6 +1019,82 @@ export type HeaderDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<
     Simplify<HeaderDocumentData>,
     "header",
+    Lang
+  >;
+
+type IdgjoldOgSkilagreinarDocumentDataSlicesSlice = PlainTextSlice;
+
+/**
+ * Content for Iðgjöld og skilagreinar documents
+ */
+interface IdgjoldOgSkilagreinarDocumentData {
+  /**
+   * Title field in *Iðgjöld og skilagreinar*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: idgjold_og_skilagreinar.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *Iðgjöld og skilagreinar*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: idgjold_og_skilagreinar.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<IdgjoldOgSkilagreinarDocumentDataSlicesSlice> /**
+   * Meta Title field in *Iðgjöld og skilagreinar*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: idgjold_og_skilagreinar.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Iðgjöld og skilagreinar*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: idgjold_og_skilagreinar.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Iðgjöld og skilagreinar*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: idgjold_og_skilagreinar.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Iðgjöld og skilagreinar document from Prismic
+ *
+ * - **API ID**: `idgjold_og_skilagreinar`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type IdgjoldOgSkilagreinarDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<IdgjoldOgSkilagreinarDocumentData>,
+    "idgjold_og_skilagreinar",
     Lang
   >;
 
@@ -1330,6 +1293,85 @@ export type OrlofshusDocument<Lang extends string = string> =
     Lang
   >;
 
+type StyrkirOgSjodirUndirsidaDocumentDataSlicesSlice =
+  | PlainTextSlice
+  | ImageSlice
+  | ButtonSlice;
+
+/**
+ * Content for Styrkir og sjóðir undirsíða documents
+ */
+interface StyrkirOgSjodirUndirsidaDocumentData {
+  /**
+   * Title field in *Styrkir og sjóðir undirsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: styrkir_og_sjodir_undirsida.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *Styrkir og sjóðir undirsíða*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: styrkir_og_sjodir_undirsida.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<StyrkirOgSjodirUndirsidaDocumentDataSlicesSlice> /**
+   * Meta Title field in *Styrkir og sjóðir undirsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: styrkir_og_sjodir_undirsida.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Styrkir og sjóðir undirsíða*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: styrkir_og_sjodir_undirsida.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Styrkir og sjóðir undirsíða*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: styrkir_og_sjodir_undirsida.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Styrkir og sjóðir undirsíða document from Prismic
+ *
+ * - **API ID**: `styrkir_og_sjodir_undirsida`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type StyrkirOgSjodirUndirsidaDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithUID<
+    Simplify<StyrkirOgSjodirUndirsidaDocumentData>,
+    "styrkir_og_sjodir_undirsida",
+    Lang
+  >;
+
 type UmOkkurTextasidaDocumentDataSlicesSlice = never;
 
 /**
@@ -1423,8 +1465,10 @@ export type AllDocumentTypes =
   | FooterDocument
   | FrontPageDocument
   | HeaderDocument
+  | IdgjoldOgSkilagreinarDocument
   | NewsDocument
   | OrlofshusDocument
+  | StyrkirOgSjodirUndirsidaDocument
   | UmOkkurTextasidaDocument;
 
 /**
@@ -1742,6 +1786,100 @@ type BoardSliceVariation = BoardSliceDefault;
 export type BoardSlice = prismic.SharedSlice<"board", BoardSliceVariation>;
 
 /**
+ * Primary content in *Button → Default → Primary*
+ */
+export interface ButtonSliceDefaultPrimary {
+  /**
+   * Button text field in *Button → Default → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: button.default.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button link field in *Button → Default → Primary*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: button.default.primary.button_link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  button_link: prismic.LinkField;
+}
+
+/**
+ * Default variation for Button Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ButtonSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ButtonSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Button*
+ */
+type ButtonSliceVariation = ButtonSliceDefault;
+
+/**
+ * Button Shared Slice
+ *
+ * - **API ID**: `button`
+ * - **Description**: Button
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ButtonSlice = prismic.SharedSlice<"button", ButtonSliceVariation>;
+
+/**
+ * Primary content in *Image → Default → Primary*
+ */
+export interface ImageSliceDefaultPrimary {
+  /**
+   * Image field in *Image → Default → Primary*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: image.default.primary.image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Image Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ImageSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Image*
+ */
+type ImageSliceVariation = ImageSliceDefault;
+
+/**
+ * Image Shared Slice
+ *
+ * - **API ID**: `image`
+ * - **Description**: Image
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ImageSlice = prismic.SharedSlice<"image", ImageSliceVariation>;
+
+/**
  * Primary content in *OrlofshusUmAlltLand → Default → Primary*
  */
 export interface OrlofshusUmAlltLandSliceDefaultPrimary {
@@ -1854,6 +1992,51 @@ type OrlofshusUmAlltLandSliceVariation = OrlofshusUmAlltLandSliceDefault;
 export type OrlofshusUmAlltLandSlice = prismic.SharedSlice<
   "orlofshus_um_allt_land",
   OrlofshusUmAlltLandSliceVariation
+>;
+
+/**
+ * Primary content in *PlainText → Default → Primary*
+ */
+export interface PlainTextSliceDefaultPrimary {
+  /**
+   * Paragraph field in *PlainText → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: plain_text.default.primary.paragraph
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  paragraph: prismic.RichTextField;
+}
+
+/**
+ * Default variation for PlainText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PlainTextSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<PlainTextSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *PlainText*
+ */
+type PlainTextSliceVariation = PlainTextSliceDefault;
+
+/**
+ * PlainText Shared Slice
+ *
+ * - **API ID**: `plain_text`
+ * - **Description**: PlainText
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type PlainTextSlice = prismic.SharedSlice<
+  "plain_text",
+  PlainTextSliceVariation
 >;
 
 /**
@@ -2347,13 +2530,18 @@ declare module "@prismicio/client" {
       HeaderDocumentDataLinkGroup1Item,
       HeaderDocumentDataLinkGroup2Item,
       HeaderDocumentDataLinkGroup3Item,
-      HeaderDocumentDataLinkGroup4Item,
+      IdgjoldOgSkilagreinarDocument,
+      IdgjoldOgSkilagreinarDocumentData,
+      IdgjoldOgSkilagreinarDocumentDataSlicesSlice,
       NewsDocument,
       NewsDocumentData,
       NewsDocumentDataSlicesSlice,
       OrlofshusDocument,
       OrlofshusDocumentData,
       OrlofshusDocumentDataSlicesSlice,
+      StyrkirOgSjodirUndirsidaDocument,
+      StyrkirOgSjodirUndirsidaDocumentData,
+      StyrkirOgSjodirUndirsidaDocumentDataSlicesSlice,
       UmOkkurTextasidaDocument,
       UmOkkurTextasidaDocumentData,
       UmOkkurTextasidaDocumentDataSlicesSlice,
@@ -2372,10 +2560,22 @@ declare module "@prismicio/client" {
       BoardSliceDefaultPrimary,
       BoardSliceVariation,
       BoardSliceDefault,
+      ButtonSlice,
+      ButtonSliceDefaultPrimary,
+      ButtonSliceVariation,
+      ButtonSliceDefault,
+      ImageSlice,
+      ImageSliceDefaultPrimary,
+      ImageSliceVariation,
+      ImageSliceDefault,
       OrlofshusUmAlltLandSlice,
       OrlofshusUmAlltLandSliceDefaultPrimary,
       OrlofshusUmAlltLandSliceVariation,
       OrlofshusUmAlltLandSliceDefault,
+      PlainTextSlice,
+      PlainTextSliceDefaultPrimary,
+      PlainTextSliceVariation,
+      PlainTextSliceDefault,
       ServiceOverviewSlice,
       ServiceOverviewSliceDefaultPrimaryItemsItem,
       ServiceOverviewSliceDefaultPrimary,

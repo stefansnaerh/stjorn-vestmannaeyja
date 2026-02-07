@@ -25,7 +25,7 @@ const routes: prismic.ClientConfig["routes"] = [
   },
   {
     type: "orlofshus",
-    path: "/um-okkur/orlofshus",
+    path: "/styrkir-og-sjodir/orlofssjodur",
   },
   {
     type: "um_okkur_textasida",
@@ -38,6 +38,14 @@ const routes: prismic.ClientConfig["routes"] = [
   {
     type: "news",
     path: "/frettir/:uid",
+  },
+  {
+    type: "styrkir_og_sjodir_undirsida",
+    path: "/styrkir-og-sjodir/:uid",
+  },
+  {
+    type: "idgjold_og_skilagreinar",
+    path: "/idgjold-og-skilagreinar",
   },
 ];
 

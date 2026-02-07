@@ -47,12 +47,9 @@ export default async function AboutUs() {
                 Heim
               </Link>
               <Chevron className="h-fluid-16 rotate-90 self-center filterWhite " />
-              <Link
-                className="text-pureWhite transition-all duration-300 ease-in-out"
-                href={"/um-okkur"}
-              >
-                Um okkur
-              </Link>
+              <div className="text-pureWhite transition-all duration-300 ease-in-out">
+                Styrkir og sjóðir
+              </div>
               <Chevron className="h-fluid-16 rotate-90 self-center filterWhite " />
 
               <p className="text-sm text-pureWhite font-semiBold">

@@ -89,21 +89,13 @@ export default function MobileNav({
 
         <PrismicNextLink
           className="flex group gap-6 pb-2 text-navLinksMobile transition-all duration-300 ease-in-out"
-          field={content.link_5}
+          field={content.link_4}
           target="_blank"
           onClick={handleNavClick}
         >
-          {content.link_5_name}
+          {content.link_4_name}
         </PrismicNextLink>
 
-        <PrismicNextLink
-          className="flex group gap-6 pb-2 text-navLinksMobile transition-all duration-300 ease-in-out"
-          field={content.link_6}
-          target="_blank"
-          onClick={handleNavClick}
-        >
-          {content.link_6_name}
-        </PrismicNextLink>
         <PrismicNextLink
           className="flex group gap-6 pb-2 text-navLinksMobile transition-all duration-300 ease-in-out"
           field={content.link_7}

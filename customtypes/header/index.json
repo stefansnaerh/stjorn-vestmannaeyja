@@ -189,97 +189,6 @@
           }
         }
       },
-      "link_group_4_name": {
-        "type": "Text",
-        "config": {
-          "label": "Link group 4 name",
-          "placeholder": ""
-        }
-      },
-      "link_group_4_title": {
-        "type": "Text",
-        "config": {
-          "label": "Link group 4 title",
-          "placeholder": ""
-        }
-      },
-      "link_group_4_paragraph": {
-        "type": "Text",
-        "config": {
-          "label": "Link group 4 paragraph",
-          "placeholder": ""
-        }
-      },
-      "link_group_4_image_1": {
-        "type": "Image",
-        "config": {
-          "label": "Link group 4 image 1",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "link_group_4_image_2": {
-        "type": "Image",
-        "config": {
-          "label": "Link group 4 image 2",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "link_group_4": {
-        "type": "Group",
-        "config": {
-          "label": "Link group 4",
-          "repeat": true,
-          "fields": {
-            "link_text": {
-              "type": "Text",
-              "config": {
-                "label": "Link text",
-                "placeholder": ""
-              }
-            },
-            "link": {
-              "type": "Link",
-              "config": {
-                "label": "Link",
-                "placeholder": "",
-                "select": null
-              }
-            }
-          }
-        }
-      },
-      "link_5_name": {
-        "type": "Text",
-        "config": {
-          "label": "Link 5 name",
-          "placeholder": ""
-        }
-      },
-      "link_5": {
-        "type": "Link",
-        "config": {
-          "label": "Link 5",
-          "placeholder": "",
-          "select": null
-        }
-      },
-      "link_6_name": {
-        "type": "Text",
-        "config": {
-          "label": "Link 6 name",
-          "placeholder": ""
-        }
-      },
-      "link_6": {
-        "type": "Link",
-        "config": {
-          "label": "Link 6",
-          "placeholder": "",
-          "select": null
-        }
-      },
       "link_7_name": {
         "type": "Text",
         "config": {
@@ -291,6 +200,21 @@
         "type": "Link",
         "config": {
           "label": "Link 7",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "link_4_name": {
+        "type": "Text",
+        "config": {
+          "label": "Link 4 name",
+          "placeholder": ""
+        }
+      },
+      "link_4": {
+        "type": "Link",
+        "config": {
+          "label": "Link 4",
           "placeholder": "",
           "select": null
         }
